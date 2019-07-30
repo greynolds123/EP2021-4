@@ -1,5 +1,6 @@
 module Puppet::Parser::Functions
   newfunction(:pe_compile_master, :type => :rvalue, :doc => <<-EOS
+<<<<<<< HEAD
     Returns whether or not the current master is a compile master.
     Based on the assumption the master of masters will have itself
     as its server but compile masters are not. Since this does not
@@ -30,6 +31,15 @@ module Puppet::Parser::Functions
       if not_compile_masters.include? replication_mode
         mom_or_replica = true
       end
+=======
+    Returns whether or not the current master is a compile master
+  EOS
+  ) do |args|
+
+
+    if args.length > 0 then
+      raise Puppet::ParseError, ("pe_compile_master(): wrong number of arguments (#{args.length}; must be 0)")
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     end
 
     fqdn = lookupvar('fqdn')
@@ -37,7 +47,11 @@ module Puppet::Parser::Functions
       raise Puppet::ParseError, ("pe_compile_master(): fqdn fact is required and expected to be set, but it was null")
     end
     servername = function_pe_servername([])
+<<<<<<< HEAD
     !(servername.nil? || (servername == fqdn) || mom_or_replica)
 
+=======
+    !servername.nil? && (servername != fqdn)
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   end
 end

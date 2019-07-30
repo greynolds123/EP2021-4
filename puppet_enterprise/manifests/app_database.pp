@@ -8,10 +8,15 @@
 # `pe_concat { $pg_ident_conf_path: ...}`.
 #
 # @param database_name [String] The name of the postgresql database to manage.
+<<<<<<< HEAD
 # @param write_user [String] The name of the postgresql user (role) to
 #        manage, which will have write access to the database.
 # @param database_password [String] The password for the user that can login to
 #        the PE application DB.
+=======
+# @param database_user [String] The name of the postgresql user (role) to
+#        manage.
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 # @param tablespace_name [String] In PE, each database is typically stored in a
 #        separate tablespace. This is the name of the tablespace to use.
 # @param tablespace_location [String] The directory where the tablespace should
@@ -23,6 +28,7 @@
 # @param pg_ident_conf_path [String] The path to the postgresql ident.conf
 #        configuration file
 # @param $client_certnames [Array<String>] The certnames which can access this
+<<<<<<< HEAD
 #        database using ssl client cert authentication
 # @param $extensions [Array<String>] The postgresql extensions which should be
 #        installed in this database
@@ -59,6 +65,14 @@ define puppet_enterprise::app_database(
   String $certname,
   String $database_name,
   String $write_user,
+=======
+#        database (as $database_user) using ssl client cert authentication
+# @param $extensions [Array<String>] The postgresql extensions which should be
+#        installed in this database
+define puppet_enterprise::app_database(
+  String $database_name,
+  String $database_user,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   String $tablespace_name,
   String $ip_mask_allow_all_users_ssl,
   String $ipv6_mask_allow_all_users_ssl,
@@ -67,6 +81,7 @@ define puppet_enterprise::app_database(
   String $tablespace_location,
   String $database_password = '',
   Array $extensions = [],
+<<<<<<< HEAD
   String $read_user = '',
   String $super_user = '',
   Puppet_enterprise::Replication_mode $replication_mode = 'none',
@@ -81,6 +96,9 @@ define puppet_enterprise::app_database(
   Array[String] $enabled_replicas = [],
 ) {
 
+=======
+) {
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   # each database gets its own tablespace
   pe_postgresql::server::tablespace { $tablespace_name:
     location => $tablespace_location,
@@ -99,6 +117,7 @@ define puppet_enterprise::app_database(
     default => $database_password
   }
 
+<<<<<<< HEAD
   if !pe_empty($super_user) {
     $database_owner = $super_user
     $owner_is_superuser = true
@@ -111,10 +130,15 @@ define puppet_enterprise::app_database(
   pe_postgresql::server::role { $database_owner:
     password_hash => $_database_password,
     superuser     => $owner_is_superuser,
+=======
+  pe_postgresql::server::role { $database_user:
+    password_hash => $_database_password,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     require       => Pe_postgresql::Server::Tablespace[$tablespace_name],
   }
 
   pe_postgresql::server::db { $database_name:
+<<<<<<< HEAD
     user       => $database_owner,
     password   => $_database_password,
     tablespace => $tablespace_name,
@@ -331,6 +355,54 @@ define puppet_enterprise::app_database(
             ipv6_mask_allow_all_users_ssl => $ipv6_mask_allow_all_users_ssl,
             * => $entry,
         }
+=======
+    user       => $database_user,
+    password   => $_database_password,
+    tablespace => $tablespace_name,
+    require    => Pe_postgresql::Server::Role[$database_user],
+  }
+
+  $extensions.each |$extension| {
+    pe_postgresql_psql { "${database_name} extension ${extension}":
+      command    => "CREATE EXTENSION ${extension};",
+      db         => $database_name,
+      port       => $pe_postgresql::params::port,
+      psql_user  => $pe_postgresql::params::user,
+      psql_group => $pe_postgresql::params::group,
+      psql_path  => $pe_postgresql::params::psql_path,
+      unless     => "select * from pg_extension where extname='${extension}'",
+      require    => Pe_postgresql::Server::Db[$database_name],
+    }
+  }
+
+  if $puppet_enterprise::database_cert_auth and pe_empty($_database_password) {
+    $ident_map_key = "${database_name}-map"
+
+    Pe_postgresql::Server::Pg_hba_rule {
+      description => 'none',
+      type        => 'hostssl',
+      database    => $database_name,
+      user        => $database_user,
+      auth_method => 'cert',
+      auth_option => "map=${ident_map_key} clientcert=1",
+    }
+
+    pe_postgresql::server::pg_hba_rule { "${database_name} cert auth rule":
+      address     => $ip_mask_allow_all_users_ssl,
+      order       => '0',
+    }
+
+    pe_postgresql::server::pg_hba_rule { "${database_name} ipv6 cert auth rule":
+      address     => $ipv6_mask_allow_all_users_ssl,
+      order       => '1',
+    }
+
+    # Create an ident rule fragment for pg_ident.conf
+    $client_certnames.each |$client_certname| {
+      pe_concat::fragment { "pg_ident_rule_${database_name}_${client_certname}":
+        target  => $pg_ident_conf_path,
+        content => "${ident_map_key} ${client_certname} ${database_user}",
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
       }
     }
   }

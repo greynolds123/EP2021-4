@@ -25,12 +25,23 @@ class puppet_enterprise::profile::master::classifier(
     value   => $node_terminus,
   }
 
+<<<<<<< HEAD
   $classifier_hosts = pe_any2array($classifier_host)
   $classifier_ports = pe_any2array($classifier_port)
 
+=======
+  # Uses
+  #  $classifier_host
+  #  $classifier_port
+  #  $classifier_url_prefix
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   file { "${confdir}/classifier.yaml" :
     content => template('puppet_enterprise/master/classifier.yaml.erb'),
     owner   => 'pe-puppet',
     group   => 'pe-puppet',
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 }

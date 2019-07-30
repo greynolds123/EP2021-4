@@ -1,14 +1,25 @@
 class puppet_enterprise::master::code_manager(
+<<<<<<< HEAD
   String $certname                              = $facts['clientcert'],
   String $webserver_ssl_host                    = '0.0.0.0',
   Integer $webserver_ssl_port                   = 8170,
   Array[String] $ssl_protocols                  = $puppet_enterprise::ssl_protocols,
+=======
+  String $certname                              = $::clientcert,
+  String $webserver_ssl_host                    = '0.0.0.0',
+  Integer $webserver_ssl_port                   = 8170,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   String $hostcrl                               = $puppet_enterprise::params::hostcrl,
   String $localcacert                           = $puppet_enterprise::params::localcacert,
   String $datadir                               = '/opt/puppetlabs/server/data/code-manager/',
   String $cachedir                              = '/opt/puppetlabs/server/data/code-manager/cache',
+<<<<<<< HEAD
   Optional[Boolean] $file_sync_auto_commit      = undef,
   Optional[String] $file_sync_repo_id           = undef,
+=======
+  String $file_sync_repo_id                     = 'puppet-code',
+  Boolean $file_sync_auto_commit                = true,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   Boolean $authenticate_webhook                 = true,
   Integer $deploy_pool_size                     = 2,
   Integer $timeouts_fetch                       = 30,
@@ -16,8 +27,11 @@ class puppet_enterprise::master::code_manager(
   Integer $timeouts_hook                        = 30,
   Integer $timeouts_shutdown                    = 610,
   Integer $timeouts_wait                        = 700,
+<<<<<<< HEAD
   Integer $timeouts_sync                        = 60,
   Optional[Array[String]] $purge_whitelist      = ['.resource_types'],
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   Optional[String] $environmentdir              = undef,
   Optional[Hash] $forge_settings                = undef,
   Optional[Hash] $git_settings                  = undef,
@@ -27,12 +41,16 @@ class puppet_enterprise::master::code_manager(
   Optional[String] $proxy                       = undef,
   Optional[String] $private_key                 = undef,
   Optional[Array[Hash]] $post_environment_hooks = undef,
+<<<<<<< HEAD
   Integer $puppet_master_port                   = $puppet_enterprise::puppet_master_port,
   Optional[Enum['rugged', 'shellgit']] $git_provider = undef,
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 ) inherits puppet_enterprise::params {
 
   $confdir = '/etc/puppetlabs/puppetserver'
 
+<<<<<<< HEAD
   if ($file_sync_repo_id != undef) {
     warning('Deprecation: $puppet_enterprise::master::code_manager::file_sync_repo_id is deprecated and will be ignored')
   }
@@ -47,6 +65,22 @@ class puppet_enterprise::master::code_manager(
   }
   else {
       $_environmentdir = '/etc/puppetlabs/code-staging/environments'
+=======
+  if $file_sync_auto_commit {
+    $code_manager_service = 'code-manager-v1'
+    if !pe_empty($environmentdir) {
+      $_environmentdir = $environmentdir
+    } else {
+      $_environmentdir = '/etc/puppetlabs/code-staging/environments'
+    }
+  } else {
+    $code_manager_service = 'code-manager-v1-no-file-sync'
+    if !pe_empty($environmentdir) {
+      $_environmentdir = $environmentdir
+    } else {
+      $_environmentdir = '/etc/puppetlabs/code/environments'
+    }
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   $web_router_section = "web-router-service.\"puppetlabs.code-manager.services/${code_manager_service}\""
@@ -68,7 +102,11 @@ class puppet_enterprise::master::code_manager(
 
   Pe_hocon_setting {
     ensure => present,
+<<<<<<< HEAD
     notify => Service['pe-puppetserver'],
+=======
+    notify => Service["pe-puppetserver"],
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   File {
@@ -92,11 +130,20 @@ class puppet_enterprise::master::code_manager(
     namespace => 'puppetlabs.code-manager.services',
   }
 
+<<<<<<< HEAD
+=======
+  puppet_enterprise::trapperkeeper::bootstrap_cfg {'remote-rbac-consumer-service' :
+    container => 'puppetserver',
+    namespace => 'puppetlabs.rbac-client.services.rbac',
+  }
+
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   puppet_enterprise::trapperkeeper::bootstrap_cfg { 'remote-activity-reporter' :
     container => 'puppetserver',
     namespace => 'puppetlabs.rbac-client.services.activity',
   }
 
+<<<<<<< HEAD
   puppet_enterprise::trapperkeeper::webserver_settings { 'code-manager' :
     container          => 'puppetserver',
     certname           => $certname,
@@ -108,6 +155,48 @@ class puppet_enterprise::master::code_manager(
     ssl_protocols      => $ssl_protocols,
   }
 
+=======
+  pe_hocon_setting{ 'webserver.code-manager.client-auth':
+    path    => "${confdir}/conf.d/webserver.conf",
+    setting => 'webserver.code-manager.client-auth',
+    value   => 'want',
+  }
+  pe_hocon_setting{ 'webserver.code-manager.ssl-host':
+    path    => "${confdir}/conf.d/webserver.conf",
+    setting => 'webserver.code-manager.ssl-host',
+    value   => $webserver_ssl_host,
+  }
+  pe_hocon_setting{ 'webserver.code-manager.ssl-port':
+    path    => "${confdir}/conf.d/webserver.conf",
+    setting => 'webserver.code-manager.ssl-port',
+    value   => $webserver_ssl_port
+  }
+  pe_hocon_setting{ 'webserver.code-manager.ssl-cert':
+    path    => "${confdir}/conf.d/webserver.conf",
+    setting => 'webserver.code-manager.ssl-cert',
+    value   => "/etc/puppetlabs/puppet/ssl/certs/${certname}.pem",
+  }
+  pe_hocon_setting{ 'webserver.code-manager.ssl-key':
+    path    => "${confdir}/conf.d/webserver.conf",
+    setting => 'webserver.code-manager.ssl-key',
+    value   => "/etc/puppetlabs/puppet/ssl/private_keys/${certname}.pem",
+  }
+  pe_hocon_setting{ 'webserver.code-manager.ssl-ca-cert':
+    path    => "${confdir}/conf.d/webserver.conf",
+    setting => 'webserver.code-manager.ssl-ca-cert',
+    value   => $localcacert,
+  }
+  pe_hocon_setting{ 'webserver.code-manager.ssl-crl-path':
+    path    => "${confdir}/conf.d/webserver.conf",
+    setting => 'webserver.code-manager.ssl-crl-path',
+    value   => $hostcrl,
+  }
+  pe_hocon_setting{ 'webserver.code-manager.access-log-config':
+    path    => "${confdir}/conf.d/webserver.conf",
+    setting => 'webserver.code-manager.access-log-config',
+    value   => "${confdir}/request-logging.xml",
+  }
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   pe_hocon_setting { "${web_router_section}.route":
     path    => "${confdir}/conf.d/web-routes.conf",
     setting => "${web_router_section}.route",
@@ -122,7 +211,11 @@ class puppet_enterprise::master::code_manager(
   pe_hocon_setting{ 'code-manager.file-sync.repo-id':
     path    => "${confdir}/conf.d/code-manager.conf",
     setting => 'code-manager.file-sync.repo-id',
+<<<<<<< HEAD
     value   => 'puppet-code',
+=======
+    value   => $file_sync_repo_id,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   pe_hocon_setting{ 'code-manager.environmentdir':
@@ -175,6 +268,7 @@ class puppet_enterprise::master::code_manager(
     setting => 'code-manager.timeouts.wait',
     value   => $timeouts_wait,
   }
+<<<<<<< HEAD
   pe_hocon_setting{ 'code-manager.timeouts.sync':
     path    => "${confdir}/conf.d/code-manager.conf",
     setting => 'code-manager.timeouts.sync',
@@ -194,6 +288,8 @@ class puppet_enterprise::master::code_manager(
     type    => 'array',
     value   => $purge_whitelist,
   }
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
   if pe_empty($proxy) {
     $proxy_ensure = absent
@@ -275,9 +371,14 @@ class puppet_enterprise::master::code_manager(
       $_git = $git_settings
       $git_ensure = present
     } else {
+<<<<<<< HEAD
       fail('Both private_key and git_settings provided to puppet_enterprise::master::code-manager.')
     }
   }
+=======
+      fail("Both private_key and git_settings provided to puppet_enterprise::master::code-manager.")
+  }}
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
   pe_hocon_setting{ 'code-manager.git':
     ensure  => $git_ensure,
@@ -286,6 +387,7 @@ class puppet_enterprise::master::code_manager(
     value   => $_git,
   }
 
+<<<<<<< HEAD
   unless pe_empty($git_provider) {
     pe_hocon_setting{ 'code-manager.git-provider':
       ensure  => 'present',
@@ -295,6 +397,8 @@ class puppet_enterprise::master::code_manager(
     }
   }
 
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   # This setting is deprecated
   pe_hocon_setting {'code-manager.private-key':
     ensure  => absent,

@@ -9,8 +9,11 @@ class puppet_enterprise::puppetdb::sync_ini(
   Array[Puppet_enterprise::Puppetdb::Sync_peer] $peers,
   $confdir = $puppet_enterprise::params::puppetdb_confdir,
 ) inherits puppet_enterprise::params {
+<<<<<<< HEAD
   include puppet_enterprise::packages
 
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   file { "${confdir}/sync.ini":
     ensure  => present,
     owner   => 'pe-puppetdb',

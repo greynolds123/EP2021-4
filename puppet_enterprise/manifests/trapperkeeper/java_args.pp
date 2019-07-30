@@ -2,12 +2,16 @@ define puppet_enterprise::trapperkeeper::java_args (
   Hash   $java_args,
   String $container   = $title,
   String $initconfdir = $puppet_enterprise::params::defaults_dir,
+<<<<<<< HEAD
   Boolean $enable_gc_logging = true,
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 ){
 
   $pe_container = "pe-${container}"
   $initconf = "${initconfdir}/${pe_container}"
 
+<<<<<<< HEAD
   $gc_logging_args = puppet_enterprise::produce_gc_logging_args_hash($container)
 
   #java_args changes require a full service restart in 2017.1
@@ -53,4 +57,19 @@ define puppet_enterprise::trapperkeeper::java_args (
     }
   }
 
+=======
+  if !pe_empty($java_args) {
+    create_resources(
+      'pe_ini_subsetting',
+      create_java_args_subsettings_hash(
+        $pe_container,
+        $java_args,
+        { path    => $initconf,
+          require => Package[$pe_container],
+          notify  => Service[$pe_container],
+        }
+      )
+    )
+  }
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 }

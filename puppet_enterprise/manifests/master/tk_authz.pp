@@ -4,6 +4,7 @@
 # @param classifier_client_certname [String] The name on the certificate used by the classifier.
 # @param orchestrator_client_certname [String] The name on the certificate used by the orchestrator.
 # @param allow_header_cert_info [Boolean] Controls how the authenticated user "name" is derived for a request being authorized.
+<<<<<<< HEAD
 # @param allow_unauthenticated_ca [Boolean] True allows unauthenticated access, by default. False requires authentication on the certificate endpoints.
 # @param allow_unauthenticated_status [Boolean] True allows unauthenticated access, by default. False requires authentication on status-service endpoint.
 # @param allow_rbac_catalog_compile [Boolean] True allows RBAC token with the 'puppetserver:compile_catalogs:*` permission to use the new v4 catalog compile endpoint. Required for CD4PE.
@@ -26,6 +27,16 @@ class puppet_enterprise::master::tk_authz(
                            false => '*',
                            default => undef,
                          }
+=======
+class puppet_enterprise::master::tk_authz(
+  String $console_client_certname,
+  String $classifier_client_certname,
+  String $orchestrator_client_certname,
+  Optional[Boolean] $allow_header_cert_info = false,
+) {
+
+  $authconf = '/etc/puppetlabs/puppetserver/conf.d/auth.conf'
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
   pe_puppet_authorization { $authconf:
     version                => 1,
@@ -47,6 +58,7 @@ class puppet_enterprise::master::tk_authz(
     sort_order           => 500,
   }
 
+<<<<<<< HEAD
   # Allow ACE Server / CD4PE to retrieve v4 catalog
   $v4_catalog_rules = $allow_rbac_catalog_compile ? {
     true =>  [$orchestrator_client_certname, { 'rbac' => { 'permission' => 'puppetserver:compile_catalog:*' }}],
@@ -62,13 +74,19 @@ class puppet_enterprise::master::tk_authz(
     sort_order           => 500,
   }
 
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   # Allow nodes to retrieve the certificate they requested earlier
   pe_puppet_authorization::rule { 'puppetlabs certificate':
     match_request_path    => '/puppet-ca/v1/certificate/',
     match_request_type    => 'path',
     match_request_method  => 'get',
+<<<<<<< HEAD
     allow                 => $allow,
     allow_unauthenticated => $allow_unauthenticated_ca,
+=======
+    allow_unauthenticated => true,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     sort_order            => 500,
   }
 
@@ -77,8 +95,12 @@ class puppet_enterprise::master::tk_authz(
     match_request_path    => '/puppet-ca/v1/certificate_revocation_list/ca',
     match_request_type    => 'path',
     match_request_method  => 'get',
+<<<<<<< HEAD
     allow                 => $allow,
     allow_unauthenticated => $allow_unauthenticated_ca,
+=======
+    allow_unauthenticated => true,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     sort_order            => 500,
   }
 
@@ -87,8 +109,12 @@ class puppet_enterprise::master::tk_authz(
     match_request_path    => '/puppet-ca/v1/certificate_request',
     match_request_type    => 'path',
     match_request_method  => ['get', 'put'],
+<<<<<<< HEAD
     allow                 => $allow,
     allow_unauthenticated => $allow_unauthenticated_ca,
+=======
+    allow_unauthenticated => true,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     sort_order            => 500,
   }
 
@@ -104,6 +130,7 @@ class puppet_enterprise::master::tk_authz(
     match_request_path   => '/puppet/v3/environment',
     match_request_type   => 'path',
     match_request_method => 'get',
+<<<<<<< HEAD
     allow                => $v4_catalog_rules,
     sort_order           => 510,
   }
@@ -112,6 +139,8 @@ class puppet_enterprise::master::tk_authz(
     match_request_path   => '/puppet/v3/tasks',
     match_request_type   => 'path',
     match_request_method => 'get',
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     allow                => $orchestrator_client_certname,
     sort_order           => 510,
   }
@@ -124,6 +153,7 @@ class puppet_enterprise::master::tk_authz(
     sort_order           => 500,
   }
 
+<<<<<<< HEAD
   # Allow nodes to access all file_bucket_files.  Note that access for
   # the 'delete' method is forbidden by Puppet regardless of the
   # configuration of this rule.
@@ -153,6 +183,16 @@ class puppet_enterprise::master::tk_authz(
     match_request_path   => '/puppet/v3/file_metadata',
     match_request_type   => 'path',
     match_request_method => ['get', 'post'],
+=======
+  # Allow nodes to access all file services; this is necessary for
+  # pluginsync, file serving from modules, and file serving from
+  # custom mount points (see fileserver.conf). Note that the `/file`
+  # prefix matches requests to file_metadata, file_content, and
+  # file_bucket_file paths.
+  pe_puppet_authorization::rule { 'puppetlabs file':
+    match_request_path   => '/puppet/v3/file',
+    match_request_type   => 'path',
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     allow                => '*',
     sort_order           => 500,
   }
@@ -166,11 +206,16 @@ class puppet_enterprise::master::tk_authz(
     sort_order           => 500,
   }
 
+<<<<<<< HEAD
   # Allow nodes to store only their own reports, allow the ACE service to store any report
+=======
+  # Allow nodes to store only their own reports
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   pe_puppet_authorization::rule { 'puppetlabs report':
     match_request_path   => '^/puppet/v3/report/([^/]+)$',
     match_request_type   => 'regex',
     match_request_method => 'put',
+<<<<<<< HEAD
     allow                => [ '$1', $orchestrator_client_certname ],
     sort_order           => 500,
   }
@@ -180,6 +225,8 @@ class puppet_enterprise::master::tk_authz(
     match_request_path   => '^/puppet/v3/facts/([^/]+)$',
     match_request_type   => 'regex',
     match_request_method => 'put',
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     allow                => '$1',
     sort_order           => 500,
   }
@@ -188,9 +235,15 @@ class puppet_enterprise::master::tk_authz(
     match_request_path   => '/puppet/v3/resource_type',
     match_request_type   => 'path',
     match_request_method => 'get',
+<<<<<<< HEAD
     allow                => pe_flatten([$console_client_certname,
                                         $classifier_client_certname,
                                         $orchestrator_client_certname]),
+=======
+    allow                => [$console_client_certname,
+                             $classifier_client_certname,
+                             $orchestrator_client_certname],
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     sort_order           => 500,
   }
 
@@ -202,6 +255,7 @@ class puppet_enterprise::master::tk_authz(
     sort_order            => 500,
   }
 
+<<<<<<< HEAD
   pe_puppet_authorization::rule { 'puppetserver simple status endpoint':
     match_request_path    => '/status/v1/simple',
     match_request_type    => 'path',
@@ -219,6 +273,8 @@ class puppet_enterprise::master::tk_authz(
     sort_order            => 500,
   }
 
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   pe_puppet_authorization::rule { 'puppetlabs static file content':
     match_request_path    => '/puppet/v3/static_file_content',
     match_request_type    => 'path',

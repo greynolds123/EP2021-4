@@ -17,11 +17,14 @@ Facter.add("platform_tag") do
   setcode do
     platform_name = Facter.value("operatingsystem").downcase
     platform_architecture = Facter.value("architecture")
+<<<<<<< HEAD
     if platform_architecture == "ppc64le"
       # Debian/Ubuntu for some reason chose ppc64el as their Power8 package
       # arch instead of ppc64le, so we need to special-case this.
       platform_architecture = "ppc64el"
     end
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     platform_release = platform_name == "ubuntu" ? Facter.value("operatingsystemrelease") : Facter.value("operatingsystemmajrelease")
 
     # If any of these are nil, do not return anything
@@ -92,6 +95,7 @@ Facter.add("platform_tag") do
     when "fedora"
       platform_name = "fedora"
     else
+<<<<<<< HEAD
       # Check for redhatfips variant
       if Facter.value("fips_enabled")
         platform_name = "redhatfips"
@@ -123,6 +127,13 @@ Facter.add("platform_tag") do
       end
     end
 
+=======
+      platform_name = "el"
+    end
+    platform_architecture = Facter.value("architecture")
+    platform_release = Facter.value("operatingsystemmajrelease")
+
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     # If any of these are nil, do not return anything
     if platform_name && platform_release && platform_architecture
         [platform_name, platform_release, platform_architecture].join('-')

@@ -14,6 +14,7 @@ Returns a list of urls.
 
     protocol, hosts, ports = args
 
+<<<<<<< HEAD
     #If passed a ports array with one element then make an array that matches the size
     #of the hosts array.
     #If passed a ports array with more than one element make sure it's the same size as
@@ -30,6 +31,14 @@ Returns a list of urls.
     end
 
     hosts.zip(ports_munge).inject([]) { |urls, pair|
+=======
+    if (hosts.size != ports.size) then
+      raise(ArgumentError, "`pe_format_urls(): Hostnames array and ports array must "+
+                           "have the same number of entries")
+    end
+
+    hosts.zip(ports).inject([]) { |urls, pair|
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
       host, port = pair
       urls.push("#{protocol}://#{host}:#{port}")
     }

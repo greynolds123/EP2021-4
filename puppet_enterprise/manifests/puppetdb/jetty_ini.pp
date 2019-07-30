@@ -12,18 +12,26 @@
 # @param ssl_listen_address [String] The address which the database is
 #        listening on for SSL connections
 # @param ssl_listen_port [Integer] The port which PuppetDB Listens on for SSL connections
+<<<<<<< HEAD
 # @param ssl_protocols [Array[String]] The list of SSL protocols to allow.
 # @param cipher_suites [Optional[String]] An optional list of cipher suites to
 #        be used by puppetdb during ssl communications. If left undef the JDK defaults
 #        will be used.  This parameter existed before ssl_cipher_suites was added
 #        to puppet_enterprise so we leave this parameter as a string instead of
 #        an array.
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 # @param tk_jetty_max_threads [Integer] The maximum number of threads that
 #        Trapperkeeper's Jetty server can spin up.
 # @param tk_jetty_request-header_max_size [Integer] Sets the maximum size of an HTTP Request Header.
 class puppet_enterprise::puppetdb::jetty_ini(
+<<<<<<< HEAD
   $cert_whitelist_path,
   $certname                         = $puppet_enterprise::puppetdb::certname,
+=======
+  $certname,
+  $cert_whitelist_path,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   $confdir                          = $puppet_enterprise::params::puppetdb_confdir,
   $listen_address                   = $puppet_enterprise::params::plaintext_address,
   $listen_port                      = $puppet_enterprise::params::puppetdb_listen_port,
@@ -31,12 +39,18 @@ class puppet_enterprise::puppetdb::jetty_ini(
   $ssl_dir                          = $puppet_enterprise::params::puppetdb_ssl_dir,
   $ssl_listen_address               = $puppet_enterprise::params::ssl_address,
   $ssl_listen_port                  = $puppet_enterprise::params::puppetdb_ssl_listen_port,
+<<<<<<< HEAD
   Array[String] $ssl_protocols      = $puppet_enterprise::ssl_protocols,
   Optional[String] $cipher_suites   = pe_join($puppet_enterprise::ssl_cipher_suites, ','),
   $tk_jetty_max_threads             = undef,
   $tk_jetty_request_header_max_size = 65536,
 ) inherits puppet_enterprise::params {
   include puppet_enterprise::packages
+=======
+  $tk_jetty_max_threads             = undef,
+  $tk_jetty_request_header_max_size = 65536,
+) inherits puppet_enterprise::params {
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
   file { "${confdir}/jetty.ini":
     ensure  => present,
@@ -85,6 +99,7 @@ class puppet_enterprise::puppetdb::jetty_ini(
     value   => $ssl_listen_port,
   }
 
+<<<<<<< HEAD
   $cipher_suites_ensure = pe_empty($cipher_suites) ? {
     true => absent,
     false => present,
@@ -96,6 +111,8 @@ class puppet_enterprise::puppetdb::jetty_ini(
     value   => $cipher_suites,
   }
 
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   pe_ini_setting {'puppetdb_ssl_key':
     setting => 'ssl-key',
     value   => "${ssl_dir}/${certname}.private_key.pem",
@@ -116,11 +133,14 @@ class puppet_enterprise::puppetdb::jetty_ini(
     value   => 'want',
   }
 
+<<<<<<< HEAD
   pe_ini_setting { 'puppetdb_ssl_protocols':
     setting => 'ssl-protocols',
     value => pe_join($ssl_protocols, ','),
   }
 
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   pe_ini_setting { 'puppetdb-certificate-whitelist':
     section => 'puppetdb',
     setting => 'certificate-whitelist',
@@ -128,7 +148,10 @@ class puppet_enterprise::puppetdb::jetty_ini(
     require => File[$cert_whitelist_path],
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   if $tk_jetty_max_threads != undef {
     pe_ini_setting {'puppetdb_max-threads':
       setting => 'max-threads',

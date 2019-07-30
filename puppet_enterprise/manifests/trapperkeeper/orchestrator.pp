@@ -3,6 +3,7 @@ define puppet_enterprise::trapperkeeper::orchestrator(
   $puppetdb_url,
   $classifier_url,
   $rbac_url,
+<<<<<<< HEAD
   $activity_url,
   $console_url,
   $console_services_url,
@@ -26,15 +27,31 @@ define puppet_enterprise::trapperkeeper::orchestrator(
   $database_name                                = $puppet_enterprise::orchestrator_database_name,
   $database_user                                = $puppet_enterprise::orchestrator_service_regular_db_user,
   $database_migration_user                      = $puppet_enterprise::orchestrator_service_migration_db_user,
+=======
+  $console_url,
+  $console_services_url,
+  $pcp_broker_url,
+  $client_certname                              = $puppet_enterprise::puppet_master_host,
+  $container                                    = $title,
+  $database_host                                = 'localhost',
+  $database_port                                = $puppet_enterprise::params::database_port,
+  $database_name                                = "pe-orchestrator",
+  $database_user                                = "pe-orchestrator",
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   $database_password                            = undef,
   $database_properties                          = '',
   $user                                         = "pe-${title}",
   $group                                        = "pe-${title}",
   Optional[Integer] $global_concurrent_compiles = undef,
+<<<<<<< HEAD
   Optional[Integer] $task_concurrency           = undef,
   Optional[Integer] $job_prune_threshold        = undef,
   Optional[Integer] $pcp_timeout                = undef,
   Optional[Boolean] $app_management             = undef,
+=======
+  Optional[Integer] $job_prune_threshold        = undef,
+  Optional[Integer] $pcp_timeout                = undef,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 ) {
 
   $confdir = "/etc/puppetlabs/${container}/conf.d"
@@ -46,34 +63,52 @@ define puppet_enterprise::trapperkeeper::orchestrator(
     mode   => '0640',
   }
 
+<<<<<<< HEAD
   Pe_hocon_setting {
     ensure => present,
   }
 
   pe_hocon_setting { "${container}.orchestrator.master-url":
+=======
+  pe_hocon_setting { "${container}.orchestrator.master-url":
+    ensure  => present,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     path    => "${confdir}/orchestrator.conf",
     setting => 'orchestrator.master-url',
     value   => $master_url,
   }
 
   pe_hocon_setting { "${container}.orchestrator.puppetdb-url":
+<<<<<<< HEAD
+=======
+    ensure  => present,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     path    => "${confdir}/orchestrator.conf",
     setting => 'orchestrator.puppetdb-url',
     value   => $puppetdb_url,
   }
 
   pe_hocon_setting { "${container}.orchestrator.classifier-service":
+<<<<<<< HEAD
+=======
+    ensure  => present,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     path    => "${confdir}/orchestrator.conf",
     setting => 'orchestrator.classifier-service',
     value   => $classifier_url,
   }
 
   pe_hocon_setting { "${container}.orchestrator.console-services-url":
+<<<<<<< HEAD
+=======
+    ensure  => present,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     path    => "${confdir}/orchestrator.conf",
     setting => 'orchestrator.console-services-url',
     value   => $console_services_url,
   }
 
+<<<<<<< HEAD
   pe_hocon_setting { "${container}.orchestrator.inventory-service-url":
     path => "${confdir}/orchestrator.conf",
     setting => 'orchestrator.inventory-service-url',
@@ -135,11 +170,16 @@ define puppet_enterprise::trapperkeeper::orchestrator(
   }
 
   pe_hocon_setting { "${container}.rbac-consumer.api-url":
+=======
+  pe_hocon_setting { "${container}.rbac-consumer.api-url":
+    ensure  => present,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     path    => "${confdir}/orchestrator.conf",
     setting => 'rbac-consumer.api-url',
     value   => $rbac_url,
   }
 
+<<<<<<< HEAD
   pe_hocon_setting { "${container}.activity-consumer.api-url":
     ensure  => present,
     path    => "${confdir}/orchestrator.conf",
@@ -154,24 +194,47 @@ define puppet_enterprise::trapperkeeper::orchestrator(
   }
 
   pe_hocon_setting { "${container}.orchestrator.console-url":
+=======
+  pe_hocon_setting { "${container}.orchestrator.pcp-broker-url":
+    ensure  => present,
+    path    => "${confdir}/orchestrator.conf",
+    setting => 'orchestrator.pcp-broker-url',
+    value   => $pcp_broker_url,
+  }
+
+  pe_hocon_setting { "${container}.orchestrator.console-url":
+    ensure  => present,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     path    => "${confdir}/orchestrator.conf",
     setting => 'orchestrator.console-url',
     value   => $console_url,
   }
 
   pe_hocon_setting { "${container}.orchestrator.ssl-ca-cert":
+<<<<<<< HEAD
+=======
+    ensure  => present,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     path    => "${confdir}/orchestrator.conf",
     setting => 'orchestrator.ssl-ca-cert',
     value   => $puppet_enterprise::params::localcacert,
   }
 
   pe_hocon_setting { "${container}.orchestrator.ssl-cert":
+<<<<<<< HEAD
+=======
+    ensure  => present,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     path    => "${confdir}/orchestrator.conf",
     setting => 'orchestrator.ssl-cert',
     value   => "/etc/puppetlabs/${container}/ssl/${client_certname}.cert.pem",
   }
 
   pe_hocon_setting { "${container}.orchestrator.ssl-key":
+<<<<<<< HEAD
+=======
+    ensure  => present,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     path    => "${confdir}/orchestrator.conf",
     setting => 'orchestrator.ssl-key',
     value   => "/etc/puppetlabs/${container}/ssl/${client_certname}.private_key.pem",
@@ -188,22 +251,28 @@ define puppet_enterprise::trapperkeeper::orchestrator(
     default => 'present',
   }
 
+<<<<<<< HEAD
   $task_concurrency_ensure = $task_concurrency ? {
     undef   => 'absent',
     default => 'present',
   }
 
 
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   $job_prune_threshold_ensure = $job_prune_threshold ? {
     undef   => 'absent',
     default => 'present',
   }
 
+<<<<<<< HEAD
   $app_management_ensure = $app_management ? {
     undef   => 'absent',
     default => 'present',
   }
 
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   pe_hocon_setting { "${container}.orchestrator.pcp-timeout":
     ensure  => $pcp_timeout_ensure,
     path    => "${confdir}/orchestrator.conf",
@@ -218,6 +287,7 @@ define puppet_enterprise::trapperkeeper::orchestrator(
     value   => $global_concurrent_compiles,
   }
 
+<<<<<<< HEAD
   pe_hocon_setting { "${container}.orchestrator.task-concurrency":
     ensure  => $task_concurrency_ensure,
     path    => "${confdir}/orchestrator.conf",
@@ -240,22 +310,40 @@ define puppet_enterprise::trapperkeeper::orchestrator(
   }
 
   pe_hocon_setting { "${container}.orchestrator.database.subname":
+=======
+  pe_hocon_setting { "${container}.orchestrator.job-prune-threshold":
+    ensure  => $job_prune_threshold_ensure,
+    path    => "${confdir}/orchestrator.conf",
+    setting => 'orchestrator.job-prune-threshold',
+    value   => $job_prune_threshold,
+  }
+
+  pe_hocon_setting { "${container}.orchestrator.database.subname":
+    ensure  => present,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     path    => "${confdir}/orchestrator.conf",
     setting => 'orchestrator.database.subname',
     value   => "//${database_host}:${database_port}/${database_name}${database_properties}",
   }
 
   pe_hocon_setting { "${container}.orchestrator.database.user":
+<<<<<<< HEAD
+=======
+    ensure  => present,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     path    => "${confdir}/orchestrator.conf",
     setting => 'orchestrator.database.user',
     value   => $database_user,
   }
+<<<<<<< HEAD
   pe_hocon_setting { "${container}.orchestrator.database.migration-user":
     ensure  => present,
     path    => "${confdir}/orchestrator.conf",
     setting => 'orchestrator.database.migration-user',
     value   => $database_migration_user,
   }
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
   if !pe_empty($database_password) {
     pe_hocon_setting { "${container}.orchestrator.database.password":
@@ -263,6 +351,7 @@ define puppet_enterprise::trapperkeeper::orchestrator(
       setting => 'orchestrator.database.password',
       value   => $database_password,
     }
+<<<<<<< HEAD
     pe_hocon_setting { "${container}.orchestrator.database.migration-password":
       path    => "${confdir}/orchestrator.conf",
       setting => 'orchestrator.database.migration-password',
@@ -322,15 +411,44 @@ define puppet_enterprise::trapperkeeper::orchestrator(
   }
 
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:orchestrator jetty9-service" :
+=======
+  }
+
+  puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:orchestrator orchestrator-service" :
+    container => $container,
+    namespace => 'puppetlabs.orchestrator.service',
+    service   => 'orchestrator-service',
+  }
+
+  puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:orchestrator status-service" :
+    container => $container,
+    namespace => 'puppetlabs.trapperkeeper.services.status.status-service',
+    service   => 'status-service',
+  }
+
+  puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:orchestrator metrics-service" :
+    container => $container,
+    namespace => 'puppetlabs.trapperkeeper.services.metrics.metrics-service',
+    service   => 'metrics-service',
+  }
+
+  puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:orchestrator jetty9-service" :
+    container => $container,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     namespace => 'puppetlabs.trapperkeeper.services.webserver.jetty9-service',
     service   => 'jetty9-service',
   }
 
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:orchestrator remote-rbac-consumer-service" :
+<<<<<<< HEAD
+=======
+    container => $container,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     namespace => 'puppetlabs.rbac-client.services.rbac',
     service   => 'remote-rbac-consumer-service',
   }
 
+<<<<<<< HEAD
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:orchestrator remote-activity-reporter" :
     container => $container,
     namespace => 'puppetlabs.rbac-client.services.activity',
@@ -341,4 +459,6 @@ define puppet_enterprise::trapperkeeper::orchestrator(
     namespace => 'puppetlabs.services.jruby-pool-manager.jruby-pool-manager-service',
     service   => 'jruby-pool-manager-service'
   }
+=======
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 }

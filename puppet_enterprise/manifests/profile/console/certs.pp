@@ -6,13 +6,18 @@
 #        CA that is in Puppet's ssl dir.
 # @param hostcrl [String] Path to certificate revocation list file.
 class puppet_enterprise::profile::console::certs(
+<<<<<<< HEAD
   $certname    = $facts['clientcert'],
+=======
+  $certname    = $::clientcert,
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   $localcacert = $puppet_enterprise::params::localcacert,
   $hostcrl     = $puppet_enterprise::params::hostcrl,
 ) inherits puppet_enterprise::params {
   $console_server_certname = $certname
   $console_services_ssl_dir = $puppet_enterprise::console_services_ssl_dir
 
+<<<<<<< HEAD
   puppet_enterprise::certs { 'pe-console-services::server_cert' :
     certname  => $console_server_certname,
     container => 'console-services',
@@ -20,6 +25,37 @@ class puppet_enterprise::profile::console::certs(
     append_ca => false,
     before    => File[ '/etc/puppetlabs/console-services/conf.d/webserver.conf' ],
     make_pk8_cert => true,
+=======
+  file { $console_services_ssl_dir :
+    ensure => directory,
+    mode   => '0600',
+    owner  => 'pe-console-services',
+    group  => 'pe-console-services',
+    before => Puppet_enterprise::Certs[ 'pe-console-services::server_cert' ],
+  }
+  puppet_enterprise::certs { 'pe-console-services::server_cert' :
+    certname  => $console_server_certname,
+    owner     => 'pe-console-services',
+    group     => 'pe-console-services',
+    cert_dir  => $console_services_ssl_dir,
+    append_ca => false,
+    before    => File[ '/etc/puppetlabs/console-services/conf.d/webserver.conf' ],
+    notify    => Service['pe-console-services'],
+  }
+
+  $cert_basename = "${console_services_ssl_dir}/${console_server_certname}"
+  $client_pk8_key  = "${cert_basename}.private_key.pk8"
+  $client_pem_key  = "${cert_basename}.private_key.pem"
+  $client_cert     = "${cert_basename}.cert.pem"
+
+  puppet_enterprise::certs::pk8_cert { $client_pk8_key:
+    pem_file => $client_pem_key,
+    owner    => 'pe-console-services',
+    group    => 'pe-console-services',
+    mode     => '0400',
+    notify   => Service['pe-console-services'],
+    require  => File[$console_services_ssl_dir],
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
 }

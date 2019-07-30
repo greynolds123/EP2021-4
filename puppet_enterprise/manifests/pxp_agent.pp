@@ -1,5 +1,6 @@
 # Internal class for Puppet Enterprise to manage pxp-agent
 #
+<<<<<<< HEAD
 # @param broker_ws_uri Variant[String, Array[String]] The websocket uri of the broker
 #        endpoint, or array of uris to try. Should always be an array when used by pe
 #        module code. Uris must begin with 'ws://' or 'wss://'.
@@ -98,6 +99,26 @@ class puppet_enterprise::pxp_agent(
                                  'loglevel'    => $pxp_loglevel,
                                })
 
+=======
+# @param broker_ws_uri [String] The websocket uri of the broker endpoint.
+# @param ssl_key [String] The path to the private key used to connect to the pcp-broker.
+# @param ssl_cert [String] The path to the certificate used to connect to the pcp-broker.
+# @param ssl_ca_cert [String] The path to the local CA cert used to issue the SSL certs.
+class puppet_enterprise::pxp_agent(
+  $broker_ws_uri,
+  String $pxp_loglevel = 'info',
+  Boolean $enabled = true,
+) inherits puppet_enterprise::params {
+
+  $pxp_agent_config = {
+    'broker-ws-uri' => $broker_ws_uri,
+    'ssl-key'       => "${puppet_enterprise::params::ssl_dir}/private_keys/${::clientcert}.pem",
+    'ssl-cert'      => "${puppet_enterprise::params::ssl_dir}/certs/${::clientcert}.pem",
+    'ssl-ca-cert'   => $puppet_enterprise::params::localcacert,
+    'loglevel'      => $pxp_loglevel,
+  }
+
+>>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   # Manage the pxp-agent configuration
   # Template uses:
   # - $pxp_agent_config
