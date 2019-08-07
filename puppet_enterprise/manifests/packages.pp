@@ -5,19 +5,15 @@
 # where each profile could want to install the same package, e.g.
 # pe-java, causing a compilation error.
 #
-<<<<<<< HEAD
 # @param installing [String] Defaults to false. Set true by the installer to bypass
 #   modifying the local repository configuration.
 #
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 # === Examples
 #
 # include puppet_enterprise::packages
 #
 # Package <| tag == 'master' |>
 #
-<<<<<<< HEAD
 class puppet_enterprise::packages(
   Boolean $installing = false,
 ){
@@ -52,42 +48,23 @@ class puppet_enterprise::packages(
   }
 
   @package { $puppet_enterprise::params::postgresql_pglogical_package_name:
-=======
-class puppet_enterprise::packages{
-  include puppet_enterprise::params
-
-  Package {
-    ensure => latest,
-    *      => $puppet_enterprise::params::package_options,
-  }
-
-  @package { 'pe-postgresql-pglogical':
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     tag => [
       'pe-psql-pglogical',
     ],
   }
 
-<<<<<<< HEAD
   @package { $puppet_enterprise::params::postgresql_pgrepack_package_name:
     tag => [
       'pe-database-extensions',
     ],
   }
 
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   @package { 'pe-java':
     tag => [
       'pe-master-packages',
       'pe-puppetdb-packages',
-<<<<<<< HEAD
       'pe-console-packages',
       'pe-razor-packages',
-=======
-      'pe-activemq-packages',
-      'pe-console-packages'
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     ],
   }
 
@@ -105,50 +82,34 @@ class puppet_enterprise::packages{
 
   @package { [
     'pe-license',
-<<<<<<< HEAD
     'pe-puppetdb-termini',
     'pe-console-services-termini',
     'pe-puppetserver',
     'pe-modules',
     'pe-tasks',
     'pe-backup-tools',
-=======
-    'pe-puppet-license-cli',
-    'pe-puppetdb-termini',
-    'pe-console-services-termini',
-    'pe-puppetserver',
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   ]:
     tag => 'pe-master-packages',
   }
 
-<<<<<<< HEAD
   @package { 'pe-installer':
     tag => 'pe-installer-packages'
   }
 
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   @package { 'pe-orchestration-services':
     tag => 'pe-orchestrator-packages',
   }
 
-<<<<<<< HEAD
   @package { 'pe-bolt-server':
     tag => 'pe-bolt-server-packages',
   }
 
   @package { 'pe-ace-server':
     tag => 'pe-ace-server-packages',
-=======
-  @package { 'pe-activemq':
-    tag => 'pe-activemq-packages',
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   @package { 'pe-puppet-enterprise-release':
     tag => [
-<<<<<<< HEAD
       'pe-console-packages',
       'pe-master-packages',
       'pe-puppetdb-packages',
@@ -162,12 +123,4 @@ class puppet_enterprise::packages{
   ]:
     tag => 'pe-razor-packages'
   }
-=======
-      'pe-activemq-packages',
-      'pe-console-packages',
-      'pe-master-packages',
-      'pe-puppetdb-packages',
-    ],
-  }
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 }

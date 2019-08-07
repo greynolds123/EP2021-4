@@ -32,7 +32,6 @@ Checklist (and a short version for the impatient)
       feature you are adding.
 
     - Make sure the test suites passes after your commit:
-<<<<<<< HEAD
 
       ```
         bundle install
@@ -42,9 +41,6 @@ Checklist (and a short version for the impatient)
       ```
 
       More information on [testing](#testing) below
-=======
-      `bundle exec rake spec` More information on [testing](#Testing) below
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
     - When introducing a new feature, make sure it is properly
       documented in the README.md
@@ -144,7 +140,6 @@ Please make sure you have [bundler installed](http://bundler.io/#getting-started
 on your system, then use it to install all dependencies needed for this project,
 by running
 
-<<<<<<< HEAD
 Additionally, because Puppet has some platform-specific Gem dependencies, 
 you should configure Bundler to fetch them.
 
@@ -153,8 +148,6 @@ you should configure Bundler to fetch them.
 ```
 
 
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 ```shell
 % bundle install
 Fetching gem metadata from https://rubygems.org/........
@@ -184,22 +177,18 @@ With all dependencies in place and up-to-date we can now run the tests:
 % bundle exec rake spec
 ```
 
-<<<<<<< HEAD
 You can run the specs faster using the parallel_tests gem:
 
 ```shell
 % bundle exec rake parallel_spec
 ```
 
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 This will execute all the [rspec tests](http://rspec-puppet.com/) tests
 under [spec/defines](./spec/defines), [spec/classes](./spec/classes),
 and so on. rspec tests may have the same kind of dependencies as the
 module they are testing. While the module defines in its [Modulefile](./Modulefile),
 rspec tests define them in [.fixtures.yml](./fixtures.yml).
 
-<<<<<<< HEAD
 Running Individual Spec Files or tests
 --------------------------------------
 
@@ -219,8 +208,6 @@ You can even run an individual test by adding a line number:
 bundle exec rspec <path to spec/folder>:<line_number_of_test>
 ```
 
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 If you have commit access to the repository
 ===========================================
 

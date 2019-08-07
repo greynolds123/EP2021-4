@@ -32,13 +32,8 @@ Puppet::Type.newtype(:pe_anchor) do
   This allows the end user of the ntp module to establish require and before
   relationships with Class['ntp']:
 
-<<<<<<< HEAD
       class { 'ntp': } -> class { 'foo': }
       class { 'foo': } -> class { 'ntp': }
-=======
-      class { 'ntp': } -> class { 'mcollective': }
-      class { 'mcollective': } -> class { 'ntp': }
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
   ENDOFDESC
 

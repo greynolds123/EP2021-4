@@ -1,7 +1,6 @@
 # Internal class for Puppet Enterprise to configure the Puppet Server
 #
 # @param metrics_webservice_enabled [Boolean] Toggle whether to enable the /metrics endpoint.
-<<<<<<< HEAD
 # @param metrics_graphite_enabled [Boolean] Toggle whether to write metrics to Graphite.
 # @param metrics_puppetserver_metrics_allowed [Array] A whitelist of metric names to be sent to the enabled reporters.
 # @param metrics_jmx_enabled [Boolean] Toggle whether to run with JMX (Java Management Extensions) enabled.
@@ -44,29 +43,6 @@
 # @param jruby_puppet_max_queued_requests [Optional[Integer]] Maximum number of queued jruby (agent) requests before responding with a 503 and retry-after headers
 # @param jruby_puppet_max_retry_delay [Optional[Integer]] Maximum value for a random delay (in seconds) to give to agents when max-queued-requests has been exceeded so they can retry in that amount of time
 # @param reserved_code_cache [Optional[Pattern[/^\d+[kmgKMG]$/]] How much java codecache to allow puppetserver to use (when a 2g heap is used, this defaults to 512m in params.pp)
-=======
-# @param metrics_server_id [String] What ID to tag the metrics with
-# @param metrics_jmx_enabled [Boolean] Toggle whether to run with JMX (Java Management Extensions) enabled.
-# @param metrics_graphite_enabled [Boolean] Toggle whether to write metrics to Graphite.
-# @param metrics_puppetserver_metrics_allowed [Array] A whitelist of metric names to be sent to the enabled reporters.
-# @param profiler_enabled [Boolean] Whether to run the Java profiler.
-# @param file_sync_puppet_code_repo [String] The id of the file sync repo that contains the puppet code.
-# @param jruby_max_active_instances [Integer] The maximum number of jruby instances that the Puppet Server will spawn to server Agent traffic.
-# @param jruby_max_requests_per_instance [Integer] The maximum number of requests a single JRuby instance will handle before it is flushed from memory and refreshed.
-# @param jruby_borrow_timeout [Integer] Set the timeout when attempting to borrow an instance from the JRuby pool in milliseconds. Defaults is 1200000.
-# @param jruby_environment_class_cache_enabled [Boolean] Whether or not Puppet Server should enable the use of caching for requests made to the environment_classes endpoint.
-# @param certname [String] The cert name the Server will use.
-# @param localcacert [String] The path to the local CA cert used for generating SSL certs.
-# @param puppet_admin_certs [Array] Certificates to add to the whitelist on the master.
-# @param static_files [Hash] Paths to static files to serve up on the master. Keys are the URLs the files will be found at, values are the paths to the folders to be served.
-# @param java_args [Hash] Key-value pairs describing the java arguments to be passed when starting the master
-# @param tk_jetty_max_threads [Integer] Maxiumum number of Jerry threads that should be started
-# @param ssl_protocols [Array] List of acceptable protocols for making HTTP requests
-# @param cipher_suites [Array] A list of acceptable cipher suites for making HTTP requests
-# @param idle_timeout_milliseconds [Integer] The amount of time an outbound HTTP connection will wait for data to be available before closing the socket
-# @param connect_timeout_milliseconds [Integer] The amount of time an outbound HTTP connection will wait to connect before giving up
-# @param code_manager_auto_configure [Boolean] Configure code-manager based on r10k params
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 class puppet_enterprise::master::puppetserver(
   $metrics_graphite_enabled,
   $metrics_puppetserver_metrics_allowed,
@@ -74,20 +50,13 @@ class puppet_enterprise::master::puppetserver(
   $metrics_server_id,
   $profiler_enabled,
   String $puppetserver_jruby_puppet_master_code_dir,
-<<<<<<< HEAD
   Boolean  $metrics_webservice_enabled                     = true,
   Optional[String] $file_sync_puppet_code_repo             = undef,
   $certname                                                = $facts['clientcert'],
-=======
-  Optional[Boolean] $metrics_webservice_enabled            = undef,
-  String $file_sync_puppet_code_repo                       = 'puppet-code',
-  $certname                                                = $::clientcert,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   Optional[Array[String]] $cipher_suites                   = undef,
   Optional[Integer] $connect_timeout_milliseconds          = undef,
   Optional[Integer] $idle_timeout_milliseconds             = undef,
   Hash $java_args                                          = $puppet_enterprise::params::puppetserver_java_args,
-<<<<<<< HEAD
   Boolean $status_logging_enabled                          = false,
   Integer $status_logging_interval_minutes                 = 30,
   Optional[Boolean] $enable_gc_logging                     = undef,
@@ -105,20 +74,6 @@ class puppet_enterprise::master::puppetserver(
   Optional[Integer] $tk_jetty_max_threads                  = undef,
   $puppetserver_webserver_ssl_host                         = '0.0.0.0',
   $puppetserver_webserver_ssl_port                         = $puppet_enterprise::puppet_master_port,
-=======
-  Optional[Integer] $jruby_borrow_timeout                  = undef,
-  Optional[Integer] $jruby_max_active_instances            = undef,
-  Integer $jruby_max_requests_per_instance                 = 10000,
-  Optional[Boolean] $jruby_environment_class_cache_enabled = undef,
-  $localcacert                                             = $puppet_enterprise::params::localcacert,
-  Array[String] $base_puppet_admin_certs                   = [$::clientcert],
-  Array[String] $puppet_admin_certs                        = [],
-  Optional[Array[String]] $ssl_protocols                   = undef,
-  Hash $static_files                                       = {},
-  Optional[Integer] $tk_jetty_max_threads                  = undef,
-  $puppetserver_webserver_ssl_host                         = '0.0.0.0',
-  $puppetserver_webserver_ssl_port                         = '8140',
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   $puppetserver_jruby_puppet_gem_home                      = '/opt/puppetlabs/server/data/puppetserver/jruby-gems',
   $puppetserver_jruby_puppet_master_conf_dir               = '/etc/puppetlabs/puppet',
   $puppetserver_jruby_puppet_master_var_dir                = '/opt/puppetlabs/server/data/puppetserver',
@@ -126,7 +81,6 @@ class puppet_enterprise::master::puppetserver(
   $puppetserver_jruby_puppet_master_log_dir                = '/var/log/puppetlabs/puppetserver',
   Array[String] $puppetserver_jruby_puppet_ruby_load_path  = ['/opt/puppetlabs/puppet/lib/ruby/vendor_ruby', '/opt/puppetlabs/puppet/cache/lib'],
   $service_stop_retries                                    = 60,
-<<<<<<< HEAD
   $start_timeout                                           = 300,
   Optional[Boolean] $code_manager_auto_configure           = undef,
   Optional[String]  $djava_io_tmpdir                       = undef,
@@ -136,12 +90,6 @@ class puppet_enterprise::master::puppetserver(
   Optional[Pattern[/^\d+[kmgKMG]$/]] $reserved_code_cache  = $puppet_enterprise::params::puppetserver_code_cache,
 ) inherits puppet_enterprise::params {
   include puppet_enterprise::packages
-=======
-  $start_timeout                                           = 120,
-  Optional[Boolean] $code_manager_auto_configure           = undef,
-  Optional[String]  $djava_io_tmpdir                       = undef,
-) inherits puppet_enterprise::params {
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
   pe_validate_single_integer($service_stop_retries)
   pe_validate_single_integer($start_timeout)
@@ -149,40 +97,28 @@ class puppet_enterprise::master::puppetserver(
   $container = 'puppetserver'
   $_puppet_admin_certs = $base_puppet_admin_certs + $puppet_admin_certs
 
-<<<<<<< HEAD
   if ($file_sync_puppet_code_repo != undef) {
     warning('Deprecation: $puppet_enterprise::master::puppetserver::file_sync_puppet_code_repo is deprecated and will be ignored')
   }
 
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   File {
     ensure => present,
     owner  => 'pe-puppet',
     group  => 'pe-puppet',
     mode   => '0640',
-<<<<<<< HEAD
     require => Package['pe-puppetserver'],
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   Pe_concat {
     owner  => 'pe-puppet',
     group  => 'pe-puppet',
     mode   => '0640',
-<<<<<<< HEAD
     require => Package['pe-puppetserver'],
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   Pe_hocon_setting {
     ensure => present,
-<<<<<<< HEAD
     require => Package['pe-puppetserver'],
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     notify => Service["pe-${container}"],
   }
 
@@ -198,7 +134,6 @@ class puppet_enterprise::master::puppetserver(
   }
 
   puppet_enterprise::trapperkeeper::bootstrap_cfg { 'pe-master-service' :
-<<<<<<< HEAD
     namespace => 'puppetlabs.enterprise.services.master.pe-master-service',
   }
 
@@ -212,11 +147,6 @@ class puppet_enterprise::master::puppetserver(
     namespace => 'puppetlabs.services.master.master-service',
   }
 
-=======
-    namespace => 'puppetlabs.enterprise.services.master.master-service',
-  }
-
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   puppet_enterprise::trapperkeeper::bootstrap_cfg { 'request-handler-service' :
     namespace => 'puppetlabs.services.request-handler.request-handler-service',
   }
@@ -228,7 +158,6 @@ class puppet_enterprise::master::puppetserver(
     namespace => 'puppetlabs.services.jruby-pool-manager.jruby-pool-manager-service',
   }
 
-<<<<<<< HEAD
   puppet_enterprise::trapperkeeper::bootstrap_cfg { 'metrics-service' :
     namespace => 'puppetlabs.trapperkeeper.services.metrics.metrics-service',
   }
@@ -247,16 +176,6 @@ class puppet_enterprise::master::puppetserver(
     namespace => 'puppetlabs.enterprise.services.puppet-profiler.puppet-profiler-service',
   }
 
-=======
-  puppet_enterprise::trapperkeeper::bootstrap_cfg { 'metrics-puppet-profiler-service' :
-    namespace => 'puppetlabs.enterprise.services.puppet-profiler.puppet-profiler-service',
-  }
-
-  puppet_enterprise::trapperkeeper::bootstrap_cfg { 'pe-metrics-service' :
-    namespace => 'puppetlabs.enterprise.services.metrics.pe-metrics-service',
-  }
-
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   puppet_enterprise::trapperkeeper::bootstrap_cfg { 'puppet-server-config-service' :
     namespace => 'puppetlabs.services.config.puppet-server-config-service',
   }
@@ -273,7 +192,6 @@ class puppet_enterprise::master::puppetserver(
     namespace => 'puppetlabs.services.legacy-routes.legacy-routes-service',
   }
 
-<<<<<<< HEAD
   # The pe-legacy-routes-service was moved to OSS puppetserver in 2017.3 and
   # renamed to the legacy-routes-service
   puppet_enterprise::trapperkeeper::bootstrap_cfg { 'pe-legacy-routes-service' :
@@ -281,8 +199,6 @@ class puppet_enterprise::master::puppetserver(
     namespace => 'puppetlabs.enterprise.services.legacy-routes.pe-legacy-routes-service',
   }
 
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   puppet_enterprise::trapperkeeper::bootstrap_cfg { 'status-service' :
     namespace => 'puppetlabs.trapperkeeper.services.status.status-service',
   }
@@ -299,7 +215,6 @@ class puppet_enterprise::master::puppetserver(
     namespace => 'puppetlabs.enterprise.services.jruby.pe-jruby-metrics-service',
   }
 
-<<<<<<< HEAD
   puppet_enterprise::trapperkeeper::bootstrap_cfg { 'jruby-metrics-service' :
     namespace => 'puppetlabs.services.jruby.jruby-metrics-service',
   }
@@ -317,12 +232,6 @@ class puppet_enterprise::master::puppetserver(
     namespace => 'puppetlabs.rbac-client.services.rbac',
   }
 
-=======
-  puppet_enterprise::trapperkeeper::bootstrap_cfg { 'analytics-service' :
-    namespace => 'puppetlabs.enterprise.services.analytics.analytics-service',
-  }
-
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   # Uses
   #   $certname
   #   $localcacert
@@ -383,7 +292,6 @@ class puppet_enterprise::master::puppetserver(
     setting => 'webserver.static-content',
   }
 
-<<<<<<< HEAD
   puppet_enterprise::trapperkeeper::webserver_settings { 'puppet-server' :
     container          => $container,
     ssl_listen_address => $puppetserver_webserver_ssl_host,
@@ -393,65 +301,6 @@ class puppet_enterprise::master::puppetserver(
     tk_jetty_max_threads => $tk_jetty_max_threads,
     default_server       => true,
     ssl_protocols        => $ssl_protocols,
-=======
-  pe_hocon_setting{ 'webserver.puppet-server.default-server':
-    path    => "${confdir}/conf.d/webserver.conf",
-    setting => 'webserver.puppet-server.default-server',
-    value   => true,
-  }
-  pe_hocon_setting{ 'webserver.puppet-server.client-auth':
-    path    => "${confdir}/conf.d/webserver.conf",
-    setting => 'webserver.puppet-server.client-auth',
-    value   => 'want',
-  }
-  pe_hocon_setting{ 'webserver.puppet-server.ssl-host':
-    path    => "${confdir}/conf.d/webserver.conf",
-    setting => 'webserver.puppet-server.ssl-host',
-    value   => $puppetserver_webserver_ssl_host,
-  }
-  pe_hocon_setting{ 'webserver.puppet-server.ssl-port':
-    path    => "${confdir}/conf.d/webserver.conf",
-    setting => 'webserver.puppet-server.ssl-port',
-    value   => $puppetserver_webserver_ssl_port,
-  }
-  pe_hocon_setting{ 'webserver.puppet-server.ssl-cert':
-    path    => "${confdir}/conf.d/webserver.conf",
-    setting => 'webserver.puppet-server.ssl-cert',
-    value   => "/etc/puppetlabs/puppet/ssl/certs/${certname}.pem",
-  }
-  pe_hocon_setting{ 'webserver.puppet-server.ssl-key':
-    path    => "${confdir}/conf.d/webserver.conf",
-    setting => 'webserver.puppet-server.ssl-key',
-    value   => "/etc/puppetlabs/puppet/ssl/private_keys/${certname}.pem",
-  }
-  pe_hocon_setting{ 'webserver.puppet-server.ssl-ca-cert':
-    path    => "${confdir}/conf.d/webserver.conf",
-    setting => 'webserver.puppet-server.ssl-ca-cert',
-    value   => $localcacert,
-  }
-  pe_hocon_setting{ 'webserver.puppet-server.ssl-crl-path':
-    path    => "${confdir}/conf.d/webserver.conf",
-    setting => 'webserver.puppet-server.ssl-crl-path',
-    value   => $hostcrl,
-  }
-  pe_hocon_setting{ 'webserver.puppet-server.access-log-config':
-    path    => "${confdir}/conf.d/webserver.conf",
-    setting => 'webserver.puppet-server.access-log-config',
-    value   => "${confdir}/request-logging.xml",
-  }
-
-  if $tk_jetty_max_threads {
-    $tk_jetty_max_threads_ensure = present
-  } else {
-    $tk_jetty_max_threads_ensure = absent
-  }
-
-  pe_hocon_setting{ 'webserver.puppet-server.max-threads':
-    ensure  => $tk_jetty_max_threads_ensure,
-    path    => "${confdir}/conf.d/webserver.conf",
-    setting => 'webserver.puppet-server.max-threads',
-    value   => $tk_jetty_max_threads,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   if $static_files and !pe_empty($static_files) {
@@ -472,7 +321,6 @@ class puppet_enterprise::master::puppetserver(
     ensure => present,
   }
 
-<<<<<<< HEAD
   pe_hocon_setting { 'web-router-service/master-service':
     path    => "${confdir}/conf.d/web-routes.conf",
     setting => 'web-router-service."puppetlabs.services.master.master-service/master-service"',
@@ -491,24 +339,13 @@ class puppet_enterprise::master::puppetserver(
     ensure  => absent,
     path    => "${confdir}/conf.d/web-routes.conf",
     setting => 'web-router-service."puppetlabs.enterprise.services.legacy-routes.pe-legacy-routes-service/pe-legacy-routes-service"',
-=======
-  pe_hocon_setting { 'web-router-service/pe-master-service':
-    path    => "${confdir}/conf.d/web-routes.conf",
-    setting => 'web-router-service."puppetlabs.enterprise.services.master.master-service/pe-master-service"',
-    value   => '/puppet',
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
   pe_hocon_setting { 'web-router-service/legacy-routes-service':
     path    => "${confdir}/conf.d/web-routes.conf",
     setting => 'web-router-service."puppetlabs.services.legacy-routes.legacy-routes-service/legacy-routes-service"',
-<<<<<<< HEAD
     value   => ''
   }
 
-=======
-    value   => '',
-  }
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   pe_hocon_setting { 'web-router-service/certificate-authority-service':
     path    => "${confdir}/conf.d/web-routes.conf",
     setting => 'web-router-service."puppetlabs.services.ca.certificate-authority-service/certificate-authority-service"',
@@ -530,16 +367,6 @@ class puppet_enterprise::master::puppetserver(
     value   => '/status',
   }
 
-<<<<<<< HEAD
-=======
-  # Puppetserver 2.x does not use this route in PE
-  pe_hocon_setting { 'web-router-service/remove-master-service':
-    ensure  => absent,
-    path    => "${confdir}/conf.d/web-routes.conf",
-    setting => 'web-router-service."puppetlabs.services.master.master-service/master-service"',
-  }
-
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   file { "${confdir}/conf.d/pe-puppet-server.conf" :
     ensure => present,
   }
@@ -586,7 +413,6 @@ class puppet_enterprise::master::puppetserver(
     setting => 'jruby-puppet.master-log-dir',
     value   => $puppetserver_jruby_puppet_master_log_dir,
   }
-<<<<<<< HEAD
   pe_hocon_setting { 'jruby-puppet.gem-path':
     ensure  => present,
     path    => "${confdir}/conf.d/pe-puppet-server.conf",
@@ -597,8 +423,6 @@ class puppet_enterprise::master::puppetserver(
       '/opt/puppetlabs/puppet/lib/ruby/vendor_gems',
     ]
   }
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
   if $jruby_borrow_timeout {
     $jruby_borrow_timeout_ensure = present
@@ -639,7 +463,6 @@ class puppet_enterprise::master::puppetserver(
     value   => false,
   }
 
-<<<<<<< HEAD
   if ($jruby_max_active_instances and $jruby_puppet_max_queued_requests and
     ($jruby_max_active_instances + $jruby_puppet_max_queued_requests > 150)) {
     warning("Setting jruby_max_active_instances and jruby_puppet_max_queued_requests to more than 150 combined is not
@@ -677,18 +500,6 @@ class puppet_enterprise::master::puppetserver(
     ensure    => $metrics_webservice_webrouting_ensure,
     namespace => 'puppetlabs.trapperkeeper.services.metrics.metrics-service',
     service   => 'metrics-webservice',
-=======
-  if $metrics_webservice_enabled == true {
-    $metrics_webservice_webrouting_ensure = present
-
-    puppet_enterprise::trapperkeeper::bootstrap_cfg { "metrics-webservice" :
-      namespace => 'puppetlabs.trapperkeeper.services.metrics.metrics-service',
-      service   => 'metrics-webservice',
-    }
-
-  } else {
-    $metrics_webservice_webrouting_ensure = absent
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   pe_hocon_setting { 'metrics-service/metrics-webservice' :
@@ -727,7 +538,6 @@ class puppet_enterprise::master::puppetserver(
   pe_hocon_setting { 'pe-puppetserver.puppet-code-repo':
     path    => "${confdir}/conf.d/pe-puppet-server.conf",
     setting => 'pe-puppetserver.puppet-code-repo',
-<<<<<<< HEAD
     value   => 'puppet-code',
   }
 
@@ -738,9 +548,6 @@ class puppet_enterprise::master::puppetserver(
       type    => 'array',
       value   => $pre_commit_hook_commands,
     }
-=======
-    value   => $file_sync_puppet_code_repo,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   pe_hocon_setting { 'puppet-admin':
@@ -772,19 +579,8 @@ class puppet_enterprise::master::puppetserver(
     path                 => "${confdir}/conf.d/auth.conf",
   }
 
-<<<<<<< HEAD
   pe_hocon_setting { 'http-client.ssl-protocols':
     ensure  => present,
-=======
-  if $ssl_protocols and !pe_empty($ssl_protocols) {
-    $ssl_protocols_ensure = present
-  } else {
-    $ssl_protocols_ensure = absent
-  }
-
-  pe_hocon_setting { 'http-client.ssl-protocols':
-    ensure  => $ssl_protocols_ensure,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     path    => "${confdir}/conf.d/pe-puppet-server.conf",
     setting => 'http-client.ssl-protocols',
     type    => 'array',
@@ -831,7 +627,6 @@ class puppet_enterprise::master::puppetserver(
     value   => $connect_timeout_milliseconds,
   }
 
-<<<<<<< HEAD
   puppet_enterprise::trapperkeeper::global_settings { $container :
     service_user  => 'pe-puppet',
     service_group => 'pe-puppet',
@@ -839,39 +634,6 @@ class puppet_enterprise::master::puppetserver(
     ssl_cert      => "/etc/puppetlabs/puppet/ssl/certs/${certname}.pem",
     ssl_key       => "/etc/puppetlabs/puppet/ssl/private_keys/${certname}.pem",
     localcacert   => $localcacert,
-=======
-  # Uses
-  #   $confdir
-  #   $certname
-  #   $localcacert
-  file { "${confdir}/conf.d/global.conf" :
-    ensure => present,
-  }
-  pe_hocon_setting { "${confdir}/conf.d/global.conf#global.logging-config":
-    path    => "${confdir}/conf.d/global.conf",
-    setting => 'global.logging-config',
-    value   => "${confdir}/logback.xml",
-  }
-  pe_hocon_setting { "${confdir}/conf.d/global.conf#global.hostname":
-    path    => "${confdir}/conf.d/global.conf",
-    setting => 'global.hostname',
-    value   => $certname,
-  }
-  pe_hocon_setting{ 'global.certs.ssl-cert':
-    path    => "${confdir}/conf.d/global.conf",
-    setting => 'global.certs.ssl-cert',
-    value   => "/etc/puppetlabs/puppet/ssl/certs/${certname}.pem",
-  }
-  pe_hocon_setting{ 'global.certs.ssl-key':
-    path    => "${confdir}/conf.d/global.conf",
-    setting => 'global.certs.ssl-key',
-    value   => "/etc/puppetlabs/puppet/ssl/private_keys/${certname}.pem",
-  }
-  pe_hocon_setting{ 'global.certs.ssl-ca-cert':
-    path    => "${confdir}/conf.d/global.conf",
-    setting => 'global.certs.ssl-ca-cert',
-    value   => $localcacert,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   # Uses
@@ -883,15 +645,9 @@ class puppet_enterprise::master::puppetserver(
     ensure => present,
   }
   pe_hocon_setting { 'metrics.enabled':
-<<<<<<< HEAD
     ensure => absent,
     path    => "${confdir}/conf.d/metrics.conf",
     setting => 'metrics.enabled',
-=======
-    path    => "${confdir}/conf.d/metrics.conf",
-    setting => 'metrics.enabled',
-    ensure => absent,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
   pe_hocon_setting { 'metrics.server-id':
     path    => "${confdir}/conf.d/metrics.conf",
@@ -904,7 +660,6 @@ class puppet_enterprise::master::puppetserver(
     setting => 'metrics.registries.puppetserver.reporters.jmx.enabled',
     value   => $metrics_jmx_enabled,
   }
-<<<<<<< HEAD
   # Enable or disable jmx metrics reporter for default domain, used by
   # pcp-broker
   pe_hocon_setting { 'metrics.registries.default.reporters.jmx.enabled':
@@ -912,8 +667,6 @@ class puppet_enterprise::master::puppetserver(
     setting => 'metrics.registries.default.reporters.jmx.enabled',
     value   => $metrics_jmx_enabled,
   }
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   # Enable or disable Graphite metrics reporter for puppetserver domain
   pe_hocon_setting { 'metrics.registries.puppetserver.reporters.graphite.enabled':
     path    => "${confdir}/conf.d/metrics.conf",
@@ -928,18 +681,11 @@ class puppet_enterprise::master::puppetserver(
   }
 
   pe_hocon_setting { 'metrics.registries.puppetserver.metrics-allowed':
-<<<<<<< HEAD
     ensure  => $metrics_puppetserver_metrics_allowed_ensure,
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     path    => "${confdir}/conf.d/metrics.conf",
     setting => 'metrics.registries.puppetserver.metrics-allowed',
     value   => $metrics_puppetserver_metrics_allowed,
     type    => 'array',
-<<<<<<< HEAD
-=======
-    ensure  => $metrics_puppetserver_metrics_allowed_ensure,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   ## Handle upgrade changes for metrics.conf
@@ -948,37 +694,21 @@ class puppet_enterprise::master::puppetserver(
 
   # Reporter enabling/disabling is under metrics.registries.<domain>.reporters now
   pe_hocon_setting { 'metrics.reporters.graphite.enabled':
-<<<<<<< HEAD
     ensure  => absent,
     path    => "${confdir}/conf.d/metrics.conf",
     setting => 'metrics.reporters.graphite.enabled',
-=======
-    path    => "${confdir}/conf.d/metrics.conf",
-    setting => 'metrics.reporters.graphite.enabled',
-    ensure  => absent,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   # There are no settings under metrics.reporters.jmx any more
   pe_hocon_setting { 'metrics.reporters.jmx':
-<<<<<<< HEAD
     ensure  => absent,
     path    => "${confdir}/conf.d/metrics.conf",
     setting => 'metrics.reporters.jmx',
-=======
-    path    => "${confdir}/conf.d/metrics.conf",
-    setting => 'metrics.reporters.jmx',
-    ensure  => absent,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
   ## End Metrics upgrade section
 
   # Configure connections to console services
-<<<<<<< HEAD
   $console_url = "https://${$::puppet_enterprise::console_host}:${$::puppet_enterprise::api_port}"
-=======
-  $console_url = "https://${$::puppet_enterprise::console_host}:${console_services_api_ssl_listen_port}"
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
   file { "${confdir}/conf.d/rbac-consumer.conf" :
     ensure => present,
@@ -986,11 +716,7 @@ class puppet_enterprise::master::puppetserver(
   pe_hocon_setting { 'rbac-consumer.api-url':
     path    => "${confdir}/conf.d/rbac-consumer.conf",
     setting => 'rbac-consumer.api-url',
-<<<<<<< HEAD
     value   => "${console_url}${puppet_enterprise::params::rbac_url_prefix}",
-=======
-    value   => "${console_url}${rbac_url_prefix}",
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   file { "${confdir}/conf.d/activity-consumer.conf" :
@@ -1000,7 +726,6 @@ class puppet_enterprise::master::puppetserver(
   pe_hocon_setting { 'activity-consumer.api-url':
     path    => "${confdir}/conf.d/activity-consumer.conf",
     setting => 'activity-consumer.api-url',
-<<<<<<< HEAD
     value   => "${console_url}${puppet_enterprise::params::activity_url_prefix}",
   }
 
@@ -1075,87 +800,6 @@ class puppet_enterprise::master::puppetserver(
         'remove files',
       ],
       onlyif    => 'match files size > 0',
-=======
-    value   => "${console_url}${activity_url_prefix}",
-  }
-
-  $puppetserver_initconf = "${puppet_enterprise::params::defaults_dir}/pe-puppetserver"
-
-  $tmp_mount_options = $::mountpoints.dig( '/tmp', 'options' )
-  $tmp_is_noexec = pe_empty( $tmp_mount_options ) ? {
-    false   => !pe_empty( pe_grep( $tmp_mount_options , 'noexec' )),
-    default => false,
-  }
-
-  $_djava_io_tmpdir = pe_pick($djava_io_tmpdir, '/opt/puppetlabs/server/apps/puppetserver/tmp')
-
-  $_java_args = $tmp_is_noexec ? {
-    true  => pe_merge($java_args, {'Djava.io.tmpdir=' => $_djava_io_tmpdir}),
-    false => pe_empty($djava_io_tmpdir) ? {
-        true  => $java_args,
-        false => pe_merge($java_args, {'Djava.io.tmpdir=' => $_djava_io_tmpdir}),
-      }
-  }
-
-  puppet_enterprise::trapperkeeper::java_args { $container :
-    java_args => $_java_args,
-  }
-
-  Pe_ini_setting {
-    ensure            => present,
-    path              => $puppetserver_initconf,
-    key_val_separator => '=',
-    section           => '',
-  }
-
-  pe_ini_setting { "${container} initconf java_bin":
-    setting => 'JAVA_BIN',
-    value   => '"/opt/puppetlabs/server/bin/java"',
-  }
-
-  pe_ini_setting { "${container} initconf user":
-    setting => 'USER',
-    value   => 'pe-puppet',
-  }
-
-  pe_ini_setting { "${container} initconf group":
-    setting => 'GROUP',
-    value   => 'pe-puppet',
-  }
-
-  pe_ini_setting { "${container} initconf install_dir":
-    setting => 'INSTALL_DIR',
-    value   => '"/opt/puppetlabs/server/apps/puppetserver"',
-  }
-
-  pe_ini_setting { "${container} initconf config":
-    setting => 'CONFIG',
-    value   => "\"${confdir}/conf.d\"",
-  }
-
-  pe_ini_setting { "${container} initconf bootstrap_config":
-    setting => 'BOOTSTRAP_CONFIG',
-    value   => "\"${confdir}/bootstrap.cfg\"",
-  }
-
-  pe_ini_setting { "${container} initconf service_stop_retries":
-    setting => 'SERVICE_STOP_RETRIES',
-    value   => $service_stop_retries,
-  }
-
-  pe_ini_setting { "${container} initconf start_timeout":
-    setting => 'START_TIMEOUT',
-    value   => $start_timeout,
-  }
-
-  # PE-10520 - invalid [files] section causes puppet run failure
-  if ! $::puppet_files_dir_present {
-    augeas { "fileserver.conf remove [files]":
-      changes   => [
-        "remove files",
-      ],
-      onlyif    => "match files size > 0",
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
       incl      => '/etc/puppetlabs/puppet/fileserver.conf',
       load_path => "${puppet_enterprise::puppet_share_dir}/augeas/lenses/dist",
       lens      => 'PuppetFileserver.lns',
@@ -1163,13 +807,5 @@ class puppet_enterprise::master::puppetserver(
     }
   }
 
-<<<<<<< HEAD
   puppet_enterprise::trapperkeeper::pe_service { $container : }
-=======
-  service { "pe-${container}":
-    ensure  => running,
-    enable  => true,
-    require => Package["pe-${container}"],
-  }
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 }

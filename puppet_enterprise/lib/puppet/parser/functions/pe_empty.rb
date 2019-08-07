@@ -11,7 +11,6 @@ Returns true if the variable is empty.
       "given (#{arguments.size} for 1)") if arguments.size < 1
 
     value = arguments[0]
-<<<<<<< HEAD
 
     unless value.is_a?(Array) || value.is_a?(Hash) || value.is_a?(String) || value.is_a?(Numeric)
       raise(Puppet::ParseError, 'pe_empty(): Requires either ' +
@@ -25,18 +24,6 @@ Returns true if the variable is empty.
 
       return result
     end
-=======
-    klass = value.class
-
-    unless [Array, Hash, String].include?(klass)
-      raise(Puppet::ParseError, 'pe_empty(): Requires either ' +
-        'array, hash or string to work with')
-    end
-
-    result = value.empty?
-
-    return result
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   end
 end
 

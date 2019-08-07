@@ -16,7 +16,6 @@ class puppet_enterprise::postgresql::client {
     package_name   => $puppet_enterprise::postgresql_client_package_name,
     bindir         => $puppet_enterprise::server_bin_dir,
   }
-<<<<<<< HEAD
   include puppet_enterprise::packages
   Package <| tag == 'pe-database-packages' |> {
     before +> [
@@ -30,6 +29,4 @@ class puppet_enterprise::postgresql::client {
       ],
     }
   }
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 }

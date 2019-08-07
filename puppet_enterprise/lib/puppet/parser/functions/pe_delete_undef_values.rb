@@ -28,16 +28,10 @@ Would return: ['A','',false]
     end
     result = args[0].dup
     if result.is_a?(Hash)
-<<<<<<< HEAD
       result.delete_if {|key, val| val.equal?(:undef) || val.nil?}
     elsif result.is_a?(Array)
       result.delete :undef
       result.delete nil
-=======
-      result.delete_if {|key, val| val.equal? :undef}
-    elsif result.is_a?(Array)
-      result.delete :undef
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     end
     result
   end

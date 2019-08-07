@@ -31,7 +31,6 @@ Puppet::Face.define(:node, '0.0.1') do
 
     when_rendering(:console) do |node_list|
       if node_list.length == 1
-<<<<<<< HEAD
         purged_msg = %Q|Node "#{node_list[0]}" was purged.|
       else
         purged_msg = %Q|Nodes #{node_list} were purged.|
@@ -48,19 +47,6 @@ To ensure this node can not check into any additional compile masters, run puppe
       On Windows, delete the `$confdir\\ssl` directory.
    2. On the agent node, run Puppet.
         MSG
-=======
-      <<-MSG
-Node "#{node_list[0]}" was purged. If you want to add this node back to your
- Puppet infrastructure, remove old certificates from the agent node first.
-        MSG
-
-      else
-      <<-MSG
-Nodes #{node_list} were purged. If you want to add these nodes back to your
- Puppet infrastructure, remove the old certificates from the agent node first.
-        MSG
-      end
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     end
   end
 end

@@ -1,10 +1,7 @@
 define puppet_enterprise::trapperkeeper::pcp_broker(
   $accept_consumers    = 2,
   $delivery_consumers  = 2,
-<<<<<<< HEAD
   $controller_uris     = [],
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   $container           = $title,
   $user                = "pe-${title}",
   $group               = "pe-${title}",
@@ -17,7 +14,6 @@ define puppet_enterprise::trapperkeeper::pcp_broker(
     owner  => $user,
     group  => $group,
     mode   => '0640',
-<<<<<<< HEAD
     notify => Service["pe-${container}"],
   }
 
@@ -63,41 +59,6 @@ define puppet_enterprise::trapperkeeper::pcp_broker(
   }
 
   pe_puppet_authorization::rule { 'pxp commands':
-=======
-  }
-
-  pe_hocon_setting { "${container}.pcp-broker.accept-consumers":
-    ensure  => present,
-    path    => "${confdir}/pcp-broker.conf",
-    setting => 'pcp-broker.accept-consumers',
-    value   => $accept_consumers,
-  }
-
-  pe_hocon_setting { "${container}.pcp-broker.delivery-consumers":
-    ensure  => present,
-    path    => "${confdir}/pcp-broker.conf",
-    setting => 'pcp-broker.delivery-consumers',
-    value   => $delivery_consumers,
-  }
-
-  file { "${confdir}/authorization.conf":
-    ensure => present,
-    owner  => $user,
-    group  => $group,
-    mode   => '0640',
-  }
-
-  $container_auth = "${confdir}/authorization.conf"
-  pe_hocon_setting { "${container}.authorization.version":
-    ensure  => present,
-    path    => $container_auth,
-    setting => 'authorization.version',
-    value   => 1,
-  }
-
-  pe_puppet_authorization::rule { 'pxp commands':
-    match_request_path         => '/pcp-broker/send',
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     match_request_type         => 'path',
     match_request_query_params => {
       'message_type' => [
@@ -110,18 +71,10 @@ define puppet_enterprise::trapperkeeper::pcp_broker(
       $puppet_enterprise::puppet_master_host,
     ],
     sort_order                 => 400,
-<<<<<<< HEAD
-=======
-    path                       => $container_auth,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   # Restrict inventory requests to orchestrator and console
   pe_puppet_authorization::rule { 'inventory request':
-<<<<<<< HEAD
-=======
-    match_request_path         => '/pcp-broker/send',
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     match_request_type         => 'path',
     match_request_query_params => {
       'message_type' => [
@@ -133,19 +86,11 @@ define puppet_enterprise::trapperkeeper::pcp_broker(
       $puppet_enterprise::puppet_master_host,
     ],
     sort_order                 => 400,
-<<<<<<< HEAD
-=======
-    path                       => $container_auth,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   # Deny multicast messages with destination_report; we currently don't
   # use them and they allow for inventory discovery
   pe_puppet_authorization::rule { 'multi-cast with destination_report':
-<<<<<<< HEAD
-=======
-    match_request_path         => '/pcp-broker/send',
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     match_request_type         => 'path',
     match_request_query_params => {
         'targets'              => [
@@ -156,15 +101,10 @@ define puppet_enterprise::trapperkeeper::pcp_broker(
     },
     allow                      => [],
     sort_order                 => 399,
-<<<<<<< HEAD
-=======
-    path                       => $container_auth,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   # This is the rule laid down by packaging that we will replace
   pe_puppet_authorization::rule { 'pcp-broker message':
-<<<<<<< HEAD
     match_request_type         => 'path',
     match_request_query_params => {
       'message_type'           => [
@@ -177,19 +117,11 @@ define puppet_enterprise::trapperkeeper::pcp_broker(
     },
     allow                      => '*',
     sort_order                 => 420,
-=======
-    match_request_path    => '/pcp-broker/send',
-    match_request_type    => 'path',
-    allow_unauthenticated => true,
-    sort_order            => 420,
-    path                  => $container_auth,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   }
 
   # This rule was set in pre-2015.3.1 versions of PE and needs to be cleaned
   pe_puppet_authorization::rule { 'pcp messages':
     ensure => absent,
-<<<<<<< HEAD
   }
 
   Puppet_enterprise::Trapperkeeper::Bootstrap_cfg {
@@ -197,57 +129,23 @@ define puppet_enterprise::trapperkeeper::pcp_broker(
   }
 
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:pcp-broker broker-service":
-=======
-    path   => $container_auth,
-  }
-
-  puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:pcp-broker broker-service":
-    container => $container,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     namespace => 'puppetlabs.pcp.broker.service',
     service   => 'broker-service',
   }
 
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:pcp-broker authorization-service":
-<<<<<<< HEAD
-=======
-    container => $container,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     namespace => 'puppetlabs.trapperkeeper.services.authorization.authorization-service',
     service   => 'authorization-service',
   }
 
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:pcp-broker jetty9-service":
-<<<<<<< HEAD
-=======
-    container => $container,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     namespace => 'puppetlabs.trapperkeeper.services.webserver.jetty9-service',
     service   => 'jetty9-service',
   }
 
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:pcp-broker webrouting-service":
-<<<<<<< HEAD
-=======
-    container => $container,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     namespace => 'puppetlabs.trapperkeeper.services.webrouting.webrouting-service',
     service   => 'webrouting-service',
   }
 
-<<<<<<< HEAD
-=======
-  puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:pcp-broker metrics-service":
-    container => $container,
-    namespace => 'puppetlabs.trapperkeeper.services.metrics.metrics-service',
-    service   => 'metrics-service',
-  }
-
-  puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:pcp-broker status-service" :
-    container => $container,
-    namespace => 'puppetlabs.trapperkeeper.services.status.status-service',
-    service   => 'status-service',
-  }
-
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 }

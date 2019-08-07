@@ -1,16 +1,11 @@
 define puppet_enterprise::trapperkeeper::console_services(
   $activity_host,
-<<<<<<< HEAD
   Array[String]  $puppetdb_host,
   Array[Integer] $puppetdb_port,
-=======
-  $puppetdb_host,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   $master_host,
   $classifier_host,
   $rbac_host,
   $status_proxy_enabled,
-<<<<<<< HEAD
   String $session_maximum_lifetime,
   $service_alert_timeout,
   String $agent_installer_host,
@@ -45,37 +40,13 @@ define puppet_enterprise::trapperkeeper::console_services(
   Puppet_enterprise::Replication_mode $replication_mode = 'none',
   Integer $master_port = $puppet_enterprise::puppet_master_port,
   Optional[Integer] $no_longer_reporting_cutoff = undef,
-=======
-  String $pcp_broker_host,
-  Integer $pcp_broker_port,
-  $service_alert_timeout,
-  $activity_port         = $puppet_enterprise::params::console_services_api_listen_port,
-  $activity_url_prefix   = $puppet_enterprise::params::activity_url_prefix,
-  $classifier_port       = $puppet_enterprise::params::console_services_api_listen_port,
-  $classifier_url_prefix = $puppet_enterprise::params::classifier_url_prefix,
-  $client_certname       = $puppet_enterprise::console_host,
-  $container             = $title,
-  $group                 = "pe-${title}",
-  $localcacert           = $puppet_enterprise::params::localcacert,
-  $proxy_idle_timeout    = 60,
-  $puppetdb_port         = $puppet_enterprise::params::puppetdb_ssl_listen_port,
-  $rbac_port             = $puppet_enterprise::params::console_services_api_listen_port,
-  $rbac_url_prefix       = $puppet_enterprise::params::rbac_url_prefix,
-  $user                  = "pe-${title}",
-  Integer $pcp_timeout   = 5,
-  Boolean $display_local_time = false,
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 ) {
 
   $cert_dir = "${puppet_enterprise::server_data_dir}/${container}/certs"
   $ssl_key = "${cert_dir}/${client_certname}.private_key.pem"
   $ssl_cert =  "${cert_dir}/${client_certname}.cert.pem"
 
-<<<<<<< HEAD
   $license_key_path = $puppet_enterprise::params::dest_license_key_path
-=======
-  $license_key_path = $puppet_enterprise::license_key_path
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
   Pe_hocon_setting {
     ensure  => present,
@@ -90,7 +61,6 @@ define puppet_enterprise::trapperkeeper::console_services(
   #   $puppetdb
   #   $puppetdb_port
   #   $master_host
-<<<<<<< HEAD
   #   $orchestrator_host
   #   $orchestrator_port
   #   $orchestrator_url_prefix
@@ -102,11 +72,6 @@ define puppet_enterprise::trapperkeeper::console_services(
   #   $rbac_url_prefix
   #   $session_timeout
   #   $session_maximum_lifetime
-=======
-  #   $rbac
-  #   $rbac_port
-  #   $rbac_url_prefix
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   #   $classifier
   #   $classifier_port
   #   $classifier_url_prefix
@@ -114,7 +79,6 @@ define puppet_enterprise::trapperkeeper::console_services(
   #   $activity_port
   #   $activity_url_prefix
   #   $proxy_idle_timeout
-<<<<<<< HEAD
   #   $query_cache_ttl
   #   $max_connections_per_route
   #   $max_connections_total
@@ -122,10 +86,6 @@ define puppet_enterprise::trapperkeeper::console_services(
 
   $console_conf_path = "/etc/puppetlabs/${container}/conf.d/console.conf"
   file { $console_conf_path :
-=======
-  #   $display_local_time
-  file { "/etc/puppetlabs/${container}/conf.d/console.conf":
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     ensure => present,
     owner  => $user,
     group  => $group,
@@ -133,16 +93,11 @@ define puppet_enterprise::trapperkeeper::console_services(
   }
 
   pe_hocon_setting { "${container}.console.assets-dir":
-<<<<<<< HEAD
     path    => $console_conf_path,
-=======
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     setting => 'console.assets-dir',
     value   => 'dist',
   }
   pe_hocon_setting { "${container}.console.puppet-master":
-<<<<<<< HEAD
     path    => $console_conf_path,
     setting => 'console.puppet-master',
     value   => "https://${master_host}:${master_port}",
@@ -154,28 +109,15 @@ define puppet_enterprise::trapperkeeper::console_services(
   }
   pe_hocon_setting { "${container}.console.rbac-server":
     path    => $console_conf_path,
-=======
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => 'console.puppet-master',
-    value   => "https://${master_host}:8140",
-  }
-  pe_hocon_setting { "${container}.console.rbac-server":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     setting => 'console.rbac-server',
     value   => "http://${rbac_host}:${rbac_port}${rbac_url_prefix}",
   }
   pe_hocon_setting { "${container}.console.classifier-server":
-<<<<<<< HEAD
     path    => $console_conf_path,
-=======
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     setting => 'console.classifier-server',
     value   => "http://${classifier_host}:${classifier_port}${classifier_url_prefix}",
   }
   pe_hocon_setting { "${container}.console.activity-server":
-<<<<<<< HEAD
     path    => $console_conf_path,
     setting => 'console.activity-server',
     value   => "http://${activity_host}:${activity_port}${activity_url_prefix}",
@@ -259,50 +201,21 @@ define puppet_enterprise::trapperkeeper::console_services(
   $first_puppetdb_port = pe_any2array($puppetdb_port)[0]
   pe_hocon_setting { "${container}.console.puppetdb-server":
     path    => $console_conf_path,
-=======
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => 'console.activity-server',
-    value   => "http://${activity_host}:${activity_port}${activity_url_prefix}",
-  }
-  pe_hocon_setting { "${container}.console.display-local-time":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => 'console.display-local-time',
-    value   => $display_local_time,
-  }
-
-  # For PuppetDB HA, a user may pass in an Array to specify their PuppetDBs
-  $first_puppetdb_host = pe_any2array($puppetdb_host)[0]
-  $first_puppetdb_port = pe_any2array($puppetdb_port)[0]
-  pe_hocon_setting { "${container}.console.puppetdb-server":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     setting => 'console.puppetdb-server',
     value   => "https://${first_puppetdb_host}:${first_puppetdb_port}",
   }
   pe_hocon_setting { "${container}.console.certs.ssl-key":
-<<<<<<< HEAD
     path    => $console_conf_path,
-=======
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     setting => 'console.certs.ssl-key',
     value   => $ssl_key,
   }
   pe_hocon_setting { "${container}.console.certs.ssl-cert":
-<<<<<<< HEAD
     path    => $console_conf_path,
-=======
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     setting => 'console.certs.ssl-cert',
     value   => $ssl_cert,
   }
   pe_hocon_setting { "${container}.console.certs.ssl-ca-cert":
-<<<<<<< HEAD
     path    => $console_conf_path,
-=======
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     setting => 'console.certs.ssl-ca-cert',
     value   => $localcacert,
   }
@@ -316,26 +229,17 @@ define puppet_enterprise::trapperkeeper::console_services(
 
   pe_hocon_setting { "${container}.console.proxy-idle-timeout":
     ensure  => $proxy_idle_timeout_ensure,
-<<<<<<< HEAD
     path    => $console_conf_path,
-=======
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     setting => 'console.proxy-idle-timeout',
     value   => $proxy_idle_timeout,
   }
 
   pe_hocon_setting { "${container}.console.license-key":
-<<<<<<< HEAD
     path    => $console_conf_path,
-=======
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     setting => 'console.license-key',
     value   => $license_key_path,
   }
 
-<<<<<<< HEAD
   pe_hocon_setting { "${container}.console.pcp-request-timeout":
     path    => $console_conf_path,
     setting => 'console.pcp-request-timeout',
@@ -459,172 +363,6 @@ define puppet_enterprise::trapperkeeper::console_services(
     owner     => $user,
   }
 
-=======
-  pe_hocon_setting { "${container}.console.pcp-broker-url":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => "console.pcp-broker-url",
-    value   => "wss://${pcp_broker_host}:${pcp_broker_port}/pcp/"
-  }
-
-  pe_hocon_setting { "${container}.console.certs.pcp-ssl-key":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => "console.certs.pcp-ssl-key",
-    value   => $ssl_key
-  }
-
-  pe_hocon_setting { "${container}.console.certs.pcp-ssl-cert":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => "console.certs.pcp-ssl-cert",
-    value   => $ssl_cert
-  }
-
-  pe_hocon_setting { "${container}.console.certs.pcp-ssl-ca-cert":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => "console.certs.pcp-ssl-ca-cert",
-    value   => $localcacert
-  }
-
-  pe_hocon_setting { "${container}.console.pcp-client-type":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => "console.pcp-client-type",
-    value   => "console"
-  }
-
-  pe_hocon_setting { "${container}.console.pcp-request-timeout":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => "console.pcp-request-timeout",
-    value   => $pcp_timeout,
-  }
-
-  # Service Alert configuration
-  pe_hocon_setting { "${container}.console.service-alert":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => "console.service-alert",
-    value   => [],
-    type    => 'array',
-  }
-
-  pe_hocon_setting { "${container}.console.service-alert.activity":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => "console.service-alert",
-    value   => {'url' => "http://${activity_host}:${activity_port}", 'type' => 'activity'},
-    type    => 'array_element',
-    require => Pe_hocon_setting["${container}.console.service-alert"],
-  }
-
-  pe_hocon_setting { "${container}.console.service-alert.classifier":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => "console.service-alert",
-    value   => {'url' => "http://${classifier_host}:${classifier_port}", 'type' => 'classifier'},
-    type    => 'array_element',
-    require => Pe_hocon_setting["${container}.console.service-alert"],
-  }
-
-  pe_hocon_setting { "${container}.console.service-alert.rbac":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => "console.service-alert",
-    value   => {'url' => "http://${rbac_host}:${rbac_port}", 'type' => 'rbac'},
-    type    => 'array_element',
-    require => Pe_hocon_setting["${container}.console.service-alert"],
-  }
-
-  if $settings::storeconfigs {
-    $nodes_with_code_manager = puppetdb_query(['from', 'resources',
-                                               ['extract', ['certname', 'parameters'],
-                                                ['and', ['=', 'type', 'Class'],
-                                                 ['=', 'title', 'Puppet_enterprise::Master::Code_manager'],
-                                                 ["=", ["node","active"], true]]]])
-
-    $code_managers = $nodes_with_code_manager.map |$code_manager| {
-      {host => $code_manager['certname'],
-     # TODO once CODEMGMT-633 is complete add this, delivered through master port 8140 for now
-     # port => $code_manager['parameters']['webserver_ssl_port']
-       port => 8140}
-    }
-  } else {
-    $code_managers = []
-  }
-
-  each($code_managers) |$code_manager| {
-    $host = $code_manager[host]
-    $port = $code_manager[port]
-    pe_hocon_setting { "${container}.console.service-alert.code-manager.${host}.${port}":
-      path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-      setting => "console.service-alert",
-      value   => {'url' => "https://${host}:${port}", 'type' => 'code-manager' },
-      type    => 'array_element',
-      require => Pe_hocon_setting["${container}.console.service-alert"],
-    }
-  }
-
-  # For PuppetDB HA, a user may pass in an Array to specify their PuppetDBs
-  $puppetdb_hosts = pe_any2array($puppetdb_host)
-  $puppetdb_ports = pe_any2array($puppetdb_port)
-  $puppetdb_servers = pe_zip($puppetdb_hosts, $puppetdb_ports)
-  each($puppetdb_servers) |$pdb_server| {
-    $pdb_host = $pdb_server[0]
-    $pdb_port = $pdb_server[1]
-    pe_hocon_setting { "${container}.console.service-alert.puppetdb.${pdb_host}.${pdb_port}":
-      path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-      setting => "console.service-alert",
-      value   => {'url' => "https://${pdb_host}:${pdb_port}", 'type' => 'puppetdb'},
-      type    => 'array_element',
-      require => Pe_hocon_setting["${container}.console.service-alert"],
-    }
-  }
-
-  # For Multi-Master installation, it's assumed that master certnames from PuppetDB are reachable hostnames
-  # "storeconfigs" being true is used here to determine if PuppetDB is ready
-  # to accept queries. This only matters during a PE installation when
-  # templates are applied. This setting is typically false then, since a
-  # manifest might otherwise attempt to query PuppetDB before it was running.
-  if $settings::storeconfigs {
-    $masters_in_puppetdb = map(
-      puppetdb_query(['from', 'resources',
-                      ['extract', ['certname'],
-                       ['and', ['=', 'type', 'Class'],
-                        ['=', 'title', 'Puppet_enterprise::Profile::Master'],
-                        ["=", ["node","active"], true]]]])) |$master| { $master['certname'] }
-  } else {
-    $masters_in_puppetdb = []
-  }
-  $masters = pe_union([$master_host], $masters_in_puppetdb)
-  each($masters) |$master| {
-    pe_hocon_setting { "${container}.console.service-alert.master.${master}":
-      path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-      setting => "console.service-alert",
-      value   => {'url' => "https://${master}:8140", 'type' => 'master'},
-      type    => 'array_element',
-      require => Pe_hocon_setting["${container}.console.service-alert"],
-    }
-  }
-
-  pe_hocon_setting { "${container}.console.service-alert-timeout":
-    path    => "/etc/puppetlabs/${container}/conf.d/console.conf",
-    setting => "console.service-alert-timeout",
-    value   => $service_alert_timeout,
-  }
-
-  $cookie_secret_key = cookie_secret_key()
-  # Uses
-  #   $cookie_secret_key
-  file { "/etc/puppetlabs/${container}/conf.d/console_secret_key.conf":
-    ensure  => present,
-    owner   => $user,
-    group   => $group,
-    replace => false,
-    mode    => '0640',
-    content => "console: { cookie-secret-key: \"${cookie_secret_key}\" }",
-  }
-
-  # pe_hocon_setting doesn't have a no replace mode
-  # pe_hocon_setting { "${container}.console.cookie-secret-key":
-  #   path    => "/etc/puppetlabs/${container}/conf.d/console_secret_key.conf",
-  #   setting => 'console.cookie-secret-key',
-  #   value   => cookie_secret_key(),
-  # }
-
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:console webrouting-service" :
     container => $container,
     namespace => 'puppetlabs.trapperkeeper.services.webrouting.webrouting-service',
@@ -637,10 +375,7 @@ define puppet_enterprise::trapperkeeper::console_services(
     service   => 'rbac-service',
   }
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:console rbac-authn-middleware" :
-<<<<<<< HEAD
     ensure    => absent,
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     container => $container,
     namespace => 'puppetlabs.rbac.services.http.middleware',
     service   => 'rbac-authn-middleware',
@@ -675,7 +410,6 @@ define puppet_enterprise::trapperkeeper::console_services(
     service   => 'rbac-authz-service',
   }
 
-<<<<<<< HEAD
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:console audit-service" :
     container => $container,
     namespace => 'puppetlabs.rbac.services.audit',
@@ -689,19 +423,13 @@ define puppet_enterprise::trapperkeeper::console_services(
 
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:console pe-console-ui-service" :
     ensure    => $absent_on_replica,
-=======
-  puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:console pe-console-ui-service" :
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     container => $container,
     namespace => 'puppetlabs.pe-console-ui.service',
     service   => 'pe-console-ui-service',
   }
 
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:console pe-console-auth-ui-service" :
-<<<<<<< HEAD
     ensure    => $absent_on_replica,
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
     container => $container,
     namespace => 'puppetlabs.pe-console-auth-ui.service',
     service   => 'pe-console-auth-ui-service',
@@ -719,7 +447,6 @@ define puppet_enterprise::trapperkeeper::console_services(
     service   => 'status-service',
   }
 
-<<<<<<< HEAD
   # This is a dependency of status-service with version 0.6.0
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:console scheduler-service" :
     container => $container,
@@ -727,8 +454,6 @@ define puppet_enterprise::trapperkeeper::console_services(
     service   => 'scheduler-service',
   }
 
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
   if $status_proxy_enabled {
     puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:console status-proxy-service" :
       container => $container,
@@ -736,7 +461,6 @@ define puppet_enterprise::trapperkeeper::console_services(
       service   => 'status-proxy-service',
     }
   }
-<<<<<<< HEAD
 
   puppet_enterprise::trapperkeeper::bootstrap_cfg { "${container}:console metrics-service" :
     container => $container,
@@ -749,6 +473,4 @@ define puppet_enterprise::trapperkeeper::console_services(
     namespace => 'puppetlabs.trapperkeeper.services.metrics.metrics-service',
     service   => 'metrics-webservice',
   }
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 }

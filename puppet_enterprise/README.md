@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 # puppet_enterprise
 
 #### Table of Contents
-=======
-#puppet_enterprise
-
-####Table of Contents
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
 1. [Overview](#overview)
 2. [Module Description - What the module does and why it is useful](#module-description)
@@ -16,115 +10,62 @@
 4. [Usage - The available classes and profiles](#usage)
     * [Class: puppet_enterprise](#class-puppet_enterprise)
     * [Available profiles](#available-profiles)
-<<<<<<< HEAD
-=======
-        * [ActiveMQ](#activemq)
-            * [Broker](#broker)
-            * [Spoke](#spoke)
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
         * [Certificate Authority](#certificate-authority)
         * [Console](#console)
         * [Database](#database)
         * [Master](#master)
         * [Agent](#agent)
-<<<<<<< HEAD
-=======
-        * [MCollective](#mcollective)
-            * [agent](#mcollective-agent)
-            * [console](#console-1)
-            * [peadmin](#peadmin)
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
         * [PuppetDB](#puppetdb)
 5. [Development - Guide for contributing to the module](#development)
     * [Contributing](#contributing)
     * [How to run spec tests](#spec-tests)
     * [Components vs Profiles](#components-vs-profiles)
       * [Why did you rewrite modules](#why-did-you-rewrite-modules)
-<<<<<<< HEAD
     * [Parameters](#parameters)
       * [what belongs at the profile level vs component level](#parameters---profile-vs-component)
       * [init.pp vs params.pp](#initpp-vs-paramspp)
 
 ## Overview
-=======
-    * [Parameters - what belongs at the profile level vs component level](#parameters-profile-vs-component)
-
-
-
-##Overview
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
 The `puppet_enterprise` module is for the configuration of all the individual components that make up the
 Puppet Enterprise stack.
 
-<<<<<<< HEAD
 If you have any questions that are not covered in this readme, you can ask in the `PE Installer and Management` Slack
 room.
 
 ## Module Description
-=======
-If you have any questions that are not covered in this readme, you can ask in the `Integration` hipchat
-room.
-
-##Module Description
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
 Puppet Enterprise contains a wide variety of software that needs to be configured to interact in a certain
 way.  The software stack in PE currently involves the following:
 
 ```
-<<<<<<< HEAD
 ace-server
 bolt-server
 console-services
 orchestration-services
 plan-executor
-=======
-ActiveMQ
-Apache
-console-services
-MCollective
-Passenger
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 PostgreSQL
 Puppet Server
 PuppetDB
 ```
 
-<<<<<<< HEAD
 ## Setup
 ### What puppet_enterprise affects
 As mentioned above, the `puppet_enterprise` module configures a wide variety of software. This includes
 everything from packages, config files to certificates and more.
 
 ### Beginning with puppet_enterprise
-=======
-##Setup
-###What puppet_enterprise affects
-As mentioned above, the `puppet_enterprise` module configures a wide variety of software. This includes
-everything from packages, config files to certificates and more.
-
-###Beginning with puppet_enterprise
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 All profiles inherit from the main `puppet_enterprise` class. We consider this the `infrastructure` class and it
 should be treated as the source of truth for infrastructure related information such as hostnames and ports.
 
 If you do not include this class, then you must pass the required hostnames and ports to the profile.
 
-<<<<<<< HEAD
 ## Usage
-=======
-##Usage
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 For end users, the component level classes should be considered private and should not be applied directly.
 That said, if the component contains a value that you would like to modify and it is not exposed from the
 profile level, you can use a Hiera override.
 
-<<<<<<< HEAD
 #### Class: `puppet_enterprise`
-=======
-####Class: `puppet_enterprise`
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 The `puppet_enterprise` is the base class that acts as the source of truth for information about a customers
 PE stack. Things like hostnames, ports and DB information should go here.
 
@@ -150,40 +91,12 @@ directly against each other, since they may or may not exist in a given node's c
 express dependencies against common anchors.
 ```
 
-<<<<<<< HEAD
 ### Available Profiles
-=======
-###Available Profiles
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 All profiles are designed in such a way that if the `puppet_enterprise` class is configured, you will not need
 to specify any additional parameters for that profile to get its component installed and configured for use
 in Puppet Enterprise.
 
-<<<<<<< HEAD
 #### Certificate Authority
-=======
-####ActiveMQ
-ActiveMQ is the message queue for MCollective. In a default install, the master will be configured as a
-broker. In more [advanced deployments](https://docs.puppetlabs.com/pe/latest/install_add_activemq.html) where
-you may need to scale this component out, we also provide a spoke profile.
-
-#####Broker
-To install with the default parameters (assuming the base `puppet_enterprise` class has been
-configured),
-
-```
-class { 'puppet_enterprise::profile::amq::broker': }
-```
-
-#####Spoke
-To install with the default parameters (assuming the base `puppet_enterprise` class has been configured),
-
-```
-class { 'puppet_enterprise::profile::amq::spoke': }
-```
-
-####Certificate Authority
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 Before discussing the details of the `certificate_authority` profile, it is important to understand that
 in the current version of PE, the certificate authority service still has a lot of overlap with the
 puppet master service. What this means is that the certificate authority node will always be a master,
@@ -238,13 +151,8 @@ To install with the default parameters (assuming the base `puppet_enterprise` cl
 class { 'puppet_enterprise::profile::certificate_authority': }
 ```
 
-<<<<<<< HEAD
 #### Console
 The Console is comprised of an Ember.js single page application backed by a clojure middleware.
-=======
-####Console
-The Console is made up of many parts: Apache, Passenger, Ruby applications and new JVM based applications.
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
 To install with the default parameters (assuming the base `puppet_enterprise` class has been configured),
 
@@ -255,11 +163,7 @@ class { 'puppet_enterprise::profile::console': }
 This will configure the entire console stack using default values.
 
 
-<<<<<<< HEAD
 #### Database
-=======
-####Database
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 The database profile is used for configuring a PostgreSQL server for use with the PE stack, which means setting
 up database tables and configuring connections to use SSL.
 
@@ -276,11 +180,7 @@ To install with the default parameters (assuming the base `puppet_enterprise` cl
 class { 'puppet_enterprise::profile::database': }
 ```
 
-<<<<<<< HEAD
 #### Master
-=======
-####Master
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 The master profile is responsible for configuring the Puppet Server to talk with PuppetDB and the
 console.
 
@@ -299,11 +199,7 @@ If you are using an external CA, you would want to set `enabled_ca_proxy` to fal
 bootstrap.cfg](https://github.com/puppetlabs/puppet-server/blob/master/documentation/configuration.markdown#service-bootstrapping)
 to load the `certificate-authority-disabled-service` - a placeholder / noop ca service.
 
-<<<<<<< HEAD
 #### Agent
-=======
-####Agent
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 This is the profile that gets applied to every puppet agent node and currently only configures symlinks for PEs
 command line components such as `facter` and `puppet` installed into '/opt/puppet/bin'.
 
@@ -314,7 +210,6 @@ configured),
 class { 'puppet_enterprise::profile::agent': }
 ```
 
-<<<<<<< HEAD
 The agent class can also (optionally) manage puppet.conf; to do this, set the
 `manage_puppet_conf` param to true. This will make the `server_list` param take
 effect, to manage the list of masters the agent tries to connect. (The
@@ -328,101 +223,6 @@ the primary master. PE Task support also makes use of compile masters for acquir
 the `server_list` param is set.
 
 #### PuppetDB
-=======
-####MCollective
-[MCollective](https://docs.puppetlabs.com/mcollective/) is an orchestration engine packaged with PE for
-use by things like Live Management. MCollective has three main components: servers, clients and the
-middleware. In PE, the middleware we ship and configure is ActiveMQ.
-
-**Note** MCollective uses the term `server` and `client` a bit differently then puppet.
-
-An MCollective server (often just called a “node”) is a computer which can be controlled via
-MCollective. Servers run the MCollective daemon (mcollectived), and have any number of agent plugins
-installed. The server component is installed on all Puppet Agent nodes.
-
-PE ships a handful of [agent
-plugins](https://docs.puppetlabs.com/mcollective/overview_components.html#agent-plugins). They are
-located in the files folder. For information on how to update them, see
-[UPDATING_MCO_PLUGINS.md](./UPDATING_MCO_PLUGINS.md)
-
-An MCollective client can send requests to any number of servers, using a security plugin to encode and
-sign the request and a connector plugin to publish it. In PE we ship two clients, `console` and
-`peadmin`. Details on these clients are located in their respective profile section.
-
-The PE Module now also has support for advanced MCO configurations such as
-[subcollectives](https://docs.puppetlabs.com/mcollective/overview_components.html#subcollectives).
-Configuration for this feature is exposed via the `collectives` and `main_collective` parameters on the
-profile.
-
-A quick note on certificates. As mentioned above - communication between the mcollective server and
-clients is encrypted using the [OpenSSL Security
-Plugin](https://docs.puppetlabs.com/mcollective/reference/plugins/security_ssl.html). A brief breakdown
-of how this works:
-
-* Each MCO client will need a private/public keypair.
-* Every MCO server then needs:
-   - All MCO clients public key's
-   - The shared MCO public key
-   - The CA cert that AMQ uses for encryption
-   - A Private key that has been signed by the above CA
-   - The corresponding certificate to that private key.
-
-The MCO client keypairs and the shared server keypair is generated by the `puppet-enterprise-installer`
-bash script at install time. Two classes then take care of copying the files around to the desired
-locations.
-
-`puppet_enterprise::master::keypair` is responsible for copying these files to each compile master.
-`puppet_enterprise::mcollective::server::certs` is resposible for copying the client and server
-certs into place.
-
-This is done by using the `file` function. Since puppet functions are ran on the master, this means
-that every agent catalog will ship the shared server keypair. The same applies for catalogs for any mco
-client.
-
-The last important thing to talk about is the stomp password. At install time, the
-`puppet_enterprise_installer` will generate a 20 character random password on the master node and store
-it in a text file located at `/etc/puppetlabs/mcollective/credentials`. This is the password used for
-communicating with the middleware. Since every mcollective server and client needs this password, it is
-also loaded by the `file` function and put in every catalog compilation for MCO servers and
-clients.
-
-#####Agent (mcollective)
-This is a profile that gets applied to every puppet agent node and configures
-the MCollective server on that node. This allows MCollective to direct commands to that node.
-
-To install with the default parameters (assuming the base `puppet_enterprise` class has been
-configured),
-
-```
-class { 'puppet_enterprise::profile::mcollective::agent': }
-```
-
-#####Console
-This is the first of two MCollective clients that are shipped with PE. This
-client is used by the dashboard's Live Management feature to orchestrate
-changes across nodes which have the MCollective Agent class applied to them.
-
-To install with the default parameters (assuming the base `puppet_enterprise`
-class has been configured),
-
-```
-class { 'puppet_enterprise::profile::mcollective::console': }
-```
-
-#####Peadmin
-This profile will install and configure the `peadmin` MCollective Client. This
-profile is installed by default on the Puppet Master node and allows
-commandline MCollective orchestration via the peadmin user.
-
-To install with the default parameters (assuming the base `puppet_enterprise`
-class has been configured),
-
-```
-class { 'puppet_enterprise::profile::mcollective::peadmin': }
-```
-
-####PuppetDB
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 The `puppetdb` profile is responsible for the configuration of PuppetDB.
 
 To install with the default parameters (assuming the base `puppet_enterprise` class has been configured),
@@ -435,7 +235,6 @@ If you need to add certificates to PuppetDB's whitelist, you can do so by adding
 `whitelisted_certnames`. This will append your list of certificates with those needed by Puppet
 Enterprise.
 
-<<<<<<< HEAD
 It is also possible to specify the cipher suites accepted by puppetdb's SSL interface using hiera to
 set puppet_enterprise::puppetdb::cipher_suites. If this parameter is undefined (default) it will not
 add the cipher-suites setting to jetty.ini and the JDK defaults shall be used. Removing the hiera
@@ -447,12 +246,6 @@ entry will also remove the setting from jetty.ini.
 
 The end goal of the `puppet_enterprise` module is to be a self serve type module that each team will
 end up owning the component module for. For now, the PE Installation and Management team still owns the module in whole.
-=======
-##Development
-###Contributing
-The end goal of the `puppet_enterprise` module is to be a self serve type module that each team will
-end up owning the component module for. For now, the integration team still owns the module in whole.
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
 We want to keep it as easy as possible to contribute changes so that our modules work together in the
 PE environment. There are a few guidelines that we need contributors to follow so that we can have a
@@ -460,20 +253,12 @@ chance of keeping on top of things.
 
 Read the complete module contribution guide in [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-<<<<<<< HEAD
 ### Spec Tests
-=======
-###Spec Tests
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 For more information on how to run the spec tests, see the [CONTRIBUTING.md](./CONTRIBUTING.md)
 document.
 
 
-<<<<<<< HEAD
 ### Components vs Profiles
-=======
-###Components vs Profiles
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 The module is currently architected as one monolithic module for ease of bootstrapping it's development.
 
 ```
@@ -497,11 +282,7 @@ to PuppetDB and the console, configuring PostgreSQL with PE specific DB's etc.
 Which leads to the question of:
 
 
-<<<<<<< HEAD
 #### Why did you rewrite modules
-=======
-####Why did you rewrite modules
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 Instead of using the FOSS version.
 
 The short answer to this is because of module environment separation. In the past we used the FOSS
@@ -524,17 +305,8 @@ One module we did not choose to namespace was
 [puppetlabs-stdlib](https://github.com/puppetlabs/puppetlabs-stdlib). Instead we chose to namespace the
 few functions our module use (and the dependencies) use.
 
-<<<<<<< HEAD
 ### Parameters - profile vs component
 There has been a lot of discussion internally about what parameters should be exposed at the profile level. I think Reid Vandewiele sums it up nicely as the following: ``` There are usability problems with exposing a parameter at the profile level. The guiding design
-=======
-###Parameters - profile vs component
-There has been a lot of discussion internally about what parameters should be exposed at the profile
-level. I think Reid Vandewiele sums it up nicely as the following:
-
-```
-There are usability problems with exposing a parameter at the profile level. The guiding design
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 principle we've been using is to present profile parameters that directly relate to the profile or
 which have potential to span at least two logical roles (that could be deployed to different nodes).
 
@@ -560,7 +332,6 @@ visible in the GUI which can be used for tuning, but class parameters are not it
 constrain the quality of our Puppet code in order to imperfectly provide a GUI tunable. If we do, it
 should only be when we expect a significant number of users to be manually tuning it, not just a few.
 Hiera is a perfectly acceptable means of accomplishing tuning today for unusual circumstances.
-<<<<<<< HEAD
 
 #### init.pp vs params.pp
 
@@ -582,6 +353,3 @@ it in one place.
 calculated - such as file paths due to operating system differences etc. Other
 classes - including init.pp - can then reference those as defaults. Any
 variable that is defiend in params.pp, the user can never modify.
-=======
-```
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547

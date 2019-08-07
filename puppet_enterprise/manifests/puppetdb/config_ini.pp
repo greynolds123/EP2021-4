@@ -3,7 +3,6 @@
 # @param command_processing_threads [Integer] This defines how many
 #        command processing threads to use. Each thread can process
 #        a single command at a time.
-<<<<<<< HEAD
 # @param concurrent_writes [Integer] This defines how many threads can persist
 #        commands to the disk-based queue.
 class puppet_enterprise::puppetdb::config_ini(
@@ -12,12 +11,6 @@ class puppet_enterprise::puppetdb::config_ini(
   Integer $concurrent_writes,
 ) inherits puppet_enterprise::params {
   include puppet_enterprise::packages
-=======
-class puppet_enterprise::puppetdb::config_ini(
-  String  $confdir,
-  Integer $command_processing_threads,
-) inherits puppet_enterprise::params {
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 
   $config_ini = "${confdir}/config.ini"
 
@@ -42,7 +35,6 @@ class puppet_enterprise::puppetdb::config_ini(
     value   => pe_max($command_processing_threads, 1),
     notify  => Service['pe-puppetdb'],
   }
-<<<<<<< HEAD
 
   pe_ini_setting { 'config.ini concurrent-writes command-processing section' :
     section => 'command-processing',
@@ -50,6 +42,4 @@ class puppet_enterprise::puppetdb::config_ini(
     value   => pe_max($concurrent_writes, 1),
     notify  => Service['pe-puppetdb'],
   }
-=======
->>>>>>> f3fe550ac8da9a8477035fe16f80a1178d7a7547
 }
