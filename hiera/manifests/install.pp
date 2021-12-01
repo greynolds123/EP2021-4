@@ -4,7 +4,11 @@ define hiera::install (
   $provider,
   $gem_version         = undef,
   $gem_source          = undef,
+<<<<<<< HEAD
   $gem_install_options = $hiera::gem_install_options,
+=======
+  $gem_install_options = $::hiera::gem_install_options,
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 ) {
 
   # $gem_install_options is typically used for specifying a proxy

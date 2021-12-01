@@ -3,7 +3,13 @@ require 'puppetlabs_spec_helper/rake_tasks'
 # load optional tasks for releases
 # only available if gem group releases is installed
 begin
+<<<<<<< HEAD
   require 'voxpupuli/release/rake_tasks'
+=======
+  require 'puppet_blacksmith/rake_tasks'
+  require 'voxpupuli/release/rake_tasks'
+  require 'puppet-strings/tasks'
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 rescue LoadError
 end
 
@@ -21,7 +27,12 @@ PuppetSyntax.exclude_paths = exclude_paths
 
 desc 'Auto-correct puppet-lint offenses'
 task 'lint:auto_correct' do
+<<<<<<< HEAD
   Rake::Task[:lint_fix].invoke
+=======
+  PuppetLint.configuration.fix = true
+  Rake::Task[:lint].invoke
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 end
 
 desc 'Run acceptance tests'
@@ -29,6 +40,7 @@ RSpec::Core::RakeTask.new(:acceptance) do |t|
   t.pattern = 'spec/acceptance'
 end
 
+<<<<<<< HEAD
 desc 'Run tests'
 task test: [:release_checks]
 
@@ -47,6 +59,13 @@ namespace :check do
   end
 end
 Rake::Task[:release_checks].enhance ['check:trailing_whitespace']
+=======
+desc 'Run tests metadata_lint, release_checks'
+task test: [
+  :metadata_lint,
+  :release_checks,
+]
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
 desc "Run main 'test' task and report merged results to coveralls"
 task test_with_coveralls: [:test] do
@@ -59,10 +78,32 @@ task test_with_coveralls: [:test] do
   end
 end
 
+<<<<<<< HEAD
 desc 'Generate REFERENCE.md'
 task :reference, [:debug, :backtrace] do |t, args|
   patterns = ''
   Rake::Task['strings:generate:reference'].invoke(patterns, args[:debug], args[:backtrace])
+=======
+desc "Print supported beaker sets"
+task 'beaker_sets', [:directory] do |t, args|
+  directory = args[:directory]
+
+  metadata = JSON.load(File.read('metadata.json'))
+
+  (metadata['operatingsystem_support'] || []).each do |os|
+    (os['operatingsystemrelease'] || []).each do |release|
+      if directory
+        beaker_set = "#{directory}/#{os['operatingsystem'].downcase}-#{release}"
+      else
+        beaker_set = "#{os['operatingsystem'].downcase}-#{release}-x64"
+      end
+
+      filename = "spec/acceptance/nodesets/#{beaker_set}.yml"
+
+      puts beaker_set if File.exists? filename
+    end
+  end
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 end
 
 begin

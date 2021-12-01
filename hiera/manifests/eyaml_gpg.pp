@@ -12,12 +12,21 @@ class hiera::eyaml_gpg {
   $ruby_gpg_version  = $hiera::ruby_gpg_version
   $ruby_gpg_source   = $hiera::ruby_gpg_source
 
+<<<<<<< HEAD
   $owner             = $hiera::eyaml_owner
   $group             = $hiera::eyaml_group
   $cmdpath           = $hiera::cmdpath
   $_keysdir          = $hiera::_keysdir
 
   $manage_package = $hiera::manage_eyaml_gpg_package
+=======
+  $owner             = $::hiera::eyaml_owner
+  $group             = $::hiera::eyaml_group
+  $cmdpath           = $::hiera::cmdpath
+  $_keysdir          = $::hiera::_keysdir
+
+  $manage_package = $::hiera::manage_eyaml_gpg_package
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
   require hiera::eyaml
 

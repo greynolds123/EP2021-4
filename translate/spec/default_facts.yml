@@ -2,7 +2,12 @@
 #
 # Facts specified here will override the values provided by rspec-puppet-facts.
 ---
+<<<<<<< HEAD
 ipaddress: "172.16.254.254"
 ipaddress6: "FE80:0000:0000:0000:AAAA:AAAA:AAAA"
+=======
+concat_basedir: ""
+ipaddress: "172.16.254.254"
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 is_pe: false
 macaddress: "AA:AA:AA:AA:AA:AA"

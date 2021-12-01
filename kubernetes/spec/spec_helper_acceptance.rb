@@ -41,7 +41,10 @@ RSpec.configure do |c|
       on host, puppet('module', 'install', 'herculesteam-augeasproviders_sysctl', '--version', '2.2.1'), { :acceptable_exit_codes => [0,1] }
       on host, puppet('module', 'install', 'herculesteam-augeasproviders_core', '--version', '2.1.0'), { :acceptable_exit_codes => [0,1] }
       on host, puppet('module', 'install', 'camptocamp-kmod', '--version', '2.2.0'), { :acceptable_exit_codes => [0,1] }
+<<<<<<< HEAD
       on host, puppet('module', 'install', 'puppetlabs-docker'), { :acceptable_exit_codes => [0,1] }
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
 
       # shell('echo "#{vmhostname}" > /etc/hostname')
@@ -129,6 +132,7 @@ EOS
           #Installing rubydev environment
           on(host, "yum install -y ruby-devel git zlib-devel gcc-c++ lib yaml-devel libffi-devel make bzip2 libtool curl openssl-devel readline-devel", acceptable_exit_codes: [0]).stdout
           on(host, "gem install bundler", acceptable_exit_codes: [0]).stdout
+<<<<<<< HEAD
           on(host, "setenforce 0 || true", acceptable_exit_codes: [0]).stdout
           on(host, "swapoff -a", acceptable_exit_codes: [0]).stdout
           on(host, "systemctl stop firewalld && systemctl disable firewalld", acceptable_exit_codes: [0]).stdout
@@ -149,6 +153,8 @@ EOS
           on(host, "yum install -y python-pip", acceptable_exit_codes: [0]).stdout
           on(host, "pip install docker-compose", acceptable_exit_codes: [0]).stdout 
           on(host, "yum upgrade python*", acceptable_exit_codes: [0]).stdout
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
           end
 
         # Installing go, cfssl
@@ -161,7 +167,10 @@ EOS
         create_remote_file(host, "/etc/hosts", hosts_file)
         create_remote_file(host, "/tmp/nginx.yml", nginx)
         create_remote_file(host,"/etc/puppetlabs/puppet/hiera.yaml", hiera)
+<<<<<<< HEAD
         create_remote_file(host,"/etc/puppetlabs/code/environments/production/hiera.yaml", hiera)
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         on(host, 'mkdir -p /etc/puppetlabs/code/environments/production/hieradata', acceptable_exit_codes: [0]).stdout
         on(host, 'cp /etc/puppetlabs/code/modules/kubernetes/tooling/*.yaml /etc/puppetlabs/code/environments/production/hieradata/', acceptable_exit_codes: [0]).stdout
 
@@ -174,6 +183,7 @@ EOS
           on(host, 'export KUBECONFIG=\'/etc/kubernetes/admin.conf\'', acceptable_exit_codes: [0]).stdout       
         end
 
+<<<<<<< HEAD
         if fact('osfamily') == 'RedHat'
           on(host, 'sed -i /cni_network_provider/d /etc/puppetlabs/code/environments/production/hieradata/Redhat.yaml', acceptable_exit_codes: [0]).stdout
           on(host, 'echo "kubernetes::cni_network_provider: https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml" >> /etc/puppetlabs/code/environments/production/hieradata/Redhat.yaml', acceptable_exit_codes: [0]).stdout
@@ -182,6 +192,8 @@ EOS
           on(host, 'export KUBECONFIG=\'/etc/kubernetes/admin.conf\'', acceptable_exit_codes: [0]).stdout       
         end
 
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     end
   end
 end

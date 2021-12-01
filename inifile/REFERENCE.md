@@ -186,7 +186,15 @@ Default value:  =
 
 ##### `quote_char`
 
+<<<<<<< HEAD
 The character used to quote the entire value of the setting. Valid values are '', '\"' and \"'\"
+=======
+<<<<<<< HEAD
+The character used to quote the entire value of the setting.
+=======
+The character used to quote the entire value of the setting. Valid values are '', '\"' and \"'\"
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
 Default value: ''
 

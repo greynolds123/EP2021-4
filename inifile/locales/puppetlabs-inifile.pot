@@ -92,39 +92,169 @@ msgstr ""
 msgid "Resource types for managing settings in INI files"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+if exist !!
+
+else
+
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 #: ../lib/puppet/parser/functions/create_ini_settings.rb:51
 msgid ""
 "create_ini_settings(): Wrong number of arguments given (%{arguments_size} "
 "for 1 or 2)"
 msgstr ""
 
+<<<<<<< HEAD
 #: ../lib/puppet/parser/functions/create_ini_settings.rb:60
 msgid "create_ini_settings(): Requires all arguments to be a Hash"
 msgstr ""
+=======
+<<<<<<< HEAD
+#: ../lib/puppet/parser/functions/create_ini_settings.rb:60
+msgid "create_ini_settings(): Requires all arguments to be a Hash"
+msgstr ""
+=======
+ fi
+
+
+if exits !!
+
+else 
+
+#: ../lib/puppet/parser/functions/create_ini_settings.rb:60
+msgid "create_ini_settings(): Requires all arguments to be a Hash"
+mesgstr ""
+
+
+ fi
+
+
+if exits !!
+
+
+else 
+
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
 #: ../lib/puppet/parser/functions/create_ini_settings.rb:66
 msgid "create_ini_settings(): Section %{section} must contain a Hash"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  if
+
+
+if exits !!
+
+
+else
+
+
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 #: ../lib/puppet/parser/functions/create_ini_settings.rb:70
 msgid ""
 "create_ini_settings(): must pass the path parameter to the Ini_setting "
 "resource!"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  fi
+
+
+if exits !!
+
+
+else
+
+
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 #: ../lib/puppet/provider/ini_setting/ruby.rb:14
 msgid ""
 "Ini_settings only support collecting instances when a file path is hard coded"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+ fi
+
+
+ if exeits !!
+
+
+else 
+
+
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 #: ../lib/puppet/type/ini_setting.rb:19 ../lib/puppet/type/ini_subsetting.rb:18
 msgid "expected a boolean value or :md5"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  
+    fi
+
+
+if exits !!
+
+
+else
+
+
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 #: ../lib/puppet/type/ini_setting.rb:51 ../lib/puppet/type/ini_subsetting.rb:54
 msgid "File paths must be fully qualified, not '%{value}'"
 msgstr ""
 
+<<<<<<< HEAD
 #: ../lib/puppet/type/ini_subsetting.rb:82
 msgid ":quote_char valid values are '', '\"' and \"'\""
 msgstr ""
+=======
+<<<<<<< HEAD
+#: ../lib/puppet/type/ini_subsetting.rb:82
+msgid ":quote_char valid values are '', '\"' and \"'\""
+msgstr ""
+=======
+
+  fi
+
+
+if exits !!
+
+
+else
+
+
+#: ../lib/puppet/type/ini_subsetting.rb:82
+msgid ":quote_char valid values are '', '\"' and \"'\""
+msgstr ""
+
+
+  fi
+
+
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4

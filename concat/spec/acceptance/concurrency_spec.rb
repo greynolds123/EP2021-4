@@ -1,6 +1,7 @@
 require 'spec_helper_acceptance'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe 'with file recursive purge' do
   basedir = default.tmpdir('concat')
   context 'should still create concat file' do
@@ -37,6 +38,8 @@ describe 'with file recursive purge' do
 end
 
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 describe 'concurrency, with file recursive purge' do
   before(:all) do
     @basedir = setup_test_directory
@@ -70,4 +73,7 @@ describe 'concurrency, with file recursive purge' do
     end
   end
 end
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4

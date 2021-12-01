@@ -20,7 +20,10 @@ class hiera::params {
   $package_ensure   = 'present'
   $package_name     = 'hiera'
   $hierarchy        = []
+<<<<<<< HEAD
   $mode             = '0644'
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   # Configure for AIO packaging.
   if $facts['pe_server_version'] {
     $master_service = 'pe-puppetserver'
@@ -41,7 +44,11 @@ class hiera::params {
     $eyaml_group    = 'puppet'
   }
   $cmdpath        = ['/opt/puppetlabs/puppet/bin', '/usr/bin', '/usr/local/bin']
+<<<<<<< HEAD
   $datadir        = '/etc/puppetlabs/code/environments/%{::environment}/hieradata'
+=======
+  $datadir        = '/etc/puppetlabs/code/environments/%{::environment}/data'
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   $manage_package = false
   $hiera_yaml = "${confdir}/hiera.yaml"
 }

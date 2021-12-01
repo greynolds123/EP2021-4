@@ -27,7 +27,7 @@ To install the correct Java package on your system, include the `java` class: `i
 
 ## Usage
 
-The java module installs the correct jdk or jre package on a wide variety of systems. By default, the module installs the jdk package, but you can set different installation parameters as needed. For example, to install jre instead of jdk, you would set the distribution parameter:
+The java module installs the correct jdk or jre package on a wide variety of systems. By default, the module will install the jdk package, but you can set different installation parameters as needed. For example, to install jre instead of jdk, you would set the distribution parameter:
 
 ```puppet
 class { 'java':
@@ -35,6 +35,7 @@ class { 'java':
 }
 ```
 
+<<<<<<< HEAD
 To install the latest patch version of Java 8 on CentOS
 
 ```puppet
@@ -42,6 +43,9 @@ class { 'java' :
   package => 'java-1.8.0-openjdk-devel',
 }
 ```
+=======
+The defined type `java::oracle` installs one or more versions of Oracle Java SE. `java::oracle` depends on [puppet/archive](https://github.com/voxpupuli/puppet-archive).  By using `java::oracle` you agree to Oracle's licensing terms for Java SE.
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
 The defined type `java::download` installs one or more versions of Java SE from a remote url. `java::download` depends on [puppet/archive](https://github.com/voxpupuli/puppet-archive).
 
@@ -53,7 +57,63 @@ java::download { 'jdk8' :
   url     => 'http://myjava.repository/java.tgz",
   basedir => '/custom/java',
 }
+<<<<<<< HEAD
 ```
+=======
+~~~
+
+##Reference
+
+###Classes
+
+####Public classes
+
+* `java`: Installs and manages the Java package.
+
+####Private classes
+
+* `java::config`: Configures the Java alternatives.
+
+* `java::params`: Builds a hash of jdk/jre packages for all compatible operating systems.
+
+
+####Parameters
+The following parameters are available in `java`:
+
+##### `distribution`
+Specifies the Java distribution to install.  
+Valid options:  'jdk', 'jre', or, where the platform supports alternative packages, 'sun-jdk', 'sun-jre', 'oracle-jdk', 'oracle-jre'. Default: 'jdk'.
+
+#####`java_alternative`
+Specifies the name of the Java alternative to use. If you set this parameter, *you must also set the `java_alternative_path`.*  
+Valid options: Run command `update-java-alternatives -l` for a list of available choices. Default: OS and distribution dependent defaults on *deb systems, undef on others.
+
+#####`java_alternative_path`  
+*Required when `java_alternative` is specified.* Defines the path to the `java` command.  
+Valid option: String. Default: OS and distribution dependent defaults on *deb systems, undef on others.
+
+#####`package`
+Specifies the name of the Java package. This is configurable in case you want to install a non-standard Java package. If not set, the module will install the appropriate package for the `distribution` parameter and target platform. If you set `package`, the `distribution` parameter will do nothing.  
+Valid option: String. Default: undef. 
+
+#####`version`
+Sets the version of Java to install, if you want to ensure a particular version.  
+Valid options: 'present', 'installed', 'latest', or a string matching `/^[.+_0-9a-zA-Z:-]+$/`. Default: 'present'.
+
+####Public defined types
+
+* `java::oracle`: Installs specified version of Oracle Java SE.  You may install multiple versions of Oracle Jave SE on the same node using this defined type.
+
+####Parameters
+
+The following parameters are available in `java::oracle`:
+
+######`version`
+Version of Java Standard Edition (SE) to install. 6, 7 or 8.
+
+#####`java_se`
+Type of Java SE to install, jdk or jre.
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
 ## Reference
 
@@ -79,7 +139,7 @@ This module cannot guarantee installation of Java versions that are not availabl
 
 This module only manages a singular installation of Java, meaning it is not possible to manage e.g. OpenJDK 7, Oracle Java 7 and Oracle Java 8 in parallel on the same system.
 
-Oracle Java packages are not included in Debian 7 and Ubuntu 12.04/14.04 repositories. To install Java on those systems, you'll need to package Oracle JDK/JRE, and then the module can install the package. For more information on how to package Oracle JDK/JRE, see the [Debian wiki](http://wiki.debian.org/JavaPackage).
+Oracle Java packages are not included in Debian 7 and Ubuntu 12.04/14.04 repositories. To install Java on those systems, you'll need to package Oracle JDK/JRE, and then the module will be able to install the package. For more information on how to package Oracle JDK/JRE, see the [Debian wiki](http://wiki.debian.org/JavaPackage).
 
 This module is officially [supported](https://forge.puppetlabs.com/supported) for the following Java versions and platforms:
 
@@ -104,11 +164,27 @@ Oracle Java is supported on:
 * CentOS 7
 * Red Hat Enterprise Linux (RHEL) 7
 
+<<<<<<< HEAD
 ### Known issues
 
 Where Oracle change the format of the URLs to different installer packages, the curl to fetch the package may fail with a HTTP/404 error. In this case, passing a full known good URL using the `url` parameter will allow the module to still be able to install specific versions of the JRE/JDK. Note the `version_major` and `version_minor` parameters must be passed and must match the version downloaded using the known URL in the `url` parameter. 
 
 #### OpenBSD
+=======
+### A note to OpenBSD
+OpenBSD packages install Java JRE/JDK in a unique directory structure, not linking
+the binaries to a standard directory. Because of that, the path to this location
+is hardcoded in the java_version fact. Whenever a Java upgrade to a newer
+version/path will be done on OpenBSD, it has to be adapted there.
+
+### A note to FreeBSD
+By default on FreeBSD Puppet < 4.0, you will see an error as `pkgng` is not the default provider. To fix this, you can install the [zleslie/pkgng module](https://forge.puppetlabs.com/zleslie/pkgng) and set it as the default package provider like so:
+
+```puppet
+Package {
+  provider => 'pkgng',
+}
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
 OpenBSD packages install Java JRE/JDK in a unique directory structure, not linking
 the binaries to a standard directory. Because of that, the path to this location

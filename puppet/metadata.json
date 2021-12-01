@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "theforeman-puppet",
   "version": "12.1.0",
   "author": "theforeman",
@@ -67,11 +68,34 @@
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
         "9"
+=======
+  "name": "dhoppe-puppet",
+  "version": "1.2.3",
+  "author": "Dennis Hoppe",
+  "summary": "This module installs, configures and manages the Puppet service.",
+  "license": "Apache-2.0",
+  "source": "git://github.com/dhoppe/puppet-puppet.git",
+  "project_page": "https://github.com/dhoppe/puppet-puppet",
+  "issues_url": "https://github.com/dhoppe/puppet-puppet/issues",
+  "dependencies": [
+    {"name":"puppet/extlib","version_requirement":">= 1.0.0 < 2.0.0"},
+    {"name":"puppetlabs/stdlib","version_requirement":">= 4.5.0 < 5.0.0"}
+  ],
+  "data_provider": null,
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
+<<<<<<< HEAD
         "16.04",
         "18.04"
       ]
@@ -109,5 +133,24 @@
         "2012 R2"
       ]
     }
+=======
+        "12.04",
+        "14.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": ">= 3.2.0"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.2.0"
+    }
+  ],
+  "tags": [
+    "puppet"
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   ]
 }

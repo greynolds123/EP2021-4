@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #concat
 
 ####Table of Contents
@@ -11,6 +12,8 @@
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
     * [Defines](#defines)
     * [Parameters](#parameters)
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 # concat
 
 #### Table of Contents
@@ -24,6 +27,7 @@
 6. [Limitations - OS compatibility, etc.](#limitations)
 7. [Development - Guide for contributing to the module](#development)
 
+<<<<<<< HEAD
 ##Overview
 
 The concat module lets you construct files from multiple ordered fragments of text.
@@ -34,6 +38,8 @@ The concat module lets you gather `concat::fragment` resources from your other m
 
 ###Beginning with concat
 
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 <a id="overview"></a>
 ## Overview
 
@@ -54,6 +60,10 @@ To start using concat you need to create:
 
 A minimal example might be:
 
+<<<<<<< HEAD
+=======
+~~~
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 concat { '/tmp/file':
   ensure => present,
 }
@@ -65,9 +75,12 @@ concat::fragment { 'tmpfile':
 }
 ~~~
 
+<<<<<<< HEAD
 ##Usage
 
 ###Maintain a list of the major modules on a node
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 <a id="usage"></a>
 ## Usage
 
@@ -85,7 +98,10 @@ class motd {
     mode  => '0644'
   }
 
+<<<<<<< HEAD
   concat::fragment{ 'motd_header':
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   concat::fragment { 'motd_header':
     target  => $motd,
     content => "\nPuppet modules on this server:\n\n",
@@ -94,7 +110,10 @@ class motd {
 
   # let local users add to the motd by creating a file called
   # /etc/motd.local
+<<<<<<< HEAD
   concat::fragment{ 'motd_local':
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   concat::fragment { 'motd_local':
     target => $motd,
     source => '/etc/motd.local',
@@ -103,7 +122,10 @@ class motd {
 }
 
 # let other modules register themselves in the motd
+<<<<<<< HEAD
 define motd::register($content="", $order='10') {
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 define motd::register (
   $content = "",
   $order   = '10',
@@ -114,7 +136,10 @@ define motd::register (
     $body = $content
   }
 
+<<<<<<< HEAD
   concat::fragment{ "motd_fragment_$name":
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   concat::fragment { "motd_fragment_$name":
     target  => '/etc/motd',
     order   => $order,
@@ -129,7 +154,10 @@ Then, in the declarations for each module on the node, add `motd::register{ 'Apa
 class apache {
   include apache::install, apache::config, apache::service
 
+<<<<<<< HEAD
   motd::register{ 'Apache': }
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   motd::register { 'Apache': }
 }
 ~~~
@@ -147,6 +175,7 @@ When you're finished, the motd file will look something like this:
   <contents of /etc/motd.local>
 ~~~
 
+<<<<<<< HEAD
 ##Reference
 
 ###Defines
@@ -358,6 +387,8 @@ Specifies a file to read into the content of the fragment. **Note**: You must su
 *Required.* Specifies the destination file of the fragment. Valid options: a string containing the path or title of the parent `concat_file` resource.
 
 ###Removed functionality
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 <a id="reference"></a>
 ## Reference
 
@@ -378,6 +409,7 @@ Parameters removed from `concat::fragment`:
 The `concat::setup` class has also been removed.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Prior to concat version 2.0.0, if you set the `warn` parameter to a string value of 'true', 'false', 'yes', 'no', 'on', or 'off', the module translated the string to the corresponding boolean value. In concat version 2.0.0 and newer, the `warn_header` parameter treats those values the same as other strings and uses them as the content of your header message. To avoid that, pass the 'true' and 'false' values as booleans instead of strings.
 
 ##Limitations
@@ -393,6 +425,8 @@ We want to keep it as easy as possible to contribute changes so that our modules
 For more information, see our [module contribution guide.](https://docs.puppetlabs.com/forge/contributing.html)
 
 ###Contributors
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 Prior to concat version 2.0.0, if you set the `warn` parameter to a string value of `true`, `false`, 'yes', 'no', 'on', or 'off', the module translated the string to the corresponding boolean value. In concat version 2.0.0 and newer, the `warn_header` parameter treats those values the same as other strings and uses them as the content of your header message. To avoid that, pass the `true` and `false` values as booleans instead of strings.
 
 <a id="limitations"></a>
@@ -419,5 +453,8 @@ Richard Pijnenburg ([@Richardp82](http://twitter.com/richardp82))
 
 Joshua Hoblitt ([@jhoblitt](http://twitter.com/jhoblitt))
 
+<<<<<<< HEAD
 [More contributors.](https://github.com/puppetlabs/puppetlabs-concat/graphs/contributors)
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 [More contributors](https://github.com/puppetlabs/puppetlabs-concat/graphs/contributors).

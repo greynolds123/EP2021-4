@@ -2,6 +2,7 @@ require 'spec_helper_acceptance'
 
 describe 'symbolic name' do
 <<<<<<< HEAD
+<<<<<<< HEAD
   basedir = default.tmpdir('concat')
   pp = <<-EOS
     concat { 'not_abs_path':
@@ -33,6 +34,8 @@ describe 'symbolic name' do
       should match '2'
     }
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   before(:all) do
     @basedir = setup_test_directory
   end
@@ -62,6 +65,9 @@ describe 'symbolic name' do
     expect(file("#{@basedir}/file")).to be_file
     expect(file("#{@basedir}/file").content).to match '1'
     expect(file("#{@basedir}/file").content).to match '2'
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   end
 end

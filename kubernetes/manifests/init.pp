@@ -364,10 +364,13 @@
 # [*environment*]
 # The environment passed to kubectl commands.
 # Defaults to setting HOME and KUBECONFIG variables
+<<<<<<< HEAD
 # 
 # [*ttl_duration*]
 # Availability of the token
 # Default to 24h 
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 #
 # Authors
 # -------
@@ -420,10 +423,14 @@ class kubernetes (
   Integer $api_server_count                          = undef,
   String $kubernetes_ca_crt                          = undef,
   String $kubernetes_ca_key                          = undef,
+<<<<<<< HEAD
   String $kubernetes_front_proxy_ca_crt              = undef,
   String $kubernetes_front_proxy_ca_key              = undef,
   String $token                                      = undef,
   String $ttl_duration                               = '24h',
+=======
+  String $token                                      = undef,
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   String $discovery_token_hash                       = undef,
   String $sa_pub                                     = undef,
   String $sa_key                                     = undef,
@@ -440,7 +447,10 @@ class kubernetes (
   Optional[Hash] $kubeadm_extra_config               = undef,
   Optional[Hash] $kubelet_extra_config               = undef,
   Optional[Array] $kubelet_extra_arguments           = [],
+<<<<<<< HEAD
   Optional[String] $proxy_mode                       = '',
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   Optional[String] $runc_version                     = '1.0.0-rc5',
   Optional[String] $runc_source                      =
     "https://github.com/opencontainers/runc/releases/download/v${runc_version}/runc.amd64",

@@ -2,6 +2,7 @@ require 'spec_helper_acceptance'
 
 describe 'concat ensure_newline parameter' do
 <<<<<<< HEAD
+<<<<<<< HEAD
   basedir = default.tmpdir('concat')
   context '=> false' do
     before(:all) do
@@ -64,6 +65,8 @@ describe 'concat ensure_newline parameter' do
         should match /1\n2\n/
       }
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   before(:all) do
     @basedir = setup_test_directory
   end
@@ -112,7 +115,10 @@ describe 'concat ensure_newline parameter' do
       idempotent_apply(pp)
       expect(file("#{@basedir}/file")).to be_file
       expect(file("#{@basedir}/file").content).to match %r{1\r?\n2\r?\n}
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     end
   end
 end

@@ -29,11 +29,20 @@ default_fact_files.each do |f|
   end
 end
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 # read default_facts and merge them over what is provided by facterdb
 default_facts.each do |fact, value|
   add_custom_fact fact, value
 end
 
+<<<<<<< HEAD
+=======
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 RSpec.configure do |c|
   c.default_facts = default_facts
   c.before :each do
@@ -47,8 +56,16 @@ RSpec.configure do |c|
   end
 end
 
+<<<<<<< HEAD
 # Ensures that a module is defined
 # @param module_name Name of the module
+=======
+<<<<<<< HEAD
+=======
+# Ensures that a module is defined
+# @param module_name Name of the module
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 def ensure_module_defined(module_name)
   module_name.split('::').reduce(Object) do |last_module, next_module|
     last_module.const_set(next_module, Module.new) unless last_module.const_defined?(next_module, false)

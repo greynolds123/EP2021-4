@@ -1,11 +1,30 @@
+<<<<<<< HEAD
 # @summary
 #   Returns true if the ipaddress is within the given CIDRs
+=======
+<<<<<<< HEAD
+# Returns true if the ipaddress is within the given CIDRs
+=======
+# @summary
+#   Returns true if the ipaddress is within the given CIDRs
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 #
 # @example ip_in_range(<IPv4 Address>, <IPv4 CIDR>)
 #   stdlib::ip_in_range('10.10.10.53', '10.10.10.0/24') => true
 Puppet::Functions.create_function(:'stdlib::ip_in_range') do
+<<<<<<< HEAD
   # @param ipaddress The IP address to check
   # @param range One CIDR or an array of CIDRs
+=======
+<<<<<<< HEAD
+  # @param [String] ipaddress The IP address to check
+  # @param [Variant[String, Array]] range One CIDR or an array of CIDRs
+=======
+  # @param ipaddress The IP address to check
+  # @param range One CIDR or an array of CIDRs
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   #   defining the range(s) to check against
   #
   # @return [Boolean] True or False
@@ -16,6 +35,13 @@ Puppet::Functions.create_function(:'stdlib::ip_in_range') do
   end
 
   require 'ipaddr'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   def ip_in_range(ipaddress, range)
     ip = IPAddr.new(ipaddress)
 

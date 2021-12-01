@@ -2,6 +2,7 @@ require 'spec_helper_acceptance'
 
 describe 'warnings' do
 <<<<<<< HEAD
+<<<<<<< HEAD
   basedir = default.tmpdir('concat')
 
   shared_examples 'has_warning' do |pp, w|
@@ -58,6 +59,8 @@ describe 'warnings' do
 
     it_behaves_like 'has_warning', pp, w
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   before(:all) do
     @basedir = setup_test_directory
   end
@@ -78,7 +81,10 @@ describe 'warnings' do
     it 'applies manifests, check stderr' do
       expect(apply_manifest(pp, expect_failures: true).stderr).to match 'not found in the catalog'
       expect(apply_manifest(pp, expect_failures: true).stderr).to match 'not found in the catalog'
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     end
   end
 end

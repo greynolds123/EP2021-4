@@ -5,6 +5,7 @@ require 'puppet/util/checksums'
 
 Puppet::Type.newtype(:concat_file) do
 <<<<<<< HEAD
+<<<<<<< HEAD
   @doc = "Gets all the file fragments and puts these into the target file.
     This will mostly be used with exported resources.
 
@@ -14,6 +15,8 @@ Puppet::Type.newtype(:concat_file) do
       concat_file { '/tmp/file':
         tag            => 'unique_tag', # Mandatory
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   @doc = <<-DOC
     @summary
       Generates a file with content from fragments sharing a common unique tag.
@@ -23,7 +26,10 @@ Puppet::Type.newtype(:concat_file) do
 
       concat_file { '/tmp/file':
         tag            => 'unique_tag', # Optional. Default to undef
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         path           => '/tmp/file',  # Optional. If given it overrides the resource name
         owner          => 'root',       # Optional. Default to undef
         group          => 'root',       # Optional. Default to undef
@@ -32,9 +38,12 @@ Puppet::Type.newtype(:concat_file) do
         ensure_newline => false         # Optional, Defaults to false
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
   "
   ensurable do
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   DOC
 
   ensurable do
@@ -43,7 +52,10 @@ Puppet::Type.newtype(:concat_file) do
       negates the effect of any other parameters.
     DOC
 
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     defaultvalues
 
     defaultto { :present }
@@ -53,6 +65,7 @@ Puppet::Type.newtype(:concat_file) do
     self[:ensure] == :present
   end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   newparam(:name, :namevar => true) do
     desc "Resource name"
@@ -94,6 +107,8 @@ Puppet::Type.newtype(:concat_file) do
   newparam(:replace) do
     desc "Whether to replace a file that already exists on the local system."
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   newparam(:tag) do
     desc 'Required. Specifies a unique tag reference to collect all concat_fragments with the same tag.'
   end
@@ -157,11 +172,15 @@ Puppet::Type.newtype(:concat_file) do
 
   newparam(:replace, boolean: true, parent: Puppet::Parameter::Boolean) do
     desc 'Specifies whether to overwrite the destination file if it already exists.'
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     defaultto true
   end
 
   newparam(:validate_cmd) do
+<<<<<<< HEAD
 <<<<<<< HEAD
     desc "Validates file."
   end
@@ -201,6 +220,8 @@ Puppet::Type.newtype(:concat_file) do
 
   # Autorequire the file we are generating below
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     desc <<-DOC
       Specifies a validation command to apply to the destination file. Requires Puppet version 3.5 or newer. Valid options: a string to
       be passed to a file resource.
@@ -278,11 +299,15 @@ Puppet::Type.newtype(:concat_file) do
 
   # Autorequire the file we are generating below
   # Why is this necessary ?
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   autorequire(:file) do
     [self[:path]]
   end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   def should_content
     return @generated_content if @generated_content
@@ -318,6 +343,8 @@ Puppet::Type.newtype(:concat_file) do
   end
 
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   def fragments
     # Collect fragments that target this resource by path, title or tag.
     @fragments ||= catalog.resources.map { |resource|
@@ -427,7 +454,10 @@ Puppet::Type.newtype(:concat_file) do
     end
   end
 
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   def fragment_content(r)
     if r[:content].nil? == false
       fragment_content = r[:content]
@@ -436,29 +466,40 @@ Puppet::Type.newtype(:concat_file) do
       Array(r[:source]).each do |source|
         if Puppet::FileServing::Metadata.indirection.find(source)
 <<<<<<< HEAD
+<<<<<<< HEAD
           @source = source 
           break
         end
       end
       self.fail "Could not retrieve source(s) #{r[:source].join(", ")}" unless @source
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
           @source = source
           break
         end
       end
       raise _('Could not retrieve source(s) %{_array}') % { _array: Array(r[:source]).join(', ') } unless @source
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       tmp = Puppet::FileServing::Content.indirection.find(@source)
       fragment_content = tmp.content unless tmp.nil?
     end
 
     if self[:ensure_newline]
 <<<<<<< HEAD
+<<<<<<< HEAD
       fragment_content<<"\n" unless fragment_content =~ /\n$/
 =======
       newline = Puppet::Util::Platform.windows? ? "\r\n" : "\n"
       fragment_content << newline unless fragment_content =~ %r{#{newline}$}
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+      newline = Puppet::Util::Platform.windows? ? "\r\n" : "\n"
+      fragment_content << newline unless fragment_content =~ %r{#{newline}$}
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     end
 
     fragment_content
@@ -467,10 +508,14 @@ Puppet::Type.newtype(:concat_file) do
   def generate
     file_opts = {
 <<<<<<< HEAD
+<<<<<<< HEAD
       :ensure => self[:ensure] == :absent ? :absent : :file,
 =======
       ensure: (self[:ensure] == :absent) ? :absent : :file,
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+      ensure: (self[:ensure] == :absent) ? :absent : :file,
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     }
 
     [:path,
@@ -487,6 +532,7 @@ Puppet::Type.newtype(:concat_file) do
      :validate_cmd,
      :show_diff].each do |param|
 <<<<<<< HEAD
+<<<<<<< HEAD
       unless self[param].nil?
         file_opts[param] = self[param]
       end
@@ -495,21 +541,30 @@ Puppet::Type.newtype(:concat_file) do
     metaparams = Puppet::Type.metaparams
     excluded_metaparams = [ :before, :notify, :require, :subscribe, :tag ]
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       file_opts[param] = self[param] unless self[param].nil?
     end
 
     metaparams = Puppet::Type.metaparams
     excluded_metaparams = [:before, :notify, :require, :subscribe, :tag]
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
     metaparams.reject! { |param| excluded_metaparams.include? param }
 
     metaparams.each do |metaparam|
 <<<<<<< HEAD
+<<<<<<< HEAD
       file_opts[metaparam] = self[metaparam] if self[metaparam]
 =======
       file_opts[metaparam] = self[metaparam] unless self[metaparam].nil?
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+      file_opts[metaparam] = self[metaparam] unless self[metaparam].nil?
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     end
 
     [Puppet::Type.type(:file).new(file_opts)]
@@ -519,17 +574,23 @@ Puppet::Type.newtype(:concat_file) do
     content = should_content
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     if !content.nil? and !content.empty?
       catalog.resource("File[#{self[:path]}]")[:content] = content
     end
 
     [ catalog.resource("File[#{self[:path]}]") ]
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     if !content.nil? && !content.empty?
       catalog.resource("File[#{self[:path]}]")[:content] = content
     end
 
     [catalog.resource("File[#{self[:path]}]")]
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   end
 end

@@ -29,17 +29,32 @@ describe 'java_default_home' do
   context 'when java found in PATH' do
     context 'when java is in /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java' do
       it do
+<<<<<<< HEAD
         unlink_and_delete('./java_test')
         symlink_and_test(java_7_path, java_7_home)
         unlink_and_delete('./java_test')
+=======
+        java_path_output = <<-EOS
+/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+        EOS
+        Facter::Util::Resolution.expects(:which).with("readlink").returns(true)
+        Facter::Util::Resolution.expects(:exec).with("readlink -e /usr/bin/java").returns(java_path_output)
+        Facter.value(:java_default_home).should == "/usr/lib/jvm/java-7-openjdk-amd64"
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       end
     end
 
     context 'when java is in /usr/lib/jvm/oracle-java8-jre-amd64/bin/java' do
       it do
+<<<<<<< HEAD
         unlink_and_delete('./java_test')
         symlink_and_test(java_8_path, java_8_home)
         unlink_and_delete('./java_test')
+=======
+        Facter::Util::Resolution.stubs(:exec)
+        Facter::Util::Resolution.expects(:which).with("readlink").at_least(1).returns(false)
+        Facter.value(:java_default_home).should be_nil
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       end
     end
   end

@@ -5,6 +5,11 @@
   "summary": "Roles for the application",
   "license": "Apache-2.0",
   "source": "https://github.com/greynolds123/control-repo/tree/production/profile",
+<<<<<<< HEAD
+=======
+  "project_page": "https://github.com/greynolds123/control-repo/tree/production/profile",
+  "issues_url": "https://github.com/greynolds123/control-repo/tree/production/profile",
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   "project_page": "https://github.com/greynolds123/control-repo/tree/production/role",
   "issues_url": "https://github.com/greynolds123/control-repo/tree/production/role",
   "dependencies": [

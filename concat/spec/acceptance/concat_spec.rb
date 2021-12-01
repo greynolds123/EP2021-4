@@ -1,6 +1,7 @@
 require 'spec_helper_acceptance'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 case fact('osfamily')
   when 'AIX'
     username = 'root'
@@ -113,6 +114,8 @@ describe 'basic concat test' do
           ensure => present,
           path   => '#{basedir}/file',
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 case os[:family]
 when 'aix'
   username = 'root'
@@ -173,7 +176,10 @@ describe 'basic concat test' do
         concat { 'file':
           ensure => present,
           path   => '#{@basedir}/file',
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
           mode   => '0644',
         }
         concat::fragment { '1':
@@ -181,6 +187,7 @@ describe 'basic concat test' do
           content => '1',
           order   => '01',
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
       "
 
@@ -208,6 +215,8 @@ describe 'basic concat test' do
           ensure => absent,
           path   => '#{basedir}/file',
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       MANIFEST
     end
 
@@ -225,7 +234,10 @@ describe 'basic concat test' do
         concat { 'file':
           ensure => absent,
           path   => '#{@basedir}/file',
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
           mode   => '0644',
         }
         concat::fragment { '1':
@@ -233,6 +245,7 @@ describe 'basic concat test' do
           content => '1',
           order   => '01',
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
       "
 
@@ -261,6 +274,8 @@ describe 'basic concat test' do
           ensure => present,
           path   => '#{basedir}/#{filename}',
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       MANIFEST
     end
 
@@ -278,7 +293,10 @@ describe 'basic concat test' do
         concat { '#{filename}':
           ensure => present,
           path   => '#{@basedir}/#{filename}',
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
           mode   => '0644',
         }
         concat::fragment { '1':
@@ -286,6 +304,7 @@ describe 'basic concat test' do
           content => '1',
           order   => '01',
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
       "
 
@@ -313,6 +332,8 @@ describe 'basic concat test' do
           ensure => present,
           path   => '#{basedir}/file',
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       MANIFEST
     end
 
@@ -330,7 +351,10 @@ describe 'basic concat test' do
         concat { 'file':
           ensure => present,
           path   => '#{@basedir}/file',
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
           mode   => '0644',
           noop   => true,
         }
@@ -340,6 +364,7 @@ describe 'basic concat test' do
           order   => '01',
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
       "
 
       it_behaves_like 'successfully_applied', pp
@@ -348,13 +373,18 @@ describe 'basic concat test' do
         it { should_not be_file }
       end
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       MANIFEST
     end
 
     it 'applies manifest twice with no stderr' do
       idempotent_apply(pp)
       expect(file("#{@basedir}/file")).not_to be_file
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     end
   end
 end

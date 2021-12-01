@@ -8,6 +8,18 @@ describe 'the Kubernetes module' do
     describe 'kubernetes class' do
 
       context 'it should install the module and run' do
+<<<<<<< HEAD
+=======
+        let(:pp) {"
+        class {'kubernetes':
+          controller => true,
+          schedule_on_controller => true,
+          environment  => ['HOME=/root', 'KUBECONFIG=/etc/kubernetes/admin.conf'],
+          kubernetes_version => '1.13.5',
+          ignore_preflight_errors => ['NumCPU'],
+        }
+        "}
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
         pp = <<-MANIFEST
         if $::osfamily == 'RedHat'{

@@ -2,6 +2,7 @@ require 'spec_helper_acceptance'
 
 describe 'concat::fragment replace' do
 <<<<<<< HEAD
+<<<<<<< HEAD
   basedir = default.tmpdir('concat')
 
   context 'should create fragment files' do
@@ -138,6 +139,8 @@ describe 'concat::fragment replace' do
   end # should replace its own fragment files even when caller has File(replace=>false) set
 
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   before(:all) do
     @basedir = setup_test_directory
   end
@@ -235,5 +238,8 @@ describe 'concat::fragment replace' do
     end
   end
   # should replace its own fragment files even when caller has File(replace=>false) set
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 end

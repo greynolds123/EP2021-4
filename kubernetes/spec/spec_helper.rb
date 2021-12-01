@@ -21,6 +21,7 @@ default_fact_files = [
 
 default_fact_files.each do |f|
   next unless File.exist?(f) && File.readable?(f) && File.size?(f)
+<<<<<<< HEAD
 
   begin
     default_facts.merge!(YAML.safe_load(File.read(f), [], [], true))
@@ -32,6 +33,14 @@ end
 # read default_facts and merge them over what is provided by facterdb
 default_facts.each do |fact, value|
   add_custom_fact fact, value
+=======
+
+  begin
+    default_facts.merge!(YAML.safe_load(File.read(f), [], [], true))
+  rescue => e
+    RSpec.configuration.reporter.message "WARNING: Unable to load #{f}: #{e}"
+  end
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 end
 
 RSpec.configure do |c|

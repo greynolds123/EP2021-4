@@ -2,6 +2,7 @@ require 'spec_helper_acceptance'
 
 describe 'concat order' do
 <<<<<<< HEAD
+<<<<<<< HEAD
   basedir = default.tmpdir('concat')
 
   context '=> ' do
@@ -13,6 +14,8 @@ describe 'concat order' do
       concat::fragment { '1':
         target  => '#{basedir}/foo',
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   before(:all) do
     @basedir = setup_test_directory
   end
@@ -24,20 +27,28 @@ describe 'concat order' do
       }
       concat::fragment { '1':
         target  => '#{@basedir}/foo',
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         content => 'string1',
         order   => '1',
       }
       concat::fragment { '2':
 <<<<<<< HEAD
+<<<<<<< HEAD
         target  => '#{basedir}/foo',
 =======
         target  => '#{@basedir}/foo',
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+        target  => '#{@basedir}/foo',
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         content => 'string2',
         order   => '2',
       }
       concat::fragment { '10':
+<<<<<<< HEAD
 <<<<<<< HEAD
         target  => '#{basedir}/foo',
         content => 'string10',
@@ -141,6 +152,8 @@ describe 'concat::fragment order' do
   end
 end # concat::fragment order
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         target  => '#{@basedir}/foo',
         content => 'string10',
       }
@@ -184,4 +197,7 @@ end # concat::fragment order
     end
   end
 end
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4

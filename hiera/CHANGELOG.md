@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+<<<<<<< HEAD
 ## [v4.0.0](https://github.com/voxpupuli/puppet-hiera/tree/v4.0.0) (2019-11-27)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v3.4.1...v4.0.0)
@@ -222,6 +223,199 @@ These should not affect the functionality of the module.
 
 **Merged pull requests:**
 
+=======
+## [v3.4.1](https://github.com/voxpupuli/puppet-hiera/tree/v3.4.1) (2019-05-01)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v3.4.0...v3.4.1)
+
+**Fixed bugs:**
+
+- Permission contention on hiera.yaml between module and PE [\#260](https://github.com/voxpupuli/puppet-hiera/pull/260) ([rnelson0](https://github.com/rnelson0))
+
+**Closed issues:**
+
+- Permission contention on hiera.yaml between module and PE [\#245](https://github.com/voxpupuli/puppet-hiera/issues/245)
+
+**Merged pull requests:**
+
+- Allow `puppetlabs/inifile` 3.x [\#256](https://github.com/voxpupuli/puppet-hiera/pull/256) ([alexjfisher](https://github.com/alexjfisher))
+
+## [v3.4.0](https://github.com/voxpupuli/puppet-hiera/tree/v3.4.0) (2019-04-25)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v3.3.4...v3.4.0)
+
+**Implemented enhancements:**
+
+- Support `hiera5\_defaults` `options` setting [\#253](https://github.com/voxpupuli/puppet-hiera/pull/253) ([alexjfisher](https://github.com/alexjfisher))
+- Extend Hiera 5 template to support trocla backend [\#238](https://github.com/voxpupuli/puppet-hiera/pull/238) ([m4rx0](https://github.com/m4rx0))
+
+**Merged pull requests:**
+
+- Make `data\_hash` in `hiera5\_defaults` optional [\#254](https://github.com/voxpupuli/puppet-hiera/pull/254) ([alexjfisher](https://github.com/alexjfisher))
+- Change hiera\_yaml to ensure file [\#247](https://github.com/voxpupuli/puppet-hiera/pull/247) ([m4rx0](https://github.com/m4rx0))
+- README.md: remove some obsolete Puppet Open Source default values [\#241](https://github.com/voxpupuli/puppet-hiera/pull/241) ([kenyon](https://github.com/kenyon))
+- README.md: remove note about FOSS Puppet 3 default [\#240](https://github.com/voxpupuli/puppet-hiera/pull/240) ([kenyon](https://github.com/kenyon))
+- README.md: correct default of hiera5\_defaults [\#239](https://github.com/voxpupuli/puppet-hiera/pull/239) ([kenyon](https://github.com/kenyon))
+
+## [v3.3.4](https://github.com/voxpupuli/puppet-hiera/tree/v3.3.4) (2018-10-20)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v3.3.3...v3.3.4)
+
+**Merged pull requests:**
+
+- modulesync 2.2.0 and allow puppet 6.x and drop puppet 3 [\#236](https://github.com/voxpupuli/puppet-hiera/pull/236) ([bastelfreak](https://github.com/bastelfreak))
+
+## [v3.3.3](https://github.com/voxpupuli/puppet-hiera/tree/v3.3.3) (2018-09-09)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v3.3.2...v3.3.3)
+
+**Merged pull requests:**
+
+- allow puppetlabs/stdlib 5.x [\#231](https://github.com/voxpupuli/puppet-hiera/pull/231) ([bastelfreak](https://github.com/bastelfreak))
+- allow puppetlabs/inifile 2.x [\#228](https://github.com/voxpupuli/puppet-hiera/pull/228) ([bastelfreak](https://github.com/bastelfreak))
+- Remove docker nodesets [\#223](https://github.com/voxpupuli/puppet-hiera/pull/223) ([bastelfreak](https://github.com/bastelfreak))
+- drop EOL OSs; fix puppet version range [\#222](https://github.com/voxpupuli/puppet-hiera/pull/222) ([bastelfreak](https://github.com/bastelfreak))
+
+## [v3.3.2](https://github.com/voxpupuli/puppet-hiera/tree/v3.3.2) (2018-03-28)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v3.3.1...v3.3.2)
+
+**Fixed bugs:**
+
+- Fix side affect in that the eyaml will always be first for backend lookups [\#216](https://github.com/voxpupuli/puppet-hiera/pull/216) ([mcmartins](https://github.com/mcmartins))
+
+**Merged pull requests:**
+
+- bump puppet to latest supported version 4.10.0 [\#217](https://github.com/voxpupuli/puppet-hiera/pull/217) ([bastelfreak](https://github.com/bastelfreak))
+
+## [v3.3.1](https://github.com/voxpupuli/puppet-hiera/tree/v3.3.1) (2017-12-09)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v3.3.0...v3.3.1)
+
+**Merged pull requests:**
+
+- Update Setup Requirements [\#210](https://github.com/voxpupuli/puppet-hiera/pull/210) ([krisamundson](https://github.com/krisamundson))
+
+## [v3.3.0](https://github.com/voxpupuli/puppet-hiera/tree/v3.3.0) (2017-10-16)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v3.2.0...v3.3.0)
+
+**Implemented enhancements:**
+
+- Allow eyaml, eyaml\_gpg and deep\_merge packages to be installed independent of hiera package [\#208](https://github.com/voxpupuli/puppet-hiera/pull/208) ([treydock](https://github.com/treydock))
+
+## [v3.2.0](https://github.com/voxpupuli/puppet-hiera/tree/v3.2.0) (2017-09-17)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v3.1.0...v3.2.0)
+
+**Implemented enhancements:**
+
+- Add datadir key for hiera5 hierarchy. [\#204](https://github.com/voxpupuli/puppet-hiera/pull/204) ([disappear89](https://github.com/disappear89))
+
+**Closed issues:**
+
+- Release new tag incorporating \#197, \#200 [\#202](https://github.com/voxpupuli/puppet-hiera/issues/202)
+
+## [v3.1.0](https://github.com/voxpupuli/puppet-hiera/tree/v3.1.0) (2017-08-31)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v3.0.0...v3.1.0)
+
+**Implemented enhancements:**
+
+- Hiera5 [\#194](https://github.com/voxpupuli/puppet-hiera/pull/194) ([naeem98](https://github.com/naeem98))
+
+**Fixed bugs:**
+
+- Remove restrictions on custom options hash [\#200](https://github.com/voxpupuli/puppet-hiera/pull/200) ([reidmv](https://github.com/reidmv))
+- fail is not a resource type, it's a function. [\#197](https://github.com/voxpupuli/puppet-hiera/pull/197) ([sophomeric](https://github.com/sophomeric))
+
+**Merged pull requests:**
+
+- Minor README.md fixes [\#199](https://github.com/voxpupuli/puppet-hiera/pull/199) ([naeem98](https://github.com/naeem98))
+
+## [v3.0.0](https://github.com/voxpupuli/puppet-hiera/tree/v3.0.0) (2017-05-11)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v2.4.0...v3.0.0)
+
+**Breaking changes:**
+
+- replace validate\_\* calls with datatypes [\#191](https://github.com/voxpupuli/puppet-hiera/pull/191) ([bastelfreak](https://github.com/bastelfreak))
+
+**Closed issues:**
+
+- Feature Request: Add Param For Passing Gem Install Options [\#187](https://github.com/voxpupuli/puppet-hiera/issues/187)
+
+**Merged pull requests:**
+
+- Add gem\_install\_options parameter [\#193](https://github.com/voxpupuli/puppet-hiera/pull/193) ([alexjfisher](https://github.com/alexjfisher))
+- Modulesync 0.19.0 [\#185](https://github.com/voxpupuli/puppet-hiera/pull/185) ([bastelfreak](https://github.com/bastelfreak))
+
+## [v2.4.0](https://github.com/voxpupuli/puppet-hiera/tree/v2.4.0) (2017-01-13)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v2.3.0...v2.4.0)
+
+**Closed issues:**
+
+- deep\_merge\_options are not set when merge\_behavior =\> deeper [\#174](https://github.com/voxpupuli/puppet-hiera/issues/174)
+- json backend datadir can not be set [\#152](https://github.com/voxpupuli/puppet-hiera/issues/152)
+- Quoting of hierarchy entries only if string starts with percent sign [\#146](https://github.com/voxpupuli/puppet-hiera/issues/146)
+- Variables in a single-quote is changed to value - should not be \(according to the README\) [\#141](https://github.com/voxpupuli/puppet-hiera/issues/141)
+- Don't notify pe-puppetserver during eyaml installation [\#109](https://github.com/voxpupuli/puppet-hiera/issues/109)
+
+**Merged pull requests:**
+
+- modulesync 0.16.7 [\#183](https://github.com/voxpupuli/puppet-hiera/pull/183) ([bastelfreak](https://github.com/bastelfreak))
+- modulesync 0.16.6 [\#180](https://github.com/voxpupuli/puppet-hiera/pull/180) ([alexjfisher](https://github.com/alexjfisher))
+- Bump min version\_requirement for Puppet + deps [\#179](https://github.com/voxpupuli/puppet-hiera/pull/179) ([juniorsysadmin](https://github.com/juniorsysadmin))
+- modulesync 0.16.4 [\#178](https://github.com/voxpupuli/puppet-hiera/pull/178) ([bastelfreak](https://github.com/bastelfreak))
+- Correct spelling of @merge\_behavior in template [\#176](https://github.com/voxpupuli/puppet-hiera/pull/176) ([antaflos](https://github.com/antaflos))
+- Strict variables fix for `pe\_server\_version` [\#175](https://github.com/voxpupuli/puppet-hiera/pull/175) ([alexjfisher](https://github.com/alexjfisher))
+- modulesync 0.16.3 [\#173](https://github.com/voxpupuli/puppet-hiera/pull/173) ([bastelfreak](https://github.com/bastelfreak))
+- Support deep\_merge\_options with 'deeper' merge\_behavior [\#172](https://github.com/voxpupuli/puppet-hiera/pull/172) ([antaflos](https://github.com/antaflos))
+- Do not make files in the gnupg home executable. [\#169](https://github.com/voxpupuli/puppet-hiera/pull/169) ([vStone](https://github.com/vStone))
+
+## [v2.3.0](https://github.com/voxpupuli/puppet-hiera/tree/v2.3.0) (2016-11-07)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v2.2.0...v2.3.0)
+
+**Closed issues:**
+
+- incompatible changes in version 2.2.0 [\#161](https://github.com/voxpupuli/puppet-hiera/issues/161)
+- Problems configuring eyaml-gpg without eyaml [\#158](https://github.com/voxpupuli/puppet-hiera/issues/158)
+- manage\_package should exist for eyaml, deep\_merge, etc [\#128](https://github.com/voxpupuli/puppet-hiera/issues/128)
+
+**Merged pull requests:**
+
+- modulesync 0.15.0 [\#167](https://github.com/voxpupuli/puppet-hiera/pull/167) ([bastelfreak](https://github.com/bastelfreak))
+- Update to new is\_expected.to syntax in favor of should [\#166](https://github.com/voxpupuli/puppet-hiera/pull/166) ([vStone](https://github.com/vStone))
+- Add missing badges [\#165](https://github.com/voxpupuli/puppet-hiera/pull/165) ([dhoppe](https://github.com/dhoppe))
+- Update based on voxpupuli/modulesync\_config 0.14.1 [\#164](https://github.com/voxpupuli/puppet-hiera/pull/164) ([dhoppe](https://github.com/dhoppe))
+- Follow manage\_package for all packages \(Fixes \#128\) [\#163](https://github.com/voxpupuli/puppet-hiera/pull/163) ([vStone](https://github.com/vStone))
+- make eyaml be the first backend [\#162](https://github.com/voxpupuli/puppet-hiera/pull/162) ([mmckinst](https://github.com/mmckinst))
+- modulesync 0.13.0 [\#160](https://github.com/voxpupuli/puppet-hiera/pull/160) ([bbriggs](https://github.com/bbriggs))
+- Test when eyaml\_gpg is true and eyaml is unspecified [\#159](https://github.com/voxpupuli/puppet-hiera/pull/159) ([earsdown](https://github.com/earsdown))
+
+## [v2.2.0](https://github.com/voxpupuli/puppet-hiera/tree/v2.2.0) (2016-10-10)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v2.1.2...v2.2.0)
+
+**Closed issues:**
+
+- Add support for 3rd party backends [\#153](https://github.com/voxpupuli/puppet-hiera/issues/153)
+
+**Merged pull requests:**
+
+- fixes issue with new backend merge logic [\#156](https://github.com/voxpupuli/puppet-hiera/pull/156) ([logicminds](https://github.com/logicminds))
+- modulesync 0.12.8 [\#155](https://github.com/voxpupuli/puppet-hiera/pull/155) ([bastelfreak](https://github.com/bastelfreak))
+- Fixes \#153 - Add support for 3rd party backends [\#154](https://github.com/voxpupuli/puppet-hiera/pull/154) ([logicminds](https://github.com/logicminds))
+
+## [v2.1.2](https://github.com/voxpupuli/puppet-hiera/tree/v2.1.2) (2016-08-31)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-hiera/compare/v2.1.1...v2.1.2)
+
+**Merged pull requests:**
+
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 - Modify gem\_source handling \(Do not attempt to validate path if gem\_source is an URL\) [\#150](https://github.com/voxpupuli/puppet-hiera/pull/150) ([nbetm](https://github.com/nbetm))
 
 ## [v2.1.1](https://github.com/voxpupuli/puppet-hiera/tree/v2.1.1) (2016-08-19)
@@ -241,7 +435,13 @@ These should not affect the functionality of the module.
 
 - Relicense BSD-2-Clause to Apache-2.0 [\#149](https://github.com/voxpupuli/puppet-hiera/pull/149) ([hunner](https://github.com/hunner))
 - Modulesync 0.12.2 & Release 2.1.1 [\#148](https://github.com/voxpupuli/puppet-hiera/pull/148) ([bastelfreak](https://github.com/bastelfreak))
+<<<<<<< HEAD
 - module is compatible with PE2016.2 [\#144](https://github.com/voxpupuli/puppet-hiera/pull/144) ([vchepkov](https://github.com/vchepkov))
+=======
+- modulesync 0.11.1 [\#145](https://github.com/voxpupuli/puppet-hiera/pull/145) ([bastelfreak](https://github.com/bastelfreak))
+- module is compatible with PE2016.2 [\#144](https://github.com/voxpupuli/puppet-hiera/pull/144) ([vchepkov](https://github.com/vchepkov))
+- modulesync 0.11.0 [\#143](https://github.com/voxpupuli/puppet-hiera/pull/143) ([bastelfreak](https://github.com/bastelfreak))
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 - Update metadata.json to not give dependency errors in puppet3.8 [\#142](https://github.com/voxpupuli/puppet-hiera/pull/142) ([cryptk](https://github.com/cryptk))
 - modulesync 0.8.0 [\#139](https://github.com/voxpupuli/puppet-hiera/pull/139) ([bastelfreak](https://github.com/bastelfreak))
 - modulesync 0.6.2 [\#137](https://github.com/voxpupuli/puppet-hiera/pull/137) ([bastelfreak](https://github.com/bastelfreak))

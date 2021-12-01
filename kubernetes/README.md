@@ -715,7 +715,11 @@ Docker is the supported container runtime for this module.
 
 ## Development
 
+<<<<<<< HEAD
 If you would like to contribute to this module, please follow the rules in the [CONTRIBUTING.md](https://github.com/puppetlabs/puppetlabs-kubernetes/blob/master/CONTRIBUTING.md). For more information, see our [module contribution guide.](https://puppet.com/docs/puppet/latest/contributing.html)
+=======
+If you would like to contribute to this module, please follow the rules in the [CONTRIBUTING.md](https://github.com/puppetlabs/puppetlabs-kubernetes/blob/master/CONTRIBUTING.md).
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
 ## Examples
 

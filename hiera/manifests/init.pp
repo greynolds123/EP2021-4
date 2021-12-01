@@ -55,6 +55,7 @@
 # Copyright (C) 2016 Vox Pupuli, unless otherwise noted.
 #
 class hiera (
+<<<<<<< HEAD
   Variant[Array, Array[Hash]] $hierarchy    = $hiera::params::hierarchy,
   Optional[Enum['3','5']] $hiera_version    = $hiera::params::hiera_version,
   Hiera::Hiera5_defaults $hiera5_defaults   = $hiera::params::hiera5_defaults,
@@ -70,16 +71,39 @@ class hiera (
   $eyaml_owner                              = $hiera::params::eyaml_owner,
   $eyaml_group                              = $hiera::params::eyaml_group,
   $provider                                 = $hiera::params::provider,
+=======
+  Variant[Array, Array[Hash]] $hierarchy    = $::hiera::params::hierarchy,
+  Optional[Enum['3','5']] $hiera_version    = $::hiera::params::hiera_version,
+  Hiera::Hiera5_defaults $hiera5_defaults   = $::hiera::params::hiera5_defaults,
+  $backends                                 = ['yaml'],
+  $backend_options                          = {},
+  $hiera_yaml                               = $::hiera::params::hiera_yaml,
+  $create_symlink                           = true,
+  $datadir                                  = $::hiera::params::datadir,
+  $datadir_manage                           = true,
+  $owner                                    = $::hiera::params::owner,
+  $group                                    = $::hiera::params::group,
+  $eyaml_owner                              = $::hiera::params::eyaml_owner,
+  $eyaml_group                              = $::hiera::params::eyaml_group,
+  $provider                                 = $::hiera::params::provider,
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   $eyaml                                    = false,
   $eyaml_name                               = 'hiera-eyaml',
   $eyaml_version                            = undef,
   $eyaml_source                             = undef,
   $eyaml_datadir                            = undef,
   $eyaml_extension                          = undef,
+<<<<<<< HEAD
   $confdir                                  = $hiera::params::confdir,
   $puppet_conf_manage                       = true,
   $logger                                   = 'console',
   $cmdpath                                  = $hiera::params::cmdpath,
+=======
+  $confdir                                  = $::hiera::params::confdir,
+  $puppet_conf_manage                       = true,
+  $logger                                   = 'console',
+  $cmdpath                                  = $::hiera::params::cmdpath,
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   $create_keys                              = true,
   $keysdir                                  = undef,
   $deep_merge_name                          = 'deep_merge',
@@ -88,6 +112,7 @@ class hiera (
   $deep_merge_options                       = {},
   $merge_behavior                           = undef,
   $extra_config                             = '',
+<<<<<<< HEAD
   $master_service                           = $hiera::params::master_service,
   $manage_package                           = $hiera::params::manage_package,
   Boolean $manage_eyaml_package             = true,
@@ -95,6 +120,15 @@ class hiera (
   Boolean $manage_eyaml_gpg_package         = true,
   $package_name                             = $hiera::params::package_name,
   $package_ensure                           = $hiera::params::package_ensure,
+=======
+  $master_service                           = $::hiera::params::master_service,
+  $manage_package                           = $::hiera::params::manage_package,
+  Boolean $manage_eyaml_package             = true,
+  Boolean $manage_deep_merge_package        = true,
+  Boolean $manage_eyaml_gpg_package         = true,
+  $package_name                             = $::hiera::params::package_name,
+  $package_ensure                           = $::hiera::params::package_ensure,
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   $eyaml_gpg_name                           = 'hiera-eyaml-gpg',
   $eyaml_gpg_version                        = undef,
   $eyaml_gpg_source                         = undef,
@@ -105,6 +139,10 @@ class hiera (
   $ruby_gpg_name                            = 'ruby_gpg',
   $ruby_gpg_version                         = undef,
   $ruby_gpg_source                          = undef,
+<<<<<<< HEAD
+=======
+
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   Optional[Array] $gem_install_options = undef,
 
   #Deprecated

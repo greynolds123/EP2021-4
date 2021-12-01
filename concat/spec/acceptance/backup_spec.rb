@@ -2,6 +2,7 @@ require 'spec_helper_acceptance'
 
 describe 'concat backup parameter' do
 <<<<<<< HEAD
+<<<<<<< HEAD
   basedir = default.tmpdir('concat')
   context '=> puppet' do
     before(:all) do
@@ -75,6 +76,8 @@ describe 'concat backup parameter' do
       it { should be_file }
       its(:content) { should match /old contents/ }
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   before(:all) do
     @basedir = setup_test_directory
   end
@@ -121,12 +124,16 @@ describe 'concat backup parameter' do
       expect(file("#{@basedir}/file").content).to match %r{backup extension}
       expect(file("#{@basedir}/file.backup")).to be_file
       expect(file("#{@basedir}/file.backup").content).to match %r{new contents}
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     end
   end
 
   # XXX The backup parameter uses validate_string() and thus can't be the
   # boolean false value, but the string 'false' has the same effect in Puppet 3
+<<<<<<< HEAD
 <<<<<<< HEAD
   context "=> 'false'" do
     before(:all) do
@@ -161,6 +168,8 @@ describe 'concat backup parameter' do
       it { should be_file }
       its(:content) { should match /new contents/ }
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   describe "when 'false'" do
     let(:pp) do
       <<-MANIFEST
@@ -181,7 +190,10 @@ describe 'concat backup parameter' do
       apply_manifest(pp, catch_changes: true)
       expect(file("#{@basedir}/file")).to be_file
       expect(file("#{@basedir}/file").content).to match %r{new contents}
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     end
   end
 end

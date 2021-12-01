@@ -4,7 +4,11 @@ bootstrapTokens:
   groups:
   - system:bootstrappers:kubeadm:default-node-token
   token: <%= @token %>
+<<<<<<< HEAD
   ttl: <%= @ttl_duration %>
+=======
+  ttl: 24h0m0s
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   usages:
   - signing
   - authentication
@@ -53,10 +57,15 @@ apiServer:
 <%- end -%>
 apiVersion: kubeadm.k8s.io/v1beta1
 certificatesDir: /etc/kubernetes/pki
+<<<<<<< HEAD
 <%- if @kubernetes_cluster_name != "kubernetes"  -%>
 clusterName: <%= @kubernetes_cluster_name %>
 <%- end -%>
 controlPlaneEndpoint: "<%= @controller_address %>"
+=======
+clusterName: kubernetes
+controlPlaneEndpoint: ""
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 controllerManager:
 <%- if @controllermanager_merged_extra_arguments -%>
   extraArgs:
@@ -125,7 +134,11 @@ ipvs:
   syncPeriod: 30s
 kind: KubeProxyConfiguration
 metricsBindAddress: 127.0.0.1:10249
+<<<<<<< HEAD
 mode: "<%= @proxy_mode %>"
+=======
+mode: ""
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 nodePortAddresses: null
 oomScoreAdj: -999
 portRange: ""

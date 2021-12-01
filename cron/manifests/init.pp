@@ -41,6 +41,7 @@ class cron {
    include cron::mc_cron
 }
 
+<<<<<<< HEAD
 =======
 
 class cron {
@@ -48,3 +49,5 @@ class cron {
    #include cron::mc_cron
 }
 
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4

@@ -3,7 +3,10 @@ require 'puppetlabs_spec_helper/rake_tasks'
 require 'puppet-syntax/tasks/puppet-syntax'
 require 'puppet_blacksmith/rake_tasks' if Bundler.rubygems.find_name('puppet-blacksmith').any?
 require 'github_changelog_generator/task' if Bundler.rubygems.find_name('github_changelog_generator').any?
+<<<<<<< HEAD
 require 'puppet-strings/tasks' if Bundler.rubygems.find_name('puppet-strings').any?
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
 def changelog_user
   return unless Rake.application.top_level_tasks.include? "changelog"
@@ -15,6 +18,7 @@ end
 
 def changelog_project
   return unless Rake.application.top_level_tasks.include? "changelog"
+<<<<<<< HEAD
 
   returnVal = nil
   returnVal ||= begin
@@ -26,13 +30,21 @@ def changelog_project
 
   raise "unable to find the changelog_project in .sync.yml or calculate it from the source in metadata.json" if returnVal.nil?
 
+=======
+  returnVal = nil || JSON.load(File.read('metadata.json'))['name']
+  raise "unable to find the changelog_project in .sync.yml or the name in metadata.json" if returnVal.nil?
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   puts "GitHubChangelogGenerator project:#{returnVal}"
   returnVal
 end
 
 def changelog_future_release
   return unless Rake.application.top_level_tasks.include? "changelog"
+<<<<<<< HEAD
   returnVal = "v%s" % JSON.load(File.read('metadata.json'))['version']
+=======
+  returnVal = JSON.load(File.read('metadata.json'))['version']
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   raise "unable to find the future_release (version) in metadata.json" if returnVal.nil?
   puts "GitHubChangelogGenerator future_release:#{returnVal}"
   returnVal

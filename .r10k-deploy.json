@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "master",
   "signature": "dd04b80e903867fac27cd9591cecedd5af00aae7",
   "started_at": "2019-06-12 20:04:14 -0700",
@@ -10,5 +11,11 @@
   "started_at": "2019-07-25 18:10:01 -0700",
   "finished_at": "2019-07-25 18:10:02 -0700",
 >>>>>>> 9c2de80aaa300aed946c107c6dc35a0a1a6e16d7
+=======
+  "name": "Dev",
+  "signature": "0c607683fd379c092de9457424f14c74bdc22738",
+  "started_at": "2019-07-25 18:09:59 -0700",
+  "finished_at": "2019-07-25 18:09:59 -0700",
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   "deploy_success": true
 }

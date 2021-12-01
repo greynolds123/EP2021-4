@@ -36,7 +36,11 @@ describe 'kubernetes::config::kubeadm', :type => :class do
 
     kube_dirs = ['/etc/kubernetes', '/etc/kubernetes/manifests', '/etc/kubernetes/pki', '/etc/kubernetes/pki/etcd']
     etcd = ['ca.crt', 'ca.key', 'client.crt', 'client.key', 'peer.crt', 'peer.key', 'server.crt', 'server.key']
+<<<<<<< HEAD
     pki = ['ca.crt', 'ca.key', 'front-proxy-ca.crt', 'front-proxy-ca.key', 'sa.pub', 'sa.key']
+=======
+    pki = ['ca.crt', 'ca.key', 'sa.pub', 'sa.key']
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
     kube_dirs.each do |d|
       it { is_expected.to contain_file(d.to_s) }
@@ -69,7 +73,11 @@ describe 'kubernetes::config::kubeadm', :type => :class do
 
     kube_dirs = ['/etc/kubernetes', '/etc/kubernetes/manifests', '/etc/kubernetes/pki', '/etc/kubernetes/pki/etcd']
     etcd = ['ca.crt', 'ca.key', 'client.crt', 'client.key', 'peer.crt', 'peer.key', 'server.crt', 'server.key']
+<<<<<<< HEAD
     pki = ['ca.crt', 'ca.key', 'front-proxy-ca.crt', 'front-proxy-ca.key', 'sa.pub', 'sa.key']
+=======
+    pki = ['ca.crt', 'ca.key', 'sa.pub', 'sa.key']
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
     kube_dirs.each do |d|
       it { is_expected.to contain_file(d.to_s) }
@@ -172,6 +180,7 @@ describe 'kubernetes::config::kubeadm', :type => :class do
     }
   end
 
+<<<<<<< HEAD
   context 'with version = 1.13 and kubernetes_cluster_name => my_own_name' do
     let(:params) do
       {
@@ -186,6 +195,8 @@ describe 'kubernetes::config::kubeadm', :type => :class do
     }
   end
 
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   context 'with version = 1.14' do
     let(:params) do
       {
@@ -265,6 +276,7 @@ describe 'kubernetes::config::kubeadm', :type => :class do
       expect(config_yaml[1]['controllerManager']['extraVolumes']).to include('name' => 'foo', 'hostPath' => '/mnt', 'mountPath' => '/data')
     end
   end
+<<<<<<< HEAD
 
   context 'with version = 1.14' do
     let(:params) do
@@ -297,4 +309,6 @@ describe 'kubernetes::config::kubeadm', :type => :class do
       expect(config_yaml[2]['mode']).to include('ipvs')
     end
   end
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 end

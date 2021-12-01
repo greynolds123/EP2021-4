@@ -1,12 +1,15 @@
 require 'spec_helper_acceptance'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe 'concat warn =>' do
   basedir = default.tmpdir('concat')
   context 'true should enable default warning message' do
     pp = <<-EOS
       concat { '#{basedir}/file':
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 describe 'concat warn_header =>' do
   before(:all) do
     @basedir = setup_test_directory
@@ -16,21 +19,29 @@ describe 'concat warn_header =>' do
     let(:pp) do
       <<-MANIFEST
       concat { '#{@basedir}/file':
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         warn  => true,
       }
 
       concat::fragment { '1':
 <<<<<<< HEAD
+<<<<<<< HEAD
         target  => '#{basedir}/file',
 =======
         target  => '#{@basedir}/file',
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+        target  => '#{@basedir}/file',
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         content => '1',
         order   => '01',
       }
 
       concat::fragment { '2':
+<<<<<<< HEAD
 <<<<<<< HEAD
         target  => '#{basedir}/file',
         content => '2',
@@ -61,6 +72,8 @@ describe 'concat warn_header =>' do
       concat::fragment { '1':
         target  => '#{basedir}/file',
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         target  => '#{@basedir}/file',
         content => '2',
         order   => '02',
@@ -72,11 +85,15 @@ describe 'concat warn_header =>' do
 
       concat::fragment { 'file2_1':
         target  => '#{@basedir}/file2',
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         content => '1',
         order   => '01',
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       concat::fragment { '2':
         target  => '#{basedir}/file',
@@ -108,6 +125,8 @@ describe 'concat warn_header =>' do
       concat::fragment { '1':
         target  => '#{basedir}/file',
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       concat::fragment { 'file2_2':
         target  => '#{@basedir}/file2',
         content => '2',
@@ -120,11 +139,15 @@ describe 'concat warn_header =>' do
 
       concat::fragment { 'file3_1':
         target  => '#{@basedir}/file3',
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         content => '1',
         order   => '01',
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       concat::fragment { '2':
         target  => '#{basedir}/file',
@@ -146,6 +169,8 @@ describe 'concat warn_header =>' do
         should match /2/
       }
 =======
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       concat::fragment { 'file3_2':
         target  => '#{@basedir}/file3',
         content => '2',
@@ -175,7 +200,10 @@ describe 'concat warn_header =>' do
       expect(file("#{@basedir}/file3").content).to match %r{# foo}
       expect(file("#{@basedir}/file3").content).to match %r{1}
       expect(file("#{@basedir}/file3").content).to match %r{2}
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     end
   end
 end

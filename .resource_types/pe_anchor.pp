@@ -1,4 +1,4 @@
-# This file was automatically generated on 2019-03-02 14:49:17 -0800.
+# This file was automatically generated on 2019-06-08 13:59:54 -0700.
 # Use the 'puppet generate types' command to regenerate this file.
 
 # A simple resource type intended to be used as an pe_anchor in a composite class.
@@ -30,8 +30,8 @@
 # This allows the end user of the ntp module to establish require and before
 # relationships with Class['ntp']:
 # 
-#     class { 'ntp': } -> class { 'foo': }
-#     class { 'foo': } -> class { 'ntp': }
+#     class { 'ntp': } -> class { 'mcollective': }
+#     class { 'mcollective': } -> class { 'ntp': }
 Puppet::Resource::ResourceType3.new(
   'pe_anchor',
   [

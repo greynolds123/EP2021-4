@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 require 'puppet_litmus/rake_tasks' if Bundler.rubygems.find_name('puppet_litmus').any?
+=======
+<<<<<<< HEAD
+=======
+require 'puppet_litmus/rake_tasks' if Bundler.rubygems.find_name('puppet_litmus').any?
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 require 'puppetlabs_spec_helper/rake_tasks'
 require 'puppet-syntax/tasks/puppet-syntax'
 require 'puppet_blacksmith/rake_tasks' if Bundler.rubygems.find_name('puppet-blacksmith').any?
@@ -16,6 +23,13 @@ end
 
 def changelog_project
   return unless Rake.application.top_level_tasks.include? "changelog"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  returnVal = nil || JSON.load(File.read('metadata.json'))['name']
+  raise "unable to find the changelog_project in .sync.yml or the name in metadata.json" if returnVal.nil?
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
   returnVal = nil
   returnVal ||= begin
@@ -27,6 +41,10 @@ def changelog_project
 
   raise "unable to find the changelog_project in .sync.yml or calculate it from the source in metadata.json" if returnVal.nil?
 
+<<<<<<< HEAD
+=======
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   puts "GitHubChangelogGenerator project:#{returnVal}"
   returnVal
 end

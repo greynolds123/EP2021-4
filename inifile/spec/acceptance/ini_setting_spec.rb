@@ -1,19 +1,50 @@
 require 'spec_helper_acceptance'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+tmpdir = default.tmpdir('tmp')
+
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+describe 'ini_setting resource' do
+  basedir = setup_test_directory
+
+  after :all do
+<<<<<<< HEAD
+    run_shell("rm #{basedir}/*.ini", expect_failures: true)
+=======
+    shell("rm #{tmpdir}/*.ini", acceptable_exit_codes: [0, 1, 2])
+=======
 describe 'ini_setting resource' do
   basedir = setup_test_directory
 
   after :all do
     run_shell("rm #{basedir}/*.ini", expect_failures: true)
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   end
 
   shared_examples 'has_content' do |path, pp, content|
     before :all do
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      shell("rm #{path}", acceptable_exit_codes: [0, 1, 2])
+    end
+
+    it 'applies the manifest twice' do
+      idempotent_apply(default, pp, {})
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       run_shell("rm #{path}", expect_failures: true)
     end
 
     it 'applies the manifest twice' do
       idempotent_apply(pp)
+<<<<<<< HEAD
+=======
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     end
 
     describe file(path) do
@@ -29,7 +60,15 @@ describe 'ini_setting resource' do
 
   shared_examples 'has_error' do |path, pp, error|
     before :all do
+<<<<<<< HEAD
       run_shell("rm #{path}", expect_failures: true)
+=======
+<<<<<<< HEAD
+      shell("rm #{path}", acceptable_exit_codes: [0, 1, 2])
+=======
+      run_shell("rm #{path}", expect_failures: true)
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     end
 
     it 'applies the manifest and gets a failure message' do
@@ -45,25 +84,60 @@ describe 'ini_setting resource' do
     pp = <<-EOS
     ini_setting { 'ensure => present for section':
       ensure  => present,
+<<<<<<< HEAD
       path    => "#{basedir}/ini_setting.ini",
+=======
+<<<<<<< HEAD
+      path    => "#{tmpdir}/ini_setting.ini",
+=======
+      path    => "#{basedir}/ini_setting.ini",
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       section => 'one',
       setting => 'two',
       value   => 'three',
     }
     ini_setting { 'ensure => present for global':
       ensure  => present,
+<<<<<<< HEAD
       path    => "#{basedir}/ini_setting.ini",
+=======
+<<<<<<< HEAD
+      path    => "#{tmpdir}/ini_setting.ini",
+=======
+      path    => "#{basedir}/ini_setting.ini",
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       section => '',
       setting => 'four',
       value   => 'five',
     }
     EOS
 
+<<<<<<< HEAD
     it_behaves_like 'has_content', "#{basedir}/ini_setting.ini", pp, %r{four = five\R\R\[one\]\Rtwo = three}
+=======
+<<<<<<< HEAD
+    it_behaves_like 'has_content', "#{tmpdir}/ini_setting.ini", pp, %r{four = five\n\n\[one\]\ntwo = three}
+=======
+    it_behaves_like 'has_content', "#{basedir}/ini_setting.ini", pp, %r{four = five\R\R\[one\]\Rtwo = three}
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   end
 
   context 'ensure parameter => absent for key/value' do
     before :all do
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      ini = <<-EOS
+        four = five
+        [one]
+        two = three
+        EOS
+      create_remote_file(default, File.join(tmpdir, 'ini_setting.ini'), ini)
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       ipp = <<-MANIFEST
         file { '#{basedir}/ini_setting.ini':
           content => "four = five \n [one] \n two = three",
@@ -72,23 +146,48 @@ describe 'ini_setting resource' do
       MANIFEST
 
       apply_manifest(ipp)
+<<<<<<< HEAD
+=======
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     end
 
     pp = <<-EOS
     ini_setting { 'ensure => absent for key/value':
       ensure  => absent,
+<<<<<<< HEAD
       path    => "#{basedir}/ini_setting.ini",
+=======
+<<<<<<< HEAD
+      path    => "#{tmpdir}/ini_setting.ini",
+=======
+      path    => "#{basedir}/ini_setting.ini",
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       section => 'one',
       setting => 'two',
       value   => 'three',
     }
     EOS
+<<<<<<< HEAD
 
     it 'applies the manifest twice' do
+=======
+
+    it 'applies the manifest twice' do
+<<<<<<< HEAD
+      apply_manifest(pp, catch_failures: true)
+      apply_manifest(pp, catch_changes: true)
+    end
+
+    describe file("#{tmpdir}/ini_setting.ini") do
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       idempotent_apply(pp)
     end
 
     describe file("#{basedir}/ini_setting.ini") do
+<<<<<<< HEAD
       it { is_expected.to be_file }
 
       describe '#content' do
@@ -128,15 +227,89 @@ describe 'ini_setting resource' do
     EOS
 
     it 'applies the manifest twice' do
-      idempotent_apply(pp)
-    end
-
-    describe file("#{basedir}/ini_setting.ini") do
+=======
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
       it { is_expected.to be_file }
 
       describe '#content' do
         subject { super().content }
 
+        it { is_expected.to match %r{four = five} }
+        it { is_expected.not_to match %r{\[one\]} }
+        it { is_expected.not_to match %r{two = three} }
+      end
+    end
+  end
+
+  context 'ensure parameter => absent for global' do
+    before :all do
+<<<<<<< HEAD
+      ini = <<-EOS
+        four = five
+        [one]
+        two = three
+        EOS
+      create_remote_file(default, File.join(tmpdir, 'ini_setting.ini'), ini)
+    end
+    after :all do
+      shell("rm #{tmpdir}/ini_setting.ini", acceptable_exit_codes: [0, 1, 2])
+=======
+      ipp = <<-MANIFEST
+        file { '#{basedir}/ini_setting.ini':
+          content => "four = five\n [one]\n two = three",
+          force   => true,
+        }
+      MANIFEST
+
+      apply_manifest(ipp)
+    end
+
+    after :all do
+      run_shell("rm #{basedir}/ini_setting.ini", expect_failures: true)
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+    end
+
+    pp = <<-EOS
+    ini_setting { 'ensure => absent for global':
+      ensure  => absent,
+<<<<<<< HEAD
+      path    => "#{tmpdir}/ini_setting.ini",
+=======
+      path    => "#{basedir}/ini_setting.ini",
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+      section => '',
+      setting => 'four',
+      value   => 'five',
+    }
+    EOS
+
+    it 'applies the manifest twice' do
+<<<<<<< HEAD
+      apply_manifest(pp, catch_failures: true)
+      apply_manifest(pp, catch_changes: true)
+    end
+
+    describe file("#{tmpdir}/ini_setting.ini") do
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+      idempotent_apply(pp)
+    end
+
+    describe file("#{basedir}/ini_setting.ini") do
+<<<<<<< HEAD
+      it { is_expected.to be_file }
+
+      describe '#content' do
+        subject { super().content }
+
+=======
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+      it { is_expected.to be_file }
+
+      describe '#content' do
+        subject { super().content }
+
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         it { is_expected.not_to match %r{four = five} }
         it { is_expected.to match %r{\[one\]} }
         it { is_expected.to match %r{two = three} }
@@ -161,24 +334,56 @@ describe 'ini_setting resource' do
   end
 
   describe 'show_diff parameter and logging:' do
+<<<<<<< HEAD
     setup_puppet_config_file
 
+=======
+<<<<<<< HEAD
+=======
+    setup_puppet_config_file
+
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     [{ value: 'initial_value', matcher: 'created', show_diff: true },
      { value: 'public_value', matcher: %r{initial_value.*public_value}, show_diff: true },
      { value: 'secret_value', matcher: %r{redacted sensitive information.*redacted sensitive information}, show_diff: false },
      { value: 'md5_value', matcher: %r{\{md5\}881671aa2bbc680bc530c4353125052b.*\{md5\}ed0903a7fa5de7886ca1a7a9ad06cf51}, show_diff: :md5 }].each do |i|
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       pp = <<-EOS
           ini_setting { 'test_show_diff':
             ensure      => present,
             section     => 'test',
             setting     => 'something',
             value       => '#{i[:value]}',
+<<<<<<< HEAD
             path        => "#{basedir}/test_show_diff.ini",
+=======
+<<<<<<< HEAD
+            path        => "#{tmpdir}/test_show_diff.ini",
+=======
+            path        => "#{basedir}/test_show_diff.ini",
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
             show_diff   => #{i[:show_diff]}
           }
       EOS
 
       context "show_diff => #{i[:show_diff]}" do
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        config = { 'main' => { 'show_diff' => true } }
+        configure_puppet_on(default, config)
+
+=======
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         res = apply_manifest(pp, expect_changes: true)
         it 'applies manifest and expects changed value to be logged in proper form' do
           expect(res.stdout).to match(i[:matcher])
@@ -189,6 +394,7 @@ describe 'ini_setting resource' do
       end
     end
   end
+<<<<<<< HEAD
 
   describe 'values with spaces in the value part at the beginning or at the end' do
     pp = <<-EOS
@@ -201,6 +407,36 @@ describe 'ini_setting resource' do
         }
     EOS
 
+=======
+
+  describe 'values with spaces in the value part at the beginning or at the end' do
+    pp = <<-EOS
+      ini_setting { 'path => foo':
+          ensure     => present,
+          section    => 'one',
+          setting    => 'two',
+          value      => '               123',
+<<<<<<< HEAD
+          path       => '#{tmpdir}/ini_setting.ini',
+        }
+    EOS
+
+    it_behaves_like 'has_content', "#{tmpdir}/ini_setting.ini", pp, %r{\[one\]\ntwo = 123}
+  end
+
+  describe 'refreshonly' do
+    path = File.join(tmpdir, 'test.txt')
+    before :each do
+      shell("echo \"[section1]\nvalueinsection1 = 123\" > #{path}")
+    end
+    after :each do
+      shell("rm #{path}", acceptable_exit_codes: [0, 1, 2])
+=======
+          path       => '#{basedir}/ini_setting.ini',
+        }
+    EOS
+
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     it_behaves_like 'has_content', "#{basedir}/ini_setting.ini", pp, %r{\[one\]\Rtwo = 123}
   end
 
@@ -218,6 +454,10 @@ describe 'ini_setting resource' do
 
     after :each do
       run_shell("rm #{basedir}/ini_setting.ini", expect_failures: true)
+<<<<<<< HEAD
+=======
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
     end
     context 'when event is triggered' do
       context 'update setting value' do
@@ -229,7 +469,15 @@ describe 'ini_setting resource' do
 
           ini_setting { "updateSetting":
             ensure => present,
+<<<<<<< HEAD
             path => "#{basedir}/ini_setting.ini",
+=======
+<<<<<<< HEAD
+            path => "#{path}",
+=======
+            path => "#{basedir}/ini_setting.ini",
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
             section => 'section1',
             setting => 'valueinsection1',
             value   => "newValue",
@@ -237,6 +485,7 @@ describe 'ini_setting resource' do
           }
           EOS
         end
+<<<<<<< HEAD
 
         before(:each) do
           apply_manifest(update_value_manifest, expect_changes: true)
@@ -252,6 +501,27 @@ describe 'ini_setting resource' do
         end
       end
 
+=======
+
+        before(:each) do
+          apply_manifest(update_value_manifest, expect_changes: true)
+        end
+
+<<<<<<< HEAD
+        describe file(path) do
+=======
+        describe file("#{basedir}/ini_setting.ini") do
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+          it { is_expected.to be_file }
+          describe '#content' do
+            subject { super().content }
+
+            it { is_expected.to match %r{valueinsection1 = newValue} }
+          end
+        end
+      end
+
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       context 'remove setting value' do
         let(:remove_setting_manifest) do
           <<-EOS
@@ -261,7 +531,15 @@ describe 'ini_setting resource' do
 
           ini_setting { "removeSetting":
             ensure => absent,
+<<<<<<< HEAD
             path => "#{basedir}/ini_setting.ini",
+=======
+<<<<<<< HEAD
+            path => "#{path}",
+=======
+            path => "#{basedir}/ini_setting.ini",
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
             section => 'section1',
             setting => 'valueinsection1',
             refreshonly => true,
@@ -273,7 +551,15 @@ describe 'ini_setting resource' do
           apply_manifest(remove_setting_manifest, expect_changes: true)
         end
 
+<<<<<<< HEAD
         describe file("#{basedir}/ini_setting.ini") do
+=======
+<<<<<<< HEAD
+        describe file(path) do
+=======
+        describe file("#{basedir}/ini_setting.ini") do
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
           it { is_expected.to be_file }
           describe '#content' do
             subject { super().content }
@@ -288,6 +574,19 @@ describe 'ini_setting resource' do
       context 'does not update setting' do
         let(:does_not_update_value_manifest) do
           <<-EOS
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          file { "#{path}":
+            ensure => present,
+            notify => Ini_Setting['updateSetting'],
+          }
+
+          ini_setting { "updateSetting":
+            ensure => present,
+            path => "#{path}",
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
           file { "#{basedir}/ini_setting.ini":
             ensure => present,
             notify => Ini_Setting['updateSetting'],
@@ -295,6 +594,10 @@ describe 'ini_setting resource' do
           ini_setting { "updateSetting":
             ensure => present,
             path => "#{basedir}/ini_setting.ini",
+<<<<<<< HEAD
+=======
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
             section => 'section1',
             setting => 'valueinsection1',
             value   => "newValue",
@@ -307,7 +610,15 @@ describe 'ini_setting resource' do
           apply_manifest(does_not_update_value_manifest, expect_changes: false)
         end
 
+<<<<<<< HEAD
         describe file("#{basedir}/ini_setting.ini") do
+=======
+<<<<<<< HEAD
+        describe file(path) do
+=======
+        describe file("#{basedir}/ini_setting.ini") do
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
           it { is_expected.to be_file }
           describe '#content' do
             subject { super().content }
@@ -321,14 +632,30 @@ describe 'ini_setting resource' do
       context 'does not remove setting' do
         let(:does_not_remove_setting_manifest) do
           <<-EOS
+<<<<<<< HEAD
           file { "#{basedir}/ini_setting.ini":
+=======
+<<<<<<< HEAD
+          file { "#{path}":
+=======
+          file { "#{basedir}/ini_setting.ini":
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
             ensure => present,
             notify => Ini_Setting['removeSetting'],
           }
 
           ini_setting { "removeSetting":
             ensure => absent,
+<<<<<<< HEAD
             path => "#{basedir}/ini_setting.ini",
+=======
+<<<<<<< HEAD
+            path => "#{path}",
+=======
+            path => "#{basedir}/ini_setting.ini",
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
             section => 'section1',
             setting => 'valueinsection1',
             refreshonly => true,
@@ -340,7 +667,15 @@ describe 'ini_setting resource' do
           apply_manifest(does_not_remove_setting_manifest, expect_changes: false)
         end
 
+<<<<<<< HEAD
         describe file("#{basedir}/ini_setting.ini") do
+=======
+<<<<<<< HEAD
+        describe file(path) do
+=======
+        describe file("#{basedir}/ini_setting.ini") do
+>>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
           it { is_expected.to be_file }
           describe '#content' do
             subject { super().content }

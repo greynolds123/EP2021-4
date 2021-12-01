@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Change log
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
@@ -228,6 +229,8 @@ Addition of a new supported OS, along with several other features and bugfixes.
 - Fixed tests to run under strict variables.
 - Updated Java package for SLES 11.4.
 
+=======
+>>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 ## Supported Release 1.5.0
 ### Summary
 
