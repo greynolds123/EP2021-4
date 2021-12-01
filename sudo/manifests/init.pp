@@ -43,3 +43,4 @@ class sudo (
     ensure => present,
   }
 }
+  }
