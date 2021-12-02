@@ -1,6 +1,5 @@
 # Change log
 
-<<<<<<< HEAD
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org).
 
@@ -8,10 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org).
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-stdlib/compare/5.2.0...v6.0.0)
 
-#### Changed
 - (MODULES-8444) - Raise lower Puppet bound
 
-#### Added
 - Add a stdlib::ip_in_range() function
 - (MODULES-8760) Add iterative feature to merge() function
 
@@ -46,7 +43,6 @@ This is a moderate release which adds support for Puppet 6.
 ## Supported Release 5.0.0
 ### Summary
 This is a major release which removes support for the Scientific 5 and Debian 7 OS, as well as a removal of the `Stdlib::(Ipv4|IPv6|Ip_address)` data types in favour of `Stdlib::IP::*`.
-=======
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
 ## [v6.1.0](https://github.com/puppetlabs/puppetlabs-stdlib/tree/v6.1.0) (2019-09-19)
@@ -133,7 +129,7 @@ This is a major release which removes support for the Scientific 5 and Debian 7 
 - Corrected example in `getparam()` and added note about equivalent in puppet.
 - Fixed URL to use 'latest' instead of '5.5' for `Hash.new` function.
 
-#### Added
+## Added
 - Support added for symbolic file nodes.
 - `loadjson()` and `loadyml()` now compatible with HTTPS files.
 - `loadjson()` and `loadyml()` now compatible with HTTP basic auth files.
