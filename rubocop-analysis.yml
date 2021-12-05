@@ -50,7 +50,8 @@ jobs:
       uses: github/codeql-action/upload-sarif@v1
       with:
         sarif_file: rubocop.sarif
-
+    - name: Setup Ruby, JRuby and TruffleRuby
+      uses: ruby/setup-ruby@v1.88.0
 
 
 
