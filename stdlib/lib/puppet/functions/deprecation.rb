@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 # Function to print deprecation warnings, Logs a warning once for a given key. The uniqueness key - can appear once.
 # The msg is the message text including any positional information that is formatted by the user/caller of the method.
 # It is affected by the puppet setting 'strict', which can be set to :error (outputs as an error message),
@@ -12,6 +15,7 @@
 #
 
 Puppet::Functions.create_function(:deprecation) do
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -33,6 +37,8 @@ Puppet::Functions.create_function(:deprecation) do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   dispatch :deprecation do
     param 'String', :key
     param 'String', :message

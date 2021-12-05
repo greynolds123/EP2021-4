@@ -6,6 +6,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Regexp escape a string or array of strings.
     Requires either a single string or an array as an input.
 =======
@@ -23,6 +24,10 @@ module Puppet::Parser::Functions
     Regexp escape a string or array of strings.
     Requires either a single string or an array as an input.
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    Regexp escape a string or array of strings.
+    Requires either a single string or an array as an input.
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     DOC
   ) do |arguments| # rubocop:disable Layout/ClosingParenthesisIndentation
     raise(Puppet::ParseError, "regexpescape(): Wrong number of arguments given (#{arguments.size} for 1)") if arguments.empty?

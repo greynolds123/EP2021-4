@@ -890,6 +890,7 @@ Since Puppet 5.0.0, you can create new values for almost any
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 data type using the type system — you can use the built-in
 =======
 data type using the type system - you can use the built-in
@@ -900,6 +901,9 @@ data type using the type system — you can use the built-in
 =======
 data type using the type system — you can use the built-in
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+data type using the type system — you can use the built-in
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 [`String.new`](https://puppet.com/docs/puppet/latest/function.html#boolean-to-string)
 function to convert to String, with many different format options:
 

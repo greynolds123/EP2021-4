@@ -4,6 +4,7 @@ require 'spec_helper_acceptance'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe 'concat warn =>' do
   basedir = default.tmpdir('concat')
   context 'true should enable default warning message' do
@@ -16,6 +17,8 @@ describe 'concat warn =>' do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 describe 'concat warn_header =>' do
   before(:all) do
     @basedir = setup_test_directory
@@ -28,6 +31,7 @@ describe 'concat warn_header =>' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -35,6 +39,8 @@ describe 'concat warn_header =>' do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
         warn  => true,
       }
 
@@ -43,6 +49,7 @@ describe 'concat warn_header =>' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         target  => '#{basedir}/file',
 =======
         target  => '#{@basedir}/file',
@@ -56,11 +63,15 @@ describe 'concat warn_header =>' do
 =======
         target  => '#{@basedir}/file',
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+        target  => '#{@basedir}/file',
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
         content => '1',
         order   => '01',
       }
 
       concat::fragment { '2':
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,6 +96,8 @@ describe 'concat warn_header =>' do
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
         target  => '#{@basedir}/file',
         content => '2',
         order   => '02',
@@ -98,6 +111,7 @@ describe 'concat warn_header =>' do
         target  => '#{@basedir}/file2',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -107,10 +121,13 @@ describe 'concat warn_header =>' do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
         content => '1',
         order   => '01',
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,6 +157,8 @@ describe 'concat warn_header =>' do
 =======
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
       concat::fragment { 'file2_2':
         target  => '#{@basedir}/file2',
         content => '2',
@@ -153,6 +172,7 @@ describe 'concat warn_header =>' do
       concat::fragment { 'file3_1':
         target  => '#{@basedir}/file3',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -164,10 +184,13 @@ describe 'concat warn_header =>' do
       concat::fragment { 'file3_1':
         target  => '#{@basedir}/file3',
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
         content => '1',
         order   => '01',
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,6 +221,8 @@ describe 'concat warn_header =>' do
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
       concat::fragment { 'file3_2':
         target  => '#{@basedir}/file3',
         content => '2',
@@ -208,10 +233,13 @@ describe 'concat warn_header =>' do
     end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     it 'when true should enable default warning message' do
       idempotent_apply(pp)
       expect(file("#{@basedir}/file")).to be_file
@@ -235,6 +263,7 @@ describe 'concat warn_header =>' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -242,6 +271,8 @@ describe 'concat warn_header =>' do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     end
   end
 end

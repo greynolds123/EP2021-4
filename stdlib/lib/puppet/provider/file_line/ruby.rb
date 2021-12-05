@@ -2,6 +2,7 @@ Puppet::Type.type(:file_line).provide(:ruby) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   desc <<-DOC
     @summary
@@ -17,6 +18,8 @@ Puppet::Type.type(:file_line).provide(:ruby) do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   def exists?
     found = false
     lines_count = 0

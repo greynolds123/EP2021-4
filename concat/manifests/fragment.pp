@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # == Define: concat::fragment
 =======
 # @summary
@@ -10,6 +11,10 @@
 # @summary
 #   Manages a fragment of text to be compiled into a file.
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+# @summary
+#   Manages a fragment of text to be compiled into a file.
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 #
 # @param content
 #   Supplies the content of the fragment. Note: You must supply either a content parameter or a source parameter.
@@ -33,6 +38,7 @@ define concat::fragment(
 ) {
   $resource = 'Concat::Fragment'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   if !(is_string($order) or is_integer($order)) {
@@ -70,6 +76,8 @@ define concat::fragment(
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   if ($order =~ String and $order =~ /[:\n\/]/) {
     fail(translate("%{_resource}['%{_title}']: 'order' cannot contain '/', ':', or '\\n'.", {'_resource' => $resource, '_title' => $title}))
   }
@@ -77,6 +85,7 @@ define concat::fragment(
   if ! ($content or $source) {
     crit('No content, source or symlink specified')
   } elsif ($content and $source) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,6 +108,11 @@ define concat::fragment(
   }
 
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    fail(translate("%{_resource}['%{_title}']: Can't use 'source' and 'content' at the same time.", {'_resource' => $resource, '_title' => $title}))
+  }
+
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   $safe_target_name = regsubst($target, '[\\\\/:~\n\s\+\*\(\)@]', '_', 'GM')
 
   concat_fragment { $name:

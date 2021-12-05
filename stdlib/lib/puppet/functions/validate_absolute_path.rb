@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Puppet::Functions.create_function(:validate_absolute_path) do
 =======
 # @summary
@@ -21,6 +22,9 @@ Puppet::Functions.create_function(:validate_absolute_path) do
 =======
 Puppet::Functions.create_function(:validate_absolute_path) do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+Puppet::Functions.create_function(:validate_absolute_path) do
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   dispatch :deprecation_gen do
     param 'Any', :scope
     repeated_param 'Any', :args

@@ -6,6 +6,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Takes an array of ip addresses and encloses the ipv6 addresses with square brackets.
 =======
     @summary
@@ -21,6 +22,9 @@ module Puppet::Parser::Functions
 =======
     Takes an array of ip addresses and encloses the ipv6 addresses with square brackets.
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    Takes an array of ip addresses and encloses the ipv6 addresses with square brackets.
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   DOC
              ) do |arguments|
 

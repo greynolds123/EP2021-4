@@ -7,10 +7,13 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     Converts a string or an array of strings to uppercase.
 
     *Examples:*
@@ -22,6 +25,7 @@ module Puppet::Parser::Functions
         ABCD
 
     Note: from Puppet 6.0.0, the compatible function with the same name in Puppet core
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -42,6 +46,8 @@ module Puppet::Parser::Functions
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     will be used instead of this function.
   DOC
              ) do |arguments|

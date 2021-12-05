@@ -1,14 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 # Take a data structure and output it as pretty JSON
 #
 # @example how to output pretty JSON
 #   # output pretty json to a file
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -23,11 +27,14 @@ require 'json'
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 #     file { '/tmp/my.json':
 #       ensure  => file,
 #       content => to_json_pretty($myhash),
 #     }
 #
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,6 +51,10 @@ require 'json'
 # @example how to output pretty JSON skipping over keys with undef values
 #   # output pretty JSON to a file skipping over undef values
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+# @example how to output pretty JSON skipping over keys with undef values
+#   # output pretty JSON to a file skipping over undef values
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 #     file { '/tmp/my.json':
 #       ensure  => file,
 #       content => to_json_pretty({
@@ -54,14 +65,18 @@ require 'json'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 #
 require 'json'
 
 Puppet::Functions.create_function(:to_json_pretty) do
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -77,6 +92,8 @@ Puppet::Functions.create_function(:to_json_pretty) do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   dispatch :to_json_pretty do
     param 'Variant[Hash, Array]', :data
     optional_param 'Boolean', :skip_undef

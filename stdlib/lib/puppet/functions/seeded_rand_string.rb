@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # @summary
 #   Generates a consistent random string of specific length based on provided seed.
 =======
@@ -17,6 +18,9 @@
 =======
 # Generates a consistent random string of specific length based on provided seed.
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+# Generates a consistent random string of specific length based on provided seed.
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 #
 # @example Generate a consistently random string of length 8 with a seed:
 #   seeded_rand_string(8, "${module_name}::redis_password")

@@ -6,16 +6,20 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     This function returns an array of the intersection of two.
 
     *Examples:*
 
         intersection(["a","b","c"],["b","c","d"])  # returns ["b","c"]
         intersection(["a","b","c"],[1,2,3,4])      # returns [] (true, when evaluated as a Boolean)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -33,6 +37,8 @@ module Puppet::Parser::Functions
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     DOC
              ) do |arguments|
 

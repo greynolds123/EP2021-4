@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # @summary
 #   Returns the Extension (the Portion of Filename in Path starting from the
 #   last Period).
@@ -22,6 +23,10 @@
 # Returns the Extension (the Portion of Filename in Path starting from the
 # last Period).
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+# Returns the Extension (the Portion of Filename in Path starting from the
+# last Period).
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 #
 # If Path is a Dotfile, or starts with a Period, then the starting Dot is not
 # dealt with the Start of the Extension.
@@ -31,6 +36,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -43,6 +49,9 @@
 =======
 
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 Puppet::Functions.create_function(:'stdlib::extname') do
   # @param filename The Filename
   # @return [String] The Extension starting from the last Period

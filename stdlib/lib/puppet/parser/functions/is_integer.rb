@@ -6,16 +6,20 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     Returns true if the variable passed to this function is an Integer or
     a decimal (base 10) integer in String form. The string may
     start with a '-' (minus). A value of '0' is allowed, but a leading '0' digit may not
     be followed by other digits as this indicates that the value is octal (base 8).
 
     If given any other argument `false` is returned.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -38,6 +42,8 @@ module Puppet::Parser::Functions
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     DOC
              ) do |arguments|
 

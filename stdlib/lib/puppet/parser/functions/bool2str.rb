@@ -6,10 +6,13 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     Converts a boolean to a string using optionally supplied arguments. The
     optional second and third arguments represent what true and false will be
     converted to respectively. If only one argument is given, it will be
@@ -28,6 +31,7 @@ module Puppet::Parser::Functions
     [`String.new`](https://puppet.com/docs/puppet/latest/function.html#boolean-to-string)
     function is used to convert to String with many different format options.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -63,10 +67,13 @@ module Puppet::Parser::Functions
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
         notice(String(false))         # Notices 'false'
         notice(String(true))          # Notices 'true'
         notice(String(false, '%y'))   # Notices 'yes'
         notice(String(true, '%y'))    # Notices 'no'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,6 +87,9 @@ module Puppet::Parser::Functions
 =======
 
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     DOC
              ) do |arguments|
 

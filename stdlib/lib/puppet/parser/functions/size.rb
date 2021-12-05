@@ -6,6 +6,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns the number of elements in a string, an array or a hash
 
     Note that since Puppet 5.4.0, the length() function in Puppet is preferred over this. For versions
@@ -28,6 +29,11 @@ module Puppet::Parser::Functions
 
     Note that since Puppet 5.4.0, the length() function in Puppet is preferred over this. For versions
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    Returns the number of elements in a string, an array or a hash
+
+    Note that since Puppet 5.4.0, the length() function in Puppet is preferred over this. For versions
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     of Puppet < 5.4.0 use the stdlib length() function.
   DOC
              ) do |arguments|

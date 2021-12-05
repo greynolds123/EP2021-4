@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "master",
   "signature": "dd04b80e903867fac27cd9591cecedd5af00aae7",
   "started_at": "2019-06-12 20:04:14 -0700",
@@ -31,5 +32,11 @@
   "started_at": "2019-07-25 18:09:59 -0700",
   "finished_at": "2019-07-25 18:10:00 -0700",
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+  "name": "Linux-Server",
+  "signature": "f4ebcee0650e9b64f08585d05a53cfffbe42bc70",
+  "started_at": "2019-07-25 18:10:00 -0700",
+  "finished_at": "2019-07-25 18:10:01 -0700",
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "deploy_success": true
 }

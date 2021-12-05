@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "CHANGELOG.md": "f426d40b78fee2a7349acb062d30233e",
   "CONTRIBUTING.md": "4d17f3c942e7c93d1577cc4438a231e4",
   "Gemfile": "3864447c01e8ca140685b2f085f2d262",
@@ -20,6 +21,11 @@
   "CONTRIBUTING.md": "4d17f3c942e7c93d1577cc4438a231e4",
   "Gemfile": "3864447c01e8ca140685b2f085f2d262",
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+  "CHANGELOG.md": "f426d40b78fee2a7349acb062d30233e",
+  "CONTRIBUTING.md": "4d17f3c942e7c93d1577cc4438a231e4",
+  "Gemfile": "3864447c01e8ca140685b2f085f2d262",
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "HISTORY.md": "6b78ee53e5d501d081c45c5ee8f604e1",
   "LICENSE": "3b83ef96387f14655fc854ddc3c6bd57",
   "MAINTAINERS.md": "b40ec4f2c16145af6f723c2c34bb2ff9",
@@ -27,16 +33,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "README.md": "3a6e8a51a94ef6db4d5cd6574987ea8d",
   "README_DEVELOPER.markdown": "220a8b28521b5c5d2ea87c4ddb511165",
   "README_SPECS.markdown": "82bb4c6abbb711f40778b162ec0070c1",
   "RELEASE_PROCESS.markdown": "94b92bc99ac4106ba1a74d5c04e520f9",
   "Rakefile": "62da7aec85d5c34a90c35c24b64328a7",
   "appveyor.yml": "4aa690537aadcdd9341e0e3cca957d38",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,6 +63,8 @@
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "examples/file_line.pp": "d8126b139dd1dce21ff26910d1c5a245",
   "examples/has_interface_with.pp": "d69d520cf3ff4d0b495480afaca359ef",
   "examples/has_ip_address.pp": "32f42575e49aa66f0f2398a70ae2a9f4",
@@ -61,10 +73,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "lib/facter/facter_dot_d.rb": "9f65108ecd7b8c5ce9c90ab4cd9d45be",
   "lib/facter/package_provider.rb": "12d57e65f9b90c13e7808c347fbdc0b0",
   "lib/facter/pe_version.rb": "245bb8ea121e8a55e1a38668cc480530",
@@ -260,6 +275,7 @@
   "spec/acceptance/has_interface_with_spec.rb": "36e2cc57fb3f9044e2b93fa98eb436ab",
   "spec/acceptance/is_a_spec.rb": "ecca7dbb41739ebffcefccc2cb85722d",
   "spec/acceptance/is_mac_address_spec.rb": "d6279ad39509c73429f2e60a342f8a51",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -461,6 +477,8 @@
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "spec/acceptance/nodesets/centos-7-x64.yml": "a713f3abd3657f0ae2878829badd23cd",
   "spec/acceptance/nodesets/debian-8-x64.yml": "d2d2977900989f30086ad251a14a1f39",
   "spec/acceptance/nodesets/default.yml": "b42da5a1ea0c964567ba7495574b8808",
@@ -470,10 +488,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "spec/acceptance/pw_hash_spec.rb": "14bbe22f9eb59c4010abd33db766b2ab",
   "spec/acceptance/size_spec.rb": "c74418e929f607652e8c3b973a12d17a",
   "spec/acceptance/strftime_spec.rb": "009ef42851b32aa797cdea874bf9e3cc",
@@ -483,12 +504,15 @@
   "spec/acceptance/validate_cmd_spec.rb": "c42681ac8aed0ca83577c0205fec6aa9",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "spec/default_facts.yml": "d4442f09ee2f33f2d55f078d0ee2634f",
   "spec/fixtures/dscacheutil/root": "e1a7622f55f3d1be258c9a5b16b474be",
   "spec/fixtures/lsuser/root": "2ed657fa157372a81634539bb1a56be8",
@@ -571,6 +595,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "spec/functions/load_module_metadata_spec.rb": "2419390d7e41728aa460ef46cc06319f",
   "spec/functions/loadjson_spec.rb": "12019b907452e777eacedb8b974abdae",
 =======
@@ -585,6 +610,10 @@
   "spec/functions/load_module_metadata_spec.rb": "2419390d7e41728aa460ef46cc06319f",
   "spec/functions/loadjson_spec.rb": "12019b907452e777eacedb8b974abdae",
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+  "spec/functions/load_module_metadata_spec.rb": "2419390d7e41728aa460ef46cc06319f",
+  "spec/functions/loadjson_spec.rb": "12019b907452e777eacedb8b974abdae",
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "spec/functions/loadyaml_spec.rb": "0a6dd0a389c49f90d61f915b6718411a",
   "spec/functions/lstrip_spec.rb": "552c469f04c8de63b6c8cefb0280cba3",
   "spec/functions/max_spec.rb": "e82809c424860b8d94ef8af70abd4891",
@@ -621,6 +650,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "spec/functions/strftime_spec.rb": "7f57c8b5350e9bfd4eb0f414f9192778",
 =======
   "spec/functions/strftime_spec.rb": "e4ff0163ab707966186d7941b0e5f18d",
@@ -631,6 +661,9 @@
 =======
   "spec/functions/strftime_spec.rb": "7f57c8b5350e9bfd4eb0f414f9192778",
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+  "spec/functions/strftime_spec.rb": "7f57c8b5350e9bfd4eb0f414f9192778",
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "spec/functions/strip_spec.rb": "1212eef324f730400c8a62d9db95a22c",
   "spec/functions/suffix_spec.rb": "61754a258fda440bc0f5e00af91f30a9",
   "spec/functions/swapcase_spec.rb": "d0dc69eda3fcdf043cc116ccb6ee3b28",
@@ -674,6 +707,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "spec/spec_helper.rb": "9be9c919886944c6712b42e16fa9d8a8",
   "spec/spec_helper_acceptance.rb": "026922790f024fad373c1f42f87267d8",
 =======
@@ -688,6 +722,10 @@
   "spec/spec_helper.rb": "9be9c919886944c6712b42e16fa9d8a8",
   "spec/spec_helper_acceptance.rb": "026922790f024fad373c1f42f87267d8",
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+  "spec/spec_helper.rb": "9be9c919886944c6712b42e16fa9d8a8",
+  "spec/spec_helper_acceptance.rb": "026922790f024fad373c1f42f87267d8",
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "spec/spec_helper_local.rb": "5644c5ce611a9e131cf37106e2a8b841",
   "spec/support/shared_data.rb": "dfe4cbdbe2833d670a89bcdf3163839b",
   "spec/type_aliases/absolute_path_spec.rb": "a03a9c6fe2e3e6fbb23cd62c263032c2",
@@ -723,6 +761,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   "spec/type_aliases/objectstore_gsuri_spec.rb": "189bdf8314c75dcdc39a05375c166a80",
   "spec/type_aliases/objectstore_s3uri_spec.rb": "7eb47306dd35f2993ee9ca01061e5663",
@@ -732,12 +771,15 @@
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "spec/type_aliases/port__privileged_spec.rb": "531e8567e3251548324088e1cdac29d6",
   "spec/type_aliases/port__unprivileged_spec.rb": "ec5aa19f8bfb62307617c0e9b002475d",
   "spec/type_aliases/port_spec.rb": "6fff6e2cfc7b91e49b6dd169629f8a53",
   "spec/type_aliases/string_spec.rb": "458ac453f5870066824b6a11ec49f9ae",
   "spec/type_aliases/unixpath_spec.rb": "04e31be6626f96e605459b4ce8c94395",
   "spec/type_aliases/windowspath_spec.rb": "a1473316f1745fa3e20be83a2eb026c7",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -748,6 +790,8 @@
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "spec/unit/facter/facter_dot_d_spec.rb": "3853da05ad110c512bbbacce81e17176",
   "spec/unit/facter/package_provider_spec.rb": "c23d89ad7313f647f917d8a945815693",
   "spec/unit/facter/pe_version_spec.rb": "f013e4ef5aa532fc2af19ddf3a82cf48",
@@ -801,15 +845,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "types/port/privileged.pp": "c4ce776dd07a3c8dd3379db8cd49e32a",
   "types/port/unprivileged.pp": "85359128fa9261fe8bf58c8525574404",
   "types/port.pp": "b1edd08c4eff860b3ea8bd84cd48ba81",
   "types/unixpath.pp": "b64a48701e7adfda45d31fd80bee4ad0",
   "types/windowspath.pp": "4c1eda331ecb43de98c29ed22d0ad448"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -828,4 +876,6 @@
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 }

@@ -5,10 +5,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 1. [Module Description - What the module does and why it is useful](#module-description)
 1. [Setup - The basics of getting started with stdlib](#setup)
 1. [Usage - Configuration options and additional functionality](#usage)
@@ -26,6 +29,7 @@
 ## Module Description
 
 This module provides a standard library of resources for Puppet modules. Puppet modules make heavy use of this standard library. The stdlib module adds the following resources to Puppet:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -52,6 +56,8 @@ Puppet modules make heavy use of this standard library. The stdlib module adds t
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
  * Stages
  * Facts
@@ -65,6 +71,7 @@ Puppet modules make heavy use of this standard library. The stdlib module adds t
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <a id="setup"></a>
 =======
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
@@ -74,10 +81,14 @@ Puppet modules make heavy use of this standard library. The stdlib module adds t
 =======
 <a id="setup"></a>
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+<a id="setup"></a>
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 ## Setup
 
 [Install](https://puppet.com/docs/puppet/latest/modules_installing.html) the stdlib module to add the functions, facts, and resources of this standard library to Puppet.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -98,6 +109,11 @@ If you are authoring a module that depends on stdlib, be sure to [specify depend
 
 <a id="usage"></a>
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+If you are authoring a module that depends on stdlib, be sure to [specify dependencies](https://puppet.com/docs/puppet/latest/modules_metadata.html#specifying-dependencies-in-modules) in your metadata.json.
+
+<a id="usage"></a>
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 ## Usage
 
 Most of stdlib's features are automatically loaded by Puppet. To use standardized run stages in Puppet, declare this class in your manifest with `include stdlib`.
@@ -127,10 +143,13 @@ node default {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 <a id="reference"></a>
 ## Reference
 
@@ -347,6 +366,7 @@ Replaces all lines matched by `match` parameter, even if `line` already exists i
 Default value: `false`.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ## Reference
 
@@ -356,6 +376,8 @@ For information on the classes and types, see the [REFERENCE.md](https://github.
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
 <a id="data-types"></a>
 ### Data types
@@ -752,10 +774,13 @@ but not 'FF01:0:0:0:0:0:0:101', 'FF01::101', '::').
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 <a id="facts"></a>
 ### Facts
 
@@ -3250,6 +3275,7 @@ Takes one element from first array given and merges corresponding elements from 
 <a id="limitations"></a>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #### `Stdlib::ObjectStore`
 
@@ -3354,6 +3380,8 @@ Returns the default provider Puppet uses to manage services on this system
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 ## Limitations
 
 As of Puppet Enterprise 3.7, the stdlib module is no longer included in PE. PE users should install the most recent release of stdlib for compatibility with Puppet modules.
@@ -3363,14 +3391,18 @@ For an extensive list of supported operating systems, see [metadata.json](https:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 <a id="development"></a>
 ## Development
 
 Puppet modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great. We can’t access the huge number of platforms and myriad hardware, software, and deployment configurations that Puppet is intended to serve. We want to keep it as easy as possible to contribute changes so that our modules work in your environment. There are a few guidelines that we need contributors to follow so that we can have a chance of keeping on top of things. For more information, see our [module contribution guide](https://docs.puppet.com/forge/contributing.html).
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3382,10 +3414,13 @@ Puppet modules on the Puppet Forge are open projects, and community contribution
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
 To report or research a bug with any part of this module, please go to
 [http://tickets.puppetlabs.com/browse/MODULES](http://tickets.puppetlabs.com/browse/MODULES).
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3398,6 +3433,9 @@ To report or research a bug with any part of this module, please go to
 =======
 <a id="contributors"></a>
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+<a id="contributors"></a>
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 ## Contributors
 
 The list of contributors can be found at: [https://github.com/puppetlabs/puppetlabs-stdlib/graphs/contributors](https://github.com/puppetlabs/puppetlabs-stdlib/graphs/contributors).

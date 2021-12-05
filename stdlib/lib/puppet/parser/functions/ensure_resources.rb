@@ -5,14 +5,18 @@ Puppet::Parser::Functions.newfunction(:ensure_resources,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
                                       :doc => <<-'DOC'
     Takes a resource type, title (only hash), and a list of attributes that describe a
     resource.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -31,6 +35,8 @@ Puppet::Parser::Functions.newfunction(:ensure_resources,
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
         user { 'dan':
           gid => 'mygroup',
           ensure => present,
@@ -39,6 +45,7 @@ Puppet::Parser::Functions.newfunction(:ensure_resources,
     An hash of resources should be passed in and each will be created with
     the type and parameters specified if it doesn't already exist.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,6 +59,9 @@ Puppet::Parser::Functions.newfunction(:ensure_resources,
 =======
         ensure_resources('user', {'dan' => { gid => 'mygroup', uid => '600' } ,  'alex' => { gid => 'mygroup' }}, {'ensure' => 'present'})
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+        ensure_resources('user', {'dan' => { gid => 'mygroup', uid => '600' } ,  'alex' => { gid => 'mygroup' }}, {'ensure' => 'present'})
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
     From Hiera Backend:
 

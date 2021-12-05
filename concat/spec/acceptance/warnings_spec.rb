@@ -5,6 +5,7 @@ describe 'warnings' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   basedir = default.tmpdir('concat')
 
   shared_examples 'has_warning' do |pp, w|
@@ -56,6 +57,8 @@ describe 'warnings' do
 =======
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   before(:all) do
     @basedir = setup_test_directory
   end
@@ -77,6 +80,7 @@ describe 'warnings' do
       expect(apply_manifest(pp, expect_failures: true).stderr).to match 'not found in the catalog'
       expect(apply_manifest(pp, expect_failures: true).stderr).to match 'not found in the catalog'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -90,6 +94,8 @@ describe 'warnings' do
       expect(apply_manifest(pp, expect_failures: true).stderr).to match 'not found in the catalog'
       expect(apply_manifest(pp, expect_failures: true).stderr).to match 'not found in the catalog'
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     end
   end
 end

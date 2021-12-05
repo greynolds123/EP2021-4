@@ -13,6 +13,7 @@ require 'puppet/type/package'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Facter.add(:package_provider) do
 =======
 # These will be nil if Puppet is not available.
@@ -25,6 +26,9 @@ Facter.add(:package_provider) do
 =======
 Facter.add(:package_provider) do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+Facter.add(:package_provider) do
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   setcode do
     if defined? Gem && Gem::Version.new(Facter.value(:puppetversion).split(' ')[0]) >= Gem::Version.new('3.6')
       Puppet::Type.type(:package).newpackage(:name => 'dummy', :allow_virtual => 'true')[:provider].to_s

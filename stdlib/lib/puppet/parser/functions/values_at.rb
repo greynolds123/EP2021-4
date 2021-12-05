@@ -6,6 +6,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Finds value inside an array based on location.
 =======
     @summary
@@ -17,6 +18,9 @@ module Puppet::Parser::Functions
 =======
     Finds value inside an array based on location.
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    Finds value inside an array based on location.
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
     The first argument is the array you want to analyze, and the second element can
     be a combination of:
@@ -28,10 +32,13 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     *Examples*:
 
         values_at(['a','b','c'], 2)
@@ -52,6 +59,7 @@ module Puppet::Parser::Functions
         ['a', 'b', 'c', 'd'][1, 2]   # results in ['b', 'c']
         ['a', 'b', 'c', 'd'][2, -1]  # results in ['c', 'd']
         ['a', 'b', 'c', 'd'][1, -2]  # results in ['b', 'c']
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -82,6 +90,8 @@ module Puppet::Parser::Functions
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     DOC
              ) do |arguments|
 

@@ -4,6 +4,7 @@ require 'spec_helper_acceptance'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe 'concat validate_cmd parameter', :unless => (fact('kernel') != 'Linux') do
   basedir = default.tmpdir('concat')
   context '=> "/usr/bin/test -e %"' do
@@ -16,14 +17,19 @@ describe 'concat validate_cmd parameter', :unless => (fact('kernel') != 'Linux')
 =======
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 describe 'validation, concat validate_cmd parameter', if: ['debian', 'redhat', 'ubuntu'].include?(os[:family]) do
   before(:all) do
     @basedir = setup_test_directory
   end
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
   context 'with "/usr/bin/test -e %"' do
     let(:pp) do
@@ -38,6 +44,7 @@ describe 'validation, concat validate_cmd parameter', if: ['debian', 'redhat', '
       MANIFEST
     end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     describe file("#{basedir}/file") do
@@ -68,10 +75,13 @@ describe 'validation, concat validate_cmd parameter', if: ['debian', 'redhat', '
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     it 'applies the manifest twice with no stderr' do
       idempotent_apply(pp)
       expect(file("#{@basedir}/file")).to be_file
       expect(file("#{@basedir}/file").content).to contain 'content'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,6 +92,8 @@ describe 'validation, concat validate_cmd parameter', if: ['debian', 'redhat', '
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     end
   end
 end

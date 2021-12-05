@@ -4,6 +4,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns the Unix version of the given string.
     Takes a single string argument.
 =======
@@ -22,6 +23,10 @@ module Puppet::Parser::Functions
     Returns the Unix version of the given string.
     Takes a single string argument.
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    Returns the Unix version of the given string.
+    Takes a single string argument.
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     DOC
              ) do |arguments|
 

@@ -4,6 +4,7 @@ describe 'anchor type' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   describe 'success' do
     pp = <<-DOC
 =======
@@ -18,6 +19,10 @@ describe 'anchor type' do
   describe 'success' do
     pp = <<-DOC
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+  describe 'success' do
+    pp = <<-DOC
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
       class anchored {
         anchor { 'anchored::begin': }
         ~> anchor { 'anchored::end': }
@@ -33,15 +38,19 @@ describe 'anchor type' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     DOC
     it 'effects proper chaining of resources' do
       apply_manifest(pp, :catch_failures => true) do |r|
         expect(r.stdout).to match(%r{Anchor\[final\]: Triggered 'refresh'})
       end
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -56,6 +65,8 @@ describe 'anchor type' do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     end
   end
 end

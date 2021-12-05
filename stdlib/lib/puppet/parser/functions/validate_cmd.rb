@@ -8,6 +8,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   newfunction(:validate_cmd, :doc => <<-'DOC') do |args|
     Perform validation of a string with an external command.
 =======
@@ -24,6 +25,10 @@ module Puppet::Parser::Functions
   newfunction(:validate_cmd, :doc => <<-'DOC') do |args|
     Perform validation of a string with an external command.
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+  newfunction(:validate_cmd, :doc => <<-'DOC') do |args|
+    Perform validation of a string with an external command.
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     The first argument of this function should be a string to
     test, and the second argument should be a path to a test command
     taking a % as a placeholder for the file path (will default to the end).
@@ -32,10 +37,13 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
     If a third argument is specified, this will be the error message raised and
     seen by the user.
@@ -51,6 +59,7 @@ module Puppet::Parser::Functions
         validate_cmd($haproxycontent, '/usr/sbin/haproxy -f % -c', 'Haproxy failed to validate config content')
 
     DOC
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -77,6 +86,8 @@ module Puppet::Parser::Functions
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     if (args.length < 2) || (args.length > 3)
       raise Puppet::ParseError, "validate_cmd(): wrong number of arguments (#{args.length}; must be 2 or 3)"
     end

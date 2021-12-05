@@ -6,6 +6,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns a new string where runs of the same character that occur in this set are replaced by a single character.
 =======
     @summary
@@ -20,6 +21,9 @@ module Puppet::Parser::Functions
 =======
     Returns a new string where runs of the same character that occur in this set are replaced by a single character.
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    Returns a new string where runs of the same character that occur in this set are replaced by a single character.
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   DOC
              ) do |arguments|
 

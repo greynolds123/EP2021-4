@@ -5,10 +5,13 @@ Puppet::Parser::Functions.newfunction(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   :doc => "Usage: `fqdn_rand_string(LENGTH, [CHARSET], [SEED])`. LENGTH is
   required and must be a positive integer. CHARSET is optional and may be
   `undef` or a string. SEED is optional and may be any number or string.
@@ -20,6 +23,7 @@ Puppet::Parser::Functions.newfunction(
   time unless its hostname changes.) Adding a SEED can be useful if you need
   more than one unrelated string. CHARSET will default to alphanumeric if
   `undef` or an empty string.",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -47,6 +51,8 @@ Puppet::Parser::Functions.newfunction(
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 ) do |args|
   raise(ArgumentError, 'fqdn_rand_string(): wrong number of arguments (0 for 1)') if args.empty?
   Puppet::Parser::Functions.function('is_integer')

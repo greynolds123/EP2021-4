@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Take a data structure and output it as YAML
 =======
 require 'yaml'
@@ -13,6 +14,9 @@ require 'yaml'
 =======
 # Take a data structure and output it as YAML
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+# Take a data structure and output it as YAML
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 #
 # @example how to output YAML
 #   # output yaml to a file
@@ -23,15 +27,19 @@ require 'yaml'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 #
 #
 require 'yaml'
 
 Puppet::Functions.create_function(:to_yaml) do
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -44,6 +52,8 @@ Puppet::Functions.create_function(:to_yaml) do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   dispatch :to_yaml do
     param 'Any', :data
   end

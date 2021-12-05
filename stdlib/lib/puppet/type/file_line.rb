@@ -3,10 +3,13 @@ Puppet::Type.newtype(:file_line) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     Ensures that a given line is contained within a file.  The implementation
     matches the full line, including whitespace at the beginning and end.  If
     the line is not contained in the given file, Puppet will append the line to
@@ -36,6 +39,7 @@ Puppet::Type.newtype(:file_line) do
           line   => 'export HTTP_PROXY=http://squid.puppetlabs.vm:3128',
           match  => '^export\ HTTP_PROXY\=',
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -77,10 +81,13 @@ Puppet::Type.newtype(:file_line) do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
     In this code example match will look for a line beginning with export
     followed by HTTP_PROXY and replace it with the value in line.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,6 +101,9 @@ Puppet::Type.newtype(:file_line) do
 =======
     Examples With `ensure => absent`:
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    Examples With `ensure => absent`:
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
     This type has two behaviors when `ensure => absent` is set.
 
@@ -103,16 +113,20 @@ Puppet::Type.newtype(:file_line) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
         file_line { 'bashrc_proxy':
           ensure            => absent,
           path              => '/etc/bashrc',
           match             => '^export\ HTTP_PROXY\=',
           match_for_absence => true,
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -129,6 +143,8 @@ Puppet::Type.newtype(:file_line) do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
     In this code example match will look for a line beginning with export
     followed by HTTP_PROXY and delete it.  If multiple lines match, an
@@ -143,10 +159,13 @@ Puppet::Type.newtype(:file_line) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
         file_line { 'bashrc_proxy':
           ensure => absent,
           path   => '/etc/bashrc',
@@ -166,6 +185,7 @@ Puppet::Type.newtype(:file_line) do
           match    => '^*lock:',
           encoding => "iso-8859-1",
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -198,6 +218,8 @@ Puppet::Type.newtype(:file_line) do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
     Files with special characters that are not valid UTF-8 will give the
     error message "invalid byte sequence in UTF-8".  In this case, determine
@@ -213,6 +235,7 @@ Puppet::Type.newtype(:file_line) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     desc 'Manage the state of this type.'
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
@@ -220,6 +243,8 @@ Puppet::Type.newtype(:file_line) do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     defaultvalues
     defaultto :present
   end
@@ -232,10 +257,13 @@ Puppet::Type.newtype(:file_line) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     desc 'An optional ruby regular expression to run against existing lines in the file.' \
          ' If a match is found, we replace that line rather than adding a new line.' \
          ' A regex comparison is performed against the line value and if it does not' \
@@ -247,6 +275,7 @@ Puppet::Type.newtype(:file_line) do
          ' If set to true and match is set, the line that matches match will be deleted.' \
          ' If set to false (the default), match is ignored when ensure => absent.' \
          ' When `ensure => present`, match_for_absence is ignored.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -266,11 +295,14 @@ Puppet::Type.newtype(:file_line) do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     newvalues(true, false)
     defaultto false
   end
 
   newparam(:multiple) do
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -288,10 +320,15 @@ Puppet::Type.newtype(:file_line) do
     desc 'An optional value to determine if match can change multiple lines.' \
          ' If set to false, an exception will be raised if more than one line matches'
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    desc 'An optional value to determine if match can change multiple lines.' \
+         ' If set to false, an exception will be raised if more than one line matches'
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     newvalues(true, false)
   end
 
   newparam(:after) do
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -309,6 +346,10 @@ Puppet::Type.newtype(:file_line) do
     desc 'An optional value used to specify the line after which we will add any new lines. (Existing lines are added in place)' \
          ' This is also takes a regex.'
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    desc 'An optional value used to specify the line after which we will add any new lines. (Existing lines are added in place)' \
+         ' This is also takes a regex.'
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   end
 
   # The line property never changes; the type only ever performs a create() or
@@ -363,6 +404,7 @@ Puppet::Type.newtype(:file_line) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
@@ -372,6 +414,9 @@ Puppet::Type.newtype(:file_line) do
 =======
 
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   validate do
     if self[:replace_all_matches_not_matching_line].to_s == 'true' && self[:multiple].to_s == 'false'
       raise(Puppet::Error, 'multiple must be true when replace_all_matches_not_matching_line is true')

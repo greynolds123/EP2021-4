@@ -6,6 +6,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Takes a list of packages and only installs them if they don't already exist.
     It optionally takes a hash as a second parameter that will be passed as the
     third argument to the ensure_resource() function.
@@ -29,6 +30,11 @@ module Puppet::Parser::Functions
     It optionally takes a hash as a second parameter that will be passed as the
     third argument to the ensure_resource() function.
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    Takes a list of packages and only installs them if they don't already exist.
+    It optionally takes a hash as a second parameter that will be passed as the
+    third argument to the ensure_resource() function.
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   DOC
              ) do |arguments|
 

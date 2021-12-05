@@ -6,6 +6,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     DEPRECATED: This function will be removed when Puppet 3 support is dropped; please migrate to the new parser's typing system.
 
     Returns the type when passed a value. Type can be one of:
@@ -25,6 +26,11 @@ module Puppet::Parser::Functions
 
     Returns the type when passed a value. Type can be one of:
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    DEPRECATED: This function will be removed when Puppet 3 support is dropped; please migrate to the new parser's typing system.
+
+    Returns the type when passed a value. Type can be one of:
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
     * string
     * array

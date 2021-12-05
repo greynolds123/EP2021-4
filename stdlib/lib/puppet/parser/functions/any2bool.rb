@@ -6,6 +6,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     This converts 'anything' to a boolean. In practise it does the following:
 
 =======
@@ -22,6 +23,10 @@ module Puppet::Parser::Functions
     This converts 'anything' to a boolean. In practise it does the following:
 
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    This converts 'anything' to a boolean. In practise it does the following:
+
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     * Strings such as Y,y,1,T,t,TRUE,yes,'true' will return true
     * Strings such as 0,F,f,N,n,FALSE,no,'false' will return false
     * Booleans will just return their original value
@@ -34,6 +39,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     @return [Boolean] The boolean value of the object that was given
@@ -42,6 +48,8 @@ module Puppet::Parser::Functions
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   DOC
              ) do |arguments|
 

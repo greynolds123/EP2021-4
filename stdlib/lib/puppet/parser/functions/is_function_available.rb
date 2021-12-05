@@ -6,6 +6,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     This function accepts a string as an argument, determines whether the
     Puppet runtime has access to a function by that name.  It returns a
     true if the function exists, false if not.
@@ -31,6 +32,11 @@ module Puppet::Parser::Functions
     Puppet runtime has access to a function by that name.  It returns a
     true if the function exists, false if not.
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    This function accepts a string as an argument, determines whether the
+    Puppet runtime has access to a function by that name.  It returns a
+    true if the function exists, false if not.
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     DOC
              ) do |arguments|
 

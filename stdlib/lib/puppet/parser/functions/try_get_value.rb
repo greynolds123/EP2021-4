@@ -10,10 +10,13 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
       DEPRECATED: this function is deprecated, please use dig() instead.
 
       Looks up into a complex structure of arrays and hashes and returns a value
@@ -22,6 +25,7 @@ module Puppet::Parser::Functions
       Key can contain slashes to describe path components. The function will go down
       the structure and try to extract the required value.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -40,6 +44,8 @@ module Puppet::Parser::Functions
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
       $data = {
         'a' => {
           'b' => [
@@ -55,6 +61,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       ```
@@ -66,6 +73,9 @@ module Puppet::Parser::Functions
 =======
 
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
       a -> first hash key
       b -> second hash key
       2 -> array index starting with 0
@@ -75,6 +85,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       ```
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
@@ -82,6 +93,8 @@ module Puppet::Parser::Functions
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
       In addition to the required "key" argument, "try_get_value" accepts default
       argument. It will be returned if no value was found or a path component is

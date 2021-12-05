@@ -5,10 +5,13 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   newfunction(:pick, :type => :rvalue, :doc => <<-DOC
     This function is similar to a coalesce function in SQL in that it will return
     the first value in a list of values that is not undefined or an empty string.
@@ -22,6 +25,7 @@ module Puppet::Parser::Functions
     Enterprise Console are brought into Puppet as top-scope variables), and,
     failing that, will use a default value of 1.449.
 DOC
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -49,6 +53,8 @@ DOC
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
              ) do |args|
     args = args.compact
     args.delete(:undef)

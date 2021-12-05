@@ -3,6 +3,7 @@ require 'spec_helper'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe 'strftime', :if => Puppet::Util::Package.versioncmp(Puppet.version, '4.8.0') < 0 do
 =======
 describe 'strftime' do
@@ -13,6 +14,9 @@ describe 'strftime', :if => Puppet::Util::Package.versioncmp(Puppet.version, '4.
 =======
 describe 'strftime', :if => Puppet::Util::Package.versioncmp(Puppet.version, '4.8.0') < 0 do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+describe 'strftime', :if => Puppet::Util::Package.versioncmp(Puppet.version, '4.8.0') < 0 do
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   it 'exists' do
     expect(Puppet::Parser::Functions.function('strftime')).to eq('function_strftime')
   end

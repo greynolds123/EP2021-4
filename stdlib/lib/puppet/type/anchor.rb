@@ -2,6 +2,7 @@ Puppet::Type.newtype(:anchor) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   desc <<-'DESCRIPTION'
   A simple resource type intended to be used as an anchor in a composite class.
 =======
@@ -17,6 +18,10 @@ Puppet::Type.newtype(:anchor) do
   desc <<-'DESCRIPTION'
   A simple resource type intended to be used as an anchor in a composite class.
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+  desc <<-'DESCRIPTION'
+  A simple resource type intended to be used as an anchor in a composite class.
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
   In Puppet 2.6, when a class declares another class, the resources in the
   interior class are not contained by the exterior class. This interacts badly
@@ -31,10 +36,13 @@ Puppet::Type.newtype(:anchor) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
       class ntp {
         # These classes will have the correct order relationship with each
         # other. However, without anchors, they won't have any order
@@ -48,6 +56,7 @@ Puppet::Type.newtype(:anchor) do
         anchor { 'ntp::begin': } -> Class['ntp::package']
         Class['ntp::service']    -> anchor { 'ntp::end': }
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -71,6 +80,8 @@ Puppet::Type.newtype(:anchor) do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
   This allows the end user of the ntp module to establish require and before
   relationships with Class['ntp']:
@@ -78,14 +89,18 @@ Puppet::Type.newtype(:anchor) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
       class { 'ntp': } -> class { 'mcollective': }
       class { 'mcollective': } -> class { 'ntp': }
 
   DESCRIPTION
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -100,10 +115,13 @@ Puppet::Type.newtype(:anchor) do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
   newparam :name do
     desc 'The name of the anchor resource.'
   end
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -116,6 +134,9 @@ Puppet::Type.newtype(:anchor) do
 =======
 
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   def refresh
     # We don't do anything with them, but we need this to
     #   show that we are "refresh aware" and not break the

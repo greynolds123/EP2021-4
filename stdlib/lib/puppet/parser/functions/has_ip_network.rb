@@ -6,6 +6,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns true if the client has an IP address within the requested network.
 =======
     @summary
@@ -20,6 +21,9 @@ module Puppet::Parser::Functions
 =======
     Returns true if the client has an IP address within the requested network.
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    Returns true if the client has an IP address within the requested network.
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
     This function iterates through the 'interfaces' fact and checks the
     'network_IFACE' facts, performing a simple string comparision.

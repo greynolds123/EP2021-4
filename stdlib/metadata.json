@@ -3,11 +3,14 @@
   "version": "6.0.0",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "6.1.0",
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
   "author": "puppetlabs",
   "summary": "Standard library of resources for Puppet modules.",
   "license": "Apache-2.0",
@@ -27,12 +30,15 @@
         "7"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "7",
         "8"
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
       ]
     },
     {
@@ -73,12 +79,15 @@
         "9"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "9",
         "10"
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
       ]
     },
     {
@@ -106,11 +115,14 @@
         "2016",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "2019",
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
         "7",
         "8.1",
         "10"
@@ -135,6 +147,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "pdk-version": "1.10.0",
   "template-url": "https://github.com/puppetlabs/pdk-templates#master",
   "template-ref": "heads/master-0-gf778803"
@@ -151,4 +164,9 @@
   "template-url": "https://github.com/puppetlabs/pdk-templates#master",
   "template-ref": "heads/master-0-gf778803"
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+  "pdk-version": "1.10.0",
+  "template-url": "https://github.com/puppetlabs/pdk-templates#master",
+  "template-ref": "heads/master-0-gf778803"
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 }

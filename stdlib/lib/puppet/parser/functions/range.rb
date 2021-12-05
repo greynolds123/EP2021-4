@@ -7,10 +7,13 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     When given range in the form of (start, stop) it will extrapolate a range as
     an array.
 
@@ -44,6 +47,7 @@ module Puppet::Parser::Functions
     iterating a given number of times. Also see the step() function in Puppet for skipping values.
 
         Integer[0, 9].each |$x| { notice($x) } # notices 0, 1, 2, ... 9
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -89,6 +93,8 @@ module Puppet::Parser::Functions
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     DOC
              ) do |arguments|
 
@@ -135,6 +141,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     result = range.step(step).to_a
 =======
     result = range.step(step).first(1_000_000).to_a
@@ -145,6 +152,9 @@ module Puppet::Parser::Functions
 =======
     result = range.step(step).to_a
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    result = range.step(step).to_a
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
     return result
   end

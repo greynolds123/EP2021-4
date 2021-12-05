@@ -6,6 +6,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Sets the current class or definition as private.
 =======
     @summary
@@ -21,6 +22,9 @@ module Puppet::Parser::Functions
 =======
     Sets the current class or definition as private.
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+    Sets the current class or definition as private.
+>>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     Calling the class or definition from outside the current module will fail.
     DOC
              ) do |args|
