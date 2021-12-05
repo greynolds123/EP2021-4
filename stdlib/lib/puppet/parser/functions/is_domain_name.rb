@@ -5,6 +5,7 @@ module Puppet::Parser::Functions
   newfunction(:is_domain_name, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns true if the string passed to this function is a syntactically correct domain name.
 =======
     @summary
@@ -20,6 +21,9 @@ module Puppet::Parser::Functions
 =======
     Returns true if the string passed to this function is a syntactically correct domain name.
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    Returns true if the string passed to this function is a syntactically correct domain name.
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
              ) do |arguments|
 

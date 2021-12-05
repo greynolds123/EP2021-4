@@ -889,6 +889,7 @@ bool2str(false, 't', 'f')         => 'f'
 Since Puppet 5.0.0, you can create new values for almost any
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 data type using the type system — you can use the built-in
 =======
 data type using the type system - you can use the built-in
@@ -896,6 +897,9 @@ data type using the type system - you can use the built-in
 =======
 data type using the type system — you can use the built-in
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+data type using the type system — you can use the built-in
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 [`String.new`](https://puppet.com/docs/puppet/latest/function.html#boolean-to-string)
 function to convert to String, with many different format options:
 

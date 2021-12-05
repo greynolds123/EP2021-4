@@ -2,8 +2,11 @@
 module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   newfunction(:base64, :type => :rvalue, :doc => <<-'DOC') do |args|
     Base64 encode or decode a string based on the command and the string submitted
 
@@ -26,6 +29,7 @@ module Puppet::Parser::Functions
        # decode a Binary assuming it is an UTF-8 String
        $decodestring = String(Binary("dGhlc3RyaW5n"), "%s")
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   newfunction(:base64, :type => :rvalue, :doc => <<-DOC) do |args|
@@ -62,6 +66,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
 
     require 'base64'

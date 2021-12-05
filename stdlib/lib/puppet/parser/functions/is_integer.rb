@@ -5,14 +5,18 @@ module Puppet::Parser::Functions
   newfunction(:is_integer, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     Returns true if the variable passed to this function is an Integer or
     a decimal (base 10) integer in String form. The string may
     start with a '-' (minus). A value of '0' is allowed, but a leading '0' digit may not
     be followed by other digits as this indicates that the value is octal (base 8).
 
     If given any other argument `false` is returned.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @summary
@@ -32,6 +36,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
              ) do |arguments|
 

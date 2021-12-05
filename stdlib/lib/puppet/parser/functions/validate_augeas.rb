@@ -6,6 +6,7 @@ require 'tempfile'
 module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   newfunction(:validate_augeas, :doc => <<-'DOC') do |args|
     Perform validation of a string using an Augeas lens
 =======
@@ -18,6 +19,10 @@ module Puppet::Parser::Functions
   newfunction(:validate_augeas, :doc => <<-'DOC') do |args|
     Perform validation of a string using an Augeas lens
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+  newfunction(:validate_augeas, :doc => <<-'DOC') do |args|
+    Perform validation of a string using an Augeas lens
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     The first argument of this function should be a string to
     test, and the second argument should be the name of the Augeas lens to use.
     If Augeas fails to parse the string with the lens, the compilation will
@@ -29,8 +34,11 @@ module Puppet::Parser::Functions
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     For example, if you want to make sure your passwd content never contains
     a user `foo`, you could write:
 
@@ -45,6 +53,7 @@ module Puppet::Parser::Functions
     seen by the user.
 
     A helpful error message can be returned like this:
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @return
@@ -69,10 +78,13 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 
         validate_augeas($sudoerscontent, 'Sudoers.lns', [], 'Failed to validate sudoers content with Augeas')
 
     DOC
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -80,6 +92,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     unless Puppet.features.augeas?
       raise Puppet::ParseError, 'validate_augeas(): this function requires the augeas feature. See http://docs.puppetlabs.com/guides/augeas.html#pre-requisites for how to activate it.'
     end

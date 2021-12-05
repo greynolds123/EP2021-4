@@ -4,6 +4,7 @@
 module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   newfunction(:glob, :type => :rvalue, :doc => <<-'DOC'
     Returns an Array of file entries of a directory or an Array of directories.
     Uses same patterns as Dir#glob
@@ -23,6 +24,11 @@ module Puppet::Parser::Functions
     Returns an Array of file entries of a directory or an Array of directories.
     Uses same patterns as Dir#glob
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+  newfunction(:glob, :type => :rvalue, :doc => <<-'DOC'
+    Returns an Array of file entries of a directory or an Array of directories.
+    Uses same patterns as Dir#glob
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
              ) do |arguments|
 

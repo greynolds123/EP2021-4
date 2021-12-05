@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 # Take a data structure and output it as pretty JSON
 #
 # @example how to output pretty JSON
 #   # output pretty json to a file
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 require 'json'
@@ -17,11 +21,14 @@ require 'json'
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #     file { '/tmp/my.json':
 #       ensure  => file,
 #       content => to_json_pretty($myhash),
 #     }
 #
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 # @example how to output pretty JSON skipping over keys with undef values
@@ -33,6 +40,10 @@ require 'json'
 # @example how to output pretty JSON skipping over keys with undef values
 #   # output pretty JSON to a file skipping over undef values
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+# @example how to output pretty JSON skipping over keys with undef values
+#   # output pretty JSON to a file skipping over undef values
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #     file { '/tmp/my.json':
 #       ensure  => file,
 #       content => to_json_pretty({
@@ -42,12 +53,16 @@ require 'json'
 #     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #
 require 'json'
 
 Puppet::Functions.create_function(:to_json_pretty) do
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 Puppet::Functions.create_function(:to_json_pretty) do
@@ -60,6 +75,8 @@ Puppet::Functions.create_function(:to_json_pretty) do
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   dispatch :to_json_pretty do
     param 'Variant[Hash, Array]', :data
     optional_param 'Boolean', :skip_undef

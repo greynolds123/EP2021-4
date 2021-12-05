@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
   newfunction(:uriescape, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Urlencodes a string or array of strings.
     Requires either a single string or an array as an input.
 =======
@@ -22,6 +23,10 @@ module Puppet::Parser::Functions
     Urlencodes a string or array of strings.
     Requires either a single string or an array as an input.
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    Urlencodes a string or array of strings.
+    Requires either a single string or an array as an input.
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
              ) do |arguments|
 

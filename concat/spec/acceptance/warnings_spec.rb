@@ -4,6 +4,7 @@ describe 'warnings' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   basedir = default.tmpdir('concat')
 
   shared_examples 'has_warning' do |pp, w|
@@ -30,6 +31,10 @@ describe 'warnings' do
   before(:all) do
     @basedir = setup_test_directory
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+  before(:all) do
+    @basedir = setup_test_directory
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   end
 
   context 'when concat::fragment target not found' do
@@ -45,6 +50,7 @@ describe 'warnings' do
     MANIFEST
     end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     it_behaves_like 'has_warning', pp, w
 =======
@@ -79,6 +85,11 @@ describe 'warnings' do
       expect(apply_manifest(pp, expect_failures: true).stderr).to match 'not found in the catalog'
       expect(apply_manifest(pp, expect_failures: true).stderr).to match 'not found in the catalog'
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    it 'applies manifests, check stderr' do
+      expect(apply_manifest(pp, expect_failures: true).stderr).to match 'not found in the catalog'
+      expect(apply_manifest(pp, expect_failures: true).stderr).to match 'not found in the catalog'
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     end
   end
 end

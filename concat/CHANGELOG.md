@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ##Supported Release 2.2.0
 ###Summary
 =======
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 # Change log
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
@@ -176,7 +179,10 @@ This is a backwards compatible bugfix release.
 
 ## Supported Release 2.2.0
 ### Summary
+<<<<<<< HEAD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 
 This release includes support for Debian 8 and Ubuntu 16.04 in addition to numerous bugfixes.
 
@@ -184,6 +190,7 @@ This release includes support for Debian 8 and Ubuntu 16.04 in addition to numer
 - Adds Debian 8 support
 - Adds Ubuntu 16.04 support
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ####Bugfixes
 =======
@@ -371,6 +378,8 @@ This release includes support for Debian 8 and Ubuntu 16.04 in addition to numer
 
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Bugfixes
 - Fixes the stdlib lower dependency.
 - (MODULES-3027) Fixes escaping the '*' character in tag creation.
@@ -380,6 +389,7 @@ This release includes support for Debian 8 and Ubuntu 16.04 in addition to numer
 - (MODULES-3332) Correct the target path validation
 - (MODULES-3463) Properly passes metaparams to generated resource
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ##Supported Release 2.1.0
@@ -396,17 +406,23 @@ This is a re-release of concat as a resource type. This release also includes ne
 This is a re-release of concat as a resource type. This release also includes new features and bugfixes on top of the previously YANKED 2.0.1 release.
 
 =======
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ## Supported Release 2.1.0
 ### Summary
 
 This is a re-release of concat as a resource type. This release also includes new features and bugfixes on top of the previously YANKED 2.0.1 release.
 
+<<<<<<< HEAD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Features
 - Adds the show_diff property.
 - Adds the selinux related file params.
 - Allows integer UID/GID values to be passed into `$owner` and `$group`
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ####Bugfixes
@@ -430,6 +446,8 @@ This release includes some ruby path and lint fixes.
 ####Bugfixes
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Bugfixes
 - Adds a workaround to PUP-1963: generated resources never receiving dependency edges.
 - Fixes occassional failure to find directory environment.
@@ -444,14 +462,18 @@ Small release for support of newer PE versions. This increments the version of P
 
 This release includes some ruby path and lint fixes.
 
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Bugfixes
 - Use correct ruby path with PE and AIO
 - Lint fixes
 - Use correct ruby path on FreeBSD
 - Test fixes
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ##2015-06-02 - Supported Release 2.0.1 [YANKED]
@@ -468,17 +490,23 @@ This is a bugfix release.
 This is a bugfix release. 
 
 =======
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ## 2015-06-02 - Supported Release 2.0.1 [YANKED]
 ### Summary
 
 This is a bugfix release. 
 
+<<<<<<< HEAD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Bugfixes
 - Fixes dependency graphing with concurrent modification of the same file.
 - Fixes handling fragment target.
 - Fixes the defaulted force behavior to handle empty concats correctly.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ##2015-06-02 - Supported Release 1.2.3
@@ -521,6 +549,8 @@ This release includes bugfixes, test improvements, and a rewritten README.
 ####Bugfixes
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ## 2015-06-02 - Supported Release 1.2.3
 ### Summary
 
@@ -553,8 +583,11 @@ This release includes a bugfix.
 
 This release includes bugfixes, test improvements, and a rewritten README.
 
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Bugfixes
 
 - Verifies existence of $is_pe before using it.
@@ -564,6 +597,7 @@ This release includes bugfixes, test improvements, and a rewritten README.
 - Explicitly sets script and concat directories to the same owner and group.
 - Re-adds support for fragment backup, so that static compiler can work with filebucket (MODULES-1700).
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ##2015-02-17 - Supported Release 1.2.0
@@ -582,6 +616,8 @@ This release includes a number of bugfixes and adds support for running a valida
 ####Bugfixes
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ## 2015-02-17 - Supported Release 1.2.0
 ### Summary
 
@@ -590,8 +626,11 @@ This release includes a number of bugfixes and adds support for running a valida
 #### Features
 - Support running a validation command for Puppet >= 3.5.0
 
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Bugfixes
 - Reset poisoned defaults from Exec
 - Use concatfragments.rb on AIX since it doesn't support print0
@@ -599,6 +638,7 @@ This release includes a number of bugfixes and adds support for running a valida
 - Fix missing method for check_is_owned_by for windows (MODULES-1764)
 - Fix sort by numeric
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ##2014-10-28 - Supported Release 1.1.2
@@ -615,12 +655,17 @@ This release includes bugfixes and test improvements. The module was tested agai
 This release includes bugfixes and test improvements. The module was tested against SLES10 and SLES12 and found to work against those platforms with no module improvements. Metadata was updated to include those as supported platforms.
 
 =======
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ## 2014-10-28 - Supported Release 1.1.2
 ### Summary
 
 This release includes bugfixes and test improvements. The module was tested against SLES10 and SLES12 and found to work against those platforms with no module improvements. Metadata was updated to include those as supported platforms.
 
+<<<<<<< HEAD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Bugfixes
 - newline didn't work for Windows and Solaris. This has been fixed.
 - Install certs on Windows for acceptance tests
@@ -628,6 +673,7 @@ This release includes bugfixes and test improvements. The module was tested agai
 - Update tests to work on Windows
 - Fix typo in CHANGELOG.md
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ##2014-09-10 - Supported Release 1.1.1
@@ -638,11 +684,14 @@ This is a bugfix release, and the first supported release of the 1.1.x series.
 ####Bugfixes
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ## 2014-09-10 - Supported Release 1.1.1
 ### Summary
 
 This is a bugfix release, and the first supported release of the 1.1.x series.
 
+<<<<<<< HEAD
 =======
 ## 2014-09-10 - Supported Release 1.1.1
 ### Summary
@@ -650,6 +699,8 @@ This is a bugfix release, and the first supported release of the 1.1.x series.
 This is a bugfix release, and the first supported release of the 1.1.x series.
 
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Bugfixes
 - Make the `$order` parameter default to a string and be validated as an integer
   or a string
@@ -664,6 +715,7 @@ This is a bugfix release, and the first supported release of the 1.1.x series.
 - Fix tests and spec_helper
 - Synchronized files for more consistency across modules via modulesync
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ##2014-05-14 - Release 1.1.0
@@ -682,6 +734,8 @@ This release is primarily a bugfix release since 1.1.0-rc1.
 ####Bugfixes
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ## 2014-05-14 - Release 1.1.0
 ### Summary
 
@@ -690,8 +744,11 @@ This release is primarily a bugfix release since 1.1.0-rc1.
 #### Features
 - Improved testing, with tests moved to beaker
 
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Bugfixes
 - No longer attempts to set fragment owner and mode on Windows
 - Fix numeric sorting
@@ -700,12 +757,15 @@ This release is primarily a bugfix release since 1.1.0-rc1.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ##2014-01-03 - Release 1.1.0-rc1
 ###Summary
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ## 2014-01-03 - Release 1.1.0-rc1
 ### Summary
 
@@ -727,11 +787,14 @@ https://github.com/puppetlabs/puppetlabs-concat/blob/master/README.md#api-deprec
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ####Removed
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Removed
 - Puppet 0.24 support.
 - Filebucket backup of all file resources except the target concatenated file.
@@ -740,11 +803,14 @@ https://github.com/puppetlabs/puppetlabs-concat/blob/master/README.md#api-deprec
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ###Features
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ### Features
 - Windows support via a ruby version of the concat bash script.
 - Huge amount of acceptance testing work added.
@@ -757,11 +823,14 @@ https://github.com/puppetlabs/puppetlabs-concat/blob/master/README.md#api-deprec
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ###Bugfixes
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ### Bugfixes
  - Ensure concat::setup runs before concat::fragment in all cases.
  - Pluginsync references updated for modern Puppet.
@@ -772,6 +841,7 @@ https://github.com/puppetlabs/puppetlabs-concat/blob/master/README.md#api-deprec
  - Always exec the concatfragments script as root when running as root.
  - Syntax and other cleanup changes.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ##2014-06-25 - Supported Release 1.0.4
@@ -822,6 +892,8 @@ This is a supported release. No functional changes were made from 1.0.1.
 =======
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ## 2014-06-25 - Supported Release 1.0.4
 ### Summary
 
@@ -861,13 +933,17 @@ This is a supported release. No functional changes were made from 1.0.1.
 
 #### Bugfixes
 
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Known Bugs
 
 * Not supported on Windows.
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ##2014-02-12 - 1.0.1
@@ -884,12 +960,17 @@ Minor bugfixes for sorting of fragments and ordering of resources.
 Minor bugfixes for sorting of fragments and ordering of resources.
 
 =======
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ## 2014-02-12 - 1.0.1
 ### Summary
 
 Minor bugfixes for sorting of fragments and ordering of resources.
 
+<<<<<<< HEAD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Bugfixes
 - LANG => C replaced with LC_ALL => C to reduce spurious recreation of
 fragments.
@@ -899,12 +980,15 @@ fragments.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ##2013-08-09 - 1.0.0
 ###Summary
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ## 2013-08-09 - 1.0.0
 ### Summary
 
@@ -915,11 +999,14 @@ this release.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ####Features
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Features
 - New parameters in concat:
  - `replace`: specify if concat should replace existing files.
@@ -929,11 +1016,14 @@ this release.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ####Bugfixes
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Bugfixes
 - Gracefully handle \n in a fragment resource name.
 - Adding more helpful message for 'pluginsync = true'
@@ -946,11 +1036,14 @@ defining resource defaults.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ####CHANGELOG:
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### CHANGELOG:
 - 2010/02/19 - initial release
 - 2010/03/12 - add support for 0.24.8 and newer

@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 require 'puppet_blacksmith/rake_tasks'
 require 'puppet-lint/tasks/puppet-lint'
 =======
 require 'puppet_litmus/rake_tasks' if Bundler.rubygems.find_name('puppet_litmus').any?
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+require 'puppet_litmus/rake_tasks' if Bundler.rubygems.find_name('puppet_litmus').any?
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 require 'puppetlabs_spec_helper/rake_tasks'
 require 'puppet-syntax/tasks/puppet-syntax'
 require 'puppet_blacksmith/rake_tasks' if Bundler.rubygems.find_name('puppet-blacksmith').any?
@@ -82,6 +86,7 @@ Gemfile:
 EOM
   end
 end
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -164,4 +169,6 @@ EOM
 end
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 

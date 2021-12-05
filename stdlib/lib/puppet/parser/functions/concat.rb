@@ -5,8 +5,11 @@ module Puppet::Parser::Functions
   newfunction(:concat, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     Appends the contents of multiple arrays into array 1.
 
     *Example:*
@@ -20,6 +23,7 @@ module Puppet::Parser::Functions
     Note: Since Puppet 4.0 concatenation of arrays and hashes can be done with the + operator.
 
       ['1','2','3'] + ['4','5','6'] + ['7','8','9']
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @summary
@@ -42,6 +46,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   DOC
              ) do |arguments|
 

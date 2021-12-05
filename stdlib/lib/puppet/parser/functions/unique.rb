@@ -5,8 +5,11 @@ module Puppet::Parser::Functions
   newfunction(:unique, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     This function will remove duplicates from strings and arrays.
 
     *Examples:*
@@ -24,6 +27,7 @@ module Puppet::Parser::Functions
     This returns:
 
         ["a","b","c"]
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @summary
@@ -45,6 +49,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
              ) do |arguments|
 

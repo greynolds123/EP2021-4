@@ -4,6 +4,7 @@ describe 'concat backup parameter' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   basedir = default.tmpdir('concat')
   context '=> puppet' do
     before(:all) do
@@ -11,6 +12,8 @@ describe 'concat backup parameter' do
         file { '#{basedir}':
           ensure => directory,
 =======
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   before(:all) do
     @basedir = setup_test_directory
   end
@@ -20,7 +23,10 @@ describe 'concat backup parameter' do
       <<-MANIFEST
         concat { '#{@basedir}/file':
           backup => 'puppet',
+<<<<<<< HEAD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
         }
         concat::fragment { 'new file':
           target  => '#{@basedir}/file',
@@ -52,6 +58,7 @@ describe 'concat backup parameter' do
 
     # XXX Puppet doesn't mention anything about filebucketing with a given
     # extension like .backup
+<<<<<<< HEAD
 <<<<<<< HEAD
     it 'applies the manifest twice  no stderr' do
       apply_manifest(pp, :catch_failures => true)
@@ -110,6 +117,8 @@ describe 'concat backup parameter' do
     # extension like .backup
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     it 'applies the manifest twice no stderr' do
       idempotent_apply(pp)
       expect(file("#{@basedir}/file")).to be_file
@@ -118,16 +127,20 @@ describe 'concat backup parameter' do
       expect(file("#{@basedir}/file.backup").content).to match %r{new contents}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     end
   end
 
   # XXX The backup parameter uses validate_string() and thus can't be the
   # boolean false value, but the string 'false' has the same effect in Puppet 3
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -174,6 +187,8 @@ describe 'concat backup parameter' do
 =======
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   describe "when 'false'" do
     let(:pp) do
       <<-MANIFEST
@@ -195,6 +210,7 @@ describe 'concat backup parameter' do
       expect(file("#{@basedir}/file")).to be_file
       expect(file("#{@basedir}/file").content).to match %r{new contents}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -203,6 +219,8 @@ describe 'concat backup parameter' do
       expect(file("#{@basedir}/file")).to be_file
       expect(file("#{@basedir}/file").content).to match %r{new contents}
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     end
   end
 end

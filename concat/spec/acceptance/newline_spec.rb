@@ -4,6 +4,7 @@ describe 'concat ensure_newline parameter' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   basedir = default.tmpdir('concat')
   context '=> false' do
     before(:all) do
@@ -72,6 +73,8 @@ describe 'concat ensure_newline parameter' do
 =======
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   before(:all) do
     @basedir = setup_test_directory
   end
@@ -116,12 +119,16 @@ describe 'concat ensure_newline parameter' do
     MANIFEST
     end
 
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     it 'applies the manifest twice with no stderr' do
       idempotent_apply(pp)
       expect(file("#{@basedir}/file")).to be_file
       expect(file("#{@basedir}/file").content).to match %r{1\r?\n2\r?\n}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
@@ -129,6 +136,8 @@ describe 'concat ensure_newline parameter' do
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     end
   end
 end

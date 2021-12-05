@@ -5,8 +5,11 @@ module Puppet::Parser::Functions
   newfunction(:suffix, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     This function applies a suffix to all elements in an array, or to the keys
     in a hash.
 
@@ -20,6 +23,7 @@ module Puppet::Parser::Functions
     function in Puppet. This example does the same as the example above:
 
         ['a', 'b', 'c'].map |$x| { "${x}p" }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @summary
@@ -41,6 +45,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 
     DOC
              ) do |arguments|

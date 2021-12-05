@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 # A facter fact to determine the root home directory.
 # This varies on PE supported platforms and may be
 # reconfigured by the end user.
 module Facter::Util::RootHome
   class << self
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 # root_home.rb
@@ -20,6 +24,8 @@ module Facter::Util::RootHome
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   def returnt_root_home
     root_ent = Facter::Util::Resolution.exec('getent passwd root')
     # The home directory is the sixth element in the passwd entry

@@ -5,8 +5,11 @@ module Puppet::Parser::Functions
   newfunction(:delete_undef_values, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     Returns a copy of input hash or array with all undefs deleted.
 
     *Examples:*
@@ -25,6 +28,7 @@ module Puppet::Parser::Functions
         $hash.filter |$key, $val| { $val =~ NotUndef }
 
       DOC
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @summary
@@ -50,6 +54,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
              ) do |args|
 
     raise(Puppet::ParseError, "delete_undef_values(): Wrong number of arguments given (#{args.size})") if args.empty?

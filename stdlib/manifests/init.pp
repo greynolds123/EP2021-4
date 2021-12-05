@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 # Class: stdlib
 #
 # This module manages stdlib. Most of stdlib's features are automatically
@@ -18,6 +21,7 @@
 #   of stdlib::stages.
 #
 # Requires: nothing
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -35,6 +39,8 @@
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #
 class stdlib {
   include ::stdlib::stages

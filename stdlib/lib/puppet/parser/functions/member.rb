@@ -7,8 +7,11 @@ module Puppet::Parser::Functions
   newfunction(:member, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     This function determines if a variable is a member of an array.
     The variable can be a string, fixnum, or array.
 
@@ -43,6 +46,7 @@ module Puppet::Parser::Functions
     Also note that since Puppet 5.2.0 the general form of testing content of an array or hash is to use the built-in
     `any` and `all` functions.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     @summary
       This function determines if a variable is a member of an array.
@@ -75,6 +79,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
              ) do |arguments|
 

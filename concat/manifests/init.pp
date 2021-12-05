@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # == Define: concat
 #
 # Sets up so that you can use fragments to build a final config file,
@@ -152,6 +153,8 @@ define concat(
   $safe_name            = regsubst($name, '[/:~\n\s\+\*\(\)]', '_', 'G')
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 # @summary
 #   Manages a file, compiled from one or more text fragments.
 #
@@ -255,8 +258,11 @@ define concat(
   Optional[Boolean]                  $force                   = false,
 ) {
 
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   $safe_name            = regsubst($name, '[\\\\/:~\n\s\+\*\(\)@]', '_', 'G')
   $default_warn_message = "# This file is managed by Puppet. DO NOT EDIT.\n"
 

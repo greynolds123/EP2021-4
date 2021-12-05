@@ -5,6 +5,7 @@ module Puppet::Parser::Functions
   newfunction(:size, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns the number of elements in a string, an array or a hash
 
     Note that since Puppet 5.4.0, the length() function in Puppet is preferred over this. For versions
@@ -22,6 +23,11 @@ module Puppet::Parser::Functions
 
     Note that since Puppet 5.4.0, the length() function in Puppet is preferred over this. For versions
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    Returns the number of elements in a string, an array or a hash
+
+    Note that since Puppet 5.4.0, the length() function in Puppet is preferred over this. For versions
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     of Puppet < 5.4.0 use the stdlib length() function.
   DOC
              ) do |arguments|

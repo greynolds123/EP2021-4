@@ -5,6 +5,7 @@ module Puppet::Parser::Functions
   newfunction(:rstrip, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Strips leading spaces to the right of the string.
 
     Note: from Puppet 6.0.0, the compatible function with the same name in Puppet core
@@ -22,6 +23,11 @@ module Puppet::Parser::Functions
 
     Note: from Puppet 6.0.0, the compatible function with the same name in Puppet core
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    Strips leading spaces to the right of the string.
+
+    Note: from Puppet 6.0.0, the compatible function with the same name in Puppet core
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     will be used instead of this function.
     DOC
              ) do |arguments|

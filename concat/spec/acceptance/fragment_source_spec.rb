@@ -3,6 +3,7 @@ require 'spec_helper_acceptance'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 case fact('osfamily')
   when 'AIX'
     username = 'root'
@@ -17,6 +18,8 @@ case fact('osfamily')
     username = 'root'
     groupname = 'root'
 =======
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 case os[:family]
 when 'aix'
   username = 'root'
@@ -30,7 +33,10 @@ when 'windows'
 else
   username = 'root'
   groupname = 'root'
+<<<<<<< HEAD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 end
 
 describe 'concat::fragment source' do
@@ -159,6 +165,7 @@ describe 'concat::fragment source' do
     end
   end
 end
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -311,3 +318,5 @@ end
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97

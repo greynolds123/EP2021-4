@@ -8,14 +8,20 @@ and this project adheres to [Semantic Versioning](http://semver.org).
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-stdlib/compare/5.2.0...v6.0.0)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - (MODULES-8444) - Raise lower Puppet bound
 
 =======
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #### Changed
 - (MODULES-8444) - Raise lower Puppet bound
 
 #### Added
+<<<<<<< HEAD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 - Add a stdlib::ip_in_range() function
 - (MODULES-8760) Add iterative feature to merge() function
 
@@ -50,6 +56,7 @@ This is a moderate release which adds support for Puppet 6.
 ## Supported Release 5.0.0
 ### Summary
 This is a major release which removes support for the Scientific 5 and Debian 7 OS, as well as a removal of the `Stdlib::(Ipv4|IPv6|Ip_address)` data types in favour of `Stdlib::IP::*`.
+<<<<<<< HEAD
 <<<<<<< HEAD
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
@@ -127,6 +134,8 @@ This is a major release which removes support for the Scientific 5 and Debian 7 
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 
 **In addition it contains a substantial piece of work centered around updating functions that have now been migrated into Puppet itself. Please note that this will be the last major release to support Puppet 2 and Puppet 3 and that they will soon be removed.**
 
@@ -140,10 +149,14 @@ This is a major release which removes support for the Scientific 5 and Debian 7 
 - Fixed URL to use 'latest' instead of '5.5' for `Hash.new` function.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Added
 =======
 #### Added
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+#### Added
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 - Support added for symbolic file nodes.
 - `loadjson()` and `loadyml()` now compatible with HTTPS files.
 - `loadjson()` and `loadyml()` now compatible with HTTP basic auth files.
@@ -596,6 +609,7 @@ Includes the addition of several new functions and considerable improvements to 
 - Fix backwards compatibility from an improvement to the parseyaml function
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Renaming of load_module_metadata test to include _spec.rb
 =======
 - Renaming of load_module_metadata test to include \_spec.rb
@@ -603,6 +617,9 @@ Includes the addition of several new functions and considerable improvements to 
 =======
 - Renaming of load_module_metadata test to include _spec.rb
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+- Renaming of load_module_metadata test to include _spec.rb
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 - Fix root_home fact on AIX 5.x, now '-c' rather than '-C'
 - Fixed Gemfile to work with ruby 1.8.7
 
@@ -1205,6 +1222,7 @@ This is a supported release
 * Add stdlib::stages class with a standard set of stages
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -1212,3 +1230,5 @@ This is a supported release
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97

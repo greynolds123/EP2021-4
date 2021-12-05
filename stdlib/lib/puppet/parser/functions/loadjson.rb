@@ -6,6 +6,7 @@ module Puppet::Parser::Functions
   newfunction(:loadjson, :type => :rvalue, :arity => -2, :doc => <<-'DOC') do |args|
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Load a JSON file containing an array, string, or hash, and return the data
     in the corresponding native data type.
 =======
@@ -18,20 +19,28 @@ module Puppet::Parser::Functions
     Load a JSON file containing an array, string, or hash, and return the data
     in the corresponding native data type.
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    Load a JSON file containing an array, string, or hash, and return the data
+    in the corresponding native data type.
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     The first parameter can be a file path or a URL.
     The second parameter is the default value. It will be returned if the file
     was not found or could not be parsed.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     For example:
 
         $myhash = loadjson('/etc/puppet/data/myhash.json')
         $myhash = loadjson('https://example.local/my_hash.json')
         $myhash = loadjson('https://username:password@example.local/my_hash.json')
         $myhash = loadjson('no-file.json', {'default' => 'value'})
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @return [Array|String|Hash]
@@ -45,6 +54,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   DOC
 
     raise ArgumentError, 'Wrong number of arguments. 1 or 2 arguments should be provided.' unless args.length >= 1

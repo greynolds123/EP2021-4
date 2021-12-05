@@ -6,6 +6,7 @@ Puppet::Parser::Functions.newfunction(:getparam,
                                       :doc => <<-'DOC'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     @summary
       Returns the value of a resource's parameter.
@@ -16,14 +17,19 @@ Puppet::Parser::Functions.newfunction(:getparam,
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     Takes a resource reference and name of the parameter and
     returns value of resource's parameter. Note that user defined
     resource types are evaluated lazily.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     *Examples:*
 
         # define a resource type with a parameter
@@ -52,6 +58,7 @@ Puppet::Parser::Functions.newfunction(:getparam,
     and the [ ] operator. The example below is equivalent to a call to getparam():
 
         Example_resource['example_resource_instance']['param']
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @example Example Usage:
@@ -84,6 +91,8 @@ Puppet::Parser::Functions.newfunction(:getparam,
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 
   DOC
                                      ) do |vals|

@@ -5,8 +5,11 @@ module Puppet::Parser::Functions
   newfunction(:validate_email_address, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     Validate that all values passed are valid email addresses.
     Fail compilation if any value fails this check.
     The following values will pass:
@@ -17,6 +20,7 @@ module Puppet::Parser::Functions
     The following values will fail, causing compilation to abort:
     $some_array = [ 'bad_email@/d/efdf.com' ]
     validate_email_address($some_array)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @summary
@@ -41,6 +45,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
              ) do |args|
     rescuable_exceptions = [ArgumentError]

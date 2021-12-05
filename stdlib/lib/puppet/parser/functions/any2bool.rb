@@ -5,6 +5,7 @@ module Puppet::Parser::Functions
   newfunction(:any2bool, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     This converts 'anything' to a boolean. In practise it does the following:
 
 =======
@@ -17,6 +18,10 @@ module Puppet::Parser::Functions
     This converts 'anything' to a boolean. In practise it does the following:
 
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    This converts 'anything' to a boolean. In practise it does the following:
+
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     * Strings such as Y,y,1,T,t,TRUE,yes,'true' will return true
     * Strings such as 0,F,f,N,n,FALSE,no,'false' will return false
     * Booleans will just return their original value
@@ -28,12 +33,15 @@ module Puppet::Parser::Functions
     function.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     @return [Boolean] The boolean value of the object that was given
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   DOC
              ) do |arguments|
 

@@ -6,6 +6,7 @@ module Puppet::Parser::Functions
   newfunction(:str2saltedsha512, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     This converts a string to a salted-SHA512 password hash (which is used for
     OS X versions >= 10.7). Given any simple string, you will get a hex version
 =======
@@ -22,6 +23,10 @@ module Puppet::Parser::Functions
     This converts a string to a salted-SHA512 password hash (which is used for
     OS X versions >= 10.7). Given any simple string, you will get a hex version
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    This converts a string to a salted-SHA512 password hash (which is used for
+    OS X versions >= 10.7). Given any simple string, you will get a hex version
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     of a salted-SHA512 password hash that can be inserted into your Puppet
     manifests as a valid password attribute.
     DOC

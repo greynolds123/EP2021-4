@@ -5,6 +5,7 @@ module Puppet::Parser::Functions
   newfunction(:dirname, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns the dirname of a path.
 =======
     @summary
@@ -15,6 +16,9 @@ module Puppet::Parser::Functions
 =======
     Returns the dirname of a path.
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    Returns the dirname of a path.
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
              ) do |arguments|
 

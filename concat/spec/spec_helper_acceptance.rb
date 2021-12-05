@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 require 'beaker-rspec/spec_helper'
 require 'beaker-rspec/helpers/serverspec'
 require 'acceptance/specinfra_stubs'
@@ -91,6 +92,8 @@ end
 
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 # frozen_string_literal: true
 
 require 'serverspec'
@@ -150,5 +153,8 @@ else
     Specinfra.configuration.winrm = winrm
   end
 end
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97

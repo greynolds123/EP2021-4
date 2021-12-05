@@ -5,6 +5,7 @@ module Puppet::Parser::Functions
   newfunction(:is_numeric, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     @summary
       **Deprecated:** Returns true if the given value is numeric.
@@ -12,6 +13,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     Returns true if the given argument is a Numeric (Integer or Float),
     or a String containing either a valid integer in decimal base 10 form, or
     a valid floating point string representation.
@@ -24,8 +27,11 @@ module Puppet::Parser::Functions
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     Valid examples:
 
       77435
@@ -33,6 +39,7 @@ module Puppet::Parser::Functions
       -8475
       0.2343
       -23.561e3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @return [Boolean]
@@ -43,6 +50,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
              ) do |arguments|
 

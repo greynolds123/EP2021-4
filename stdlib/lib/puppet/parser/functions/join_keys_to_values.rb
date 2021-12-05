@@ -5,8 +5,11 @@ module Puppet::Parser::Functions
   newfunction(:join_keys_to_values, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     This function joins each key of a hash to that key's corresponding value with a
     separator. Keys are cast to strings. If values are arrays, multiple keys
     are added for each element. The return value is an array in
@@ -23,6 +26,7 @@ module Puppet::Parser::Functions
     Would result in: ["a is 1","b is 2","b is 3"]
 
     Note: Since Puppet 5.0.0 - for more detailed control over the formatting (including indentations and
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @summary
@@ -44,6 +48,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     line breaks, delimiters around arrays and hash entries, between key/values in hash entries, and individual
     formatting of values in the array) - see the `new` function for `String` and its formatting
     options for `Array` and `Hash`.

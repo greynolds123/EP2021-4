@@ -5,6 +5,7 @@ module Puppet::Parser::Functions
   newfunction(:is_function_available, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     This function accepts a string as an argument, determines whether the
     Puppet runtime has access to a function by that name.  It returns a
     true if the function exists, false if not.
@@ -25,6 +26,11 @@ module Puppet::Parser::Functions
     Puppet runtime has access to a function by that name.  It returns a
     true if the function exists, false if not.
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    This function accepts a string as an argument, determines whether the
+    Puppet runtime has access to a function by that name.  It returns a
+    true if the function exists, false if not.
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
              ) do |arguments|
 

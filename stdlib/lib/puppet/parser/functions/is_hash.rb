@@ -5,6 +5,7 @@ module Puppet::Parser::Functions
   newfunction(:is_hash, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns true if the variable passed to this function is a hash.
 =======
     @summary
@@ -19,6 +20,9 @@ module Puppet::Parser::Functions
 =======
     Returns true if the variable passed to this function is a hash.
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    Returns true if the variable passed to this function is a hash.
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
              ) do |arguments|
 

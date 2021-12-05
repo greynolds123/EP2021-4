@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Puppet::Functions.create_function(:validate_hash) do
 =======
 # @summary
@@ -17,6 +18,9 @@ Puppet::Functions.create_function(:validate_hash) do
 =======
 Puppet::Functions.create_function(:validate_hash) do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+Puppet::Functions.create_function(:validate_hash) do
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   dispatch :deprecation_gen do
     param 'Any', :scope
     repeated_param 'Any', :args

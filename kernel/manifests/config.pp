@@ -35,10 +35,14 @@
   yumrepo    { 'Redhat_7_Updates':
   ensure   => 'present',
 <<<<<<< HEAD
+<<<<<<< HEAD
   baseurl  => 'http://centos7.dev.localdomain/yum/channels/$baseos/rhel-x86_64-server-7',
 =======
   baseurl  => 'http://centos7.prod.localdomain/yum/channels/$baseos/rhel-x86_64-server-7',
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+  baseurl  => 'http://centos7.prod.localdomain/yum/channels/$baseos/rhel-x86_64-server-7',
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   descr    => 'RHEL7 udpates channel',
   enabled  => '1',
   gpgcheck => '0',

@@ -5,8 +5,11 @@ module Puppet::Parser::Functions
   newfunction(:deep_merge, :type => :rvalue, :doc => <<-'DOC') do |args|
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     Recursively merges two or more hashes together and returns the resulting hash.
 
     For example:
@@ -20,6 +23,7 @@ module Puppet::Parser::Functions
     When there is a duplicate key that is a hash, they are recursively merged.
     When there is a duplicate key that is not a hash, the key in the rightmost hash will "win."
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @summary
@@ -42,6 +46,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
 
     if args.length < 2

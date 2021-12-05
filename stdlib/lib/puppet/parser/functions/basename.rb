@@ -5,6 +5,7 @@ module Puppet::Parser::Functions
   newfunction(:basename, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Strips directory (and optional suffix) from a filename
 =======
     @summary
@@ -15,6 +16,9 @@ module Puppet::Parser::Functions
 =======
     Strips directory (and optional suffix) from a filename
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    Strips directory (and optional suffix) from a filename
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
              ) do |arguments|
 

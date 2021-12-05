@@ -6,8 +6,11 @@ module Puppet::Parser::Functions
   newfunction(:fqdn_uuid, :type => :rvalue, :doc => <<-DOC) do |args|
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     Creates a UUID based on a given string, assumed to be the FQDN
 
     For example, to generate a UUID based on the FQDN of a system:
@@ -37,6 +40,7 @@ module Puppet::Parser::Functions
     is in fact a correct fully-qualified domain name.  Therefore any arbitrary
     string and/or alpha-numeric value can subside for a domain name.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     @summary
       Returns a [RFC 4122](https://tools.ietf.org/html/rfc4122) valid version 5 UUID based
@@ -51,6 +55,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
 
     raise(ArgumentError, 'fqdn_uuid: No arguments given') if args.empty?

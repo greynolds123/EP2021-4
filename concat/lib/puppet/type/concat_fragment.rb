@@ -2,6 +2,7 @@ Puppet::Type.newtype(:concat_fragment) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   @doc = "Create a concat fragment to be used by concat.
     the `concat_fragment` type creates a file fragment to be collected by concat based on the tag.
     The example is based on exported resources.
@@ -19,6 +20,8 @@ Puppet::Type.newtype(:concat_fragment) do
   newparam(:name, :namevar => true) do
     desc "Unique name"
 =======
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   @doc = <<-DOC
     @summary
       Manages the fragment.
@@ -37,7 +40,10 @@ Puppet::Type.newtype(:concat_fragment) do
 
   newparam(:name, namevar: true) do
     desc 'Name of resource.'
+<<<<<<< HEAD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   end
 
   newparam(:target) do
@@ -80,6 +86,7 @@ Puppet::Type.newtype(:concat_fragment) do
 
     defaultto '10'
     validate do |val|
+<<<<<<< HEAD
 <<<<<<< HEAD
       fail Puppet::ParseError, '$order is not a string or integer.' if !(val.is_a? String or val.is_a? Integer)
       fail Puppet::ParseError, "Order cannot contain '/', ':', or '\n'." if val.to_s =~ /[:\n\/]/
@@ -156,10 +163,15 @@ Puppet::Type.newtype(:concat_fragment) do
       raise Puppet::ParseError, _('$order is not a string or integer.') unless val.is_a?(String) || val.is_a?(Integer)
       raise Puppet::ParseError, _('Order cannot contain \'/\', \':\', or \'\\n\'.') if val.to_s =~ %r{[:\n\/]}
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+      raise Puppet::ParseError, _('$order is not a string or integer.') unless val.is_a?(String) || val.is_a?(Integer)
+      raise Puppet::ParseError, _('Order cannot contain \'/\', \':\', or \'\\n\'.') if val.to_s =~ %r{[:\n\/]}
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     end
   end
 
   newparam(:tag) do
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,16 +184,21 @@ Puppet::Type.newtype(:concat_fragment) do
 =======
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     desc 'Specifies a unique tag to be used by concat_file to reference and collect content.'
   end
 
   autorequire(:file) do
+<<<<<<< HEAD
 =======
     desc 'Specifies a unique tag to be used by concat_file to reference and collect content.'
   end
 
   autorequire(:file) do
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     found = catalog.resources.select do |resource|
       next unless resource.is_a?(Puppet::Type.type(:concat_file))
 
@@ -194,16 +211,20 @@ Puppet::Type.newtype(:concat_fragment) do
       warning "Target Concat_file with path or title '#{self[:target]}' #{tag_message}not found in the catalog"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     end
   end
 
   validate do
     # Check if target is set
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,11 +235,15 @@ Puppet::Type.newtype(:concat_fragment) do
 =======
     raise Puppet::ParseError, _("No 'target' or 'tag' set") unless self[:target] || self[:tag]
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    raise Puppet::ParseError, _("No 'target' or 'tag' set") unless self[:target] || self[:tag]
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 
     # Check if either source or content is set. raise error if none is set
     raise Puppet::ParseError, _("Set either 'source' or 'content'") if self[:source].nil? && self[:content].nil?
 
     # Check if both are set, if so rais error
+<<<<<<< HEAD
 <<<<<<< HEAD
     fail Puppet::ParseError, "Can't use 'source' and 'content' at the same time" if !self[:source].nil? && !self[:content].nil?
 =======
@@ -238,5 +263,8 @@ Puppet::Type.newtype(:concat_fragment) do
 =======
     raise Puppet::ParseError, _("Can't use 'source' and 'content' at the same time") if !self[:source].nil? && !self[:content].nil?
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+    raise Puppet::ParseError, _("Can't use 'source' and 'content' at the same time") if !self[:source].nil? && !self[:content].nil?
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   end
 end

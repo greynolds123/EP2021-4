@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #concat
 =======
 # concat
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+# concat
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 
 #### Table of Contents
 
@@ -12,6 +16,7 @@
     * [Beginning with concat](#beginning-with-concat)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+<<<<<<< HEAD
 <<<<<<< HEAD
     * [Defines](#defines)
     * [Parameters](#parameters)
@@ -28,10 +33,13 @@
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     * [Removed functionality](#removed-functionality)
 6. [Limitations - OS compatibility, etc.](#limitations)
 7. [Development - Guide for contributing to the module](#development)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ##Overview
@@ -52,6 +60,8 @@ The concat module lets you gather `concat::fragment` resources from your other m
 
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 <a id="overview"></a>
 ## Overview
 
@@ -73,9 +83,13 @@ To start using concat you need to create:
 A minimal example might be:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ~~~
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+~~~
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 concat { '/tmp/file':
   ensure => present,
 }
@@ -87,6 +101,7 @@ concat::fragment { 'tmpfile':
 }
 ~~~
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ##Usage
@@ -102,6 +117,11 @@ concat::fragment { 'tmpfile':
 ## Usage
 
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+<a id="usage"></a>
+## Usage
+
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ### Maintain a list of the major modules on a node
 
 To maintain an motd file that lists the modules on one of your nodes, first create a class to frame up the file:
@@ -118,11 +138,14 @@ class motd {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   concat::fragment{ 'motd_header':
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   concat::fragment { 'motd_header':
     target  => $motd,
     content => "\nPuppet modules on this server:\n\n",
@@ -133,11 +156,14 @@ class motd {
   # /etc/motd.local
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   concat::fragment{ 'motd_local':
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   concat::fragment { 'motd_local':
     target => $motd,
     source => '/etc/motd.local',
@@ -148,11 +174,14 @@ class motd {
 # let other modules register themselves in the motd
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 define motd::register($content="", $order='10') {
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 define motd::register (
   $content = "",
   $order   = '10',
@@ -165,11 +194,14 @@ define motd::register (
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   concat::fragment{ "motd_fragment_$name":
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   concat::fragment { "motd_fragment_$name":
     target  => '/etc/motd',
     order   => $order,
@@ -186,11 +218,14 @@ class apache {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   motd::register{ 'Apache': }
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
   motd::register { 'Apache': }
 }
 ~~~
@@ -208,6 +243,7 @@ When you're finished, the motd file will look something like this:
   <contents of /etc/motd.local>
 ~~~
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ##Reference
@@ -426,13 +462,18 @@ Specifies a file to read into the content of the fragment. **Note**: You must su
 ###Removed functionality
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 <a id="reference"></a>
 ## Reference
 
 See [REFERENCE.md](https://github.com/puppetlabs/puppetlabs-concat/blob/master/REFERENCE.md)
 
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 <a id="removed-functionality"></a>
 ### Removed functionality
 
@@ -447,6 +488,7 @@ Parameters removed from `concat::fragment`:
 
 The `concat::setup` class has also been removed.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -477,6 +519,8 @@ For more information, see our [module contribution guide](https://puppet.com/doc
 ###Contributors
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 Prior to concat version 2.0.0, if you set the `warn` parameter to a string value of `true`, `false`, 'yes', 'no', 'on', or 'off', the module translated the string to the corresponding boolean value. In concat version 2.0.0 and newer, the `warn_header` parameter treats those values the same as other strings and uses them as the content of your header message. To avoid that, pass the `true` and `false` values as booleans instead of strings.
 
 <a id="limitations"></a>
@@ -497,8 +541,11 @@ We want to keep it as easy as possible to contribute changes so that our modules
 
 For more information, see our [module contribution guide](https://puppet.com/docs/puppet/latest/contributing.html).
 
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 ### Contributors
 
 Richard Pijnenburg ([@Richardp82](http://twitter.com/richardp82))
@@ -507,9 +554,12 @@ Joshua Hoblitt ([@jhoblitt](http://twitter.com/jhoblitt))
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [More contributors.](https://github.com/puppetlabs/puppetlabs-concat/graphs/contributors)
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 [More contributors](https://github.com/puppetlabs/puppetlabs-concat/graphs/contributors).

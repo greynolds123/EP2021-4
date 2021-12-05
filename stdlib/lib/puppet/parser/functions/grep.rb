@@ -5,8 +5,11 @@ module Puppet::Parser::Functions
   newfunction(:grep, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     This function searches through an array and returns any elements that match
     the provided regular expression.
 
@@ -21,6 +24,7 @@ module Puppet::Parser::Functions
     Note that since Puppet 4.0.0, the filter() function in Puppet can do the same:
 
         ['aaa', 'bbb', 'ccc', 'aaaddd']. filter |$x| { $x =~ 'aaa' }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @summary
@@ -39,6 +43,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
              ) do |arguments|
 

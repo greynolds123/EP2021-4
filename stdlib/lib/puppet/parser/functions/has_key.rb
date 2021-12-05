@@ -5,8 +5,11 @@ module Puppet::Parser::Functions
   newfunction(:has_key, :type => :rvalue, :doc => <<-'DOC') do |args|
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     Determine if a hash has a certain key value.
 
     Example:
@@ -25,6 +28,7 @@ module Puppet::Parser::Functions
        if 'key_one' in $my_hash {
          notice('this will be printed')
        }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     @summary
@@ -53,6 +57,8 @@ module Puppet::Parser::Functions
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     DOC
 
     unless args.length == 2

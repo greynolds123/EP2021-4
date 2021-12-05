@@ -3,6 +3,7 @@ require 'spec_helper_acceptance'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 case fact('osfamily')
   when 'AIX'
     username = 'root'
@@ -108,6 +109,8 @@ describe 'basic concat test' do
 =======
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 case os[:family]
 when 'aix'
   username = 'root'
@@ -169,12 +172,15 @@ describe 'basic concat test' do
           ensure => present,
           path   => '#{@basedir}/file',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
           path   => '#{@basedir}/file',
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
           mode   => '0644',
         }
         concat::fragment { '1':
@@ -182,6 +188,7 @@ describe 'basic concat test' do
           content => '1',
           order   => '01',
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,6 +218,8 @@ describe 'basic concat test' do
 =======
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
       MANIFEST
     end
 
@@ -229,12 +238,15 @@ describe 'basic concat test' do
           ensure => absent,
           path   => '#{@basedir}/file',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
           path   => '#{@basedir}/file',
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
           mode   => '0644',
         }
         concat::fragment { '1':
@@ -242,6 +254,7 @@ describe 'basic concat test' do
           content => '1',
           order   => '01',
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -274,6 +287,8 @@ describe 'basic concat test' do
 =======
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
       MANIFEST
     end
 
@@ -292,12 +307,15 @@ describe 'basic concat test' do
           ensure => present,
           path   => '#{@basedir}/#{filename}',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
           path   => '#{@basedir}/#{filename}',
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
           mode   => '0644',
         }
         concat::fragment { '1':
@@ -305,6 +323,7 @@ describe 'basic concat test' do
           content => '1',
           order   => '01',
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -334,6 +353,8 @@ describe 'basic concat test' do
 =======
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
       MANIFEST
     end
 
@@ -352,12 +373,15 @@ describe 'basic concat test' do
           ensure => present,
           path   => '#{@basedir}/file',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
           path   => '#{@basedir}/file',
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
           mode   => '0644',
           noop   => true,
         }
@@ -366,6 +390,7 @@ describe 'basic concat test' do
           content => '1',
           order   => '01',
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -390,13 +415,18 @@ describe 'basic concat test' do
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
       MANIFEST
     end
 
     it 'applies manifest twice with no stderr' do
       idempotent_apply(pp)
       expect(file("#{@basedir}/file")).not_to be_file
+<<<<<<< HEAD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
     end
   end
 end

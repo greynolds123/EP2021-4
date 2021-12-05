@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 # Class: stdlib::stages
 #
 # This class manages a standard set of run stages for Puppet. It is managed by
@@ -9,6 +12,7 @@
 #
 # The high level stages are (in order):
 #
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 # @summary
@@ -22,6 +26,8 @@
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #  * setup
 #  * main
 #  * runtime
@@ -33,8 +39,11 @@
 #
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 # Parameters: none
 #
 # Actions:
@@ -51,6 +60,7 @@
 #    class { java: stage => 'runtime' }
 #  }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # @example
 #   node default {
@@ -60,6 +70,8 @@
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
+=======
+>>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 #
 class stdlib::stages {
 
