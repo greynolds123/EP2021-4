@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     This converts 'anything' to a boolean. In practise it does the following:
 
 =======
@@ -53,6 +54,19 @@ module Puppet::Parser::Functions
   DOC
              ) do |arguments|
 
+=======
+    This converts 'anything' to a boolean. In practise it does the following:
+
+    * Strings such as Y,y,1,T,t,TRUE,yes,'true' will return true
+    * Strings such as 0,F,f,N,n,FALSE,no,'false' will return false
+    * Booleans will just return their original value
+    * Number (or a string representation of a number) > 0 will return true, otherwise false
+    * undef will return false
+    * Anything else will return true
+  DOC
+             ) do |arguments|
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     raise(Puppet::ParseError, "any2bool(): Wrong number of arguments given (#{arguments.size} for 1)") if arguments.empty?
 
     # If argument is already Boolean, return it

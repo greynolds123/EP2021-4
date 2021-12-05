@@ -1,9 +1,13 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "CHANGELOG.md": "177764e719368cbcc698f59d3fc4b4df",
 =======
   "CHANGELOG.md": "6af11a76accd5a88ff09f0fd47836670",
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+  "CHANGELOG.md": "48d638e3cc0c74d1b351622e09ab5e99",
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   "CONTRIBUTING.md": "e3cc28b95ece88673b90eecd91ce626d",
   "Gemfile": "f2f39bcf6586cc92bba1242fcfad140c",
   "HISTORY.md": "b1299b3296914e9f55985ff7cd982e5b",
@@ -39,6 +43,7 @@
   "manifests/kubeadm_join.pp": "29e524bcf87f21ca7028ae32770acaf4",
   "manifests/packages.pp": "f4bea5f66ba2f85f3d730fa6f786d68e",
   "manifests/repos.pp": "bc278a077effc71b8a446354c4035fa8",
+<<<<<<< HEAD
   "manifests/service.pp": "6d17f3d76b55dbfd8696cc9a76d19a18",
   "manifests/wait_for_default_sa.pp": "17aa0b60b12f7b4cfad2c019f321a66e",
 <<<<<<< HEAD
@@ -51,6 +56,12 @@
   "rakelib/acceptance.rake": "083af04448b28e03dbe317ba216dfeff",
   "spec/acceptance/kubernetes_spec.rb": "0468c7bbd29021f9b5dd700172906343",
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+  "manifests/service.pp": "34522529c92489e1c6884a3115cdfb8b",
+  "metadata.json": "ced9c181e67d63134cdea4002d98e8e2",
+  "rakelib/acceptance.rake": "ad2ddeea8982a6cc66aa55e788012e7d",
+  "spec/acceptance/kubernetes_spec.rb": "82c997e33aff2c20ec1083b6634ca4bd",
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   "spec/acceptance/nodesets/centos-72-x64.yml": "ee37962802ea815a0d9249c5e4a0108b",
   "spec/acceptance/nodesets/default.yml": "f1250991ffcfed81619d7038c734f6ad",
   "spec/acceptance/nodesets/pooler/centos7.yml": "f464836bbb64b550fe0fb2e4411d1409",
@@ -1179,6 +1190,10 @@
   "tooling/kube_tool/create_certs.rb": "32bf8c1f2541131c993430f02bcaf033",
   "tooling/kube_tool/other_params.rb": "f84fe596071d317c7c8679e59ae9173a",
   "tooling/kube_tool/pre_checks.rb": "2ba7b00baed312eefb4099ed3aab0178",
+<<<<<<< HEAD
   "tooling/kube_tool.rb": "820fce21d8c6e890604d5caecc8a76de",
   "tooling/start-kubetool.sh": "fa12e2ef60a15dc41ae90b68a366ba6c"
+=======
+  "tooling/kube_tool.rb": "9e64aa8fbee5a10a3ac4883f3ab88dac"
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 }

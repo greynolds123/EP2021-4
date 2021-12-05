@@ -21,8 +21,11 @@ class activemq::packages (
   $package_real = $package
 
   package { $package_real:
+<<<<<<< HEAD
     ensure => $version_real,
     notify => Service['activemq'],
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     ensure  => $version_real,
     notify  => Service['activemq'],
   }

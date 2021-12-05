@@ -10,7 +10,11 @@ describe 'any2bool' do
   it { is_expected.to run.with_params('1.5').and_return(true) }
 
   describe 'when testing stringy values that mean "true"' do
+<<<<<<< HEAD
     ['TRUE', '1', 't', 'y', 'true', 'yes'].each do |value|
+=======
+    %w[TRUE 1 t y true yes].each do |value|
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       it { is_expected.to run.with_params(value).and_return(true) }
     end
   end

@@ -1,6 +1,7 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "CHANGELOG.md": "0c42b183f0c9d0ee6000362bb7982432",
   "CONTRIBUTING.md": "7c433386c0c90d838ffba6e02bdb2484",
   "CONTRIBUTORS.md": "9fe238dbf86940276151b28b279dab50",
@@ -13,11 +14,16 @@
   "Guardfile": "3886cf0104f5de976e3bcd3cfbaeff9d",
 >>>>>>> 9c2de80aaa300aed946c107c6dc35a0a1a6e16d7
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   "CHANGELOG.md": "c8a976c9c06c2fb468a83d102b0f9f29",
   "CONTRIBUTING.md": "2e0bf76b0408e7a7595cea20b6d3c65c",
   "Gemfile": "fde0500fcd1b8114bbf4843c0559fd35",
   "Guardfile": "3886cf0104f5de976e3bcd3cfbaeff9d",
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   "LICENSE": "e7fff5d8ca4f44f1279782ead2da5925",
   "README.md": "85b23343fe553765e4460f5149c0a5de",
   "Rakefile": "6e15b36ea85a202f272d0faada23ea9c",
@@ -272,6 +278,7 @@
   "templates/etc/sysconfig/docker-storage-setup.erb": "258a17ec46b3a60e0e558000bfb6af30",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "templates/etc/sysconfig/docker-storage.erb": "7e1c985c056fc1c30e526436711fbcca",
   "templates/etc/sysconfig/docker.erb": "60d4764f5860b54a51e9edd30cc26207",
   "templates/etc/sysconfig/docker.systemd.erb": "eb91c691df86d7ed2488d8cab735cbc5",
@@ -289,6 +296,8 @@
 =======
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   "templates/etc/sysconfig/docker-storage.erb": "8838e0ed2370abfe95c42170a3e4dc62",
   "templates/etc/sysconfig/docker.erb": "e06b80444d881f8a8253ae8a24438988",
   "templates/etc/sysconfig/docker.systemd.erb": "31acce1b99e0fa07626ccd4efd05c1a1",
@@ -297,6 +306,7 @@
   "templates/etc/systemd/system/docker.service.d/service-overrides-debian.conf.erb": "db5bfafdd7bf2e61ba5c76963b809cb2",
   "templates/etc/systemd/system/docker.service.d/service-overrides-rhel.conf.erb": "ec9c543d6f0c0e66e94f50a472e7e525",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "templates/update_docker_image.sh.erb": "87f007dd417278ebe73e345af01867e2"
 }
 >>>>>>> 9c2de80aaa300aed946c107c6dc35a0a1a6e16d7
@@ -304,3 +314,7 @@
   "templates/update_docker_image.sh.erb": "fb05ada566bc366840b2bf89b6a46de8"
 }
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+  "templates/update_docker_image.sh.erb": "fb05ada566bc366840b2bf89b6a46de8"
+}
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b

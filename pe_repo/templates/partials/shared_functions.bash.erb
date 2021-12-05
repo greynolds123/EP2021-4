@@ -453,7 +453,11 @@ download_from_url() {
 supported_platform() {
   # Because of differences between how regex works between bash versions this
   # regex MUST be in a variable and passed into the test below UNQUOTED.
+<<<<<<< HEAD
   t_supported_platform_regex='(el-(5|6|7|8)-(i386|x86_64|s390x|ppc64le|aarch64))|(redhatfips-7-x86_64)|(debian-(8|9)-(i386|amd64))|(ubuntu-(14\.04|16\.04)-(i386|amd64|ppc64el))|(ubuntu-18\.04-amd64)|(sles-(11|12|15)-(i386|x86_64|s390x|ppc64le))|(fedora-(26|27|28|29)-(x86_64))|(solaris-(10|11)-(i386|sparc))|(aix-(6\.1)-power)|(osx-10\.(12|13|14)-x86_64)'
+=======
+  t_supported_platform_regex='(el-(5|6|7|8)-(i386|x86_64|s390x|ppc64le|aarch64))|(redhatfips-7-x86_64)|(debian-(8|9)-(i386|amd64))|(ubuntu-(14\.04|16\.04)-(i386|amd64|ppc64el))|(ubuntu-18\.04-amd64)|(sles-(11|12|15)-(i386|x86_64|s390x|ppc64le))|(fedora-(26|27|28|29|30)-(x86_64))|(solaris-(10|11)-(i386|sparc))|(aix-(6\.1|7\.1)-power)|(osx-10\.(12|13|14)-x86_64)'
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   [[ "${1?}" =~ ${t_supported_platform_regex:?} ]]
 }
 

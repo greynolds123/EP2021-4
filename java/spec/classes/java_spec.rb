@@ -110,7 +110,10 @@ describe 'java', type: :class do
     let(:facts) { {:osfamily => 'RedHat', :operatingsystem => 'Fedora', :operatingsystemrelease => '21'} }
     let(:params) { { 'distribution' => 'jre' } }
     it { should contain_package('java').with_name('java-1.8.0-openjdk') }
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   end
 
   context 'when select jre for Debian Buster (10.0)' do
@@ -157,12 +160,16 @@ describe 'java', type: :class do
     let(:params) { { 'distribution' => 'oracle-jre' } }
     it { should contain_package('java').with_name('oracle-j2re1.7') }
     it { should contain_exec('update-java-alternatives').with_command('update-java-alternatives --set j2re1.7-oracle --jre') }
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   end
 
   context 'when select jre for Ubuntu Trusty (14.04)' do
     let(:facts) { { osfamily: 'Debian', operatingsystem: 'Ubuntu', lsbdistcodename: 'trusty', operatingsystemmajrelease: '14.04', architecture: 'amd64' } }
     let(:params) { { 'distribution' => 'jre' } }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     it { is_expected.to contain_package('java').with_name('openjdk-7-jre-headless') }
@@ -176,6 +183,8 @@ describe 'java', type: :class do
     it { is_expected.to contain_package('java').with_name('openjdk-8-jdk') }
     it { is_expected.to contain_file_line('java-home-environment').with_line('JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-armhf/') }
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     it { should contain_package('java').with_name('openjdk-7-jre-headless') }
     it { should contain_exec('update-java-alternatives').with_command('update-java-alternatives --set java-1.7.0-openjdk-amd64 --jre-headless') }
   end
@@ -205,12 +214,16 @@ describe 'java', type: :class do
     let(:params) { { 'java_alternative' => 'bananafish' } }
     it { should contain_package('java').with_name('openjdk-7-jdk') }
     it { should contain_exec('update-java-alternatives').with_command('update-java-alternatives --set bananafish --jre') }
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   end
 
   context 'when select jdk for Ubuntu xenial (16.04) on ARM64' do
     let(:facts) { { osfamily: 'Debian', operatingsystem: 'Ubuntu', lsbdistcodename: 'xenial', operatingsystemmajrelease: '16.04', architecture: 'aarch64' } }
     let(:params) { { 'distribution' => 'jdk' } }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     it { is_expected.to contain_package('java').with_name('openjdk-8-jdk') }
@@ -235,6 +248,8 @@ describe 'java', type: :class do
 
     it { is_expected.to contain_package('java').with_name('java-1.7.0-openjdk') }
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     it { should contain_package('java').with_name('openjdk-8-jdk') }
   end
 
@@ -263,12 +278,16 @@ describe 'java', type: :class do
   context 'select openjdk for Oracle Linux 6.2' do
     let(:facts) { {:osfamily => 'RedHat', :operatingsystem => 'OracleLinux', :operatingsystemrelease => '6.2'} }
     it { should contain_package('java').with_name('java-1.6.0-openjdk-devel') }
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   end
 
   context 'when select passed value for Scientific Linux' do
     let(:facts) { { osfamily: 'RedHat', operatingsystem: 'Scientific', operatingsystemrelease: '6.4', architecture: 'x86_64' } }
     let(:params) { { 'distribution' => 'jre' } }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     it { is_expected.to contain_package('java').with_name('java-1.7.0-openjdk') }
@@ -276,11 +295,15 @@ describe 'java', type: :class do
 =======
     it { should contain_package('java').with_name('java-1.7.0-openjdk') }
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+    it { should contain_package('java').with_name('java-1.7.0-openjdk') }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   end
 
   context 'when select passed value for Scientific Linux CERN (SLC)' do
     let(:facts) { { osfamily: 'RedHat', operatingsystem: 'SLC', operatingsystemrelease: '6.4', architecture: 'x86_64' } }
     let(:params) { { 'distribution' => 'jre' } }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     it { is_expected.to contain_package('java').with_name('java-1.7.0-openjdk') }
@@ -356,6 +379,11 @@ describe 'java', type: :class do
     it { should contain_package('java').with_name('java-1.7.0-openjdk') }
   end
 
+=======
+    it { should contain_package('java').with_name('java-1.7.0-openjdk') }
+  end
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   context 'select default for OpenSUSE 12.3' do
     let(:facts) { {:osfamily => 'Suse', :operatingsystem => 'OpenSUSE', :operatingsystemrelease => '12.3'}}
     it { should contain_package('java').with_name('java-1_7_0-openjdk-devel')}
@@ -370,7 +398,10 @@ describe 'java', type: :class do
     let(:facts) { {:osfamily => 'OpenBSD'} }
     let(:params) { { 'distribution' => 'jre' } }
     it { should contain_package('java').with_name('jre') }
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   end
 
   describe 'incompatible OSs' do
@@ -403,10 +434,13 @@ describe 'java', type: :class do
     ].each do |facts|
       let(:facts) { facts }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       it "is_expected.to fail on #{facts[:operatingsystem]} #{facts[:operatingsystemrelease]}" do
         expect { catalogue }.to raise_error Puppet::Error, %r{unsupported platform}
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       it "should fail on #{facts[:operatingsystem]} #{facts[:operatingsystemrelease]}" do
         expect { catalogue }.to raise_error Puppet::Error, /unsupported platform/
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4

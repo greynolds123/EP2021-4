@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     @summary
       **Deprecated:** Returns true if the given value is numeric.
@@ -61,6 +62,25 @@ module Puppet::Parser::Functions
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+    Returns true if the given argument is a Numeric (Integer or Float),
+    or a String containing either a valid integer in decimal base 10 form, or
+    a valid floating point string representation.
+
+    The function recognizes only decimal (base 10) integers and float but not
+    integers in hex (base 16) or octal (base 8) form.
+
+    The string representation may start with a '-' (minus). If a decimal '.' is used,
+    it must be followed by at least one digit.
+
+    Valid examples:
+
+      77435
+      10e-12
+      -8475
+      0.2343
+      -23.561e3
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     DOC
              ) do |arguments|
 

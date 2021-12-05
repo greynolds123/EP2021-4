@@ -25,7 +25,11 @@ describe 'parseyaml' do
 
     it 'is able to parse YAML data with an Array' do
       is_expected.to run.with_params("---\n- a\n- b\n- c\n")
+<<<<<<< HEAD
                         .and_return(['a', 'b', 'c'])
+=======
+                        .and_return(%w[a b c])
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     end
 
     it 'is able to parse YAML data with a mixed structure' do
@@ -35,18 +39,40 @@ describe 'parseyaml' do
 
     it 'is able to parse YAML data with a UTF8 and double byte characters' do
       is_expected.to run.with_params("---\na: ×\nこれ: 記号\nです:\n  ©:\n  - Á\n  - ß\n")
+<<<<<<< HEAD
                         .and_return('a' => '×', 'これ' => '記号', 'です' => { '©' => ['Á', 'ß'] })
+=======
+                        .and_return('a' => '×', 'これ' => '記号', 'です' => { '©' => %w[Á ß] })
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     end
 
     it 'does not return the default value if the data was parsed correctly' do
       is_expected.to run.with_params("---\na: '1'\n", 'default_value')
                         .and_return('a' => '1')
+<<<<<<< HEAD
     end
   end
 
   it 'raises an error with invalid YAML and no default' do
     is_expected.to run.with_params('["one"')
                       .and_raise_error(Psych::SyntaxError)
+=======
+    end
+  end
+
+  context 'on a modern ruby', :unless => RUBY_VERSION == '1.8.7' do
+    it 'raises an error with invalid YAML and no default' do
+      is_expected.to run.with_params('["one"')
+                        .and_raise_error(Psych::SyntaxError)
+    end
+  end
+
+  context 'when running on ruby 1.8.7, which does not have Psych', :if => RUBY_VERSION == '1.8.7' do
+    it 'raises an error with invalid YAML and no default' do
+      is_expected.to run.with_params('["one"')
+                        .and_raise_error(ArgumentError)
+    end
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   end
 
   context 'with incorrect YAML data' do

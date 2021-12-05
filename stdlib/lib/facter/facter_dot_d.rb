@@ -47,10 +47,13 @@ class Facter::Util::DotD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 
+<<<<<<< HEAD
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   def initialize(dir = '/etc/facts.d', cache_file = File.join(Puppet[:libdir], 'facts_dot_d.cache'))
     @dir = dir
     @cache_file = cache_file

@@ -31,6 +31,7 @@ Puppet::Function.create_function('tool::config') do
     }
    }
 
+<<<<<<< HEAD
 # This section will execute $arg if it exists.
 
    function Puppet::Util::Execution::ProcessOutput('config') do
@@ -41,3 +42,16 @@ Puppet::Function.create_function('tool::config') do
      command('exit 0')
    end
 
+=======
+# This section will execute $arg if exists.
+
+  function Puppet::Util::Execution:ProceesOutput('$arg') do
+     command('puppet apply $arg') 
+    end
+
+  function Puppet::Util::ExecutionFailure('$arg') do
+    command('exit 0')
+   end
+
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b

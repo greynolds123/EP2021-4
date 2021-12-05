@@ -13,6 +13,7 @@ describe 'load_module_metadata' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       # Additional modules used by litmus which are identified while running these dues to being in fixtures
       allow(File).to receive(:read).with(%r{\/(provision|puppet_agent|facts)\/metadata.json}, :encoding => 'utf-8')
@@ -23,6 +24,8 @@ describe 'load_module_metadata' do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     end
 
     context 'when calling with valid utf8 and double byte character arguments' do
@@ -40,7 +43,11 @@ describe 'load_module_metadata' do
         allow(File).to receive(:exists?).with("#{prefix}/path/to/module/metadata.json").and_return(true)
         allow(File).to receive(:read).with("#{prefix}/path/to/module/metadata.json").and_return('{"name": "spencer-science"}')
 
+<<<<<<< HEAD
         result = subject.execute('science')
+=======
+        result = subject.call(['science'])
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
         expect(result['name']).to eq('spencer-science')
       end
 
@@ -53,7 +60,11 @@ describe 'load_module_metadata' do
       it 'returns nil if user allows empty metadata.json' do
         allow(scope).to receive(:function_get_module_path).with(['science']).and_return("#{prefix}/path/to/module/")
         allow(File).to receive(:exists?).with("#{prefix}/path/to/module/metadata.json").and_return(false)
+<<<<<<< HEAD
         result = subject.execute('science', true)
+=======
+        result = subject.call(['science', true])
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
         expect(result).to eq({})
       end
     end

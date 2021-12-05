@@ -61,12 +61,17 @@ class pe_repo (
   # packages/public/ directory.
   exec { 'create repo_dir':
 <<<<<<< HEAD
+<<<<<<< HEAD
     command => "mkdir -p /opt/puppetlabs/server/data",
     creates => "${repo_dir}/packages",
 =======
     command => "mkdir -p ${repo_dir}",
     creates => $repo_dir,
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+    command => "mkdir -p ${repo_dir}",
+    creates => $repo_dir,
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     path    => '/sbin/:/bin/',
   }
 
@@ -91,9 +96,15 @@ class pe_repo (
     target => "${public_dir}/${default_pe_build}",
   }
 
+<<<<<<< HEAD
   # puppet labs gpg key
   file { "${public_dir}/GPG-KEY-puppetlabs":
     source => 'puppet:///modules/pe_repo/GPG-KEY-puppetlabs',
+=======
+  # puppet new gpg key
+  file { "${public_dir}/GPG-KEY-puppet-2025-04-06":
+    source => 'puppet:///modules/pe_repo/GPG-KEY-puppet-2025-04-06',
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   }
 
   # puppet, inc gpg key

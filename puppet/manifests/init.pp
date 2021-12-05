@@ -1,6 +1,7 @@
 # == Class: puppet
 #
 <<<<<<< HEAD
+<<<<<<< HEAD
 # This class installs and configures the puppet agent.
 #
 # === Parameters:
@@ -738,6 +739,8 @@ class puppet (
     Class['puppet::server'] -> Class['puppet::agent::service']
   }
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 class puppet (
   $package_ensure           = 'present',
   $package_name             = $::puppet::params::package_name,
@@ -847,5 +850,8 @@ class puppet (
   class { '::puppet::config': } ~>
   class { '::puppet::service': } ->
   anchor { 'puppet::end': }
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 }

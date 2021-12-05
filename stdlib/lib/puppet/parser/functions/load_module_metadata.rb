@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     This function loads the metadata of a given module.
 =======
     @summary
@@ -28,6 +29,9 @@ module Puppet::Parser::Functions
 =======
     This function loads the metadata of a given module.
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+    This function loads the metadata of a given module.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   DOC
              ) do |args|
     raise(Puppet::ParseError, 'load_module_metadata(): Wrong number of arguments, expects one or two') unless [1, 2].include?(args.size)

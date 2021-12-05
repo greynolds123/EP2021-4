@@ -96,6 +96,7 @@ class CreateCerts
     FileUtils.rm_f('discovery_token_hash.csr')
     File.open("kubernetes.yaml", "a") { |file| file.write(data.to_yaml) } 
   end
+<<<<<<< HEAD
 
   def CreateCerts.kube_front_proxy_ca
     puts "Creating kube front-proxy ca"
@@ -118,6 +119,8 @@ class CreateCerts
     data['kubernetes::kubernetes_front_proxy_ca_key'] = key
     File.open("kubernetes.yaml", "a") { |file| file.write(data.to_yaml) }
   end
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   
   def CreateCerts.sa
     puts "Creating service account certs"

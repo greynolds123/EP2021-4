@@ -8,17 +8,21 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     deletes all instances of a given element that match a regular expression
     from an array or key from a hash. Multiple regular expressions are assumed
     to be matched as an OR.
 
     *Examples:*
+<<<<<<< HEAD
 
         delete_regex(['a','b','c','b'], 'b')
         Would return: ['a','c']
@@ -76,6 +80,21 @@ module Puppet::Parser::Functions
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+
+        delete_regex(['a','b','c','b'], 'b')
+        Would return: ['a','c']
+
+        delete_regex(['a','b','c','b'], ['b', 'c'])
+        Would return: ['a']
+
+        delete_regex({'a'=>1,'b'=>2,'c'=>3}, 'b')
+        Would return: {'a'=>1,'c'=>3}
+
+        delete_regex({'a'=>1,'b'=>2,'c'=>3}, '^a$')
+        Would return: {'b'=>2,'c'=>3}
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   DOC
              ) do |arguments|
 

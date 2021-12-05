@@ -8,6 +8,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
@@ -98,6 +99,39 @@ module Puppet::Parser::Functions
     DOC
              ) do |arguments|
 
+=======
+    When given range in the form of (start, stop) it will extrapolate a range as
+    an array.
+
+    *Examples:*
+
+        range("0", "9")
+
+    Will return: [0,1,2,3,4,5,6,7,8,9]
+
+        range("00", "09")
+
+    Will return: [0,1,2,3,4,5,6,7,8,9] (Zero padded strings are converted to
+    integers automatically)
+
+        range("a", "c")
+
+    Will return: ["a","b","c"]
+
+        range("host01", "host10")
+    Will return: ["host01", "host02", ..., "host09", "host10"]
+    NB Be explicit in including trailing zeros. Otherwise the underlying ruby function will fail.
+
+    Passing a third argument will cause the generated range to step by that
+    interval, e.g.
+
+        range("0", "9", "2")
+
+    Will return: [0,2,4,6,8]
+    DOC
+             ) do |arguments|
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     raise(Puppet::ParseError, 'range(): Wrong number of arguments given (0 for 1)') if arguments.empty?
 
     if arguments.size > 1
@@ -142,6 +176,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     result = range.step(step).to_a
 =======
     result = range.step(step).first(1_000_000).to_a
@@ -153,6 +188,8 @@ module Puppet::Parser::Functions
     result = range.step(step).to_a
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     result = range.step(step).to_a
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #  Please note: This function is an implementation of a Ruby class and as such may not be entirely UTF8 compatible. To ensure compatibility please use this function with Ruby 2.4.0 or greater - https://bugs.ruby-lang.org/issues/10085.
 =======
 #  Please note: This function is an implementation of a Ruby class and as such may not be entirely UTF8 compatible.
@@ -17,6 +18,9 @@
 =======
 #  Please note: This function is an implementation of a Ruby class and as such may not be entirely UTF8 compatible. To ensure compatibility please use this function with Ruby 2.4.0 or greater - https://bugs.ruby-lang.org/issues/10085.
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+#  Please note: This function is an implementation of a Ruby class and as such may not be entirely UTF8 compatible. To ensure compatibility please use this function with Ruby 2.4.0 or greater - https://bugs.ruby-lang.org/issues/10085.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 Puppet::Parser::Functions.newfunction(
   :pw_hash,
   :type => :rvalue,
@@ -91,7 +95,10 @@ Puppet::Parser::Functions.newfunction(
   Note: this uses the Puppet Master's implementation of crypt(3). If your
   environment contains several different operating systems, ensure that they
   are compatible before using this function.",
+<<<<<<< HEAD
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 ) do |args|
   raise ArgumentError, "pw_hash(): wrong number of arguments (#{args.size} for 3)" if args.size != 3
   args.map! do |arg|

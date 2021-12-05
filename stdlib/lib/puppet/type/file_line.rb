@@ -4,12 +4,15 @@ Puppet::Type.newtype(:file_line) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     Ensures that a given line is contained within a file.  The implementation
     matches the full line, including whitespace at the beginning and end.  If
     the line is not contained in the given file, Puppet will append the line to
@@ -91,6 +94,7 @@ Puppet::Type.newtype(:file_line) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Examples With `ensure => absent`:
 =======
     * Examples With `ensure => absent`:
@@ -104,6 +108,9 @@ Puppet::Type.newtype(:file_line) do
 =======
     Examples With `ensure => absent`:
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+    Examples With `ensure => absent`:
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
     This type has two behaviors when `ensure => absent` is set.
 
@@ -160,12 +167,15 @@ Puppet::Type.newtype(:file_line) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
         file_line { 'bashrc_proxy':
           ensure => absent,
           path   => '/etc/bashrc',
@@ -185,6 +195,7 @@ Puppet::Type.newtype(:file_line) do
           match    => '^*lock:',
           encoding => "iso-8859-1",
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -220,6 +231,8 @@ Puppet::Type.newtype(:file_line) do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
     Files with special characters that are not valid UTF-8 will give the
     error message "invalid byte sequence in UTF-8".  In this case, determine
@@ -258,12 +271,15 @@ Puppet::Type.newtype(:file_line) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     desc 'An optional ruby regular expression to run against existing lines in the file.' \
          ' If a match is found, we replace that line rather than adding a new line.' \
          ' A regex comparison is performed against the line value and if it does not' \
@@ -306,6 +322,7 @@ Puppet::Type.newtype(:file_line) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     desc 'An optional value to determine if match can change multiple lines.' \
          ' If set to false, an exception will be raised if more than one line matches'
 =======
@@ -317,6 +334,8 @@ Puppet::Type.newtype(:file_line) do
          ' If set to false, an exception will be raised if more than one line matches'
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     desc 'An optional value to determine if match can change multiple lines.' \
          ' If set to false, an exception will be raised if more than one line matches'
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
@@ -332,6 +351,7 @@ Puppet::Type.newtype(:file_line) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     desc 'An optional value used to specify the line after which we will add any new lines. (Existing lines are added in place)' \
          ' This is also takes a regex.'
 =======
@@ -343,6 +363,8 @@ Puppet::Type.newtype(:file_line) do
          ' This is also takes a regex.'
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     desc 'An optional value used to specify the line after which we will add any new lines. (Existing lines are added in place)' \
          ' This is also takes a regex.'
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97

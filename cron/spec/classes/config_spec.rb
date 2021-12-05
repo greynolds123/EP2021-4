@@ -36,7 +36,14 @@ describe('tool::config') do
       }
       }
   end
+<<<<<<< HEAD
 end
+=======
+end 
+<<<<<<< HEAD
+ 
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   
  context 'with default parameters from config' do
     let (:config) {

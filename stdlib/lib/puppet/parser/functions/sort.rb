@@ -8,6 +8,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Sorts strings and arrays lexically.
 =======
     @summary
@@ -30,6 +31,12 @@ module Puppet::Parser::Functions
   DOC
              ) do |arguments|
 
+=======
+    Sorts strings and arrays lexically.
+  DOC
+             ) do |arguments|
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     if arguments.size != 1
       raise(Puppet::ParseError, "sort(): Wrong number of arguments given #{arguments.size} for 1")
     end

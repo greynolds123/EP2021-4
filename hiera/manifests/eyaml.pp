@@ -11,6 +11,7 @@
 # Copyright (C) 2014 Terri Haber, unless otherwise noted.
 #
 class hiera::eyaml {
+<<<<<<< HEAD
   $eyaml_name    = $hiera::eyaml_name
   $provider      = $hiera::provider
   $eyaml_version = $hiera::eyaml_version
@@ -28,13 +29,26 @@ class hiera::eyaml {
 =======
   $owner         = $::hiera::eyaml_owner
   $group         = $::hiera::eyaml_group
+=======
+  $eyaml_name    = $::hiera::eyaml_name
+  $provider      = $::hiera::provider
+  $eyaml_version = $::hiera::eyaml_version
+  $eyaml_source  = $::hiera::_eyaml_source
+
+  $owner         = $::hiera::owner
+  $group         = $::hiera::group
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   $cmdpath       = $::hiera::cmdpath
   $confdir       = $::hiera::confdir
   $create_keys   = $::hiera::create_keys
   $_keysdir      = $::hiera::_keysdir
 
+<<<<<<< HEAD
   $manage_package = $::hiera::manage_eyaml_package
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+  $manage_package = $::hiera::manage_package
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
   if $manage_package {
     ::hiera::install { 'eyaml':

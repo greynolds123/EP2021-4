@@ -30,7 +30,10 @@ describe 'kubernetes', :type => :class do
    end
 
   context 'with controller => true' do
+<<<<<<< HEAD
 
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     let(:params) do {
       :controller => true,
     } end

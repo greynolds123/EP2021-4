@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     DEPRECATED: This function will cease to function on Puppet 4; please use type3x() before upgrading to Puppet 4 for backwards-compatibility, or migrate to the new parser's typing system.
 =======
     @summary
@@ -31,6 +32,9 @@ module Puppet::Parser::Functions
 =======
     DEPRECATED: This function will cease to function on Puppet 4; please use type3x() before upgrading to Puppet 4 for backwards-compatibility, or migrate to the new parser's typing system.
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+    DEPRECATED: This function will cease to function on Puppet 4; please use type3x() before upgrading to puppet 4 for backwards-compatibility, or migrate to the new parser's typing system.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   DOC
              ) do |args|
 

@@ -9,6 +9,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
@@ -90,6 +91,31 @@ module Puppet::Parser::Functions
     DOC
              ) do |arguments|
 
+=======
+    This function determines if a variable is a member of an array.
+    The variable can be a string, fixnum, or array.
+
+    *Examples:*
+
+        member(['a','b'], 'b')
+
+    Would return: true
+
+        member(['a', 'b', 'c'], ['a', 'b'])
+
+    would return: true
+
+        member(['a','b'], 'c')
+
+    Would return: false
+
+        member(['a', 'b', 'c'], ['d', 'b'])
+
+    would return: false
+    DOC
+             ) do |arguments|
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     raise(Puppet::ParseError, "member(): Wrong number of arguments given (#{arguments.size} for 2)") if arguments.size < 2
 
     array = arguments[0]

@@ -17,8 +17,13 @@ describe 'unique' do
     context 'when called with an array' do
       it { is_expected.to run.with_params([]).and_return([]) }
       it { is_expected.to run.with_params(['a']).and_return(['a']) }
+<<<<<<< HEAD
       it { is_expected.to run.with_params(['a', 'b', 'a']).and_return(['a', 'b']) }
       it { is_expected.to run.with_params(['ã', 'ъ', 'ã']).and_return(['ã', 'ъ']) }
+=======
+      it { is_expected.to run.with_params(%w[a b a]).and_return(%w[a b]) }
+      it { is_expected.to run.with_params(%w[ã ъ ã]).and_return(%w[ã ъ]) }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     end
 
     context 'when called with a string' do

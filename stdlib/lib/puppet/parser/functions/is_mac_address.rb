@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns true if the string passed to this function is a valid mac address.
 =======
     @summary
@@ -14,6 +15,15 @@ module Puppet::Parser::Functions
 
     @return [Boolean]
       Returns `true` or `false`
+=======
+    Returns true if the string passed to this function is a valid mac address.
+    DOC
+             ) do |arguments|
+
+    if arguments.size != 1
+      raise(Puppet::ParseError, "is_mac_address(): Wrong number of arguments given #{arguments.size} for 1")
+    end
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
     > **Note:* **Deprecated** Will be removed in a future version of stdlib. See
     [`validate_legacy`](#validate_legacy).
@@ -30,6 +40,7 @@ module Puppet::Parser::Functions
     DOC
              ) do |arguments|
 
+<<<<<<< HEAD
     if arguments.size != 1
       raise(Puppet::ParseError, "is_mac_address(): Wrong number of arguments given #{arguments.size} for 1")
     end
@@ -38,6 +49,9 @@ module Puppet::Parser::Functions
 
     return true if %r{^[a-f0-9]{1,2}(:[a-f0-9]{1,2}){5}$}i =~ mac
     return true if %r{^[a-f0-9]{1,2}(:[a-f0-9]{1,2}){19}$}i =~ mac
+=======
+    return true if %r{^[a-f0-9]{1,2}(:[a-f0-9]{1,2}){5}$}i =~ mac
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     return false
   end
 end

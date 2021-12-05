@@ -35,12 +35,20 @@ describe 'is_numeric' do
     # Checking for deprecation warning, which should only be provoked when the env variable for it is set.
     it 'displays a single deprecation' do
       ENV['STDLIB_LOG_DEPRECATIONS'] = 'true'
+<<<<<<< HEAD
       expect(scope).to receive(:warning).with(include('This method is deprecated'))
+=======
+      scope.expects(:warning).with(includes('This method is deprecated'))
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       is_expected.to run.with_params(7).and_return(true)
     end
     it 'displays no warning for deprecation' do
       ENV['STDLIB_LOG_DEPRECATIONS'] = 'false'
+<<<<<<< HEAD
       expect(scope).to receive(:warning).with(include('This method is deprecated')).never
+=======
+      scope.expects(:warning).with(includes('This method is deprecated')).never
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       is_expected.to run.with_params(7).and_return(true)
     end
   end

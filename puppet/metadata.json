@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "theforeman-puppet",
   "version": "12.1.0",
   "author": "theforeman",
@@ -69,6 +70,8 @@
       "operatingsystemrelease": [
         "9"
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   "name": "dhoppe-puppet",
   "version": "1.2.3",
   "author": "Dennis Hoppe",
@@ -89,12 +92,16 @@
         "6",
         "7",
         "8"
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
+<<<<<<< HEAD
 <<<<<<< HEAD
         "16.04",
         "18.04"
@@ -134,6 +141,8 @@
       ]
     }
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
         "12.04",
         "14.04"
       ]
@@ -151,6 +160,9 @@
   ],
   "tags": [
     "puppet"
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   ]
 }

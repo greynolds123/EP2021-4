@@ -46,7 +46,11 @@ describe 'deep_merge' do
   arguments = { 'key1' => 'value1' }, { 'key2' => 'value2' }
   originals = [arguments[0].dup, arguments[1].dup]
   it 'does not change the original hashes' do
+<<<<<<< HEAD
     subject.execute(arguments[0], arguments[1])
+=======
+    subject.call([arguments[0], arguments[1]])
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     arguments.each_with_index do |argument, index|
       expect(argument).to eq(originals[index])
     end

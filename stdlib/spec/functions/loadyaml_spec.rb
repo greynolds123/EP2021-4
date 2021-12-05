@@ -7,27 +7,46 @@ describe 'loadyaml' do
   context 'when a non-existing file is specified' do
     let(:filename) { '/tmp/doesnotexist' }
 
+<<<<<<< HEAD
     it "'default' => 'value'" do
       expect(File).to receive(:exists?).with(filename).and_return(false).once
       expect(YAML).to receive(:load_file).never
       is_expected.to run.with_params(filename, 'default' => 'value').and_return('default' => 'value')
     end
+=======
+    before(:each) do
+      File.expects(:exists?).with(filename).returns(false).once
+      YAML.expects(:load_file).never
+    end
+    it { is_expected.to run.with_params(filename, 'default' => 'value').and_return('default' => 'value') }
+    it { is_expected.to run.with_params(filename, 'đẽƒằưļŧ' => '٧ẵłựέ').and_return('đẽƒằưļŧ' => '٧ẵłựέ') }
+    it { is_expected.to run.with_params(filename, 'デフォルト' => '値').and_return('デフォルト' => '値') }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   end
 
   context 'when an existing file is specified' do
     let(:filename) { '/tmp/doesexist' }
     let(:data) { { 'key' => 'value', 'ķęŷ' => 'νậŀųề', 'キー' => '値' } }
 
+<<<<<<< HEAD
     it "returns 'key' => 'value', 'ķęŷ' => 'νậŀųề', 'キー' => '値'" do
       expect(File).to receive(:exists?).with(filename).and_return(true).once
       expect(YAML).to receive(:load_file).with(filename).and_return(data).once
       is_expected.to run.with_params(filename).and_return(data)
     end
+=======
+    before(:each) do
+      File.expects(:exists?).with(filename).returns(true).once
+      YAML.expects(:load_file).with(filename).returns(data).once
+    end
+    it { is_expected.to run.with_params(filename).and_return(data) }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   end
 
   context 'when the file could not be parsed' do
     let(:filename) { '/tmp/doesexist' }
 
+<<<<<<< HEAD
     it 'filename /tmp/doesexist' do
       expect(File).to receive(:exists?).with(filename).and_return(true).once
       allow(YAML).to receive(:load_file).with(filename).once.and_raise(StandardError, 'Something terrible have happened!')
@@ -97,5 +116,12 @@ describe 'loadyaml' do
       expect(OpenURI).to receive(:open_uri).with(filename, basic_auth).and_raise OpenURI::HTTPError, '404 File not Found'
       is_expected.to run.with_params(filename, 'default' => 'value').and_return('default' => 'value')
     }
+=======
+    before(:each) do
+      File.expects(:exists?).with(filename).returns(true).once
+      YAML.stubs(:load_file).with(filename).once.raises StandardError, 'Something terrible have happened!'
+    end
+    it { is_expected.to run.with_params(filename, 'default' => 'value').and_return('default' => 'value') }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   end
 end

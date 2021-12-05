@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
@@ -54,6 +55,16 @@ module Puppet::Parser::Functions
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
+=======
+    This function applies a suffix to all elements in an array, or to the keys
+    in a hash.
+
+    *Examples:*
+
+        suffix(['a','b','c'], 'p')
+
+    Will return: ['ap','bp','cp']
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     DOC
              ) do |arguments|
 

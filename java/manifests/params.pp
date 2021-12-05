@@ -127,10 +127,14 @@ class java::params {
           }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         '9', '15.04', '15.10', '16.04', '16.10', '17.04', '17.10': {
 =======
         'vivid', 'wily': {
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+        'vivid', 'wily': {
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
           $java =  {
             'jdk' => {
               'package'          => 'openjdk-8-jdk',
@@ -205,6 +209,7 @@ class java::params {
       case $::operatingsystem {
         'SLES': {
 <<<<<<< HEAD
+<<<<<<< HEAD
           if (versioncmp($::operatingsystemrelease, '12.1') >= 0) {
             $jdk_package = 'java-1_8_0-openjdk-devel'
             $jre_package = 'java-1_8_0-openjdk'
@@ -222,6 +227,8 @@ class java::params {
             $jre_package = 'java-1_6_0-ibm'
             $java_home   = '/usr/lib64/jvm/java-1.6.0-ibm-1.6.0/'
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
           case $::operatingsystemmajrelease{
             default: {
               $jdk_package = 'java-1_6_0-ibm-devel'
@@ -231,7 +238,10 @@ class java::params {
               $jdk_package = 'java-1_7_0-openjdk-devel'
               $jre_package = 'java-1_7_0-openjdk'
             }
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
           }
         }
         'OpenSuSE': {

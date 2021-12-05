@@ -3,6 +3,9 @@ Puppet::Type.newtype(:anchor) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   desc <<-'DESCRIPTION'
   A simple resource type intended to be used as an anchor in a composite class.
 =======
@@ -103,6 +106,7 @@ Puppet::Type.newtype(:anchor) do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   ```
   class { 'ntp': } -> class { 'mcollective': }
@@ -117,6 +121,8 @@ Puppet::Type.newtype(:anchor) do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
   newparam :name do
     desc 'The name of the anchor resource.'

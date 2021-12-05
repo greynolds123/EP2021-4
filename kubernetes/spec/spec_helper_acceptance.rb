@@ -38,6 +38,7 @@ RSpec.configure do |c|
       on host, puppet('module', 'install', 'maestrodev-wget'), { :acceptable_exit_codes => [0,1] }
       on host, puppet('module', 'install', 'puppetlabs-translate', '--version', '1.0.0' ), { :acceptable_exit_codes => [0,1] }
       on host, puppet('module', 'install', 'puppet-archive'), { :acceptable_exit_codes => [0,1] }
+<<<<<<< HEAD
       on host, puppet('module', 'install', 'herculesteam-augeasproviders_sysctl', '--version', '2.2.1'), { :acceptable_exit_codes => [0,1] }
       on host, puppet('module', 'install', 'herculesteam-augeasproviders_core', '--version', '2.1.0'), { :acceptable_exit_codes => [0,1] }
       on host, puppet('module', 'install', 'camptocamp-kmod', '--version', '2.2.0'), { :acceptable_exit_codes => [0,1] }
@@ -45,6 +46,12 @@ RSpec.configure do |c|
       on host, puppet('module', 'install', 'puppetlabs-docker'), { :acceptable_exit_codes => [0,1] }
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+      on host, puppet('module', 'install', 'puppet-wget'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module', 'install', 'herculesteam-augeasproviders_sysctl'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module', 'install', 'herculesteam-augeasproviders_core'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module', 'install', 'camptocamp-kmod'), { :acceptable_exit_codes => [0,1] }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
 
       # shell('echo "#{vmhostname}" > /etc/hostname')
@@ -127,7 +134,11 @@ EOS
           on(host, "gem install bundler", acceptable_exit_codes: [0]).stdout
         end
         if fact('osfamily') == 'RedHat'
+<<<<<<< HEAD
           runtime = 'docker'
+=======
+          runtime = 'cri_containerd'
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
           cni = 'flannel'
           #Installing rubydev environment
           on(host, "yum install -y ruby-devel git zlib-devel gcc-c++ lib yaml-devel libffi-devel make bzip2 libtool curl openssl-devel readline-devel", acceptable_exit_codes: [0]).stdout
@@ -159,7 +170,11 @@ EOS
 
         # Installing go, cfssl
         on(host, "cd  /etc/puppetlabs/code/modules/kubernetes;rm -rf Gemfile.lock;bundle install --path vendor/bundle", acceptable_exit_codes: [0]).stdout
+<<<<<<< HEAD
         on(host, "curl -o go.tar.gz https://storage.googleapis.com/golang/go1.11.9.linux-amd64.tar.gz", acceptable_exit_codes: [0]).stdout
+=======
+        on(host, "curl -o go.tar.gz https://storage.googleapis.com/golang/go1.10.2.linux-amd64.tar.gz", acceptable_exit_codes: [0]).stdout
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
         on(host, "tar -C /usr/local -xzf go.tar.gz", acceptable_exit_codes: [0]).stdout
         on(host, "export PATH=$PATH:/usr/local/go/bin;go get -u github.com/cloudflare/cfssl/cmd/...", acceptable_exit_codes: [0]).stdout
         # Creating certs
@@ -182,6 +197,7 @@ EOS
           on(host, 'echo "kubernetes::taint_master: false" >> /etc/puppetlabs/code/environments/production/hieradata/Debian.yaml', acceptable_exit_codes: [0]).stdout
           on(host, 'export KUBECONFIG=\'/etc/kubernetes/admin.conf\'', acceptable_exit_codes: [0]).stdout       
         end
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         if fact('osfamily') == 'RedHat'
@@ -194,6 +210,8 @@ EOS
 
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     end
   end
 end

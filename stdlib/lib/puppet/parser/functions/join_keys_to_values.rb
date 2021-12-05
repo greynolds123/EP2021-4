@@ -7,12 +7,15 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     This function joins each key of a hash to that key's corresponding value with a
     separator. Keys are cast to strings. If values are arrays, multiple keys
     are added for each element. The return value is an array in
@@ -21,6 +24,7 @@ module Puppet::Parser::Functions
     *Examples:*
 
         join_keys_to_values({'a'=>1,'b'=>2}, " is ")
+<<<<<<< HEAD
 
     Would result in: ["a is 1","b is 2"]
 
@@ -59,6 +63,14 @@ module Puppet::Parser::Functions
     line breaks, delimiters around arrays and hash entries, between key/values in hash entries, and individual
     formatting of values in the array) - see the `new` function for `String` and its formatting
     options for `Array` and `Hash`.
+=======
+
+    Would result in: ["a is 1","b is 2"]
+
+        join_keys_to_values({'a'=>1,'b'=>[2,3]}, " is ")
+
+    Would result in: ["a is 1","b is 2","b is 3"]
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     DOC
              ) do |arguments|
 

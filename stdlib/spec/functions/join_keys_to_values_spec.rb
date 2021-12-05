@@ -17,6 +17,7 @@ describe 'join_keys_to_values' do
     it { is_expected.to run.with_params({ 'ҝẽγ' => '√ạĺűē' }, '万').and_return(['ҝẽγ万√ạĺűē']) }
   end
 
+<<<<<<< HEAD
   if Puppet::Util::Package.versioncmp(Puppet.version, '5.5.7') == 0
     it { is_expected.to run.with_params({ 'key' => '' }, ':').and_return(['key:']) }
   else
@@ -30,5 +31,15 @@ describe 'join_keys_to_values' do
   it 'runs join_keys_to_values(<hash with array value>, " ") and return the proper array' do
     expected_result = ['key1 value1', 'key2 value2', 'key2 value3']
     is_expected.to run.with_params({ 'key1' => 'value1', 'key2' => ['value2', 'value3'] }, ' ').and_return(expected_result)
+=======
+  it { is_expected.to run.with_params({ 'key' => nil }, ':').and_return(['key:']) }
+  it 'runs join_keys_to_values(<hash with multiple keys>, ":") and return the proper array' do
+    result = subject.call([{ 'key1' => 'value1', 'key2' => 'value2' }, ':'])
+    expect(result.sort).to eq(['key1:value1', 'key2:value2'].sort)
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
+  end
+  it 'runs join_keys_to_values(<hash with array value>, " ") and return the proper array' do
+    result = subject.call([{ 'key1' => 'value1', 'key2' => %w[value2 value3] }, ' '])
+    expect(result.sort).to eq(['key1 value1', 'key2 value2', 'key2 value3'].sort)
   end
 end

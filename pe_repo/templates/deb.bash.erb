@@ -3,7 +3,11 @@
 <%= scope.function_template(["pe_repo/partials/shared_functions.bash.erb"]) %>
 
 import_gpg_key() {
+<<<<<<< HEAD
   gpg_keys="GPG-KEY-puppetlabs GPG-KEY-puppet"
+=======
+  gpg_keys="GPG-KEY-puppet-2025-04-0 GPG-KEY-puppet"
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   for gpg_key in ${gpg_keys}
   do
     curl_or_wget_quietly <%= @repo_base_url %>/${gpg_key} | apt-key add -

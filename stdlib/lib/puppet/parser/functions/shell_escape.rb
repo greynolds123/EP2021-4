@@ -8,6 +8,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Escapes a string so that it can be safely used in a Bourne shell command line.
 
     Note that the resulting string should be used unquoted and is not intended for use in double quotes nor in single
@@ -35,6 +36,11 @@ module Puppet::Parser::Functions
 
     Note that the resulting string should be used unquoted and is not intended for use in double quotes nor in single
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+    Escapes a string so that it can be safely used in a Bourne shell command line.
+
+    Note that the resulting string should be used unquoted and is not intended for use in double quotes nor in single
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     quotes.
 
     This function behaves the same as ruby's Shellwords.shellescape() function.

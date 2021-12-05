@@ -10,9 +10,13 @@ GEM
       thor (= 0.18.1)
     diff-lcs (1.2.5)
     facter (2.4.6)
+<<<<<<< HEAD
     CFPropertyList (~> 2.2.6)
     eeradius               
     addressable (2.8.0)
+=======
+      CFPropertyList (~> 2.2.6)
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     facterdb (0.3.6)
       facter
       jgrep

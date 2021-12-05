@@ -42,7 +42,11 @@ If you are using the eyaml backend on:
   module to install the eyaml gem using PE's gem command.
 * Puppet Enterprise 3.7 or 3.8 then you will need the [puppetlabs-pe_puppetserver_gem](https://forge.puppetlabs.com/puppetlabs/pe_puppetserver_gem)
   module.
+<<<<<<< HEAD
 * Puppet Enterprise 201x.y (ex: 2017.3) or FOSS puppetserver then you will need the [puppetlabs-puppetserver_gem](https://forge.puppetlabs.com/puppetlabs/puppetserver_gem)
+=======
+* Puppet Enterprise 2015.x or FOSS puppetserver then you will need the [puppetlabs-puppetserver_gem](https://forge.puppetlabs.com/puppetlabs/puppetserver_gem)
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   module.
 
 ### Beginning with hiera
@@ -277,6 +281,7 @@ The following parameters are available for the hiera class:
 * `hierarchy`
   The hiera hierarchy.
   Default: `[]`
+<<<<<<< HEAD
   For Hiera verison 5.
   Default: `[{}]`
 * `hiera5_defaults`
@@ -286,6 +291,8 @@ The following parameters are available for the hiera class:
   Version format to layout hiera.yaml.
   Should be a string.
   Default: `3`
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 * `backends`
   The list of backends.
   Default: `['yaml']`
@@ -385,15 +392,26 @@ The following parameters are available for the hiera class:
   A hash of options to set in hiera.yaml for the deep merge behavior.
   Default: `{}`
 * `manage_package`
+<<<<<<< HEAD
   A boolean for wether the hiera package should be managed.
   Default: `false`
+=======
+  A boolean for wether the hiera package should be managed. Defaults to `true` on
+  FOSS 3 but `false` otherwise.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 * `package_name`
   Specifies the name of the hiera package. Default: 'hiera'
 * `package_ensure`
   Specifies the ensure value of the hiera package. Default: 'present'
 * `confdir`
   The path to Puppet's confdir.
+<<<<<<< HEAD
   Default: `$::settings::confdir` which should be `'/etc/puppetlabs/puppet'`
+=======
+  Default: `$::settings::confdir` which should be the following:
+    * `'/etc/puppet'` for Puppet Open Source
+    * `'/etc/puppetlabs/puppet'` for Puppet Enterprise
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 * `logger`
   Which hiera logger to use.
   **Note**: You need to manage any package/gem dependencies yourself.

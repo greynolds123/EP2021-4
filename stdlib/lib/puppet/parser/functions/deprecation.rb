@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   Function to print deprecation warnings (this is the 3.X version of it), The uniqueness key - can appear once. The msg is the message text including any positional information that is formatted by the user/caller of the method.).
 =======
   @summary
@@ -30,6 +31,12 @@ module Puppet::Parser::Functions
 DOC
              ) do |arguments|
 
+=======
+  Function to print deprecation warnings (this is the 3.X version of it), The uniqueness key - can appear once. The msg is the message text including any positional information that is formatted by the user/caller of the method.).
+DOC
+             ) do |arguments|
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     raise(Puppet::ParseError, "deprecation: Wrong number of arguments given (#{arguments.size} for 2)") unless arguments.size == 2
 
     key = arguments[0]

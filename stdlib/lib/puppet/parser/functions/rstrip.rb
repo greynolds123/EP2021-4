@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Strips leading spaces to the right of the string.
 
     Note: from Puppet 6.0.0, the compatible function with the same name in Puppet core
@@ -38,6 +39,12 @@ module Puppet::Parser::Functions
     DOC
              ) do |arguments|
 
+=======
+    Strips leading spaces to the right of the string.
+    DOC
+             ) do |arguments|
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     raise(Puppet::ParseError, "rstrip(): Wrong number of arguments given (#{arguments.size} for 1)") if arguments.empty?
 
     value = arguments[0]

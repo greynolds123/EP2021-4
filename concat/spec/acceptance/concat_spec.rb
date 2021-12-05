@@ -5,6 +5,7 @@ require 'spec_helper_acceptance'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 case fact('osfamily')
   when 'AIX'
     username = 'root'
@@ -114,6 +115,8 @@ describe 'basic concat test' do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 case os[:family]
 when 'aix'
   username = 'root'
@@ -177,6 +180,7 @@ describe 'basic concat test' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -187,6 +191,8 @@ describe 'basic concat test' do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
           mode   => '0644',
         }
         concat::fragment { '1':
@@ -194,6 +200,7 @@ describe 'basic concat test' do
           content => '1',
           order   => '01',
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -229,6 +236,8 @@ describe 'basic concat test' do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       MANIFEST
     end
 
@@ -249,6 +258,7 @@ describe 'basic concat test' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -259,6 +269,8 @@ describe 'basic concat test' do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
           mode   => '0644',
         }
         concat::fragment { '1':
@@ -266,6 +278,7 @@ describe 'basic concat test' do
           content => '1',
           order   => '01',
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -304,6 +317,8 @@ describe 'basic concat test' do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       MANIFEST
     end
 
@@ -324,6 +339,7 @@ describe 'basic concat test' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -334,6 +350,8 @@ describe 'basic concat test' do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
           mode   => '0644',
         }
         concat::fragment { '1':
@@ -341,6 +359,7 @@ describe 'basic concat test' do
           content => '1',
           order   => '01',
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -376,6 +395,8 @@ describe 'basic concat test' do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       MANIFEST
     end
 
@@ -396,6 +417,7 @@ describe 'basic concat test' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -406,6 +428,8 @@ describe 'basic concat test' do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
           mode   => '0644',
           noop   => true,
         }
@@ -414,6 +438,7 @@ describe 'basic concat test' do
           content => '1',
           order   => '01',
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -444,6 +469,8 @@ describe 'basic concat test' do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       MANIFEST
     end
 
@@ -452,11 +479,14 @@ describe 'basic concat test' do
       expect(file("#{@basedir}/file")).not_to be_file
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     end
   end
 end

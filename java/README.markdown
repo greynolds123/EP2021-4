@@ -36,6 +36,7 @@ class { 'java':
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 To install the latest patch version of Java 8 on CentOS
 
 ```puppet
@@ -44,6 +45,8 @@ class { 'java' :
 }
 ```
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 The defined type `java::oracle` installs one or more versions of Oracle Java SE. `java::oracle` depends on [puppet/archive](https://github.com/voxpupuli/puppet-archive).  By using `java::oracle` you agree to Oracle's licensing terms for Java SE.
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
@@ -165,12 +168,15 @@ Oracle Java is supported on:
 * Red Hat Enterprise Linux (RHEL) 7
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### Known issues
 
 Where Oracle change the format of the URLs to different installer packages, the curl to fetch the package may fail with a HTTP/404 error. In this case, passing a full known good URL using the `url` parameter will allow the module to still be able to install specific versions of the JRE/JDK. Note the `version_major` and `version_minor` parameters must be passed and must match the version downloaded using the known URL in the `url` parameter. 
 
 #### OpenBSD
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 ### A note to OpenBSD
 OpenBSD packages install Java JRE/JDK in a unique directory structure, not linking
 the binaries to a standard directory. Because of that, the path to this location
@@ -184,7 +190,10 @@ By default on FreeBSD Puppet < 4.0, you will see an error as `pkgng` is not the 
 Package {
   provider => 'pkgng',
 }
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
 OpenBSD packages install Java JRE/JDK in a unique directory structure, not linking
 the binaries to a standard directory. Because of that, the path to this location

@@ -16,6 +16,7 @@ module Facter::Util::RootHome
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # root_home.rb
 module Facter::Util::RootHome
@@ -32,6 +33,8 @@ module Facter::Util::RootHome
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   def returnt_root_home
     root_ent = Facter::Util::Resolution.exec('getent passwd root')
     # The home directory is the sixth element in the passwd entry

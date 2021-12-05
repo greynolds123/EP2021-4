@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Randomizes the order of a string or array elements.
 =======
   @summary
@@ -24,6 +25,9 @@ module Puppet::Parser::Functions
 =======
     Randomizes the order of a string or array elements.
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+    Randomizes the order of a string or array elements.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   DOC
              ) do |arguments|
 

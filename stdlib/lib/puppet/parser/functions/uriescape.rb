@@ -9,6 +9,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Urlencodes a string or array of strings.
     Requires either a single string or an array as an input.
 =======
@@ -32,6 +33,10 @@ module Puppet::Parser::Functions
     Urlencodes a string or array of strings.
     Requires either a single string or an array as an input.
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+    Urlencodes a string or array of strings.
+    Requires either a single string or an array as an input.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     DOC
              ) do |arguments|
 

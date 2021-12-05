@@ -6,12 +6,15 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   newfunction(:validate_string, :doc => <<-'DOC') do |args|
     Validate that all passed values are string data structures. Abort catalog
     compilation if any value fails this check.
@@ -34,6 +37,7 @@ module Puppet::Parser::Functions
         }
 
     DOC
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,6 +81,12 @@ module Puppet::Parser::Functions
     function_deprecation([:validate_string, 'This method is deprecated, please use the stdlib validate_legacy function,
                             with Stdlib::Compat::String. There is further documentation for validate_legacy function in the README.'])
 
+=======
+
+    function_deprecation([:validate_string, 'This method is deprecated, please use the stdlib validate_legacy function,
+                            with Stdlib::Compat::String. There is further documentation for validate_legacy function in the README.'])
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     if args.empty?
       raise Puppet::ParseError, "validate_string(): wrong number of arguments (#{args.length}; must be > 0)"
     end

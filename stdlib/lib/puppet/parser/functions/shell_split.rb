@@ -8,6 +8,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Splits a string into an array of tokens in the same way the Bourne shell does.
 =======
     @summary
@@ -25,6 +26,9 @@ module Puppet::Parser::Functions
 =======
     Splits a string into an array of tokens in the same way the Bourne shell does.
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+    Splits a string into an array of tokens in the same way the Bourne shell does.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
     This function behaves the same as ruby's Shellwords.shellsplit() function
   DOC

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "greynolds-tool",
   "version": "0.1.0",
@@ -69,3 +70,21 @@
   "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git#1.10.0",
   "template-ref": "1.10.0-0-gbba9ac3"
 }
+=======
+{
+  "name": "tool",
+  "version": "0.1.0",
+  "author": "Glynn D. Reynolds",
+  "summary": "Deploy scripts for selinux and iptables",
+  "license": "Apache 2.0",
+  "source": "https://greynolds@centos7.dev.localdomain:/etc/puppetlabs/puppet/modules",
+  "project_page": "https://greynolds@centos7.dev.localdomain:/etc/puppetlabs/puppet/modules",
+  "issues_url": "https://greynolds@centos7.dev.localdomain:/etc/puppetlabs/puppet/modules",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b

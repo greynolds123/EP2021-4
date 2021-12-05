@@ -6,6 +6,7 @@ describe 'concat::fragment replace' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   basedir = default.tmpdir('concat')
 
   context 'should create fragment files' do
@@ -128,6 +129,8 @@ describe 'concat::fragment replace' do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   before(:all) do
     @basedir = setup_test_directory
   end
@@ -228,6 +231,7 @@ describe 'concat::fragment replace' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -239,4 +243,6 @@ describe 'concat::fragment replace' do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 end

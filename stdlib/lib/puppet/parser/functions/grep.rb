@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
@@ -54,6 +55,21 @@ module Puppet::Parser::Functions
     DOC
              ) do |arguments|
 
+=======
+    This function searches through an array and returns any elements that match
+    the provided regular expression.
+
+    *Examples:*
+
+        grep(['aaa','bbb','ccc','aaaddd'], 'aaa')
+
+    Would return:
+
+        ['aaa','aaaddd']
+    DOC
+             ) do |arguments|
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     if arguments.size != 2
       raise(Puppet::ParseError, "grep(): Wrong number of arguments given #{arguments.size} for 2")
     end

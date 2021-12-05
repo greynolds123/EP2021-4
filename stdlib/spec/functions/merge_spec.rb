@@ -2,6 +2,12 @@ require 'spec_helper'
 
 describe 'merge' do
   it { is_expected.not_to eq(nil) }
+<<<<<<< HEAD
+=======
+  it { is_expected.to run.with_params.and_raise_error(Puppet::ParseError, %r{wrong number of arguments}i) }
+  it { is_expected.to run.with_params({}, 'two').and_raise_error(Puppet::ParseError, %r{unexpected argument type String}) }
+  it { is_expected.to run.with_params({}, 1).and_raise_error(Puppet::ParseError, %r{unexpected argument type (Fixnum|Integer)}) }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   it {
     is_expected.to run \
       .with_params({}, 'two') \
@@ -29,7 +35,10 @@ describe 'merge' do
   describe 'should accept empty strings as puppet undef' do
     it { is_expected.to run.with_params({}, '').and_return({}) }
   end
+<<<<<<< HEAD
 
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   it { is_expected.to run.with_params({ 'key' => 'value' }, {}).and_return('key' => 'value') }
   it { is_expected.to run.with_params({}, 'key' => 'value').and_return('key' => 'value') }
   it { is_expected.to run.with_params({ 'key' => 'value1' }, 'key' => 'value2').and_return('key' => 'value2') }

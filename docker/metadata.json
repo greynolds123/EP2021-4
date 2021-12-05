@@ -9,6 +9,7 @@
   "issues_url": "https://github.com/garethr/garethr-docker/issues",
   "dependencies": [
 <<<<<<< HEAD
+<<<<<<< HEAD
     {
       "name": "puppetlabs/stdlib",
       "version_requirement": ">= 4.24.0"
@@ -34,6 +35,11 @@
     {"name":"puppetlabs/apt","version_requirement":">= 1.8.0 <= 3.0.0"},
     {"name":"stahnma/epel","version_requirement":">= 0.0.6"}
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+    {"name":"puppetlabs/stdlib","version_requirement":">= 4.1.0"},
+    {"name":"puppetlabs/apt","version_requirement":">= 1.8.0 <= 3.0.0"},
+    {"name":"stahnma/epel","version_requirement":">= 0.0.6"}
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   ],
   "data_provider": null,
   "operatingsystem_support": [

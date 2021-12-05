@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "puppetlabs-razor",
   "version": "0.11.0",
   "source": "git@github.com:puppetlabs/puppetlabs-razor.git",
@@ -46,3 +47,36 @@
     "templates/razor-server.init.erb": "9e304f707d48e90fd96237a082142c8e"
   }
 }
+=======
+  "name": "Lavaburn-razor",
+  "version": "0.2.0",
+  "author": "Nicolas Truyens (Lavaburn)",
+  "summary": "Puppet module for managing (Puppetlabs) Razor",
+  "license": "Apache License 2.0",
+  "source": "https://github.com/Lavaburn/puppet-razor",
+  "project_page": "https://github.com/Lavaburn/puppet-razor",
+  "issues_url": "https://github.com/Lavaburn/puppet-razor/issues",
+  "tags": [
+    "razor",
+    "provisioning"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6.5"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "10.04",
+        "13.10"
+      ]
+    }
+  ],
+  "dependencies": [
+    {"name":"puppetlabs/stdlib","version_requirement":">=4.0.0"}
+  ]
+}
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b

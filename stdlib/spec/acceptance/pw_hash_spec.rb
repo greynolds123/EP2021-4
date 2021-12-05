@@ -1,7 +1,11 @@
 require 'spec_helper_acceptance'
 
 # Windows and OS X do not have useful implementations of crypt(3)
+<<<<<<< HEAD
 describe 'pw_hash function', :unless => ['windows', 'Darwin', 'SLES'].include?(fact('operatingsystem')) do
+=======
+describe 'pw_hash function', :unless => %w[windows Darwin SLES].include?(fact('operatingsystem')) do
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   describe 'success' do
     pp1 = <<-DOC
       $o = pw_hash('password', 'sha-512', 'salt')

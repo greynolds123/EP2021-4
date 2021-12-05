@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #concat
 =======
 # concat
@@ -9,6 +10,9 @@
 =======
 # concat
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
+=======
+# concat
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
 #### Table of Contents
 
@@ -17,6 +21,7 @@
     * [Beginning with concat](#beginning-with-concat)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     * [Defines](#defines)
@@ -41,10 +46,13 @@
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     * [Removed functionality](#removed-functionality)
 6. [Limitations - OS compatibility, etc.](#limitations)
 7. [Development - Guide for contributing to the module](#development)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -71,6 +79,8 @@ The concat module lets you gather `concat::fragment` resources from your other m
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 <a id="overview"></a>
 ## Overview
 
@@ -94,6 +104,7 @@ A minimal example might be:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ~~~
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -103,6 +114,9 @@ A minimal example might be:
 =======
 ~~~
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+~~~
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 concat { '/tmp/file':
   ensure => present,
 }
@@ -114,6 +128,7 @@ concat::fragment { 'tmpfile':
 }
 ~~~
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -141,6 +156,11 @@ concat::fragment { 'tmpfile':
 ## Usage
 
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+<a id="usage"></a>
+## Usage
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 ### Maintain a list of the major modules on a node
 
 To maintain an motd file that lists the modules on one of your nodes, first create a class to frame up the file:
@@ -159,6 +179,7 @@ class motd {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   concat::fragment{ 'motd_header':
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -168,6 +189,8 @@ class motd {
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   concat::fragment { 'motd_header':
     target  => $motd,
     content => "\nPuppet modules on this server:\n\n",
@@ -176,6 +199,7 @@ class motd {
 
   # let local users add to the motd by creating a file called
   # /etc/motd.local
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -189,6 +213,8 @@ class motd {
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   concat::fragment { 'motd_local':
     target => $motd,
     source => '/etc/motd.local',
@@ -197,6 +223,7 @@ class motd {
 }
 
 # let other modules register themselves in the motd
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -210,6 +237,8 @@ define motd::register($content="", $order='10') {
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 define motd::register (
   $content = "",
   $order   = '10',
@@ -224,6 +253,7 @@ define motd::register (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   concat::fragment{ "motd_fragment_$name":
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -233,6 +263,8 @@ define motd::register (
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   concat::fragment { "motd_fragment_$name":
     target  => '/etc/motd',
     order   => $order,
@@ -251,6 +283,7 @@ class apache {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   motd::register{ 'Apache': }
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -260,6 +293,8 @@ class apache {
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   motd::register { 'Apache': }
 }
 ~~~
@@ -277,6 +312,7 @@ When you're finished, the motd file will look something like this:
   <contents of /etc/motd.local>
 ~~~
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -510,12 +546,17 @@ See [REFERENCE.md](https://github.com/puppetlabs/puppetlabs-concat/blob/master/R
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 <a id="reference"></a>
 ## Reference
 
 See [REFERENCE.md](https://github.com/puppetlabs/puppetlabs-concat/blob/master/REFERENCE.md)
 
+<<<<<<< HEAD
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 <a id="removed-functionality"></a>
 ### Removed functionality
 
@@ -530,6 +571,7 @@ Parameters removed from `concat::fragment`:
 
 The `concat::setup` class has also been removed.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -566,6 +608,8 @@ For more information, see our [module contribution guide](https://puppet.com/doc
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 Prior to concat version 2.0.0, if you set the `warn` parameter to a string value of `true`, `false`, 'yes', 'no', 'on', or 'off', the module translated the string to the corresponding boolean value. In concat version 2.0.0 and newer, the `warn_header` parameter treats those values the same as other strings and uses them as the content of your header message. To avoid that, pass the `true` and `false` values as booleans instead of strings.
 
 <a id="limitations"></a>
@@ -588,18 +632,22 @@ For more information, see our [module contribution guide](https://puppet.com/doc
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 ### Contributors
 
 Richard Pijnenburg ([@Richardp82](http://twitter.com/richardp82))
 
 Joshua Hoblitt ([@jhoblitt](http://twitter.com/jhoblitt))
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -613,4 +661,6 @@ Joshua Hoblitt ([@jhoblitt](http://twitter.com/jhoblitt))
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 [More contributors](https://github.com/puppetlabs/puppetlabs-concat/graphs/contributors).

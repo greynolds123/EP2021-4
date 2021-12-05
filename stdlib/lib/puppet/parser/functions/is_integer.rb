@@ -7,16 +7,20 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     Returns true if the variable passed to this function is an Integer or
     a decimal (base 10) integer in String form. The string may
     start with a '-' (minus). A value of '0' is allowed, but a leading '0' digit may not
     be followed by other digits as this indicates that the value is octal (base 8).
+<<<<<<< HEAD
 
     If given any other argument `false` is returned.
 <<<<<<< HEAD
@@ -50,6 +54,16 @@ module Puppet::Parser::Functions
     function_deprecation([:is_integer, 'This method is deprecated, please use the stdlib validate_legacy function,
                             with Stdlib::Compat::Integer. There is further documentation for validate_legacy function in the README.'])
 
+=======
+
+    If given any other argument `false` is returned.
+    DOC
+             ) do |arguments|
+
+    function_deprecation([:is_integer, 'This method is deprecated, please use the stdlib validate_legacy function,
+                            with Stdlib::Compat::Integer. There is further documentation for validate_legacy function in the README.'])
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     if arguments.size != 1
       raise(Puppet::ParseError, "is_integer(): Wrong number of arguments given #{arguments.size} for 1")
     end

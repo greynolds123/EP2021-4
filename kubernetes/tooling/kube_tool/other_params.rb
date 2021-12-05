@@ -5,15 +5,22 @@ class OtherParams
 
 
 
+<<<<<<< HEAD
   def OtherParams.create(os, version, container_runtime, cni_provider, cni_provider_version, etcd_initial_cluster, etcd_ip, api_address, install_dashboard)
+=======
+  def OtherParams.create(os, version, container_runtime, cni_provider, etcd_initial_cluster, etcd_ip, api_address, install_dashboard)
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     if install_dashboard.match('true')
        install = true
     else
        install = false
     end
 
+<<<<<<< HEAD
     kubernetes_minor_release = version.match(/(\d+\.)(\d+)/)[0]
 
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     if os.downcase.match('debian')
       kubernetes_package_version = "#{version}-00"
     elsif os.downcase.match('redhat')

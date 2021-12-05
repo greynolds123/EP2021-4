@@ -8,6 +8,7 @@ Puppet::Parser::Functions.newfunction(:getparam,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     @summary
       Returns the value of a resource's parameter.
@@ -103,6 +104,23 @@ Puppet::Parser::Functions.newfunction(:getparam,
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
+=======
+    Takes a resource reference and name of the parameter and
+    returns value of resource's parameter.
+
+    *Examples:*
+
+        define example_resource($param) {
+        }
+
+        example_resource { "example_resource_instance":
+            param => "param_value"
+        }
+
+        getparam(Example_resource["example_resource_instance"], "param")
+
+    Would return: param_value
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   DOC
                                      ) do |vals|
   reference, param = vals

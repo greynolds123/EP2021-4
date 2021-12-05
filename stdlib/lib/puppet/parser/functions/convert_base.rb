@@ -7,12 +7,15 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     Converts a given integer or base 10 string representing an integer to a specified base, as a string.
 
     Usage:
@@ -20,6 +23,7 @@ module Puppet::Parser::Functions
       $binary_repr = convert_base(5, 2)  # $binary_repr is now set to "101"
       $hex_repr = convert_base("254", "16")  # $hex_repr is now set to "fe"
 
+<<<<<<< HEAD
      Note: Since Puppet 4.5.0 this can be done with String.new() and its many formatting options:
 
        $binary_repr = String(5, '%b') # results in "101"
@@ -58,6 +62,8 @@ module Puppet::Parser::Functions
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     DOC
 
     raise Puppet::ParseError, 'convert_base(): First argument must be either a string or an integer' unless args[0].is_a?(Integer) || args[0].is_a?(String)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Change log
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
@@ -80,6 +81,8 @@ Allows changing etcd cluster state with new param
 
 A full list of PR's and issues closed can be found here [here](https://github.com/puppetlabs/puppetlabs-kubernetes/milestone/5)
 
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 # Version 3.2.0
 
 Includes support for 1.13.x with the alpha3 config files

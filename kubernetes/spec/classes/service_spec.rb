@@ -1,6 +1,10 @@
 require 'spec_helper'
 describe 'kubernetes::service', :type => :class do
+<<<<<<< HEAD
   let(:pre_condition) { 'include kubernetes; include kubernetes::config::kubeadm' }
+=======
+  let(:pre_condition) { 'include kubernetes; include kubernetes::config' }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   let(:facts) do
     {
       :kernel           => 'Linux',

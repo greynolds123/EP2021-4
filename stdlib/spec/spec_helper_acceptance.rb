@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
@@ -10,13 +11,18 @@
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 require 'beaker-pe'
 require 'beaker-puppet'
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 require 'puppet'
 require 'beaker-rspec'
 require 'beaker/puppet_install_helper'
 require 'beaker/module_install_helper'
 
 run_puppet_install_helper
+<<<<<<< HEAD
 configure_type_defaults_on(hosts)
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 install_ca_certs unless ENV['PUPPET_INSTALL_TYPE'] =~ %r{pe}i
 install_module_on(hosts)
 install_module_dependencies_on(hosts)
@@ -38,6 +44,7 @@ def return_puppet_version
 =======
 # frozen_string_literal: true
 
+<<<<<<< HEAD
 require 'serverspec'
 require 'puppet_litmus'
 require 'spec_helper_acceptance_local' if File.file?(File.join(File.dirname(__FILE__), 'spec_helper_acceptance_local.rb'))
@@ -49,12 +56,36 @@ if ENV['TARGET_HOST'].nil? || ENV['TARGET_HOST'] == 'localhost'
     set :backend, :cmd
   else
     set :backend, :exec
+=======
+RSpec.shared_context 'with faked facts' do
+  let(:facts_d) do
+    puppet_version = return_puppet_version
+    if fact('osfamily') =~ %r{windows}i
+      if fact('kernelmajversion').to_f < 6.0
+        'C:/Documents and Settings/All Users/Application Data/PuppetLabs/facter/facts.d'
+      else
+        'C:/ProgramData/PuppetLabs/facter/facts.d'
+      end
+    elsif Puppet::Util::Package.versioncmp(puppet_version, '4.0.0') < 0 && fact('is_pe', '--puppet') == 'true'
+      '/etc/puppetlabs/facter/facts.d'
+    else
+      '/etc/facter/facts.d'
+    end
+  end
+
+  before :each do
+    # No need to create on windows, PE creates by default
+    if fact('osfamily') !~ %r{windows}i
+      shell("mkdir -p '#{facts_d}'")
+    end
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   end
 else
   # load inventory
   inventory_hash = inventory_hash_from_inventory_file
   node_config = config_from_node(inventory_hash, ENV['TARGET_HOST'])
 
+<<<<<<< HEAD
   if target_in_group(inventory_hash, ENV['TARGET_HOST'], 'docker_nodes')
     host = ENV['TARGET_HOST']
     set :backend, :docker
@@ -106,6 +137,11 @@ else
     user = node_config.dig('winrm', 'user') unless node_config.dig('winrm', 'user').nil?
     pass = node_config.dig('winrm', 'password') unless node_config.dig('winrm', 'password').nil?
     endpoint = "http://#{ENV['TARGET_HOST']}:5985/wsman"
+=======
+  after :each do
+    shell("rm -f '#{facts_d}/fqdn.txt'", :acceptable_exit_codes => [0, 1])
+  end
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
     opts = {
       user: user,

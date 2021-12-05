@@ -1,6 +1,7 @@
 #
 # loadjson.rb
 #
+<<<<<<< HEAD
 
 module Puppet::Parser::Functions
   newfunction(:loadjson, :type => :rvalue, :arity => -2, :doc => <<-'DOC') do |args|
@@ -43,6 +44,20 @@ module Puppet::Parser::Functions
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     For example:
+=======
+module Puppet::Parser::Functions
+  newfunction(:loadjson, :type => :rvalue, :arity => -2, :doc => <<-'DOC') do |args|
+    Load a JSON file containing an array, string, or hash, and return the data
+    in the corresponding native data type.
+    The second parameter is the default value. It will be returned if the file
+    was not found or could not be parsed.
+
+    For example:
+
+        $myhash = loadjson('/etc/puppet/data/myhash.json')
+        $myhash = loadjson('no-file.json', {'default' => 'value'})
+  DOC
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
         $myhash = loadjson('/etc/puppet/data/myhash.json')
         $myhash = loadjson('https://example.local/my_hash.json')
@@ -55,6 +70,7 @@ module Puppet::Parser::Functions
     @return [Array|String|Hash]
       The data stored in the JSON file, the type depending on the type of data that was stored.
 
+<<<<<<< HEAD
     @example Example Usage:
       $myhash = loadjson('/etc/puppet/data/myhash.json')
       $myhash = loadjson('https://example.local/my_hash.json')
@@ -99,6 +115,14 @@ module Puppet::Parser::Functions
         PSON.load(content) || args[1]
       else
         warning("Can't load '#{args[0]}' File does not exist!")
+=======
+    if File.exists?(args[0]) # rubocop:disable Lint/DeprecatedClassMethods : Changing to .exist? breaks the code
+      begin
+        content = File.read(args[0])
+        PSON.load(content) || args[1]
+      rescue StandardError => e
+        raise e unless args[1]
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
         args[1]
       end
     rescue StandardError => e

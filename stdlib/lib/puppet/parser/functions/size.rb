@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns the number of elements in a string, an array or a hash
 
     Note that since Puppet 5.4.0, the length() function in Puppet is preferred over this. For versions
@@ -38,6 +39,12 @@ module Puppet::Parser::Functions
   DOC
              ) do |arguments|
 
+=======
+    Returns the number of elements in a string, an array or a hash
+  DOC
+             ) do |arguments|
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     raise(Puppet::ParseError, "size(): Wrong number of arguments given (#{arguments.size} for 1)") if arguments.empty?
 
     item = arguments[0]

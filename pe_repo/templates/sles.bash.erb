@@ -1,7 +1,11 @@
 #!/bin/bash -e
 
 import_gpg_key() {
+<<<<<<< HEAD
   gpg_keys="GPG-KEY-puppetlabs GPG-KEY-puppet"
+=======
+  gpg_keys="GPG-KEY-puppet-2025-04-06 GPG-KEY-puppet"
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   for gpg_key in ${gpg_keys}
   do
     gpg_file="$(mktemp)"
@@ -28,7 +32,10 @@ install_agent() {
   zypper rr puppet-enterprise
   zypper addrepo -t rpm-md https://<%= @master %>:<%= @port %><%= @prefix %>/<%= @pe_version %>/<%= @installer_build %>?ssl_verify=no puppet-enterprise
   zypper refresh puppet-enterprise
+<<<<<<< HEAD
   zypper --non-interactive dist-upgrade --from puppet-enterprise
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
   set -x
   zypper --non-interactive install puppet-agent=<%= @agent_version %>

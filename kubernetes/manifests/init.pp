@@ -9,11 +9,14 @@
 #   The version of Kubernetes containers you want to install.
 #   ie api server,
 #   Defaults to  1.10.2
+<<<<<<< HEAD
 #
 # [*kubernetes_cluster_name*]
 #   The name of the cluster, for use when multiple clusters are accessed from the same source
 #   Only used by Kubernetes 1.12+
 #   Defaults to "kubernetes"
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 #
 # [*kubernetes_package_version*]
 #   The version of the packages the Kubernetes os packages to install
@@ -57,7 +60,11 @@
 #
 # [*cni_rbac_binding*]
 #  The URL get the cni providers rbac rules. This is for use with Calico only.
+<<<<<<< HEAD
 #  Defaults to `undef`.
+=======
+#  Defaults to `undef`.  
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 #
 # [*controller*]
 #   This is a bool that sets the node as a Kubernetes controller
@@ -107,12 +114,16 @@
 # [*runc_source*]
 #  The URL to download runc
 #  Defaults to https://github.com/opencontainers/runc/releases/download/v${runc_version}/runc.amd64
+<<<<<<< HEAD
 #
 # [*etcd_hostname*]
 #   The name of the etcd instance.
 #   An example with hiera would be kubernetes::etcd_hostname: "%{::fqdn}"
 #   Defaults to hostname
 #
+=======
+#  
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 # [*etcd_ip*]
 #   The ip address that you want etcd to use for communications.
 #   An example with hiera would be kubernetes::etcd_ip: "%{::ipaddress_enp0s8}"
@@ -352,6 +363,7 @@
 # [*manage_sysctl_settings*]
 #  A flag to manage required sysctl settings.
 #  Defaults to true
+<<<<<<< HEAD
 #
 # [*default_path*]
 #  The path to be used when running kube* commands
@@ -371,6 +383,8 @@
 # Default to 24h 
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 #
 # Authors
 # -------
@@ -380,6 +394,7 @@
 #
 #
 class kubernetes (
+<<<<<<< HEAD
   String $kubernetes_version                         = '1.10.2',
   String $kubernetes_cluster_name                    = 'kubernetes',
   String $kubernetes_package_version                 = $facts['os']['family'] ? {
@@ -453,6 +468,62 @@ class kubernetes (
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   Optional[String] $runc_version                     = '1.0.0-rc5',
   Optional[String] $runc_source                      =
+=======
+  String $kubernetes_version                   = '1.10.2',
+  String $kubernetes_package_version           = $facts['os']['family'] ? {
+                                                    'Debian' => "${kubernetes_version}-00",
+                                                    'RedHat' => $kubernetes::kubernetes_version,
+                                                  },
+  String $container_runtime                    = 'docker',
+  Optional[String] $containerd_version         = '1.1.0',
+  Optional[String] $docker_package_name        = 'docker-engine',
+  Optional[String] $docker_version             = $facts['os']['family'] ? {
+                                                    'Debian' => '17.03.0~ce-0~ubuntu-xenial',
+                                                    'RedHat' => '17.03.1.ce-1.el7.centos',
+                                                  },
+  Optional[String] $cni_pod_cidr               = undef,
+  Boolean $controller                          = false,
+  Boolean $worker                              = false,
+  Boolean $manage_docker                       = true,
+  Boolean $manage_etcd                         = true,
+  Optional[String] $kube_api_advertise_address = undef,
+  Optional[String] $etcd_version               = '3.1.12',
+  Optional[String] $etcd_ip                    = undef,
+  Optional[Array] $etcd_peers                  = undef,
+  Optional[String] $etcd_initial_cluster       = undef,
+  String $etcd_ca_key                          = undef,
+  String $etcd_ca_crt                          = undef,
+  String $etcdclient_key                       = undef,
+  String $etcdclient_crt                       = undef,
+  Optional[String] $etcdserver_crt             = undef,
+  Optional[String] $etcdserver_key             = undef,
+  Optional[String] $etcdpeer_crt               = undef,
+  Optional[String] $etcdpeer_key               = undef,
+  Optional[String] $cni_network_provider       = undef,
+  Optional[String] $cni_rbac_binding           = undef,
+  Boolean $install_dashboard                   = false,
+  String $dashboard_version                    = 'v1.10.1',
+  Boolean $schedule_on_controller              = false,
+  Integer $api_server_count                    = undef,
+  String $kubernetes_ca_crt                    = undef,
+  String $kubernetes_ca_key                    = undef,
+  String $token                                = undef,
+  String $discovery_token_hash                 = undef,
+  String $sa_pub                               = undef,
+  String $sa_key                               = undef,
+  Optional[Array] $apiserver_cert_extra_sans   = [],
+  Optional[Array] $apiserver_extra_arguments   = [],
+  String $service_cidr                         = '10.96.0.0/12',
+  Optional[String] $node_label                 = undef,
+  Optional[String] $controller_address         = undef,
+  Optional[String] $cloud_provider             = undef,
+  Optional[String] $cloud_config               = undef,
+  Optional[Hash] $kubeadm_extra_config         = undef,
+  Optional[Hash] $kubelet_extra_config         = undef,
+  Optional[Array] $kubelet_extra_arguments     = [],
+  Optional[String] $runc_version               = '1.0.0-rc5',
+  Optional[String] $runc_source                =
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     "https://github.com/opencontainers/runc/releases/download/v${runc_version}/runc.amd64",
   Optional[String] $containerd_archive               = "containerd-${containerd_version}.linux-amd64.tar.gz",
   Optional[String] $containerd_source                =

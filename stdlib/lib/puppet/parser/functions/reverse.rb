@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Reverses the order of a string or array.
 
     Note that the same can be done with the reverse_each() function in Puppet.
@@ -34,6 +35,9 @@ module Puppet::Parser::Functions
 
     Note that the same can be done with the reverse_each() function in Puppet.
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+    Reverses the order of a string or array.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     DOC
              ) do |arguments|
 

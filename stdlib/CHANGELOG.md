@@ -2,6 +2,7 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org).
+<<<<<<< HEAD
 
 ## Supported Release 6.0.0
 
@@ -287,6 +288,8 @@ This is a major release which removes support for the Scientific 5 and Debian 7 
 - Support has been removed for `Scientific 5` and `Debian 7` operating systems.
 - `Stdlib::(Ipv4|IPv6|Ip_address)` have been removed.
 
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 ## Supported Release 4.25.1
 ### Summary
 

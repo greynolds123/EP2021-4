@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Strips directory (and optional suffix) from a filename
 =======
     @summary
@@ -30,6 +31,16 @@ module Puppet::Parser::Functions
     raise(Puppet::ParseError, "basename(): Too many arguments given (#{arguments.size})") if arguments.size > 2
     raise(Puppet::ParseError, 'basename(): Requires string as first argument') unless arguments[0].is_a?(String)
 
+=======
+    Strips directory (and optional suffix) from a filename
+    DOC
+             ) do |arguments|
+
+    raise(Puppet::ParseError, 'basename(): No arguments given') if arguments.empty?
+    raise(Puppet::ParseError, "basename(): Too many arguments given (#{arguments.size})") if arguments.size > 2
+    raise(Puppet::ParseError, 'basename(): Requires string as first argument') unless arguments[0].is_a?(String)
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     rv = File.basename(arguments[0]) if arguments.size == 1
     if arguments.size == 2
       raise(Puppet::ParseError, 'basename(): Requires string as second argument') unless arguments[1].is_a?(String)

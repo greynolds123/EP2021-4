@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # class Specinfra::Command::Windows::Base::File
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
@@ -18,6 +19,9 @@
 =======
 # class Specinfra::Command::Windows::Base::File
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+# class Specinfra::Command::Windows::Base::File
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 class Specinfra::Command::Windows::Base::File < Specinfra::Command::Windows::Base
   class << self
     def check_is_owned_by(file, owner)
@@ -33,6 +37,7 @@ end
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -50,6 +55,9 @@ end
 =======
 # class Specinfra::Command::Base::File
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+# class Specinfra::Command::Base::File
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 class Specinfra::Command::Base::File < Specinfra::Command::Base
   class << self
     def get_content(file)

@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
@@ -15,6 +16,9 @@ module Puppet::Parser::Functions
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
     Lookup a variable in a given namespace.
     Returns undef if variable does not exist.
+=======
+    Lookup a variable in a remote namespace.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
     For example:
 
@@ -26,6 +30,7 @@ module Puppet::Parser::Functions
         $datalocation = 'site::data'
         $bar = getvar("${datalocation}::bar")
         # Equivalent to $bar = $site::data::bar
+<<<<<<< HEAD
 
     Note: from Puppet 6.0.0, the compatible function with the same name in Puppet core
 <<<<<<< HEAD
@@ -56,6 +61,8 @@ module Puppet::Parser::Functions
     will be used instead of this function. The new function also has support for
     digging into a structured value. See the built-in
     [`getvar`](https://puppet.com/docs/puppet/latest/function.html#getvar) function
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     DOC
 
     unless args.length == 1

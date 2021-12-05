@@ -7,12 +7,15 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     Validate that all values passed are valid IP addresses,
     regardless they are IPv4 or IPv6
     Fail compilation if any value fails this check.
@@ -29,6 +32,7 @@ module Puppet::Parser::Functions
     The following values will fail, causing compilation to abort:
     $some_array = [ 1, true, false, "garbage string", "3ffe:505:2" ]
     validate_ip_address($some_array)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,6 +74,14 @@ module Puppet::Parser::Functions
     require 'ipaddr'
     rescuable_exceptions = [ArgumentError]
 
+=======
+    DOC
+             ) do |args|
+
+    require 'ipaddr'
+    rescuable_exceptions = [ArgumentError]
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     function_deprecation([:validate_ip_address, 'This method is deprecated, please use the stdlib validate_legacy function,
                             with Stdlib::Compat::Ip_address. There is further documentation for validate_legacy function in the README.'])
 

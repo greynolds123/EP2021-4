@@ -19,9 +19,16 @@ describe 'get_module_path' do
     let(:modulepath) { '/tmp/does_not_exist' }
     let(:path_of_module_foo) { StubModule.new('/tmp/does_not_exist/foo') }
 
+<<<<<<< HEAD
     before(:each) do
       Puppet[:modulepath] = modulepath
     end
+=======
+    before(:each) { Puppet[:modulepath] = modulepath }
+
+    context 'when in the default environment' do
+      before(:each) { Puppet::Module.expects(:find).with('foo', 'rp_env').returns(path_of_module_foo) }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
     context 'when in the default environment' do
       before(:each) do
@@ -40,6 +47,11 @@ describe 'get_module_path' do
 
     context 'when in a non-default default environment' do
       let(:environment) { 'test' }
+<<<<<<< HEAD
+=======
+
+      before(:each) { Puppet::Module.expects(:find).with('foo', 'test').returns(path_of_module_foo) }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
       before(:each) do
         allow(Puppet::Module).to receive(:find).with('foo', 'test').and_return(path_of_module_foo)

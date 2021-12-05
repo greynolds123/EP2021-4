@@ -99,6 +99,7 @@ allow httpd_t nagios_log_t:file read;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   include ::nagios::base::withwebinterface
 =======
   include ::nagios::dev::withwebinterface
@@ -112,5 +113,8 @@ allow httpd_t nagios_log_t:file read;
 =======
   include ::nagios::base::withwebinterface
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+  include ::nagios::base::withwebinterface
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
 }

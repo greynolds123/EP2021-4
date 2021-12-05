@@ -12,6 +12,7 @@ describe 'loadjson' do
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       # Additional modules used by litmus which are identified while running these dues to being in fixtures
       allow(File).to receive(:read).with(%r{\/(provision|puppet_agent|facts)\/metadata.json}, :encoding => 'utf-8')
@@ -22,6 +23,8 @@ describe 'loadjson' do
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     end
 
     context 'when a non-existing file is specified' do
@@ -78,6 +81,7 @@ describe 'loadjson' do
         allow(PSON).to receive(:load).with(json).once.and_raise StandardError, 'Something terrible have happened!'
       end
       it { is_expected.to run.with_params(filename, 'default' => 'value').and_return('default' => 'value') }
+<<<<<<< HEAD
     end
 
     context 'when an existing URL is specified' do
@@ -151,6 +155,8 @@ describe 'loadjson' do
         expect(OpenURI).to receive(:open_uri).with(filename, basic_auth).and_raise OpenURI::HTTPError, '404 File not Found'
         is_expected.to run.with_params(filename, 'default' => 'value').and_return('default' => 'value')
       }
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     end
   end
 end

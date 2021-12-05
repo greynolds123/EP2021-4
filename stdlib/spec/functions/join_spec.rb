@@ -14,7 +14,13 @@ describe 'join', :if => Puppet::Util::Package.versioncmp(Puppet.version, '5.5.0'
   it { is_expected.to run.with_params([], ':').and_return('') }
   it { is_expected.to run.with_params(['one']).and_return('one') }
   it { is_expected.to run.with_params(['one'], ':').and_return('one') }
+<<<<<<< HEAD
   it { is_expected.to run.with_params(['one', 'two', 'three']).and_return('onetwothree') }
   it { is_expected.to run.with_params(['one', 'two', 'three'], ':').and_return('one:two:three') }
   it { is_expected.to run.with_params(['ōŋể', 'ŧשợ', 'ţђŕẽё'], ':').and_return('ōŋể:ŧשợ:ţђŕẽё') }
+=======
+  it { is_expected.to run.with_params(%w[one two three]).and_return('onetwothree') }
+  it { is_expected.to run.with_params(%w[one two three], ':').and_return('one:two:three') }
+  it { is_expected.to run.with_params(%w[ōŋể ŧשợ ţђŕẽё], ':').and_return('ōŋể:ŧשợ:ţђŕẽё') }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 end

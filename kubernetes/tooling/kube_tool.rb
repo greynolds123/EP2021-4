@@ -10,7 +10,10 @@ options = {:os                         => nil,
            :version                    => nil,
            :container_runtime          => nil,
            :cni_provider               => nil,
+<<<<<<< HEAD
            :cni_provider_version       => nil,
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
            :etcd_initial_cluster       => nil,
            :kube_api_advertise_address => nil,
       	   :install_dashboard          => nil,
@@ -64,7 +67,11 @@ parser.parse!
 
 class Kube_tool
   def build_hiera(hash)
+<<<<<<< HEAD
     OtherParams.create( hash[:os], hash[:version], hash[:container_runtime], hash[:cni_provider], hash[:cni_provider_version], hash[:etcd_initial_cluster], hash[:etcd_ip], hash[:kube_api_advertise_address], hash[:install_dashboard])
+=======
+    OtherParams.create( hash[:os], hash[:version], hash[:container_runtime], hash[:cni_provider], hash[:etcd_initial_cluster], hash[:etcd_ip], hash[:kube_api_advertise_address], hash[:install_dashboard])
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     PreChecks.checks
     CreateCerts.etcd_ca
     CreateCerts.etcd_clients

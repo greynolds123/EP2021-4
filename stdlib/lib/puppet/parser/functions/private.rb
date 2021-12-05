@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     DEPRECATED: Sets the current class or definition as private.
     Calling the class or definition from outside the current module will fail.
 =======
@@ -29,6 +30,10 @@ module Puppet::Parser::Functions
     DEPRECATED: Sets the current class or definition as private.
     Calling the class or definition from outside the current module will fail.
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+    DEPRECATED: Sets the current class or definition as private.
+    Calling the class or definition from outside the current module will fail.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   DOC
              ) do |args|
     warning("private() DEPRECATED: This function will cease to function on Puppet 4; please use assert_private() before upgrading to puppet 4 for backwards-compatibility, or migrate to the new parser's typing system.") # rubocop:disable Metrics/LineLength : Cannot shorten this line

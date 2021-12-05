@@ -1,4 +1,5 @@
 require 'puppetlabs_spec_helper/rake_tasks'
+<<<<<<< HEAD
 
 # load optional tasks for releases
 # only available if gem group releases is installed
@@ -15,6 +16,19 @@ end
 
 PuppetLint.configuration.log_format = '%{path}:%{line}:%{check}:%{KIND}:%{message}'
 PuppetLint.configuration.absolute_classname_reverse = true
+=======
+require 'puppet_blacksmith/rake_tasks'
+require 'voxpupuli/release/rake_tasks'
+require 'puppet-strings/tasks'
+
+PuppetLint.configuration.log_format = '%{path}:%{line}:%{check}:%{KIND}:%{message}'
+PuppetLint.configuration.fail_on_warnings = true
+PuppetLint.configuration.send('relative')
+PuppetLint.configuration.send('disable_140chars')
+PuppetLint.configuration.send('disable_class_inherits_from_params_class')
+PuppetLint.configuration.send('disable_documentation')
+PuppetLint.configuration.send('disable_single_quote_string_with_variables')
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
 exclude_paths = %w(
   pkg/**/*
@@ -25,6 +39,7 @@ exclude_paths = %w(
 PuppetLint.configuration.ignore_paths = exclude_paths
 PuppetSyntax.exclude_paths = exclude_paths
 
+<<<<<<< HEAD
 desc 'Auto-correct puppet-lint offenses'
 task 'lint:auto_correct' do
 <<<<<<< HEAD
@@ -35,11 +50,14 @@ task 'lint:auto_correct' do
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 end
 
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 desc 'Run acceptance tests'
 RSpec::Core::RakeTask.new(:acceptance) do |t|
   t.pattern = 'spec/acceptance'
 end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 desc 'Run tests'
 task test: [:release_checks]
@@ -60,11 +78,14 @@ namespace :check do
 end
 Rake::Task[:release_checks].enhance ['check:trailing_whitespace']
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 desc 'Run tests metadata_lint, release_checks'
 task test: [
   :metadata_lint,
   :release_checks,
 ]
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 
 desc "Run main 'test' task and report merged results to coveralls"
@@ -120,4 +141,6 @@ begin
   end
 rescue LoadError
 end
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 # vim: syntax=ruby

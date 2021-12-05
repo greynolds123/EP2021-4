@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
@@ -51,6 +52,19 @@ module Puppet::Parser::Functions
     DOC
              ) do |arguments|
 
+=======
+    This function removes leading and trailing whitespace from a string or from
+    every string inside an array.
+
+    *Examples:*
+
+        strip("    aaa   ")
+
+    Would result in: "aaa"
+    DOC
+             ) do |arguments|
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     raise(Puppet::ParseError, "strip(): Wrong number of arguments given (#{arguments.size} for 1)") if arguments.empty?
 
     value = arguments[0]

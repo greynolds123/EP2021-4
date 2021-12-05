@@ -36,6 +36,7 @@
   ensure   => 'present',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   baseurl  => 'http://centos7.dev.localdomain/yum/channels/$baseos/rhel-x86_64-server-7',
 =======
   baseurl  => 'http://centos7.prod.localdomain/yum/channels/$baseos/rhel-x86_64-server-7',
@@ -48,6 +49,14 @@
   gpgcheck => '0',
   gpgkey   => 'http://centos7.prod.localdomain/yum/keys/RPM-GPG-KEY-redhat-release
   http://centos7.prod.localdomain/yum/keys/RPM-GPG-KEY-redhat-release7',
+=======
+  baseurl  => 'http://wwwin-kickstart-dev.cisco.com/yum/channels/$baseos/rhel-x86_64-server-7',
+  descr    => 'RHEL7 udpates channel',
+  enabled  => '1',
+  gpgcheck => '0',
+  gpgkey   => 'http://wwwin-kickstart-dev.cisco.com/yum/keys/RPM-GPG-KEY-redhat-release
+  http://wwwin-kickstart-dev.cisco.com/yum/keys/RPM-GPG-KEY-redhat-release7',
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   priority => '1',
   }
 

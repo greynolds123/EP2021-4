@@ -13,9 +13,15 @@ describe 'reverse' do
   it { is_expected.to run.with_params([]).and_return([]) }
   it { is_expected.to run.with_params(['a']).and_return(['a']) }
   it { is_expected.to run.with_params(['one']).and_return(['one']) }
+<<<<<<< HEAD
   it { is_expected.to run.with_params(['one', 'two', 'three']).and_return(['three', 'two', 'one']) }
   it { is_expected.to run.with_params(['one', 'two', 'three', 'four']).and_return(['four', 'three', 'two', 'one']) }
   it { is_expected.to run.with_params(['ổňë', 'ťŵọ', 'ŧңяəė', 'ƒŏůŗ']).and_return(['ƒŏůŗ', 'ŧңяəė', 'ťŵọ', 'ổňë']) }
+=======
+  it { is_expected.to run.with_params(%w[one two three]).and_return(%w[three two one]) }
+  it { is_expected.to run.with_params(%w[one two three four]).and_return(%w[four three two one]) }
+  it { is_expected.to run.with_params(%w[ổňë ťŵọ ŧңяəė ƒŏůŗ]).and_return(%w[ƒŏůŗ ŧңяəė ťŵọ ổňë]) }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
   it { is_expected.to run.with_params('').and_return('') }
   it { is_expected.to run.with_params('a').and_return('a') }

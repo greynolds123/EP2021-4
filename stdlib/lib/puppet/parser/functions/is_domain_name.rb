@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns true if the string passed to this function is a syntactically correct domain name.
 =======
     @summary
@@ -28,6 +29,9 @@ module Puppet::Parser::Functions
 =======
     Returns true if the string passed to this function is a syntactically correct domain name.
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+    Returns true if the string passed to this function is a syntactically correct domain name.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     DOC
              ) do |arguments|
 

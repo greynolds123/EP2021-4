@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 concat puppet module
 
 Copyright (C) 2015-2016 Puppet Labs Inc
@@ -27,6 +28,10 @@ Puppet Module - puppetlabs-concat
 Puppet Module - puppetlabs-concat
 
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+Puppet Module - puppetlabs-concat
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 Copyright 2018 Puppet, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,6 +44,7 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,3 +63,6 @@ limitations under the License.
 =======
 limitations under the License.
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+limitations under the License.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b

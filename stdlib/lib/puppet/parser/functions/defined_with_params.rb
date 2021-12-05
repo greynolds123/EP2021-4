@@ -7,12 +7,15 @@ Puppet::Parser::Functions.newfunction(:defined_with_params,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
                                       :doc => <<-'DOC'
     Takes a resource reference and an optional hash of attributes.
 
@@ -26,6 +29,7 @@ Puppet::Parser::Functions.newfunction(:defined_with_params,
         if ! defined_with_params(User[dan], {'ensure' => 'present' }) {
           user { 'dan': ensure => present, }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,6 +60,8 @@ Puppet::Parser::Functions.newfunction(:defined_with_params,
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 DOC
                                      ) do |vals|
   reference, params = vals
@@ -71,7 +77,11 @@ DOC
       type_name, title = Puppet::Resource.type_and_title(reference, nil)
       type = Puppet::Pops::Evaluator::Runtime3ResourceSupport.find_resource_type_or_class(find_global_scope, type_name.downcase)
     elsif reference.is_a?(Puppet::Resource)
+<<<<<<< HEAD
       type = reference.type
+=======
+      type = reference.resource_type
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       title = reference.title
     else
       raise(ArgumentError, "Reference is not understood: '#{reference.class}'")

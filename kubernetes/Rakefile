@@ -81,3 +81,13 @@ EOM
   end
 end
 
+<<<<<<< HEAD
+=======
+desc 'Run syntax, lint and  metadata tests'
+task :test => [
+  :syntax,
+  :lint,
+  :metadata_lint,
+  :spec,
+]
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b

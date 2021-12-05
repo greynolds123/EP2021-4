@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
@@ -41,6 +42,14 @@ module Puppet::Parser::Functions
   DOC
              ) do |arguments|
 
+=======
+    This converts a string to a boolean. This attempt to convert strings that
+    contain things like: Y,y, 1, T,t, TRUE,true to 'true' and strings that contain things
+    like: 0, F,f, N,n, false, FALSE, no to 'false'.
+  DOC
+             ) do |arguments|
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     raise(Puppet::ParseError, "str2bool(): Wrong number of arguments given (#{arguments.size} for 1)") if arguments.empty?
 
     string = arguments[0]

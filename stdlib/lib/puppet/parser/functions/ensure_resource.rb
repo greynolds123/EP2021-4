@@ -7,12 +7,15 @@ Puppet::Parser::Functions.newfunction(:ensure_resource,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
                                       :doc => <<-'DOC'
     Takes a resource type, title, and a list of attributes that describe a
     resource.
@@ -24,6 +27,7 @@ Puppet::Parser::Functions.newfunction(:ensure_resource,
     This example only creates the resource if it does not already exist:
 
         ensure_resource('user', 'dan', {'ensure' => 'present' })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,6 +82,18 @@ Puppet::Parser::Functions.newfunction(:ensure_resource,
         ensure_resource('user', ['dan','alex'], {'ensure' => 'present'})
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
+=======
+
+    If the resource already exists but does not match the specified parameters,
+    this function will attempt to recreate the resource leading to a duplicate
+    resource definition error.
+
+    An array of resources can also be passed in and each will be created with
+    the type and parameters specified if it doesn't already exist.
+
+        ensure_resource('user', ['dan','alex'], {'ensure' => 'present'})
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 DOC
                                      ) do |vals|
   type, title, params = vals

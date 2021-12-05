@@ -21,6 +21,10 @@ describe 'upcase', :if => Puppet::Util::Package.versioncmp(Puppet.version, '6.0.
 
   describe 'strings in arrays handling' do
     it { is_expected.to run.with_params([]).and_return([]) }
+<<<<<<< HEAD
     it { is_expected.to run.with_params(['One', 'twO']).and_return(['ONE', 'TWO']) }
+=======
+    it { is_expected.to run.with_params(%w[One twO]).and_return(%w[ONE TWO]) }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   end
 end

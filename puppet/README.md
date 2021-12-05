@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [![Puppet Forge](https://img.shields.io/puppetforge/v/theforeman/puppet.svg)](https://forge.puppetlabs.com/theforeman/puppet)
 [![Build Status](https://travis-ci.org/theforeman/puppet-puppet.svg?branch=master)](https://travis-ci.org/theforeman/puppet-puppet)
 
@@ -173,6 +174,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 # puppet
 
 [![Build Status](https://travis-ci.org/dhoppe/puppet-puppet.png?branch=master)](https://travis-ci.org/dhoppe/puppet-puppet)
@@ -616,4 +619,7 @@ pull request.
 ### Contributors
 
 The list of contributors can be found at: [https://github.com/dhoppe/puppet-puppet/graphs/contributors](https://github.com/dhoppe/puppet-puppet/graphs/contributors)
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b

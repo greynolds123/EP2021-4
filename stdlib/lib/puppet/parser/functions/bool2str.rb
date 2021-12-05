@@ -7,12 +7,15 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     Converts a boolean to a string using optionally supplied arguments. The
     optional second and third arguments represent what true and false will be
     converted to respectively. If only one argument is given, it will be
@@ -25,6 +28,7 @@ module Puppet::Parser::Functions
     bool2str(false, 't', 'f')         => 'f'
 
     Requires a single boolean as an input.
+<<<<<<< HEAD
 
     Note that since Puppet 5.0.0 it is possible to create new data types for almost any
     datatype using the type system and the built-in
@@ -93,6 +97,11 @@ module Puppet::Parser::Functions
     DOC
              ) do |arguments|
 
+=======
+    DOC
+             ) do |arguments|
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     unless arguments.size == 1 || arguments.size == 3
       raise(Puppet::ParseError, "bool2str(): Wrong number of arguments given (#{arguments.size} for 3)")
     end

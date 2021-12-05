@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "CHANGELOG.md": "bed2b93c459d4d1ce741fbc3138858f3",
   "HISTORY.md": "77a55d102cdae041fc0b21f967d1e8e3",
   "LICENSE": "9eef91148a9b14ec7f9df333daebc746",
@@ -40,6 +41,8 @@
   "templates/server/puppetserver/services.d/ca.cfg.erb": "e478149b793cbab5fbc3f0ae2eeb7087",
   "types/custom_trusted_oid_mapping.pp": "de82bb0ef38399e9adb5c441f72db9db"
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   "CHANGELOG.md": "61ffa706a22dcc54906e59ef4b0d7761",
   "Gemfile": "4b8ca94ea6d40c36ea7c2670b457972e",
   "LICENSE": "33c430decf7b6fecc92d9aa5e707363d",
@@ -79,5 +82,8 @@
   "templates/common/etc/puppet/fileserver.conf.erb": "0b241e134010c48cb61027cd6fee8cd0",
   "templates/common/etc/puppet/puppet.conf.erb": "3ca6d65ad19168ce299da7fe2eea6424",
   "templates/common/etc/puppet/puppetmaster.conf.erb": "a0438cbdec3f78e853c56741c6c6f50e"
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 }

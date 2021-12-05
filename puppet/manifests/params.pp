@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Default parameters
 # @api private
 class puppet::params {
@@ -438,6 +439,8 @@ class puppet::params {
   # Normally agents can only fetch their own catalogs.  If you want some nodes to be able to fetch *any* catalog, add them here.
   $server_puppetserver_trusted_agents = []
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 # == Class: puppet::params
 #
 class puppet::params {
@@ -488,5 +491,8 @@ class puppet::params {
       fail("${::operatingsystem} not supported.")
     }
   }
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 }

@@ -10,6 +10,7 @@ Puppet::Parser::Functions.newfunction(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Usage: `seeded_rand(MAX, SEED)`. MAX must be a positive integer; SEED is any string.
 =======
     @summary
@@ -32,6 +33,10 @@ Puppet::Parser::Functions.newfunction(
     Usage: `seeded_rand(MAX, SEED)`. MAX must be a positive integer; SEED is any string.
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
 
+=======
+    Usage: `seeded_rand(MAX, SEED)`. MAX must be a positive integer; SEED is any string.
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     Generates a random whole number greater than or equal to 0 and less
     than MAX, using the value of SEED for repeatable randomness.  If SEED
     starts with "$fqdn:", this is behaves the same as `fqdn_rand`.

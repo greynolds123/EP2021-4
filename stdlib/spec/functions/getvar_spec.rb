@@ -2,6 +2,11 @@ require 'spec_helper'
 
 describe 'getvar' do
   it { is_expected.not_to eq(nil) }
+<<<<<<< HEAD
+=======
+  it { is_expected.to run.with_params.and_raise_error(Puppet::ParseError, %r{wrong number of arguments}i) }
+  it { is_expected.to run.with_params('one', 'two').and_raise_error(Puppet::ParseError, %r{wrong number of arguments}i) }
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
   describe 'before Puppet 6.0.0', :if => Puppet::Util::Package.versioncmp(Puppet.version, '6.0.0') < 0 do
     it { is_expected.to run.with_params.and_raise_error(Puppet::ParseError, %r{wrong number of arguments}i) }

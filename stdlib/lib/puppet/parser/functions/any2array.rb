@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
@@ -89,6 +90,11 @@ module Puppet::Parser::Functions
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+    This converts any object to an array containing that object. Empty argument
+    lists are converted to an empty array. Arrays are left untouched. Hashes are
+    converted to arrays of alternating keys and values.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   DOC
              ) do |arguments|
 
@@ -98,7 +104,10 @@ module Puppet::Parser::Functions
 
     return arguments unless arguments.length == 1
     return arguments[0] if arguments[0].is_a?(Array)
+<<<<<<< HEAD
     return [] if arguments == ['']
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     if arguments[0].is_a?(Hash)
       result = []
       arguments[0].each do |key, value|

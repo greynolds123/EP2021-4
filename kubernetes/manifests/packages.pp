@@ -107,6 +107,7 @@ class kubernetes::packages (
   }
 
   if $controller and $manage_etcd {
+<<<<<<< HEAD
     if $etcd_install_method == 'wget' {
       archive { $etcd_archive:
         path            => "/${etcd_archive}",
@@ -121,6 +122,16 @@ class kubernetes::packages (
       package { $etcd_package_name:
         ensure => $etcd_version,
       }
+=======
+    archive { $etcd_archive:
+      path            => "/${etcd_archive}",
+      source          => $etcd_source,
+      extract         => true,
+      extract_command => 'tar xfz %s --strip-components=1 -C /usr/local/bin/',
+      extract_path    => '/usr/local/bin',
+      cleanup         => true,
+      creates         => ['/usr/local/bin/etcd','/usr/local/bin/etcdctl']
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     }
   }
 

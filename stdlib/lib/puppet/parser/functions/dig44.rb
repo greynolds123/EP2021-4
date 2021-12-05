@@ -11,6 +11,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
@@ -114,6 +115,39 @@ module Puppet::Parser::Functions
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+    DEPRECATED: This function has been replaced in puppet 4.5.0.
+
+    Looks up into a complex structure of arrays and hashes and returns a value
+    or the default value if nothing was found.
+
+    Key can contain slashes to describe path components. The function will go down
+    the structure and try to extract the required value.
+
+    $data = {
+      'a' => {
+        'b' => [
+          'b1',
+          'b2',
+          'b3',
+        ]
+      }
+    }
+
+    $value = dig44($data, ['a', 'b', '2'], 'not_found')
+    => $value = 'b3'
+
+    a -> first hash key
+    b -> second hash key
+    2 -> array index starting with 0
+
+    not_found -> (optional) will be returned if there is no value or the path
+    did not match. Defaults to nil.
+
+    In addition to the required "key" argument, the function accepts a default
+    argument. It will be returned if no value was found or a path component is
+    missing. And the fourth argument can set a variable path separator.
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   DOC
   ) do |arguments|
     # Two arguments are required

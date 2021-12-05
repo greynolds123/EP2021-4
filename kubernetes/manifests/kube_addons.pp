@@ -10,6 +10,7 @@ class kubernetes::kube_addons (
   Boolean $controller                        = $kubernetes::controller,
   Optional[Boolean] $schedule_on_controller  = $kubernetes::schedule_on_controller,
   String $node_name                          = $kubernetes::node_name,
+<<<<<<< HEAD
   Array $path                                = $kubernetes::default_path,
   Optional[Array] $env                       = $kubernetes::environment,
 ){
@@ -17,6 +18,13 @@ class kubernetes::kube_addons (
   Exec {
     path        => $path,
     environment => $env,
+=======
+){
+
+  Exec {
+    path        => ['/usr/bin', '/bin'],
+    environment => [ 'HOME=/root', 'KUBECONFIG=/etc/kubernetes/admin.conf'],
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     logoutput   => true,
     tries       => 10,
     try_sleep   => 30,
@@ -55,10 +63,16 @@ class kubernetes::kube_addons (
   if $install_dashboard  {
     $shellsafe_source = shell_escape($kubernetes_dashboard_url)
     exec { 'Install Kubernetes dashboard':
+<<<<<<< HEAD
       command     => "kubectl apply -f ${shellsafe_source}",
       onlyif      => 'kubectl get nodes',
       unless      => 'kubectl -n kube-system get pods | grep kubernetes-dashboard',
       environment => $env,
+=======
+      command => "kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/${dashboard_version}/src/deploy/recommended/kubernetes-dashboard.yaml",
+      onlyif  => 'kubectl get nodes',
+      unless  => 'kubectl -n kube-system get pods | grep kubernetes-dashboard',
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       }
     }
 }

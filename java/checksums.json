@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "CHANGELOG.md": "ae1e9ec161116e78cc786c00bc9a0390",
   "CODEOWNERS": "366aefdc1424442b8f864528c2e0db1d",
   "CONTRIBUTING.md": "4d17f3c942e7c93d1577cc4438a231e4",
@@ -41,6 +42,8 @@
   "spec/unit/facter/java_patch_level_spec.rb": "81cd9fdde384a154d9ca40a3a385c24a",
   "spec/unit/facter/java_version_spec.rb": "ba10552b8de6184ecbe4df460015a8c7"
 =======
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   "CHANGELOG.md": "632e57d7fc47759730a906dc345f317d",
   "CONTRIBUTING.md": "ad65d271f183b5adb9fdd58207939f5f",
   "Gemfile": "a5493d10f1c1fec87972b13a9fe1afcf",

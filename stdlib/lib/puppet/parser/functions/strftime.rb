@@ -8,6 +8,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
@@ -19,6 +20,10 @@ module Puppet::Parser::Functions
     Note that since Puppet 4.8.0 the function with the same name in Puppet will be used instead of this
     function. It also supports the Timestamp and Timespan data types in the Puppet language.
 
+=======
+    This function returns formatted time.
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     *Examples:*
 
     To return the time since epoch:
@@ -30,6 +35,7 @@ module Puppet::Parser::Functions
         strftime("%Y-%m-%d")
 
     *Format meaning:*
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,6 +62,8 @@ module Puppet::Parser::Functions
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
         %a - The abbreviated weekday name (``Sun'')
         %A - The  full  weekday  name (``Sunday'')

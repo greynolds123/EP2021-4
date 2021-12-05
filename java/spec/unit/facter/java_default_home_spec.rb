@@ -40,7 +40,10 @@ describe 'java_default_home' do
         Facter::Util::Resolution.expects(:which).with("readlink").returns(true)
         Facter::Util::Resolution.expects(:exec).with("readlink -e /usr/bin/java").returns(java_path_output)
         Facter.value(:java_default_home).should == "/usr/lib/jvm/java-7-openjdk-amd64"
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       end
     end
 
@@ -54,7 +57,10 @@ describe 'java_default_home' do
         Facter::Util::Resolution.stubs(:exec)
         Facter::Util::Resolution.expects(:which).with("readlink").at_least(1).returns(false)
         Facter.value(:java_default_home).should be_nil
+<<<<<<< HEAD
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       end
     end
   end

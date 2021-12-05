@@ -27,6 +27,7 @@ describe 'is_mac_address function' do
     it 'is_mac_addresss a mac out of range' do
       apply_manifest(pp2, :catch_failures => true) do |r|
         expect(r.stdout).to match(%r{Notice: output correct})
+<<<<<<< HEAD
       end
     end
 
@@ -41,6 +42,8 @@ describe 'is_mac_address function' do
     it 'is_mac_addresss a 20-octet mac' do
       apply_manifest(pp3, :catch_failures => true) do |r|
         expect(r.stdout).to match(%r{Notice: output correct})
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
       end
     end
   end

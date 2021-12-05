@@ -7,6 +7,7 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns the dirname of a path.
 =======
     @summary
@@ -26,6 +27,12 @@ module Puppet::Parser::Functions
     DOC
              ) do |arguments|
 
+=======
+    Returns the dirname of a path.
+    DOC
+             ) do |arguments|
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     if arguments.empty?
       raise(Puppet::ParseError, 'dirname(): No arguments given')
     end

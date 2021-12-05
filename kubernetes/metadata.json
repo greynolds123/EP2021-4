@@ -1,10 +1,14 @@
 {
   "name": "puppetlabs-kubernetes",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "5.0.0",
 =======
   "version": "4.0.1",
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+  "version": "3.2.0",
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   "author": "Puppet",
   "summary": "The module installs and configures a Kubernetes cluster",
   "license": "Apache-2.0",
@@ -14,7 +18,11 @@
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
+<<<<<<< HEAD
       "version_requirement": ">= 4.20.0 <= 5.2.0"
+=======
+      "version_requirement": ">= 4.20.0 < 5.0.0"
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     },
     {
       "name": "puppetlabs-apt",
@@ -70,6 +78,7 @@
   "requirements": [
     {
       "name": "puppet",
+<<<<<<< HEAD
       "version_requirement": ">= 5.5.10 < 7.0.0"
     }
   ],
@@ -82,4 +91,12 @@
   "template-url": "https://github.com/puppetlabs/pdk-templates",
   "template-ref": "heads/master-0-g46a1deb"
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+      "version_requirement": ">= 4.2.1 < 7.0.0"
+    }
+  ],
+  "pdk-version": "1.7.0",
+  "template-url": "https://github.com/puppetlabs/pdk-templates",
+  "template-ref": "1.7.0-0-g57412ed"
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 }

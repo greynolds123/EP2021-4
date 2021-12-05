@@ -14,9 +14,12 @@ describe 'the Kubernetes module' do
         class {'kubernetes':
           controller => true,
           schedule_on_controller => true,
+<<<<<<< HEAD
           environment  => ['HOME=/root', 'KUBECONFIG=/etc/kubernetes/admin.conf'],
           kubernetes_version => '1.13.5',
           ignore_preflight_errors => ['NumCPU'],
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
         }
         "}
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -52,7 +55,11 @@ describe 'the Kubernetes module' do
         end
 
         it 'should install kube-dns' do
+<<<<<<< HEAD
           shell('KUBECONFIG=/etc/kubernetes/admin.conf kubectl get deploy --namespace kube-system coredns', :acceptable_exit_codes => [0])
+=======
+          shell('KUBECONFIG=/etc/kubernetes/admin.conf kubectl get deploy --namespace kube-system kube-dns', :acceptable_exit_codes => [0])
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
         end
       end
 
@@ -61,7 +68,11 @@ describe 'the Kubernetes module' do
         it 'can deploy an application into a namespace and expose it' do
           shell('sleep 180')
           shell('KUBECONFIG=/etc/kubernetes/admin.conf kubectl create -f /tmp/nginx.yml', :acceptable_exit_codes => [0]) do |r|
+<<<<<<< HEAD
             expect(r.stdout).to match(/namespace\/nginx created\ndeployment.apps\/my-nginx created\nservice\/my-nginx created\n/)
+=======
+            expect(r.stdout).to match(/namespace "nginx" created\ndeployment.apps "my-nginx" created\nservice "my-nginx" created\n/)
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
           end
         end
 

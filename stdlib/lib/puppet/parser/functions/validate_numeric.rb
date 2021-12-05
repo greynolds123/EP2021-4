@@ -6,12 +6,15 @@ module Puppet::Parser::Functions
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 =======
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
   newfunction(:validate_numeric, :doc => <<-'DOC') do |args|
     Validate that the first argument is a numeric value (or an array of numeric values). Abort catalog compilation if any of the checks fail.
 
@@ -26,6 +29,7 @@ module Puppet::Parser::Functions
     For passing and failing usage, see `validate_integer()`. It is all the same for validate_numeric, yet now floating point values are allowed, too.
 
     DOC
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,6 +59,9 @@ module Puppet::Parser::Functions
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     function_deprecation([:validate_numeric, 'This method is deprecated, please use the stdlib validate_legacy function,
                             with Stdlib::Compat::Numeric. There is further documentation for validate_legacy function in the README.'])
 

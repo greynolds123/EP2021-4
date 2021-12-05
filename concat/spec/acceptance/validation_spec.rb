@@ -5,6 +5,7 @@ require 'spec_helper_acceptance'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe 'concat validate_cmd parameter', :unless => (fact('kernel') != 'Linux') do
   basedir = default.tmpdir('concat')
   context '=> "/usr/bin/test -e %"' do
@@ -19,10 +20,13 @@ describe 'concat validate_cmd parameter', :unless => (fact('kernel') != 'Linux')
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 describe 'validation, concat validate_cmd parameter', if: ['debian', 'redhat', 'ubuntu'].include?(os[:family]) do
   before(:all) do
     @basedir = setup_test_directory
   end
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
@@ -30,6 +34,8 @@ describe 'validation, concat validate_cmd parameter', if: ['debian', 'redhat', '
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
 
   context 'with "/usr/bin/test -e %"' do
     let(:pp) do
@@ -44,6 +50,7 @@ describe 'validation, concat validate_cmd parameter', if: ['debian', 'redhat', '
       MANIFEST
     end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,10 +84,13 @@ describe 'validation, concat validate_cmd parameter', if: ['debian', 'redhat', '
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     it 'applies the manifest twice with no stderr' do
       idempotent_apply(pp)
       expect(file("#{@basedir}/file")).to be_file
       expect(file("#{@basedir}/file").content).to contain 'content'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,6 +104,8 @@ describe 'validation, concat validate_cmd parameter', if: ['debian', 'redhat', '
 >>>>>>> 5543a6b918d57f6620cb126b141fdd787103be97
 =======
 >>>>>>> fdbd39eef4bbf49d3b1c939e730df11545dc240e
+=======
+>>>>>>> d641f2a4d90b30f3fbe3cf853c4c9f86e0a3387b
     end
   end
 end
