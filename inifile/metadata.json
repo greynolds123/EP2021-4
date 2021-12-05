@@ -1,14 +1,19 @@
 {
   "name": "puppetlabs-inifile",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "4.0.0",
 =======
 <<<<<<< HEAD
-  "version": "3.0.0",
 =======
+>>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
+  "version": "3.0.0",
   "version": "4.0.0",
+<<<<<<< HEAD
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
   "author": "puppetlabs",
   "summary": "Resource types for managing settings in INI files",
   "license": "Apache-2.0",
@@ -19,14 +24,19 @@
     {
       "name": "puppetlabs/translate",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "version_requirement": ">= 1.0.0 < 3.0.0"
 =======
 <<<<<<< HEAD
-      "version_requirement": ">= 1.0.0 < 2.0.0"
 =======
+>>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
+      "version_requirement": ">= 1.0.0 < 2.0.0"
       "version_requirement": ">= 1.0.0 < 3.0.0"
+<<<<<<< HEAD
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
     }
   ],
   "data_provider": null,
@@ -37,16 +47,21 @@
         "5",
         "6",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "7",
         "8"
 =======
 <<<<<<< HEAD
-        "7"
 =======
+>>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
+        "7"
         "7",
         "8"
+<<<<<<< HEAD
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
       ]
     },
     {
@@ -85,21 +100,27 @@
       "operatingsystemrelease": [
         "8",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "9",
         "10"
 =======
 <<<<<<< HEAD
-        "9"
 =======
+>>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
+        "9"
         "9",
         "10"
+<<<<<<< HEAD
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -107,6 +128,9 @@
 =======
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+        "14.04",
+>>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
         "16.04",
         "18.04"
       ]
@@ -125,6 +149,7 @@
         "2012 R2",
         "2016",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "2019",
 =======
 <<<<<<< HEAD
@@ -132,6 +157,9 @@
         "2019",
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+        "2019",
+>>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
         "10"
       ]
     },
@@ -152,15 +180,20 @@
   ],
   "template-url": "https://github.com/puppetlabs/pdk-templates#master",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "template-ref": "heads/master-0-g0b5b39b",
   "pdk-version": "1.14.0"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
   "template-ref": "heads/master-0-gf778803",
   "pdk-version": "1.10.0"
-=======
   "template-ref": "heads/master-0-g0b5b39b",
   "pdk-version": "1.14.0"
+<<<<<<< HEAD
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
 }
