@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:delete_values, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Deletes all instances of a given value from a hash.
 
     *Examples:*
@@ -18,6 +21,7 @@ module Puppet::Parser::Functions
         $hash.filter |$key, $val| { $val != 'B' }
 
       DOC
+<<<<<<< HEAD
 =======
     @summary
       Deletes all instances of a given value from a hash.
@@ -36,6 +40,8 @@ module Puppet::Parser::Functions
     @return [Hash] The given hash now missing all instances of the targeted value
     DOC
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
              ) do |arguments|
 
     raise(Puppet::ParseError, "delete_values(): Wrong number of arguments given (#{arguments.size} of 2)") if arguments.size != 2

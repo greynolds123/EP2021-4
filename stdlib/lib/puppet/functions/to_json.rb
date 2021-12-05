@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Take a data structure and output it as JSON
 =======
 require 'json'
 # @summary
 #   Convert a data structure and output to JSON
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+# Take a data structure and output it as JSON
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 #
 # @example how to output JSON
 #   # output json to a file
@@ -14,16 +18,22 @@ require 'json'
 #     }
 #
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 #
 require 'json'
 
 Puppet::Functions.create_function(:to_json) do
+<<<<<<< HEAD
 =======
 Puppet::Functions.create_function(:to_json) do
   # @param data
   #   data structure which needs to be converted into JSON
   # @return converted data to json
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   dispatch :to_json do
     param 'Any', :data
   end

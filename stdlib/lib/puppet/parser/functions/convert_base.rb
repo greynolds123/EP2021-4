@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:convert_base, :type => :rvalue, :arity => 2, :doc => <<-'DOC') do |args|
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Converts a given integer or base 10 string representing an integer to a specified base, as a string.
 
     Usage:
@@ -16,6 +19,7 @@ module Puppet::Parser::Functions
        $binary_repr = String(5, '%b') # results in "101"
        $hex_repr = String(254, "%x")  # results in "fe"
        $hex_repr = String(254, "%#x")  # results in "0xfe"
+<<<<<<< HEAD
 =======
     @summary
       Converts a given integer or base 10 string representing an integer to a
@@ -40,6 +44,8 @@ module Puppet::Parser::Functions
 
       @return [String] The converted value as a String
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
 
     raise Puppet::ParseError, 'convert_base(): First argument must be either a string or an integer' unless args[0].is_a?(Integer) || args[0].is_a?(String)

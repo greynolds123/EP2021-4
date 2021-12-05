@@ -4,6 +4,7 @@
 module Puppet::Parser::Functions
   newfunction(:dig, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
     DEPRECATED: This function has been replaced in Puppet 4.5.0, please use dig44() for backwards compatibility or use the new version.
 =======
     @summary
@@ -50,6 +51,9 @@ module Puppet::Parser::Functions
       [`dig`](https://puppet.com/docs/puppet/latest/function.html#dig) function as of
       Puppet 4.5.0. Use [`dig44()`](#dig44) for backwards compatibility or use the new version.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+    DEPRECATED: This function has been replaced in Puppet 4.5.0, please use dig44() for backwards compatibility or use the new version.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
              ) do |arguments|
     warning('dig() DEPRECATED: This function has been replaced in Puppet 4.5.0, please use dig44() for backwards compatibility or use the new version.')

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Puppet::Functions.create_function(:validate_legacy) do
   # The function checks a value against both the target_type (new) and the previous_validation function (old).
 
@@ -17,6 +18,11 @@ Puppet::Functions.create_function(:validate_legacy) do
   # @return
   #   A boolean value (`true` or `false`) returned from the called function.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+Puppet::Functions.create_function(:validate_legacy) do
+  # The function checks a value against both the target_type (new) and the previous_validation function (old).
+
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   dispatch :validate_legacy do
     param 'Any', :scope
     param 'Type', :target_type
@@ -25,6 +31,7 @@ Puppet::Functions.create_function(:validate_legacy) do
     repeated_param 'Any', :args
   end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   # @param scope
@@ -36,6 +43,8 @@ Puppet::Functions.create_function(:validate_legacy) do
   # @return Legacy validation method
   #
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   dispatch :validate_legacy_s do
     param 'Any', :scope
     param 'String', :type_string

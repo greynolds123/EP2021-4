@@ -9,9 +9,12 @@
 # Caveats:
 #
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Fact: pe_version
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 Facter.add('pe_version') do
   setcode do
     puppet_ver = Facter.value('puppetversion')
@@ -25,9 +28,12 @@ Facter.add('pe_version') do
 end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Fact: is_pe
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 Facter.add('is_pe') do
   setcode do
     if Facter.value(:pe_version).to_s.empty?
@@ -39,9 +45,12 @@ Facter.add('is_pe') do
 end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Fact: pe_major_version
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 Facter.add('pe_major_version') do
   confine :is_pe => true
   setcode do
@@ -53,9 +62,12 @@ Facter.add('pe_major_version') do
 end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Fact: pe_minor_version
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 Facter.add('pe_minor_version') do
   confine :is_pe => true
   setcode do
@@ -67,9 +79,12 @@ Facter.add('pe_minor_version') do
 end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Fact: pe_patch_version
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 Facter.add('pe_patch_version') do
   confine :is_pe => true
   setcode do

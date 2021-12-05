@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:round, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Rounds a number to the nearest integer
 
     *Examples:*
@@ -18,6 +21,7 @@ module Puppet::Parser::Functions
 
     Note: from Puppet 6.0.0, the compatible function with the same name in Puppet core
     will be used instead of this function.
+<<<<<<< HEAD
 =======
     @summary
       Rounds a number to the nearest integer
@@ -34,6 +38,8 @@ module Puppet::Parser::Functions
     > *Note:* from Puppet 6.0.0, the compatible function with the same name in Puppet core
       will be used instead of this function.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   DOC
              ) do |args|
 

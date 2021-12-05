@@ -3,6 +3,9 @@
 #
 module Puppet::Parser::Functions
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   newfunction(:validate_re, :doc => <<-'DOC') do |args|
     Perform simple validation of a string against one or more regular
     expressions. The first argument of this function should be a string to
@@ -14,6 +17,7 @@ module Puppet::Parser::Functions
     If a third argument is specified, this will be the error message raised and
     seen by the user.
 
+<<<<<<< HEAD
 =======
   newfunction(:validate_re, :doc => <<-DOC
   @summary
@@ -33,6 +37,8 @@ module Puppet::Parser::Functions
 
   @example **Usage**
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     The following strings will validate against the regular expressions:
 
         validate_re('one', '^one$')
@@ -47,6 +53,9 @@ module Puppet::Parser::Functions
         validate_re($::puppetversion, '^2.7', 'The $puppetversion fact value does not match 2.7')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Note: Compilation will also abort, if the first argument is not a String. Always use
     quotes to force stringification:
 
@@ -54,6 +63,7 @@ module Puppet::Parser::Functions
 
     DOC
 
+<<<<<<< HEAD
 =======
   > *Note:*
   Compilation will also abort, if the first argument is not a String. Always use
@@ -62,6 +72,8 @@ module Puppet::Parser::Functions
    DOC
              ) do |args|
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     function_deprecation([:validate_re, 'This method is deprecated, please use the stdlib validate_legacy function,
                             with Stdlib::Compat::Re. There is further documentation for validate_legacy function in the README.'])
 

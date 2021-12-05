@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # A Facter plugin that loads facts from /etc/facter/facts.d
 # and /etc/puppetlabs/facter/facts.d.
 =======
@@ -6,6 +7,10 @@
 #   A Facter plugin that loads facts from /etc/facter/facts.d
 #   and /etc/puppetlabs/facter/facts.d.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+# A Facter plugin that loads facts from /etc/facter/facts.d
+# and /etc/puppetlabs/facter/facts.d.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 #
 # Facts can be in the form of JSON, YAML or Text files
 # and any executable that returns key=value pairs.
@@ -20,10 +25,14 @@
 class Facter::Util::DotD
   require 'yaml'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   # These will be nil if Puppet is not available.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def initialize(dir = '/etc/facts.d', cache_file = File.join(Puppet[:libdir], 'facts_dot_d.cache'))
     @dir = dir
     @cache_file = cache_file
@@ -32,9 +41,12 @@ class Facter::Util::DotD
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   # entries
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def entries
     Dir.entries(@dir).reject { |f| f =~ %r{^\.|\.ttl$} }.sort.map { |f| File.join(@dir, f) }
   rescue
@@ -42,10 +54,13 @@ class Facter::Util::DotD
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   # fact_type
   # @param file
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def fact_type(file)
     extension = File.extname(file)
 
@@ -57,10 +72,13 @@ class Facter::Util::DotD
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   # txt_parser
   # @param file
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def txt_parser(file)
     File.readlines(file).each do |line|
       next unless line =~ %r{^([^=]+)=(.+)$}
@@ -76,10 +94,13 @@ class Facter::Util::DotD
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   # json_parser
   # @param file
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def json_parser(file)
     begin
       require 'json'
@@ -98,10 +119,13 @@ class Facter::Util::DotD
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   # yaml_parser
   # @param file
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def yaml_parser(file)
     require 'yaml'
 
@@ -115,10 +139,13 @@ class Facter::Util::DotD
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   # script_parser
   # @param file
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def script_parser(file)
     result = cache_lookup(file)
     ttl = cache_time(file)
@@ -150,9 +177,12 @@ class Facter::Util::DotD
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   # cache_save
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def cache_save!
     cache = load_cache
     File.open(@cache_file, 'w', 0o600) { |f| f.write(YAML.dump(cache)) }
@@ -160,10 +190,13 @@ class Facter::Util::DotD
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   # cache_store
   # @param file
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def cache_store(file, data)
     load_cache
 
@@ -172,10 +205,13 @@ class Facter::Util::DotD
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   # cache_lookup
   # @param file
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def cache_lookup(file)
     cache = load_cache
 
@@ -194,10 +230,13 @@ class Facter::Util::DotD
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   # cache_time
   # @param file
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def cache_time(file)
     meta = file + '.ttl'
 
@@ -207,9 +246,12 @@ class Facter::Util::DotD
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   # load_cache
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def load_cache
     @cache ||= if File.exist?(@cache_file)
                  YAML.load_file(@cache_file)
@@ -224,9 +266,12 @@ class Facter::Util::DotD
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   # create
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def create
     entries.each do |fact|
       type = fact_type(fact)

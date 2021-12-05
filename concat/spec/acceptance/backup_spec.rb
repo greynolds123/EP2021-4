@@ -3,66 +3,56 @@ require 'spec_helper_acceptance'
 describe 'concat backup parameter' do
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   basedir = default.tmpdir('concat')
   context '=> puppet' do
     before(:all) do
       pp = <<-EOS
         file { '#{basedir}':
           ensure => directory,
+=======
+  before(:all) do
+    @basedir = setup_test_directory
+  end
+
+  describe 'when puppet' do
+    let(:pp) do
+      <<-MANIFEST
+        concat { '#{@basedir}/file':
+          backup => 'puppet',
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
         }
-        file { '#{basedir}/file':
-          content => "old contents\n",
+        concat::fragment { 'new file':
+          target  => '#{@basedir}/file',
+          content => 'new contents',
         }
-      EOS
-      apply_manifest(pp)
+      MANIFEST
     end
-    pp = <<-EOS
-      concat { '#{basedir}/file':
-        backup => 'puppet',
-      }
-      concat::fragment { 'new file':
-        target  => '#{basedir}/file',
-        content => 'new contents',
-      }
-    EOS
 
     it 'applies the manifest twice with "Filebucketed" stdout and no stderr' do
-      apply_manifest(pp, :catch_failures => true) do |r|
-        expect(r.stdout).to match(/Filebucketed #{basedir}\/file to puppet with sum 0140c31db86293a1a1e080ce9b91305f/)
-      end
-      apply_manifest(pp, :catch_changes => true)
-    end
-
-    describe file("#{basedir}/file") do
-      it { should be_file }
-      its(:content) { should match /new contents/ }
+      expect(apply_manifest(pp, catch_failures: true, debug: true).stdout).to match(%r{Filebucketed.*to puppet with sum.*})
+      apply_manifest(pp, catch_changes: true)
+      expect(file("#{@basedir}/file")).to be_file
+      expect(file("#{@basedir}/file").content).to match %r{new contents}
     end
   end
 
-  context '=> .backup' do
-    before(:all) do
-      pp = <<-EOS
-        file { '#{basedir}':
-          ensure => directory,
-        }
-        file { '#{basedir}/file':
-          content => "old contents\n",
-        }
-      EOS
-      apply_manifest(pp)
-    end
-    pp = <<-EOS
-      concat { '#{basedir}/file':
+  describe 'when .backup' do
+    let(:pp) do
+      <<-MANIFEST
+      concat { '#{@basedir}/file':
         backup => '.backup',
       }
       concat::fragment { 'new file':
-        target  => '#{basedir}/file',
-        content => 'new contents',
+        target  => '#{@basedir}/file',
+        content => 'backup extension',
       }
-    EOS
+      MANIFEST
+    end
 
     # XXX Puppet doesn't mention anything about filebucketing with a given
     # extension like .backup
+<<<<<<< HEAD
     it 'applies the manifest twice  no stderr' do
       apply_manifest(pp, :catch_failures => true)
       apply_manifest(pp, :catch_changes => true)
@@ -118,6 +108,8 @@ describe 'concat backup parameter' do
 
     # XXX Puppet doesn't mention anything about filebucketing with a given
     # extension like .backup
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     it 'applies the manifest twice no stderr' do
       idempotent_apply(pp)
       expect(file("#{@basedir}/file")).to be_file
@@ -125,14 +117,18 @@ describe 'concat backup parameter' do
       expect(file("#{@basedir}/file.backup")).to be_file
       expect(file("#{@basedir}/file.backup").content).to match %r{new contents}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     end
   end
 
   # XXX The backup parameter uses validate_string() and thus can't be the
   # boolean false value, but the string 'false' has the same effect in Puppet 3
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   context "=> 'false'" do
@@ -149,18 +145,26 @@ describe 'concat backup parameter' do
     end
     pp = <<-EOS
       concat { '#{basedir}/file':
+=======
+  describe "when 'false'" do
+    let(:pp) do
+      <<-MANIFEST
+      concat { '#{@basedir}/file':
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
         backup => '.backup',
       }
       concat::fragment { 'new file':
-        target  => '#{basedir}/file',
+        target  => '#{@basedir}/file',
         content => 'new contents',
       }
-    EOS
+    MANIFEST
+    end
 
     it 'applies the manifest twice with no "Filebucketed" stdout and no stderr' do
-      apply_manifest(pp, :catch_failures => true) do |r|
-        expect(r.stdout).to_not match(/Filebucketed/)
+      apply_manifest(pp, catch_failures: true) do |r|
+        expect(r.stdout).not_to match(%r{Filebucketed})
       end
+<<<<<<< HEAD
       apply_manifest(pp, :catch_changes => true)
     end
 
@@ -194,6 +198,11 @@ describe 'concat backup parameter' do
 >>>>>>> 358c2d5599e3b70bbdd5e12ad751d558ed2fc6b8
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+      apply_manifest(pp, catch_changes: true)
+      expect(file("#{@basedir}/file")).to be_file
+      expect(file("#{@basedir}/file").content).to match %r{new contents}
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     end
   end
 end

@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:bool2num, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Converts a boolean to a number. Converts the values:
       false, f, 0, n, and no to 0
       true, t, 1, y, and yes to 1
@@ -18,6 +21,7 @@ module Puppet::Parser::Functions
 
         notice(Integer(false)) # Notices 0
         notice(Float(true))    # Notices 1.0
+<<<<<<< HEAD
 =======
     @summary
       Converts a boolean to a number.
@@ -43,6 +47,8 @@ module Puppet::Parser::Functions
 
     @return [Integer] The converted value as a number
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
              ) do |arguments|
 

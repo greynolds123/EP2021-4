@@ -6,6 +6,7 @@ class pipelines::agent::windows {
 
   if ! $pipelines::agent::install_dir {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $install_dir = "${env['ProgramFiles']}\\Distelli"
 =======
 <<<<<<< HEAD
@@ -14,6 +15,9 @@ class pipelines::agent::windows {
     $install_dir = "${env['ProgramFiles']}\\Distelli"
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+    $install_dir = "${env['ProgramFiles']}\\Distelli"
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   } else {
     $install_dir = $pipelines::agent::install_dir
   }
@@ -25,6 +29,7 @@ class pipelines::agent::windows {
   }
   $download_location = "${install_dir}\\distelli-download.ps1"
 <<<<<<< HEAD
+<<<<<<< HEAD
   $agent_conf_file = "${env['SystemDrive']}\\distelli.yml"
 =======
 <<<<<<< HEAD
@@ -33,6 +38,9 @@ class pipelines::agent::windows {
   $agent_conf_file = "${env['SystemDrive']}\\distelli.yml"
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+  $agent_conf_file = "${env['SystemDrive']}\\distelli.yml"
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
   exec { "mkdir ${install_dir}":
     command => "cmd.exe /c \"md \"${install_dir}\"\"",

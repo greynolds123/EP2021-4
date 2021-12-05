@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:any2array, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     This converts any object to an array containing that object. Empty argument
     lists are converted to an empty array. Arrays are left untouched. Hashes are
     converted to arrays of alternating keys and values.
@@ -15,6 +18,7 @@ module Puppet::Parser::Functions
 
         $hsh = {'key' => 42, 'another-key' => 100}
         notice(Array($hsh))
+<<<<<<< HEAD
 =======
     @summary
       This converts any object to an array containing that object.
@@ -33,16 +37,22 @@ module Puppet::Parser::Functions
       notice(Array($hsh))
       ```
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
     Would notice `[['key', 42], ['another-key', 100]]`
 
     The Array data type also has a special mode to "create an array if not already an array"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
         notice(Array({'key' => 42, 'another-key' => 100}, true))
 
     Would notice `[{'key' => 42, 'another-key' => 100}]`, as the `true` flag prevents the hash from being
     transformed into an array.
+<<<<<<< HEAD
 =======
       ```
       notice(Array({'key' => 42, 'another-key' => 100}, true))
@@ -53,6 +63,8 @@ module Puppet::Parser::Functions
 
     @return [Array] The new array containing the given object
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   DOC
              ) do |arguments|
 

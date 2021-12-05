@@ -5,6 +5,9 @@
 module Puppet::Parser::Functions
   newfunction(:delete_regex, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     deletes all instances of a given element that match a regular expression
     from an array or key from a hash. Multiple regular expressions are assumed
     to be matched as an OR.
@@ -29,6 +32,7 @@ module Puppet::Parser::Functions
         # Would return: ['aaa', 'aca']
 
 
+<<<<<<< HEAD
 =======
     @summary
       Deletes all instances of a given element that match a regular expression
@@ -58,6 +62,8 @@ module Puppet::Parser::Functions
 
     @return [Array] The given array now missing all targeted values.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   DOC
              ) do |arguments|
 

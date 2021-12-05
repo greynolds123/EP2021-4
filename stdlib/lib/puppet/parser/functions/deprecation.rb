@@ -4,6 +4,7 @@
 module Puppet::Parser::Functions
   newfunction(:deprecation, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
   Function to print deprecation warnings (this is the 3.X version of it), The uniqueness key - can appear once. The msg is the message text including any positional information that is formatted by the user/caller of the method.).
 =======
   @summary
@@ -15,6 +16,9 @@ module Puppet::Parser::Functions
   @return [String]
     return deprecation warnings
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+  Function to print deprecation warnings (this is the 3.X version of it), The uniqueness key - can appear once. The msg is the message text including any positional information that is formatted by the user/caller of the method.).
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 DOC
              ) do |arguments|
 

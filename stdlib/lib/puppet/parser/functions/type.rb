@@ -4,6 +4,7 @@
 module Puppet::Parser::Functions
   newfunction(:type, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
     DEPRECATED: This function will cease to function on Puppet 4; please use type3x() before upgrading to Puppet 4 for backwards-compatibility, or migrate to the new parser's typing system.
 =======
     @summary
@@ -19,6 +20,9 @@ module Puppet::Parser::Functions
     * integer
     * boolean
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+    DEPRECATED: This function will cease to function on Puppet 4; please use type3x() before upgrading to Puppet 4 for backwards-compatibility, or migrate to the new parser's typing system.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   DOC
              ) do |args|
 

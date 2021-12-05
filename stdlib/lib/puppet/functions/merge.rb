@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 # Merges two or more hashes together or hashes resulting from iteration, and returns the resulting hash.
 #
 # @example Using merge()
@@ -10,6 +13,7 @@
 #   $merged_hash = merge($hash1, $hash2)
 #   # The resulting hash is equivalent to:
 #   # $merged_hash =  {'one' => 1, 'two' => 'dos', 'three' => 'tres'}
+<<<<<<< HEAD
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 # @summary
@@ -24,10 +28,13 @@
 =======
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 #
 # When there is a duplicate key, the key in the rightmost hash will "win."
 #
 # Note that since Puppet 4.0.0 the same merge can be achieved with the + operator.
+<<<<<<< HEAD
 <<<<<<< HEAD
 #  `$merged_hash = $hash1 + $hash2`
 =======
@@ -38,6 +45,10 @@
 #  `$merged_hash = $hash1 + $hash2`
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+#
+#    $merged_hash = $hash1 + $hash2
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 #
 # If merge is given a single Iterable (Array, Hash, etc.) it will call a given block with
 # up to three parameters, and merge each resulting Hash into the accumulated result. All other types
@@ -52,8 +63,11 @@
 #
 # @example counting occurrences of strings in an array
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 #   ['a', 'b', 'c', 'c', 'd', 'b'].merge | $hsh, $v | { { $v => $hsh[$v].lest || { 0 } + 1 } }
 #   # would result in { a => 1, b => 2, c => 2, d => 1 }
 #
@@ -65,6 +79,7 @@
 # does not have to be copied in each iteration and thus will perform much better with large inputs.
 #
 Puppet::Functions.create_function(:merge) do
+<<<<<<< HEAD
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 #   ['a', 'b', 'c', 'c', 'd', 'b'].merge | $hsh, $v | { { $v => $hsh[$v].lest || { 0 } + 1 } } # results in { a => 1, b => 2, c => 2, d => 1 }
@@ -84,11 +99,14 @@ Puppet::Functions.create_function(:merge) do
 =======
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   dispatch :merge2hashes do
     repeated_param 'Variant[Hash, Undef, String[0,0]]', :args # this strange type is backwards compatible
     return_type 'Hash'
   end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -106,6 +124,8 @@ Puppet::Functions.create_function(:merge) do
 =======
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   dispatch :merge_iterable3 do
     repeated_param 'Iterable', :args
     block_param 'Callable[3,3]', :block
@@ -113,6 +133,7 @@ Puppet::Functions.create_function(:merge) do
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -129,6 +150,8 @@ Puppet::Functions.create_function(:merge) do
 =======
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   dispatch :merge_iterable2 do
     repeated_param 'Iterable', :args
     block_param 'Callable[2,2]', :block

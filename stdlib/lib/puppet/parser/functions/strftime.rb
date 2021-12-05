@@ -5,6 +5,9 @@
 module Puppet::Parser::Functions
   newfunction(:strftime, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     This function returns formatted time.
 
     Note that since Puppet 4.8.0 the function with the same name in Puppet will be used instead of this
@@ -21,6 +24,7 @@ module Puppet::Parser::Functions
         strftime("%Y-%m-%d")
 
     *Format meaning:*
+<<<<<<< HEAD
 =======
     @summary
       This function returns formatted time.
@@ -38,6 +42,8 @@ module Puppet::Parser::Functions
 
     **Format meaning:**
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
         %a - The abbreviated weekday name (``Sun'')
         %A - The  full  weekday  name (``Sunday'')

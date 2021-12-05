@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 # Digs into the facts hash using dot-notation
 #
 # Example usage:
@@ -15,6 +18,7 @@
 #     fact('vmware."VRA.version"')
 #
 Puppet::Functions.create_function(:fact) do
+<<<<<<< HEAD
 =======
 # @summary
 #   Digs into the facts hash using dot-notation
@@ -39,6 +43,8 @@ Puppet::Functions.create_function(:fact) do
   # @return
   #   All information retrieved on the given fact_name
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   dispatch :fact do
     param 'String', :fact_name
   end

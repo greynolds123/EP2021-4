@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:count, :type => :rvalue, :arity => -2, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Takes an array as first argument and an optional second argument.
     Count the number of elements in array that is equal to the second argument.
     If called with only an array, it counts the number of elements that are not nil/undef/empty-string.
@@ -19,6 +22,7 @@ module Puppet::Parser::Functions
 
     Would notice the value 2.
 
+<<<<<<< HEAD
 =======
     @summary
       Counts the number of elements in array.
@@ -41,6 +45,8 @@ module Puppet::Parser::Functions
 
     @return [Integer] The amount of elements counted within the array
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   DOC
              ) do |args|
 

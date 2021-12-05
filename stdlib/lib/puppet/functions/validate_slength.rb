@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Puppet::Functions.create_function(:validate_slength) do
 =======
 #  Validate that a passed string has length less/equal with the passed value
@@ -12,6 +13,9 @@ Puppet::Functions.create_function(:validate_slength) do
   # @return [Boolean] `true` or `false`
   #   A boolean value returned from the called function.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+Puppet::Functions.create_function(:validate_slength) do
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   dispatch :deprecation_gen do
     param 'Any', :scope
     repeated_param 'Any', :args

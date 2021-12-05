@@ -35,6 +35,7 @@ environment:
       RUBY_VERSION: 25-x64
       CHECK: parallel_spec
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     -
       RUBY_VERSION: 25-x64
@@ -58,6 +59,8 @@ for:
      - bundle exec rake spec_prep
      - bundle exec rake litmus:acceptance:localhost
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 matrix:
   fast_finish: true
 install:

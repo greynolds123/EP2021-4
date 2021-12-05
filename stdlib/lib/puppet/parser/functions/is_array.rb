@@ -4,6 +4,7 @@
 module Puppet::Parser::Functions
   newfunction(:is_array, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns true if the variable passed to this function is an array.
 =======
     @summary
@@ -15,6 +16,9 @@ module Puppet::Parser::Functions
     > **Note:* **Deprecated** Will be removed in a future version of stdlib. See
     [`validate_legacy`](#validate_legacy).
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+    Returns true if the variable passed to this function is an array.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
              ) do |arguments|
 

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # frozen_string_literal: true
 
 require 'serverspec'
@@ -163,4 +164,28 @@ else
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
   end
+=======
+require 'beaker-rspec/spec_helper'
+require 'beaker-rspec/helpers/serverspec'
+require 'beaker/puppet_install_helper'
+
+run_puppet_install_helper
+
+RSpec.configure do |c|
+  # Project root
+  proj_root = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+
+  # Readable test descriptions
+  c.formatter = :documentation
+
+  # Configure all nodes in nodeset
+  c.before :suite do
+    # Install module and dependencies
+    hosts.each do |host|
+      copy_root_module_to(host, :source => proj_root, :module_name => 'inifile')
+    end
+  end
+
+  c.treat_symbols_as_metadata_keys_with_true_values = true
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 end

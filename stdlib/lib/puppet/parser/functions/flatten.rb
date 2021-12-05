@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:flatten, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     This function flattens any deeply nested arrays and returns a single flat array
     as a result.
 
@@ -15,6 +18,7 @@ module Puppet::Parser::Functions
 
     Note: from Puppet 5.5.0, the compatible function with the same name in Puppet core
     will be used instead of this function.
+<<<<<<< HEAD
 =======
     @summary
       This function flattens any deeply nested arrays and returns a single flat array
@@ -30,6 +34,8 @@ module Puppet::Parser::Functions
     > **Note:** **Deprecated** from Puppet 5.5.0, this function has been replaced with a
     built-in [`flatten`](https://puppet.com/docs/puppet/latest/function.html#flatten) function.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   DOC
              ) do |arguments|
 

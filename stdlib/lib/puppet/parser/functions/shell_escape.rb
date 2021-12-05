@@ -5,6 +5,7 @@ require 'shellwords'
 module Puppet::Parser::Functions
   newfunction(:shell_escape, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
     Escapes a string so that it can be safely used in a Bourne shell command line.
 
     Note that the resulting string should be used unquoted and is not intended for use in double quotes nor in single
@@ -17,6 +18,11 @@ module Puppet::Parser::Functions
 
     >* Note:* that the resulting string should be used unquoted and is not intended for use in double quotes nor in single
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+    Escapes a string so that it can be safely used in a Bourne shell command line.
+
+    Note that the resulting string should be used unquoted and is not intended for use in double quotes nor in single
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     quotes.
 
     This function behaves the same as ruby's Shellwords.shellescape() function.

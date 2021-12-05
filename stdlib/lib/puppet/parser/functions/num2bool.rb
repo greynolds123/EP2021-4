@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:num2bool, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     This function converts a number or a string representation of a number into a
     true boolean. Zero or anything non-numeric becomes false. Numbers higher then 0
     become true.
@@ -13,6 +16,7 @@ module Puppet::Parser::Functions
 
         Boolean(0) # false
         Boolean(1) # true
+<<<<<<< HEAD
 =======
     @summary
       This function converts a number or a string representation of a number into a
@@ -25,6 +29,8 @@ module Puppet::Parser::Functions
         Boolean(0) # false for any zero or negative number
         Boolean(1) # true for any positive number
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
              ) do |arguments|
 

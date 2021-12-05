@@ -3,6 +3,9 @@
 #
 module Puppet::Parser::Functions
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   newfunction(:validate_array, :doc => <<-'DOC') do |args|
     Validate that all passed values are array data structures. Abort catalog
     compilation if any value fails this check.
@@ -20,6 +23,7 @@ module Puppet::Parser::Functions
         validate_array($undefined)
 
     DOC
+<<<<<<< HEAD
 =======
   newfunction(:validate_array, :doc => <<-DOC) do |args|
     @summary
@@ -43,6 +47,8 @@ module Puppet::Parser::Functions
           validate_array($undefined)
       DOC
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
     function_deprecation([:validate_array, 'This method is deprecated, please use the stdlib validate_legacy function,
       with Stdlib::Compat::Array. There is further documentation for validate_legacy function in the README.'])

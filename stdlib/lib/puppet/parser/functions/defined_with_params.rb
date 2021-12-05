@@ -4,6 +4,9 @@ require 'puppet/parser/functions'
 Puppet::Parser::Functions.newfunction(:defined_with_params,
                                       :type => :rvalue,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
                                       :doc => <<-'DOC'
     Takes a resource reference and an optional hash of attributes.
 
@@ -17,6 +20,7 @@ Puppet::Parser::Functions.newfunction(:defined_with_params,
         if ! defined_with_params(User[dan], {'ensure' => 'present' }) {
           user { 'dan': ensure => present, }
         }
+<<<<<<< HEAD
 =======
                                       :doc => <<-DOC
     @summary
@@ -38,6 +42,8 @@ Puppet::Parser::Functions.newfunction(:defined_with_params,
     @return [Boolean]
       returns `true` or `false`
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 DOC
                                      ) do |vals|
   reference, params = vals

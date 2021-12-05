@@ -1,14 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #  Please note: This function is an implementation of a Ruby class and as such may not be entirely UTF8 compatible. To ensure compatibility please use this function with Ruby 2.4.0 or greater - https://bugs.ruby-lang.org/issues/10085.
 =======
 #  Please note: This function is an implementation of a Ruby class and as such may not be entirely UTF8 compatible.
 #  To ensure compatibility please use this function with Ruby 2.4.0 or greater - https://bugs.ruby-lang.org/issues/10085.
 #
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+#  Please note: This function is an implementation of a Ruby class and as such may not be entirely UTF8 compatible. To ensure compatibility please use this function with Ruby 2.4.0 or greater - https://bugs.ruby-lang.org/issues/10085.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 Puppet::Parser::Functions.newfunction(
   :pw_hash,
   :type => :rvalue,
   :arity => 3,
+<<<<<<< HEAD
 <<<<<<< HEAD
   :doc => "Hashes a password using the crypt function. Provides a hash
   usable on most POSIX systems.
@@ -18,6 +23,10 @@ Puppet::Parser::Functions.newfunction(
     Hashes a password using the crypt function. Provides a hash usable
     on most POSIX systems.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+  :doc => "Hashes a password using the crypt function. Provides a hash
+  usable on most POSIX systems.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
   The first argument to this function is the password to hash. If it is
   undef or an empty string, this function returns undef.
@@ -35,6 +44,7 @@ Puppet::Parser::Functions.newfunction(
   The third argument to this function is the salt to use.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   Note: this uses the Puppet Master's implementation of crypt(3). If your
   environment contains several different operating systems, ensure that they
   are compatible before using this function.",
@@ -47,6 +57,11 @@ Puppet::Parser::Functions.newfunction(
     are compatible before using this function.
   DOC
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+  Note: this uses the Puppet Master's implementation of crypt(3). If your
+  environment contains several different operating systems, ensure that they
+  are compatible before using this function.",
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 ) do |args|
   raise ArgumentError, "pw_hash(): wrong number of arguments (#{args.size} for 3)" if args.size != 3
   args.map! do |arg|

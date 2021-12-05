@@ -3,6 +3,7 @@
 #
 module Puppet::Parser::Functions
 <<<<<<< HEAD
+<<<<<<< HEAD
   newfunction(:glob, :type => :rvalue, :doc => <<-'DOC'
     Returns an Array of file entries of a directory or an Array of directories.
     Uses same patterns as Dir#glob
@@ -17,6 +18,11 @@ module Puppet::Parser::Functions
     @example Example Usage:
       $confs = glob(['/etc/**/*.conf', '/opt/**/*.conf'])
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+  newfunction(:glob, :type => :rvalue, :doc => <<-'DOC'
+    Returns an Array of file entries of a directory or an Array of directories.
+    Uses same patterns as Dir#glob
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
              ) do |arguments|
 

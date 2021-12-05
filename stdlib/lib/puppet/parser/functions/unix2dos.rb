@@ -2,6 +2,7 @@
 module Puppet::Parser::Functions
   newfunction(:unix2dos, :type => :rvalue, :arity => 1, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns the DOS version of the given string.
 =======
     @summary
@@ -11,6 +12,9 @@ module Puppet::Parser::Functions
       the DOS version of the given string.
 
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+    Returns the DOS version of the given string.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Takes a single string argument.
     DOC
              ) do |arguments|

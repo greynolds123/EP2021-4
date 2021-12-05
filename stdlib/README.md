@@ -3,6 +3,9 @@
 #### Table of Contents
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 1. [Module Description - What the module does and why it is useful](#module-description)
 1. [Setup - The basics of getting started with stdlib](#setup)
 1. [Usage - Configuration options and additional functionality](#usage)
@@ -20,6 +23,7 @@
 ## Module Description
 
 This module provides a standard library of resources for Puppet modules. Puppet modules make heavy use of this standard library. The stdlib module adds the following resources to Puppet:
+<<<<<<< HEAD
 =======
 1. [Overview](#overview)
 1. [Module Description](#module-description)
@@ -40,6 +44,8 @@ This module provides a standard library of resources for Puppet modules.
 
 Puppet modules make heavy use of this standard library. The stdlib module adds the following resources to Puppet:
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
  * Stages
  * Facts
@@ -51,13 +57,18 @@ Puppet modules make heavy use of this standard library. The stdlib module adds t
 > *Note:* As of version 3.7, Puppet Enterprise no longer includes the stdlib module. If you're running Puppet Enterprise, you should install the most recent release of stdlib for compatibility with Puppet modules.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <a id="setup"></a>
 =======
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+<a id="setup"></a>
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 ## Setup
 
 [Install](https://puppet.com/docs/puppet/latest/modules_installing.html) the stdlib module to add the functions, facts, and resources of this standard library to Puppet.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 If you are authoring a module that depends on stdlib, be sure to [specify dependencies](https://puppet.com/docs/puppet/latest/modules_metadata.html#specifying-dependencies-in-modules) in your metadata.json.
 
@@ -66,6 +77,11 @@ If you are authoring a module that depends on stdlib, be sure to [specify depend
 If you are authoring a module that depends on stdlib, be sure to [specify dependencies](https://puppet.com/docs/puppet/latest/modules_installing.html) in your metadata.json.
 
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+If you are authoring a module that depends on stdlib, be sure to [specify dependencies](https://puppet.com/docs/puppet/latest/modules_metadata.html#specifying-dependencies-in-modules) in your metadata.json.
+
+<a id="usage"></a>
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 ## Usage
 
 Most of stdlib's features are automatically loaded by Puppet. To use standardized run stages in Puppet, declare this class in your manifest with `include stdlib`.
@@ -93,6 +109,9 @@ node default {
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 <a id="reference"></a>
 ## Reference
 
@@ -307,11 +326,14 @@ Default value: `true`.
 Replaces all lines matched by `match` parameter, even if `line` already exists in the file.
 
 Default value: `false`.
+<<<<<<< HEAD
 =======
 ## Reference
 
 For information on the classes and types, see the [REFERENCE.md](https://github.com/puppetlabs/puppetlabs-stdlib/blob/master/REFERENCE.md).
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
 <a id="data-types"></a>
 ### Data types
@@ -706,6 +728,9 @@ Match an IPv6 address in the CIDR format. It will only match if the address cont
 but not 'FF01:0:0:0:0:0:0:101', 'FF01::101', '::').
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 <a id="facts"></a>
 ### Facts
 
@@ -3198,6 +3223,7 @@ A negative value is taken to be "from the end" of the array, for example:
 Takes one element from first array given and merges corresponding elements from second array given. This generates a sequence of n-element arrays, where *n* is one more than the count of arguments. For example, `zip(['1','2','3'],['4','5','6'])` results in ["1", "4"], ["2", "5"], ["3", "6"]. *Type*: rvalue.
 
 <a id="limitations"></a>
+<<<<<<< HEAD
 =======
 #### `Stdlib::ObjectStore`
 
@@ -3298,6 +3324,8 @@ Determines the root home directory, which depends on your operating system. Gene
 Returns the default provider Puppet uses to manage services on this system
 
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 ## Limitations
 
 As of Puppet Enterprise 3.7, the stdlib module is no longer included in PE. PE users should install the most recent release of stdlib for compatibility with Puppet modules.
@@ -3305,23 +3333,33 @@ As of Puppet Enterprise 3.7, the stdlib module is no longer included in PE. PE u
 For an extensive list of supported operating systems, see [metadata.json](https://github.com/puppetlabs/puppetlabs-stdlib/blob/master/metadata.json)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 <a id="development"></a>
 ## Development
 
 Puppet modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great. We can’t access the huge number of platforms and myriad hardware, software, and deployment configurations that Puppet is intended to serve. We want to keep it as easy as possible to contribute changes so that our modules work in your environment. There are a few guidelines that we need contributors to follow so that we can have a chance of keeping on top of things. For more information, see our [module contribution guide](https://docs.puppet.com/forge/contributing.html).
+<<<<<<< HEAD
 =======
 ## Development
 
 Puppet modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great. We can’t access the huge number of platforms and myriad hardware, software, and deployment configurations that Puppet is intended to serve. We want to keep it as easy as possible to contribute changes so that our modules work in your environment. There are a few guidelines that we need contributors to follow so that we can have a chance of keeping on top of things. For more information, see our [module contribution guide](https://github.com/puppetlabs/puppetlabs-stdlib/blob/master/CONTRIBUTING.md).
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
 To report or research a bug with any part of this module, please go to
 [http://tickets.puppetlabs.com/browse/MODULES](http://tickets.puppetlabs.com/browse/MODULES).
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <a id="contributors"></a>
 =======
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+<a id="contributors"></a>
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 ## Contributors
 
 The list of contributors can be found at: [https://github.com/puppetlabs/puppetlabs-stdlib/graphs/contributors](https://github.com/puppetlabs/puppetlabs-stdlib/graphs/contributors).

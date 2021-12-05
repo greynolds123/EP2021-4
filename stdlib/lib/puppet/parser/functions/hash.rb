@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:hash, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     This function converts an array into a hash.
 
     *Examples:*
@@ -18,6 +21,7 @@ module Puppet::Parser::Functions
 
         Hash(['a',1,'b',2,'c',3])
         Hash([['a',1],['b',2],['c',3]])
+<<<<<<< HEAD
 =======
     @summary
       **Deprecated:** This function converts an array into a hash.
@@ -36,6 +40,8 @@ module Puppet::Parser::Functions
       Hash([['a',1],['b',2],['c',3]])
       ```
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
              ) do |arguments|
 

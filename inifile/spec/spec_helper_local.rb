@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 if ENV['COVERAGE'] == 'yes'
   require 'simplecov'
   require 'simplecov-console'
@@ -25,4 +26,8 @@ if ENV['COVERAGE'] == 'yes'
       system("git check-ignore --quiet #{f.filename}")
     end
   end
+=======
+RSpec.configure do |config|
+  config.mock_with :rspec
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 end

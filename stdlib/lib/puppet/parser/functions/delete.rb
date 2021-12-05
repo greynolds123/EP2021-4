@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:delete, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Deletes all instances of a given element from an array, substring from a
     string, or key from a hash.
 
@@ -36,6 +39,7 @@ module Puppet::Parser::Functions
 
     In general, the filter() function can filter out entries from arrays and hashes based on keys and/or values.
 
+<<<<<<< HEAD
 =======
     @summary
       Deletes all instances of a given element from an array, substring from a
@@ -79,6 +83,8 @@ module Puppet::Parser::Functions
     @return [Hash] The filtered Hash, if one was given.
     @return [Array] The filtered Array, if one was given.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   DOC
              ) do |arguments|
 

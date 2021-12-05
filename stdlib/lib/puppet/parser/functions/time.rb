@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:time, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     This function will return the current time since epoch as an integer.
 
     *Examples:*
@@ -17,6 +20,7 @@ module Puppet::Parser::Functions
     any arguments:
 
         Timestamp()
+<<<<<<< HEAD
 =======
     @summary
       This function will return the current time since epoch as an integer.
@@ -35,6 +39,8 @@ module Puppet::Parser::Functions
 
     ```Timestamp()```
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
     DOC
              ) do |arguments|

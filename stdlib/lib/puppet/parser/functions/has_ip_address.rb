@@ -4,6 +4,7 @@
 module Puppet::Parser::Functions
   newfunction(:has_ip_address, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns true if the client has the requested IP address on some interface.
 =======
     @summary
@@ -12,6 +13,9 @@ module Puppet::Parser::Functions
     @return [Boolean]
       `true` or `false`
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+    Returns true if the client has the requested IP address on some interface.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
     This function iterates through the 'interfaces' fact and checks the
     'ipaddress_IFACE' facts, performing a simple string comparison.

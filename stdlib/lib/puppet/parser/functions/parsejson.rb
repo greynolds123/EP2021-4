@@ -4,11 +4,15 @@
 module Puppet::Parser::Functions
   newfunction(:parsejson, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     This function accepts JSON as a string and converts it into the correct
     Puppet structure.
 
     The optional second argument can be used to pass a default value that will
     be returned if the parsing of YAML string have failed.
+<<<<<<< HEAD
 =======
     @summary
       This function accepts JSON as a string and converts it into the correct
@@ -21,6 +25,8 @@ module Puppet::Parser::Functions
       The optional second argument can be used to pass a default value that will
       be returned if the parsing of YAML string have failed.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   DOC
              ) do |arguments|
     raise ArgumentError, 'Wrong number of arguments. 1 or 2 arguments should be provided.' unless arguments.length >= 1

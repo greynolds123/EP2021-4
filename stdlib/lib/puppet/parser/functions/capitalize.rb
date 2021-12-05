@@ -5,11 +5,15 @@
 module Puppet::Parser::Functions
   newfunction(:capitalize, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Capitalizes the first letter of a string or array of strings.
     Requires either a single string or an array as an input.
 
     Note: from Puppet 6.0.0, the compatible function with the same name in Puppet core
     will be used instead of this function.
+<<<<<<< HEAD
 =======
     @summary
       **Deprecated** Capitalizes the first letter of a string or array of strings.
@@ -24,6 +28,8 @@ module Puppet::Parser::Functions
     @return [String] The converted String, if it was a String that was given
     @return [Array[String]] The converted Array, if it was a Array that was given
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
              ) do |arguments|
 

@@ -2,6 +2,7 @@
   "name": "puppetlabs-inifile",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "4.0.0",
 =======
 <<<<<<< HEAD
@@ -15,12 +16,17 @@
 =======
 >>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
   "author": "puppetlabs",
+=======
+  "version": "1.6.0",
+  "author": "Puppet Labs",
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "summary": "Resource types for managing settings in INI files",
   "license": "Apache-2.0",
   "source": "https://github.com/puppetlabs/puppetlabs-inifile",
   "project_page": "https://github.com/puppetlabs/puppetlabs-inifile",
   "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
   "dependencies": [
+<<<<<<< HEAD
     {
       "name": "puppetlabs/translate",
 <<<<<<< HEAD
@@ -38,6 +44,9 @@
 =======
 >>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
     }
+=======
+  
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   ],
   "data_provider": null,
   "operatingsystem_support": [
@@ -46,6 +55,7 @@
       "operatingsystemrelease": [
         "5",
         "6",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "7",
@@ -62,6 +72,9 @@
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
+=======
+        "7"
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
       ]
     },
     {
@@ -83,6 +96,10 @@
     {
       "operatingsystem": "Scientific",
       "operatingsystemrelease": [
+<<<<<<< HEAD
+=======
+        "5",
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
         "6",
         "7"
       ]
@@ -90,14 +107,21 @@
     {
       "operatingsystem": "SLES",
       "operatingsystemrelease": [
+<<<<<<< HEAD
         "11 SP1",
         "12",
         "15"
+=======
+        "10 SP4",
+        "11 SP1",
+        "12"
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
       ]
     },
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
+<<<<<<< HEAD
         "8",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,11 +139,17 @@
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
+=======
+        "6",
+        "7",
+        "8"
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -133,18 +163,30 @@
 >>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
         "16.04",
         "18.04"
+=======
+        "10.04",
+        "12.04",
+        "14.04",
+        "16.04"
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
       ]
     },
     {
       "operatingsystem": "Solaris",
       "operatingsystemrelease": [
         "10",
+<<<<<<< HEAD
         "11"
+=======
+        "11",
+        "12"
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
       ]
     },
     {
       "operatingsystem": "Windows",
       "operatingsystemrelease": [
+<<<<<<< HEAD
         "2008 R2",
         "2012 R2",
         "2016",
@@ -161,6 +203,12 @@
         "2019",
 >>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
         "10"
+=======
+        "Server 2003 R2",
+        "Server 2008 R2",
+        "Server 2012",
+        "Server 2012 R2"
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
       ]
     },
     {
@@ -175,6 +223,7 @@
   "requirements": [
     {
       "name": "puppet",
+<<<<<<< HEAD
       "version_requirement": ">= 5.5.10 < 7.0.0"
     }
   ],
@@ -196,4 +245,9 @@
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 =======
 >>>>>>> 47bd9b089e60a434eedc031c6408dbc6e8a01072
+=======
+      "version_requirement": ">= 3.0.0 < 5.0.0"
+    }
+  ]
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 }

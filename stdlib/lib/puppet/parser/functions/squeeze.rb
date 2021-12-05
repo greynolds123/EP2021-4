@@ -4,6 +4,7 @@
 module Puppet::Parser::Functions
   newfunction(:squeeze, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
     Returns a new string where runs of the same character that occur in this set are replaced by a single character.
 =======
     @summary
@@ -12,6 +13,9 @@ module Puppet::Parser::Functions
     @return
       a new string where runs of the same character that occur in this set are replaced by a single character.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+    Returns a new string where runs of the same character that occur in this set are replaced by a single character.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   DOC
              ) do |arguments|
 

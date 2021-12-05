@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:get_module_path, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Returns the absolute path of the specified module for the current
     environment.
 
@@ -12,6 +15,7 @@ module Puppet::Parser::Functions
 
     Note that since Puppet 5.4.0 the function `module_directory()` in Puppet does the same thing and will return
     the path to the first found module if given multiple values or an array.
+<<<<<<< HEAD
 =======
     @summary
       Returns the absolute path of the specified module for the current
@@ -30,6 +34,8 @@ module Puppet::Parser::Functions
       function in Puppet does the same thing and will return the path to the first found module
       if given multiple values or an array.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   DOC
              ) do |args|
     raise(Puppet::ParseError, 'get_module_path(): Wrong number of arguments, expects one') unless args.size == 1

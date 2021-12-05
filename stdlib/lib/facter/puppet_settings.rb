@@ -17,10 +17,14 @@ rescue LoadError => e
 end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # These will be nil if Puppet is not available.
 =======
 # Facter fact returns the value of the Puppet vardir
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+# These will be nil if Puppet is not available.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 Facter.add(:puppet_vardir) do
   setcode do
     Facter::Util::PuppetSettings.with_puppet do
@@ -30,9 +34,12 @@ Facter.add(:puppet_vardir) do
 end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Facter fact returns the value of the Puppet environment path
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 Facter.add(:puppet_environmentpath) do
   setcode do
     Facter::Util::PuppetSettings.with_puppet do
@@ -42,9 +49,12 @@ Facter.add(:puppet_environmentpath) do
 end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Facter fact returns the value of the Puppet server
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 Facter.add(:puppet_server) do
   setcode do
     Facter::Util::PuppetSettings.with_puppet do

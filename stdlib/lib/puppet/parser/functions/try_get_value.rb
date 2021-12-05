@@ -8,6 +8,9 @@ module Puppet::Parser::Functions
     :arity => -2,
     :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
       DEPRECATED: this function is deprecated, please use dig() instead.
 
       Looks up into a complex structure of arrays and hashes and returns a value
@@ -16,6 +19,7 @@ module Puppet::Parser::Functions
       Key can contain slashes to describe path components. The function will go down
       the structure and try to extract the required value.
 
+<<<<<<< HEAD
 =======
       @summary
         **DEPRECATED:** this function is deprecated, please use dig() instead.
@@ -28,6 +32,8 @@ module Puppet::Parser::Functions
       the structure and try to extract the required value.
       ``
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
       $data = {
         'a' => {
           'b' => [
@@ -41,11 +47,15 @@ module Puppet::Parser::Functions
       $value = try_get_value($data, 'a/b/2', 'not_found', '/')
       => $value = 'b3'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       ```
       ```
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
       a -> first hash key
       b -> second hash key
       2 -> array index starting with 0
@@ -53,9 +63,12 @@ module Puppet::Parser::Functions
       not_found -> (optional) will be returned if there is no value or the path did not match. Defaults to nil.
       / -> (optional) path delimiter. Defaults to '/'.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       ```
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
       In addition to the required "key" argument, "try_get_value" accepts default
       argument. It will be returned if no value was found or a path component is

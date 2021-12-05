@@ -4,11 +4,14 @@
 module Puppet::Parser::Functions
   newfunction(:is_numeric, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     @summary
       **Deprecated:** Returns true if the given value is numeric.
 
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Returns true if the given argument is a Numeric (Integer or Float),
     or a String containing either a valid integer in decimal base 10 form, or
     a valid floating point string representation.
@@ -20,6 +23,9 @@ module Puppet::Parser::Functions
     it must be followed by at least one digit.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Valid examples:
 
       77435
@@ -27,6 +33,7 @@ module Puppet::Parser::Functions
       -8475
       0.2343
       -23.561e3
+<<<<<<< HEAD
 =======
     @return [Boolean]
       Returns `true` or `false`
@@ -34,6 +41,8 @@ module Puppet::Parser::Functions
     > **Note:* **Deprecated** Will be removed in a future version of stdlib. See
     [`validate_legacy`](#validate_legacy).
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
              ) do |arguments|
 

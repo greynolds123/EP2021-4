@@ -1,6 +1,9 @@
 #  Please note: This function is an implementation of a Ruby class and as such may not be entirely UTF8 compatible. To ensure compatibility please use this function with Ruby 2.4.0 or greater - https://bugs.ruby-lang.org/issues/10085.
 module Puppet::Parser::Functions
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   newfunction(:base64, :type => :rvalue, :doc => <<-'DOC') do |args|
     Base64 encode or decode a string based on the command and the string submitted
 
@@ -23,6 +26,7 @@ module Puppet::Parser::Functions
        # decode a Binary assuming it is an UTF-8 String
        $decodestring = String(Binary("dGhlc3RyaW5n"), "%s")
 
+<<<<<<< HEAD
 =======
   newfunction(:base64, :type => :rvalue, :doc => <<-DOC) do |args|
     @summary
@@ -56,6 +60,8 @@ module Puppet::Parser::Functions
 
     @return [String] The encoded/decoded value
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
 
     require 'base64'

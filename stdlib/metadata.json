@@ -1,7 +1,10 @@
 {
   "name": "puppetlabs-stdlib",
   "version": "6.0.0",
+<<<<<<< HEAD
   "version": "6.1.0",
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "author": "puppetlabs",
   "summary": "Standard library of resources for Puppet modules.",
   "license": "Apache-2.0",
@@ -19,8 +22,11 @@
         "5",
         "6",
         "7"
+<<<<<<< HEAD
         "7",
         "8"
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
       ]
     },
     {
@@ -59,8 +65,11 @@
       "operatingsystemrelease": [
         "8",
         "9"
+<<<<<<< HEAD
         "9",
         "10"
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
       ]
     },
     {
@@ -86,7 +95,10 @@
         "2012",
         "2012 R2",
         "2016",
+<<<<<<< HEAD
         "2019",
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
         "7",
         "8.1",
         "10"
@@ -109,10 +121,16 @@
   ],
   "description": "Standard Library for Puppet Modules",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "pdk-version": "1.10.0",
   "template-url": "https://github.com/puppetlabs/pdk-templates#master",
   "template-ref": "heads/master-0-gf778803"
   "pdk-version": "1.12.0",
   "template-url": "https://github.com/puppetlabs/pdk-templates#master",
   "template-ref": "1.12.0-0-g55d9ae2"
+=======
+  "pdk-version": "1.10.0",
+  "template-url": "https://github.com/puppetlabs/pdk-templates#master",
+  "template-ref": "heads/master-0-gf778803"
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 }

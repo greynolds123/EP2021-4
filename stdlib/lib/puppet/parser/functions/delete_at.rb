@@ -3,6 +3,9 @@
 #
 module Puppet::Parser::Functions
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   newfunction(:delete_at, :type => :rvalue, :doc => <<-DOC
     Deletes a determined indexed value from an array.
 
@@ -24,6 +27,7 @@ module Puppet::Parser::Functions
         $array[1, -2] # all but the first and last element
   DOC
              ) do |arguments|
+<<<<<<< HEAD
 =======
   newfunction(:delete_at, :type => :rvalue, :doc => <<-DOC) do |arguments|
     @summary
@@ -52,6 +56,8 @@ module Puppet::Parser::Functions
 
   DOC
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
     raise(Puppet::ParseError, "delete_at(): Wrong number of arguments given (#{arguments.size} for 2)") if arguments.size < 2
 

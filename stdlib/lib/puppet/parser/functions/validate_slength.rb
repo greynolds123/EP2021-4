@@ -3,6 +3,9 @@
 #
 module Puppet::Parser::Functions
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   newfunction(:validate_slength, :doc => <<-'DOC') do |args|
     Validate that the first argument is a string (or an array of strings), and
     less/equal to than the length of the second argument. An optional third
@@ -24,6 +27,7 @@ module Puppet::Parser::Functions
 
     DOC
 
+<<<<<<< HEAD
 =======
   newfunction(:validate_slength, :doc => <<-DOC
     @summary
@@ -49,6 +53,8 @@ module Puppet::Parser::Functions
     DOC
              ) do |args|
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     function_deprecation([:validate_slength, 'This method is deprecated, please use the stdlib validate_legacy function,
                             with String[]. There is further documentation for validate_legacy function in the README.'])
 

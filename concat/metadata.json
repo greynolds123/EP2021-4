@@ -1,10 +1,13 @@
 {
   "name": "puppetlabs-concat",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "2.2.0",
   "author": "Puppet Labs",
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "version": "6.1.0",
   "author": "puppetlabs",
   "summary": "Construct files from multiple fragments.",
@@ -14,9 +17,12 @@
   "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
   "dependencies": [
 <<<<<<< HEAD
+<<<<<<< HEAD
     {"name":"puppetlabs/stdlib","version_requirement":">= 4.2.0 < 5.0.0"}
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     {
       "name": "puppetlabs/stdlib",
       "version_requirement": ">= 4.13.1 < 7.0.0"
@@ -34,9 +40,12 @@
         "5",
         "6",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "7"
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
         "7",
         "8"
       ]
@@ -61,9 +70,12 @@
       "operatingsystem": "Scientific",
       "operatingsystemrelease": [
 <<<<<<< HEAD
+<<<<<<< HEAD
         "5",
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
         "6",
         "7"
       ]
@@ -72,12 +84,16 @@
       "operatingsystem": "SLES",
       "operatingsystemrelease": [
 <<<<<<< HEAD
+<<<<<<< HEAD
         "10 SP4",
         "11 SP1",
         "12"
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         "11 SP1",
+=======
+        "11 SP1",
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
         "12",
         "15"
       ]
@@ -86,11 +102,14 @@
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
 <<<<<<< HEAD
+<<<<<<< HEAD
         "6",
         "7",
         "8"
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
         "8",
         "9"
       ]
@@ -99,6 +118,7 @@
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
 <<<<<<< HEAD
+<<<<<<< HEAD
         "10.04",
         "12.04",
         "14.04",
@@ -106,6 +126,9 @@
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
         "14.04",
+=======
+        "14.04",
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
         "16.04",
         "18.04"
       ]
@@ -121,12 +144,15 @@
       "operatingsystem": "Windows",
       "operatingsystemrelease": [
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Server 2003 R2",
         "Server 2008 R2",
         "Server 2012",
         "Server 2012 R2"
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
         "2008 R2",
         "2012",
         "2012 R2",
@@ -145,6 +171,7 @@
         "7.1"
       ]
 <<<<<<< HEAD
+<<<<<<< HEAD
     },
     {
       "operatingsystem": "OSX",
@@ -153,24 +180,32 @@
       ]
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     }
   ],
   "requirements": [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "name": "pe",
       "version_requirement": ">= 3.7.0 < 2015.4.0"
     },
     {
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
       "name": "puppet",
-      "version_requirement": ">= 3.0.0 < 5.0.0"
+      "version_requirement": ">= 5.5.10 < 7.0.0"
     }
+<<<<<<< HEAD
   ]
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
       "name": "puppet",
       "version_requirement": ">= 5.5.10 < 7.0.0"
     }
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   ],
   "template-url": "https://github.com/puppetlabs/pdk-templates/#master",
   "template-ref": "heads/master-0-gb096033",

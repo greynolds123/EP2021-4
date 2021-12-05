@@ -4,6 +4,7 @@
 module Puppet::Parser::Functions
   newfunction(:is_function_available, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
     This function accepts a string as an argument, determines whether the
     Puppet runtime has access to a function by that name.  It returns a
     true if the function exists, false if not.
@@ -19,6 +20,11 @@ module Puppet::Parser::Functions
     > **Note:* **Deprecated** Will be removed in a future version of stdlib. See
     [`validate_legacy`](#validate_legacy).
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+    This function accepts a string as an argument, determines whether the
+    Puppet runtime has access to a function by that name.  It returns a
+    true if the function exists, false if not.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
              ) do |arguments|
 

@@ -4,11 +4,15 @@
 module Puppet::Parser::Functions
   newfunction(:values_at, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
     Finds value inside an array based on location.
 =======
     @summary
       Finds value inside an array based on location.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+    Finds value inside an array based on location.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
     The first argument is the array you want to analyze, and the second element can
     be a combination of:
@@ -18,6 +22,9 @@ module Puppet::Parser::Functions
     * An array combining the above
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     *Examples*:
 
         values_at(['a','b','c'], 2)
@@ -38,6 +45,7 @@ module Puppet::Parser::Functions
         ['a', 'b', 'c', 'd'][1, 2]   # results in ['b', 'c']
         ['a', 'b', 'c', 'd'][2, -1]  # results in ['c', 'd']
         ['a', 'b', 'c', 'd'][1, -2]  # results in ['b', 'c']
+<<<<<<< HEAD
 =======
     @return
       an array of values identified by location
@@ -62,6 +70,8 @@ module Puppet::Parser::Functions
     `['a', 'b', 'c', 'd'][1, -2]`  results in `['b', 'c']`
 
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
              ) do |arguments|
 

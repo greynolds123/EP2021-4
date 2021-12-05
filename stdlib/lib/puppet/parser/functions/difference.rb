@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:difference, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     This function returns the difference between two arrays.
     The returned array is a copy of the original array, removing any items that
     also appear in the second array.
@@ -18,6 +21,7 @@ module Puppet::Parser::Functions
 
       ['a', 'b', 'c'] - ['b', 'c', 'd']
       # would return ['a']
+<<<<<<< HEAD
 =======
     @summary
       This function returns the difference between two arrays.
@@ -38,6 +42,8 @@ module Puppet::Parser::Functions
     @return [Array]
       The difference between the two given arrays
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
     DOC
              ) do |arguments|

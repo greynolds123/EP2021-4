@@ -4,10 +4,14 @@
 module Puppet::Parser::Functions
   newfunction(:lstrip, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Strips leading spaces to the left of a string.
 
     Note: from Puppet 6.0.0, the compatible function with the same name in Puppet core
     will be used instead of this function.
+<<<<<<< HEAD
 =======
     @summary
       **Deprecated:** Strips leading spaces to the left of a string.
@@ -18,6 +22,8 @@ module Puppet::Parser::Functions
     > **Note:** **Deprecated** from Puppet 6.0.0, this function has been replaced with a
     built-in [`max`](https://puppet.com/docs/puppet/latest/function.html#max) function.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
              ) do |arguments|
 

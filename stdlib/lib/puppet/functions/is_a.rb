@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 # Boolean check to determine whether a variable is of a given data type. This is equivalent to the `=~` type checks.
 #
 # @example how to check a data type
@@ -16,6 +19,7 @@
 #       if $baz.is_a(String) {
 #         notify { 'baz!': }
 #       }
+<<<<<<< HEAD
 =======
 # @summary
 #   Boolean check to determine whether a variable is of a given data type.
@@ -37,11 +41,14 @@
 #       notify { 'baz!': }
 #     }
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 #
 # See the documentation for "The Puppet Type System" for more information about types.
 # See the `assert_type()` function for flexible ways to assert the type of a value.
 #
 Puppet::Functions.create_function(:is_a) do
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   # @param value
@@ -53,6 +60,8 @@ Puppet::Functions.create_function(:is_a) do
   # @return [Boolean]
   #   Return's `true` or `false`.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   dispatch :is_a do
     param 'Any', :value
     param 'Type', :type

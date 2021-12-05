@@ -4,10 +4,14 @@
 module Puppet::Parser::Functions
   newfunction(:clamp, :type => :rvalue, :arity => -2, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Clamps value to a range.
 
     Note: From Puppet 6.0.0 this can be done with only core Puppet like this:
       [$minval, $maxval, $value_to_clamp].sort[1]
+<<<<<<< HEAD
 =======
     @summary
       Keeps value within the range [Min, X, Max] by sort based on integer value
@@ -28,6 +32,8 @@ module Puppet::Parser::Functions
 
     @return [Array[Integer]] The sorted Array
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
              ) do |args|
 

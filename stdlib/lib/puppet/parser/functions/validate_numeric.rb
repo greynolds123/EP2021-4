@@ -3,6 +3,9 @@
 #
 module Puppet::Parser::Functions
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   newfunction(:validate_numeric, :doc => <<-'DOC') do |args|
     Validate that the first argument is a numeric value (or an array of numeric values). Abort catalog compilation if any of the checks fail.
 
@@ -18,6 +21,7 @@ module Puppet::Parser::Functions
 
     DOC
 
+<<<<<<< HEAD
 =======
   newfunction(:validate_numeric, :doc => <<-DOC
     @summary
@@ -37,6 +41,8 @@ module Puppet::Parser::Functions
     DOC
              ) do |args|
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     function_deprecation([:validate_numeric, 'This method is deprecated, please use the stdlib validate_legacy function,
                             with Stdlib::Compat::Numeric. There is further documentation for validate_legacy function in the README.'])
 

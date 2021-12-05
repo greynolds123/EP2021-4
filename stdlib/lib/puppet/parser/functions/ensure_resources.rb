@@ -3,10 +3,14 @@ require 'puppet/parser/functions'
 Puppet::Parser::Functions.newfunction(:ensure_resources,
                                       :type => :statement,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
                                       :doc => <<-'DOC'
     Takes a resource type, title (only hash), and a list of attributes that describe a
     resource.
 
+<<<<<<< HEAD
 =======
                                       :doc => <<-DOC
   @summary
@@ -19,6 +23,8 @@ Puppet::Parser::Functions.newfunction(:ensure_resources,
   @example Example usage
 
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
         user { 'dan':
           gid => 'mygroup',
           ensure => present,
@@ -28,10 +34,14 @@ Puppet::Parser::Functions.newfunction(:ensure_resources,
     the type and parameters specified if it doesn't already exist.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         ensure_resources('user', {'dan' => { gid => 'mygroup', uid => '600' } ,  'alex' => { gid => 'mygroup' }}, {'ensure' => 'present'})
 =======
     ensure_resources('user', {'dan' => { gid => 'mygroup', uid => '600' }, 'alex' => { gid => 'mygroup' }}, {'ensure' => 'present'})
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+        ensure_resources('user', {'dan' => { gid => 'mygroup', uid => '600' } ,  'alex' => { gid => 'mygroup' }}, {'ensure' => 'present'})
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
     From Hiera Backend:
 

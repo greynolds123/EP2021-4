@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "CHANGELOG.md": "f426d40b78fee2a7349acb062d30233e",
   "CONTRIBUTING.md": "4d17f3c942e7c93d1577cc4438a231e4",
   "Gemfile": "3864447c01e8ca140685b2f085f2d262",
@@ -8,17 +9,26 @@
   "CONTRIBUTING.md": "4d17f3c942e7c93d1577cc4438a231e4",
   "Gemfile": "1a5466fcfc1a2f40765b4abc5ea9ad06",
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+  "CHANGELOG.md": "f426d40b78fee2a7349acb062d30233e",
+  "CONTRIBUTING.md": "4d17f3c942e7c93d1577cc4438a231e4",
+  "Gemfile": "3864447c01e8ca140685b2f085f2d262",
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "HISTORY.md": "6b78ee53e5d501d081c45c5ee8f604e1",
   "LICENSE": "3b83ef96387f14655fc854ddc3c6bd57",
   "MAINTAINERS.md": "b40ec4f2c16145af6f723c2c34bb2ff9",
   "NOTICE": "b2e552587e5969886fdd60481e8b0351",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "README.md": "3a6e8a51a94ef6db4d5cd6574987ea8d",
   "README_DEVELOPER.markdown": "220a8b28521b5c5d2ea87c4ddb511165",
   "README_SPECS.markdown": "82bb4c6abbb711f40778b162ec0070c1",
   "RELEASE_PROCESS.markdown": "94b92bc99ac4106ba1a74d5c04e520f9",
   "Rakefile": "62da7aec85d5c34a90c35c24b64328a7",
   "appveyor.yml": "4aa690537aadcdd9341e0e3cca957d38",
+<<<<<<< HEAD
 =======
   "README.md": "292f3898d725d5e153e3d06b63db7620",
   "README_DEVELOPER.markdown": "220a8b28521b5c5d2ea87c4ddb511165",
@@ -29,12 +39,17 @@
   "appveyor.yml": "787231ca36ea3c98313389eb01bb0653",
   "distelli-manifest.yml": "2b03c8cae145c90561cd4a0b43f9eea5",
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "examples/file_line.pp": "d8126b139dd1dce21ff26910d1c5a245",
   "examples/has_interface_with.pp": "d69d520cf3ff4d0b495480afaca359ef",
   "examples/has_ip_address.pp": "32f42575e49aa66f0f2398a70ae2a9f4",
   "examples/has_ip_network.pp": "bfb8db068c58d77c4dd7ae9697536537",
   "examples/init.pp": "b52fd907330ddbd9c3e070cf39f7b317",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "lib/facter/facter_dot_d.rb": "9f65108ecd7b8c5ce9c90ab4cd9d45be",
   "lib/facter/package_provider.rb": "12d57e65f9b90c13e7808c347fbdc0b0",
   "lib/facter/pe_version.rb": "245bb8ea121e8a55e1a38668cc480530",
@@ -230,6 +245,7 @@
   "spec/acceptance/has_interface_with_spec.rb": "36e2cc57fb3f9044e2b93fa98eb436ab",
   "spec/acceptance/is_a_spec.rb": "ecca7dbb41739ebffcefccc2cb85722d",
   "spec/acceptance/is_mac_address_spec.rb": "d6279ad39509c73429f2e60a342f8a51",
+<<<<<<< HEAD
 =======
   "lib/facter/facter_dot_d.rb": "82a1f2646f4ce640c6dcea2bfcbbecc8",
   "lib/facter/package_provider.rb": "b17127f4c7f20443f6c85c4836745bac",
@@ -425,6 +441,8 @@
   "spec/acceptance/anchor_spec.rb": "8da30674d0c852e84776bb66bd6fa450",
   "spec/acceptance/file_line_spec.rb": "223c241e3fca6ed815612176fbcb801e",
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "spec/acceptance/nodesets/centos-7-x64.yml": "a713f3abd3657f0ae2878829badd23cd",
   "spec/acceptance/nodesets/debian-8-x64.yml": "d2d2977900989f30086ad251a14a1f39",
   "spec/acceptance/nodesets/default.yml": "b42da5a1ea0c964567ba7495574b8808",
@@ -432,6 +450,9 @@
   "spec/acceptance/nodesets/docker/debian-8.yml": "ac8e871d1068c96de5e85a89daaec6df",
   "spec/acceptance/nodesets/docker/ubuntu-14.04.yml": "dc42ee922a96908d85b8f0f08203ce58",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "spec/acceptance/pw_hash_spec.rb": "14bbe22f9eb59c4010abd33db766b2ab",
   "spec/acceptance/size_spec.rb": "c74418e929f607652e8c3b973a12d17a",
   "spec/acceptance/strftime_spec.rb": "009ef42851b32aa797cdea874bf9e3cc",
@@ -439,8 +460,11 @@
   "spec/acceptance/type_spec.rb": "1d55a0ad8635c239a33a1d107bda5404",
   "spec/acceptance/validate_augeas_spec.rb": "006d3658397e85dd497d7c612cbb3ae5",
   "spec/acceptance/validate_cmd_spec.rb": "c42681ac8aed0ca83577c0205fec6aa9",
+<<<<<<< HEAD
 =======
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "spec/default_facts.yml": "d4442f09ee2f33f2d55f078d0ee2634f",
   "spec/fixtures/dscacheutil/root": "e1a7622f55f3d1be258c9a5b16b474be",
   "spec/fixtures/lsuser/root": "2ed657fa157372a81634539bb1a56be8",
@@ -521,12 +545,17 @@
   "spec/functions/keys_spec.rb": "185acb2eeb716cf93c99cbbd41327224",
   "spec/functions/length_spec.rb": "2f9edfc8fbb4058a267bd00674cad654",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "spec/functions/load_module_metadata_spec.rb": "2419390d7e41728aa460ef46cc06319f",
   "spec/functions/loadjson_spec.rb": "12019b907452e777eacedb8b974abdae",
 =======
   "spec/functions/load_module_metadata_spec.rb": "e85aedac6540d4dbec21120afd31e361",
   "spec/functions/loadjson_spec.rb": "bebf061634829a66072f4abcde61cde8",
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+  "spec/functions/load_module_metadata_spec.rb": "2419390d7e41728aa460ef46cc06319f",
+  "spec/functions/loadjson_spec.rb": "12019b907452e777eacedb8b974abdae",
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "spec/functions/loadyaml_spec.rb": "0a6dd0a389c49f90d61f915b6718411a",
   "spec/functions/lstrip_spec.rb": "552c469f04c8de63b6c8cefb0280cba3",
   "spec/functions/max_spec.rb": "e82809c424860b8d94ef8af70abd4891",
@@ -561,10 +590,14 @@
   "spec/functions/str2bool_spec.rb": "d099ca74f02ac231f699e59d7a41bafb",
   "spec/functions/str2saltedsha512_spec.rb": "815dfb2f7c65f81769c117129e45bf85",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "spec/functions/strftime_spec.rb": "7f57c8b5350e9bfd4eb0f414f9192778",
 =======
   "spec/functions/strftime_spec.rb": "e4ff0163ab707966186d7941b0e5f18d",
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+  "spec/functions/strftime_spec.rb": "7f57c8b5350e9bfd4eb0f414f9192778",
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "spec/functions/strip_spec.rb": "1212eef324f730400c8a62d9db95a22c",
   "spec/functions/suffix_spec.rb": "61754a258fda440bc0f5e00af91f30a9",
   "spec/functions/swapcase_spec.rb": "d0dc69eda3fcdf043cc116ccb6ee3b28",
@@ -606,12 +639,17 @@
   "spec/monkey_patches/alias_should_to_must.rb": "3455626d32375d114ee5622e19a1fa6c",
   "spec/monkey_patches/publicize_methods.rb": "d2ae9210754b0a4eae0d6bf33737fe90",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "spec/spec_helper.rb": "9be9c919886944c6712b42e16fa9d8a8",
   "spec/spec_helper_acceptance.rb": "026922790f024fad373c1f42f87267d8",
 =======
   "spec/spec_helper.rb": "3a5cb451e0a0b4995c5d07f306088603",
   "spec/spec_helper_acceptance.rb": "cce39efa586eb23fd74fbd3d8ed58db3",
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+  "spec/spec_helper.rb": "9be9c919886944c6712b42e16fa9d8a8",
+  "spec/spec_helper_acceptance.rb": "026922790f024fad373c1f42f87267d8",
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "spec/spec_helper_local.rb": "5644c5ce611a9e131cf37106e2a8b841",
   "spec/support/shared_data.rb": "dfe4cbdbe2833d670a89bcdf3163839b",
   "spec/type_aliases/absolute_path_spec.rb": "a03a9c6fe2e3e6fbb23cd62c263032c2",
@@ -645,11 +683,14 @@
   "spec/type_aliases/ip_address_v6_spec.rb": "74a4c54bf8fffc4ebc3e33c12b085640",
   "spec/type_aliases/numeric_spec.rb": "06ae28964dfad6ca60ac59468c33104b",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   "spec/type_aliases/objectstore_gsuri_spec.rb": "189bdf8314c75dcdc39a05375c166a80",
   "spec/type_aliases/objectstore_s3uri_spec.rb": "7eb47306dd35f2993ee9ca01061e5663",
   "spec/type_aliases/objectstore_spec.rb": "49673c2ec656d39f23c326052181f78a",
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "spec/type_aliases/port__privileged_spec.rb": "531e8567e3251548324088e1cdac29d6",
   "spec/type_aliases/port__unprivileged_spec.rb": "ec5aa19f8bfb62307617c0e9b002475d",
   "spec/type_aliases/port_spec.rb": "6fff6e2cfc7b91e49b6dd169629f8a53",
@@ -657,9 +698,12 @@
   "spec/type_aliases/unixpath_spec.rb": "04e31be6626f96e605459b4ce8c94395",
   "spec/type_aliases/windowspath_spec.rb": "a1473316f1745fa3e20be83a2eb026c7",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   "spec/type_aliases/yes_no_spec.rb": "65925081b1eee87e5fe56028e9706fcd",
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "spec/unit/facter/facter_dot_d_spec.rb": "3853da05ad110c512bbbacce81e17176",
   "spec/unit/facter/package_provider_spec.rb": "c23d89ad7313f647f917d8a945815693",
   "spec/unit/facter/pe_version_spec.rb": "f013e4ef5aa532fc2af19ddf3a82cf48",
@@ -711,11 +755,15 @@
   "types/ip/address.pp": "9929a758afc9469acbcff0c2050bb0ab",
   "types/mac.pp": "6c4a697bca8a68bdc6db1394108df6d0",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "types/port/privileged.pp": "c4ce776dd07a3c8dd3379db8cd49e32a",
   "types/port/unprivileged.pp": "85359128fa9261fe8bf58c8525574404",
   "types/port.pp": "b1edd08c4eff860b3ea8bd84cd48ba81",
   "types/unixpath.pp": "b64a48701e7adfda45d31fd80bee4ad0",
   "types/windowspath.pp": "4c1eda331ecb43de98c29ed22d0ad448"
+<<<<<<< HEAD
 =======
   "types/objectstore/gsuri.pp": "8c315d523e14eaca1f1ae40fd0ef1389",
   "types/objectstore/s3uri.pp": "ebb69db2ae883d4a59bf57b6bd434e63",
@@ -728,4 +776,6 @@
   "types/windowspath.pp": "4c1eda331ecb43de98c29ed22d0ad448",
   "types/yes_no.pp": "9837204961362ecc238bd9f8cac38a39"
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 }

@@ -4,6 +4,7 @@
 module Puppet::Parser::Functions
   newfunction(:loadyaml, :type => :rvalue, :arity => -2, :doc => <<-'DOC') do |args|
 <<<<<<< HEAD
+<<<<<<< HEAD
     Load a YAML file containing an array, string, or hash, and return the data
     in the corresponding native data type.
 =======
@@ -12,10 +13,15 @@ module Puppet::Parser::Functions
       in the corresponding native data type.
 
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+    Load a YAML file containing an array, string, or hash, and return the data
+    in the corresponding native data type.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     The first parameter can be a file path or a URL.
     The second parameter is the default value. It will be returned if the file
     was not found or could not be parsed.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     For example:
 
@@ -25,6 +31,10 @@ module Puppet::Parser::Functions
 
     @example Example Usage:
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+    For example:
+
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
         $myhash = loadyaml('/etc/puppet/data/myhash.yaml')
         $myhash = loadyaml('https://example.local/my_hash.yaml')
         $myhash = loadyaml('https://username:password@example.local/my_hash.yaml')

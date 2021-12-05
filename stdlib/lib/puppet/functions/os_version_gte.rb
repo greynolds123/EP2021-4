@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 # Checks if the OS version is at least a certain version. Note that only the
 # major version is taken into account.
 #
@@ -9,6 +12,7 @@
 #     if os_version_gte('Debian', '9') { }
 #     if os_version_gte('Ubuntu', '18.04') { }
 Puppet::Functions.create_function(:os_version_gte) do
+<<<<<<< HEAD
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
 # @summary
@@ -28,6 +32,8 @@ Puppet::Functions.create_function(:os_version_gte) do
 =======
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   dispatch :os_version_gte do
     param 'String[1]', :os
     param 'String[1]', :version

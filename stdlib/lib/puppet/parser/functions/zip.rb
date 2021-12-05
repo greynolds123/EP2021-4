@@ -4,6 +4,9 @@
 module Puppet::Parser::Functions
   newfunction(:zip, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     Takes one element from first array and merges corresponding elements from second array. This generates a sequence of n-element arrays, where n is one more than the count of arguments.
 
     *Example:*
@@ -13,6 +16,7 @@ module Puppet::Parser::Functions
     Would result in:
 
         ["1", "4"], ["2", "5"], ["3", "6"]
+<<<<<<< HEAD
 =======
     @summary
       Takes one element from first array and merges corresponding elements from second array.
@@ -24,6 +28,8 @@ module Puppet::Parser::Functions
       zip(['1','2','3'],['4','5','6'])
       Would result in: ["1", "4"], ["2", "5"], ["3", "6"]
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DOC
              ) do |arguments|
 

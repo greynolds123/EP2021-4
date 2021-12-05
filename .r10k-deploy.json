@@ -1,6 +1,7 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "master",
   "signature": "dd04b80e903867fac27cd9591cecedd5af00aae7",
   "started_at": "2019-06-12 20:04:14 -0700",
@@ -17,5 +18,11 @@
   "started_at": "2019-07-25 18:09:59 -0700",
   "finished_at": "2019-07-25 18:09:59 -0700",
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+  "name": "stage",
+  "signature": "eaaffaebc2e277e0b4d66924b416540c77663abb",
+  "started_at": "2019-07-25 18:10:02 -0700",
+  "finished_at": "2019-07-25 18:10:02 -0700",
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   "deploy_success": true
 }

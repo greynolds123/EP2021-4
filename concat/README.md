@@ -1,15 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #concat
+=======
+# concat
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
-####Table of Contents
+#### Table of Contents
 
 1. [Overview](#overview)
 2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with concat](#setup)
-    * [What concat affects](#what-concat-affects)
     * [Beginning with concat](#beginning-with-concat)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+<<<<<<< HEAD
     * [Defines](#defines)
     * [Parameters](#parameters)
 =======
@@ -23,20 +26,29 @@
     * [Beginning with concat](#beginning-with-concat)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     * [Removed functionality](#removed-functionality)
 6. [Limitations - OS compatibility, etc.](#limitations)
 7. [Development - Guide for contributing to the module](#development)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ##Overview
+=======
+<a id="overview"></a>
+## Overview
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
 The concat module lets you construct files from multiple ordered fragments of text.
 
-##Module Description
+<a id="module-description"></a>
+## Module Description
 
 The concat module lets you gather `concat::fragment` resources from your other modules and order them into a coherent file through a single `concat` resource.
 
-###Beginning with concat
+<a id="beginning-with-concat"></a>
+### Beginning with concat
 
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -76,6 +88,7 @@ concat::fragment { 'tmpfile':
 ~~~
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ##Usage
 
 ###Maintain a list of the major modules on a node
@@ -84,6 +97,11 @@ concat::fragment { 'tmpfile':
 <a id="usage"></a>
 ## Usage
 
+=======
+<a id="usage"></a>
+## Usage
+
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 ### Maintain a list of the major modules on a node
 
 To maintain an motd file that lists the modules on one of your nodes, first create a class to frame up the file:
@@ -99,9 +117,12 @@ class motd {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   concat::fragment{ 'motd_header':
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   concat::fragment { 'motd_header':
     target  => $motd,
     content => "\nPuppet modules on this server:\n\n",
@@ -111,9 +132,12 @@ class motd {
   # let local users add to the motd by creating a file called
   # /etc/motd.local
 <<<<<<< HEAD
+<<<<<<< HEAD
   concat::fragment{ 'motd_local':
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   concat::fragment { 'motd_local':
     target => $motd,
     source => '/etc/motd.local',
@@ -123,9 +147,12 @@ class motd {
 
 # let other modules register themselves in the motd
 <<<<<<< HEAD
+<<<<<<< HEAD
 define motd::register($content="", $order='10') {
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 define motd::register (
   $content = "",
   $order   = '10',
@@ -137,9 +164,12 @@ define motd::register (
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   concat::fragment{ "motd_fragment_$name":
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   concat::fragment { "motd_fragment_$name":
     target  => '/etc/motd',
     order   => $order,
@@ -155,9 +185,12 @@ class apache {
   include apache::install, apache::config, apache::service
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   motd::register{ 'Apache': }
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   motd::register { 'Apache': }
 }
 ~~~
@@ -176,12 +209,16 @@ When you're finished, the motd file will look something like this:
 ~~~
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ##Reference
+=======
+<a id="reference"></a>
+## Reference
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
-###Defines
-* `concat`: Manages a file, compiled from one or more text fragments.
-* `concat::fragment`: Manages a fragment of text to be compiled into a file.
+See [REFERENCE.md](https://github.com/puppetlabs/puppetlabs-concat/blob/master/REFERENCE.md)
 
+<<<<<<< HEAD
 ###Types
 * `concat_file`: Generates a file with content from fragments sharing a common unique tag.
 * `concat_fragment`: Manages the fragment.
@@ -394,6 +431,8 @@ Specifies a file to read into the content of the fragment. **Note**: You must su
 
 See [REFERENCE.md](https://github.com/puppetlabs/puppetlabs-concat/blob/master/REFERENCE.md)
 
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 <a id="removed-functionality"></a>
 ### Removed functionality
 
@@ -410,20 +449,31 @@ The `concat::setup` class has also been removed.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Prior to concat version 2.0.0, if you set the `warn` parameter to a string value of 'true', 'false', 'yes', 'no', 'on', or 'off', the module translated the string to the corresponding boolean value. In concat version 2.0.0 and newer, the `warn_header` parameter treats those values the same as other strings and uses them as the content of your header message. To avoid that, pass the 'true' and 'false' values as booleans instead of strings.
+=======
+Prior to concat version 2.0.0, if you set the `warn` parameter to a string value of `true`, `false`, 'yes', 'no', 'on', or 'off', the module translated the string to the corresponding boolean value. In concat version 2.0.0 and newer, the `warn_header` parameter treats those values the same as other strings and uses them as the content of your header message. To avoid that, pass the `true` and `false` values as booleans instead of strings.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
-##Limitations
+<a id="limitations"></a>
+## Limitations
 
 This module has been tested on [all PE-supported platforms](https://forge.puppetlabs.com/supported#compat-matrix), and no issues have been identified.
 
-##Development
+For an extensive list of supported operating systems, see [metadata.json](https://github.com/puppetlabs/puppetlabs-concat/blob/master/metadata.json)
 
-Puppet Labs modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great. We can't access the huge number of platforms and myriad of hardware, software, and deployment configurations that Puppet is intended to serve.
+<a id="development"></a>
+## Development
+
+We are experimenting with a new tool for running acceptance tests. It's name is [puppet_litmus](https://github.com/puppetlabs/puppet_litmus) this replaces beaker as the test runner. To run the acceptance tests follow the instructions [here](https://github.com/puppetlabs/puppet_litmus/wiki/Tutorial:-use-Litmus-to-execute-acceptance-tests-with-a-sample-module-(MoTD)#install-the-necessary-gems-for-the-module).
+
+Puppet modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great. We can't access the huge number of platforms and myriad of hardware, software, and deployment configurations that Puppet is intended to serve.
 
 We want to keep it as easy as possible to contribute changes so that our modules work in your environment. There are a few guidelines that we need contributors to follow so that we can have a chance of keeping on top of things.
 
-For more information, see our [module contribution guide.](https://docs.puppetlabs.com/forge/contributing.html)
+For more information, see our [module contribution guide](https://puppet.com/docs/puppet/latest/contributing.html).
 
+<<<<<<< HEAD
 ###Contributors
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
@@ -447,6 +497,8 @@ We want to keep it as easy as possible to contribute changes so that our modules
 
 For more information, see our [module contribution guide](https://puppet.com/docs/puppet/latest/contributing.html).
 
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 ### Contributors
 
 Richard Pijnenburg ([@Richardp82](http://twitter.com/richardp82))
@@ -454,7 +506,10 @@ Richard Pijnenburg ([@Richardp82](http://twitter.com/richardp82))
 Joshua Hoblitt ([@jhoblitt](http://twitter.com/jhoblitt))
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [More contributors.](https://github.com/puppetlabs/puppetlabs-concat/graphs/contributors)
 =======
 >>>>>>> ed5efc529b7bf9185a6bc125b2e287f5aa6077c4
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 [More contributors](https://github.com/puppetlabs/puppetlabs-concat/graphs/contributors).

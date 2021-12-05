@@ -4,6 +4,7 @@
 module Puppet::Parser::Functions
   newfunction(:shuffle, :type => :rvalue, :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
     Randomizes the order of a string or array elements.
 =======
   @summary
@@ -12,6 +13,9 @@ module Puppet::Parser::Functions
    @return
      randomized string or array
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+    Randomizes the order of a string or array elements.
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   DOC
              ) do |arguments|
 

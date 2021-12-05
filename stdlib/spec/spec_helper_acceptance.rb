@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 require 'beaker-pe'
 require 'beaker-puppet'
 require 'puppet'
@@ -23,6 +26,7 @@ end
 
 def return_puppet_version
   (on default, puppet('--version')).output.chomp
+<<<<<<< HEAD
 =======
 # frozen_string_literal: true
 
@@ -106,4 +110,6 @@ else
     Specinfra.configuration.winrm = winrm
   end
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 end

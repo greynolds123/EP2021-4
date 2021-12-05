@@ -8,23 +8,32 @@ module Puppet::Parser::Functions
     :arity => -2,
     :doc => <<-DOC
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     DEPRECATED: This function has been replaced in Puppet 4.5.0.
 
     Looks up into a complex structure of arrays and hashes and returns a value
     or the default value if nothing was found.
+<<<<<<< HEAD
 =======
     @summary
       **DEPRECATED**: Looks up into a complex structure of arrays and hashes and returns a value
       or the default value if nothing was found.
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
 
     Key can contain slashes to describe path components. The function will go down
     the structure and try to extract the required value.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     ```
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     $data = {
       'a' => {
         'b' => [
@@ -36,6 +45,9 @@ module Puppet::Parser::Functions
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
     $value = dig44($data, ['a', 'b', '2'], 'not_found')
     => $value = 'b3'
 
@@ -49,6 +61,7 @@ module Puppet::Parser::Functions
     In addition to the required "key" argument, the function accepts a default
     argument. It will be returned if no value was found or a path component is
     missing. And the fourth argument can set a variable path separator.
+<<<<<<< HEAD
 =======
     $value = dig44($data, ['a', 'b', 2])
     # $value = 'b3'
@@ -69,6 +82,8 @@ module Puppet::Parser::Functions
     @return [String] 'not_found' will be returned if nothing is found
     @return [Any] the value that was searched for
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   DOC
   ) do |arguments|
     # Two arguments are required

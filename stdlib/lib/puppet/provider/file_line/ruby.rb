@@ -1,5 +1,6 @@
 Puppet::Type.type(:file_line).provide(:ruby) do
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   desc <<-DOC
     @summary
@@ -11,6 +12,8 @@ Puppet::Type.type(:file_line).provide(:ruby) do
     Multiple resources may be declared to manage multiple lines in the same file.
   DOC
 >>>>>>> 3e0569df506721e4616112328527bfb8431b063a
+=======
+>>>>>>> 5e3f5c76a39b399f8ca3eee5196911b7889828ed
   def exists?
     found = false
     lines_count = 0
