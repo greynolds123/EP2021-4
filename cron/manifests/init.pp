@@ -1,7 +1,6 @@
 # == Class:cron
 #
-# Full description of class cron here.
-#
+# Full description of class cron here.	:wq!
 # === Parameters
 #
 # Document parameters here.
@@ -27,11 +26,12 @@
 #    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #  }
 #
-# === Authors
+# == Authors
 #
 # Author Name <author@domain.com>
 #
-# === Copyright
+#
+# Copyright
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
@@ -41,10 +41,4 @@ class cron {
    include cron::mc_cron
 }
 
-=======
-
-class cron {
-   include cron::config
-   #include cron::mc_cron
-}
 

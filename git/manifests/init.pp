@@ -43,3 +43,5 @@ if ( $package_manage ) {
 
   create_resources(git::config, git_config_hash($configs), $configs_defaults)
 }
+}
+
