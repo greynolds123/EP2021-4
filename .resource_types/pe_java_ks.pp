@@ -1,4 +1,4 @@
-# This file was automatically generated on 2021-12-01 16:11:25 -0800.
+# This file was automatically generated on 2021-12-06 13:23:48 -0800.
 # Use the 'puppet generate types' command to regenerate this file.
 
 # Manages entries in a java keystore.  Uses composite namevars to
